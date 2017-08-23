@@ -14,7 +14,6 @@
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
-        <property id="2395210634691693337" name="CurrentProduction" index="3yd3hS" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
       </concept>
     </language>
@@ -26,11 +25,15 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
-    <node concept="3yd64n" id="24XvQ732$Xz" role="3yd3h7">
-      <property role="TrG5h" value="Windmill1" />
-      <property role="3yd64o" value="1" />
-      <property role="3yd3hR" value="1" />
-      <property role="3yd3hS" value="1" />
+    <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
+      <property role="TrG5h" value="Windmill 1" />
+      <property role="3yd3hR" value="20" />
+      <property role="3yd64o" value="10" />
+    </node>
+    <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
+      <property role="3yd3hR" value="100" />
+      <property role="3yd64o" value="10" />
+      <property role="TrG5h" value="Test" />
     </node>
   </node>
 </model>
