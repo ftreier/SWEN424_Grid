@@ -10,6 +10,14 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
+        <reference id="1083171729157" name="memberDataType" index="M4eZT" />
+        <child id="1083172003582" name="member" index="M5hS2" />
+      </concept>
+      <concept id="1083171877298" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ig" index="M4N5e">
+        <property id="1083923523172" name="externalValue" index="1uS6qo" />
+        <property id="1083923523171" name="internalValue" index="1uS6qv" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
@@ -80,10 +88,25 @@
       <property role="TrG5h" value="MaxProduction" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="24XvQ732kGp" role="1TKVEl">
-      <property role="IQ2nx" value="2395210634691693337" />
-      <property role="TrG5h" value="CurrentProduction" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+  </node>
+  <node concept="AxPO7" id="6Lad368Q94p">
+    <property role="TrG5h" value="EnergyUnitEnum" />
+    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="M4N5e" id="6Lad368Q94r" role="M5hS2">
+      <property role="1uS6qv" value="1" />
+      <property role="1uS6qo" value="Wh" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94q" role="M5hS2">
+      <property role="1uS6qv" value="2" />
+      <property role="1uS6qo" value="kWh" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94w" role="M5hS2">
+      <property role="1uS6qo" value="MWh" />
+      <property role="1uS6qv" value="3" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
+      <property role="1uS6qo" value="GWh" />
+      <property role="1uS6qv" value="4" />
     </node>
   </node>
 </model>
