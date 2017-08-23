@@ -30,6 +30,11 @@
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="10" />
     </node>
+    <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
+      <property role="3yd3hR" value="100" />
+      <property role="3yd64o" value="10" />
+      <property role="TrG5h" value="Test" />
+    </node>
   </node>
 </model>
 
