@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/PowerGrid/PowerGrid.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/PowerGrid/sandbox/PowerGrid.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/PowerGrid.Utils/PowerGrid.Runtime.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
