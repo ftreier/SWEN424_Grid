@@ -35,6 +35,11 @@
       <property role="3yd64o" value="10" />
       <property role="TrG5h" value="Test" />
     </node>
+    <node concept="3yd64n" id="1frgxxItnxc" role="3yd3h7">
+      <property role="TrG5h" value="asdf" />
+      <property role="3yd3hR" value="40" />
+      <property role="3yd64o" value="10" />
+    </node>
   </node>
 </model>
 
