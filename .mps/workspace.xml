@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae39244f-7942-4114-a89c-be6c34997771" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/workspace.xml" afterPath="$PROJECT_DIR$/.mps/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/PowerGrid.Utils/PowerGrid.Runtime.msd" afterPath="$PROJECT_DIR$/solutions/PowerGrid.Utils/PowerGrid.Runtime.msd" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +107,7 @@
                 <foldable />
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -142,7 +141,7 @@
                 <foldable />
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -162,20 +161,32 @@
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="119" />
-                    <property name="caretXRelative" value="88" />
+                    <property name="caretX" value="55" />
+                    <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_ueqr71_i1c0" cellNumber="0" isInList="false">
-                      <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" />
+                    <cellInfo cellId="Constant_trik0f_c1a" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
                 <errorMarkers />
                 <transactionalProperties />
-                <foldable />
-                <restoreAlways />
+                <foldable>
+                  <collapsedElement isCollapsed="false">
+                    <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
+                    </cellIdElement>
+                  </collapsedElement>
+                </foldable>
+                <restoreAlways>
+                  <collapsedElement isCollapsed="false">
+                    <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
+                    </cellIdElement>
+                  </collapsedElement>
+                </restoreAlways>
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -183,7 +194,7 @@
                 <restoreAlways />
                 <enabledHints />
               </inspectorMemento>
-              <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" />
+              <node node_ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614956595" />
             </state>
           </provider>
         </entry>
@@ -195,21 +206,34 @@
               <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="71" />
-                    <property name="caretXRelative" value="56" />
+                    <property name="selectionStart" value="0" />
+                    <property name="hasNonTrivialSelection" value="true" />
+                    <property name="caretX" value="127" />
+                    <property name="selectionEnd" value="15" />
+                    <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
-                      <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/2395210634691681910" />
+                    <cellInfo cellId="ReadOnlyModelAccessor_trik0f_a0" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620868" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
                 <errorMarkers />
                 <transactionalProperties />
-                <foldable />
+                <foldable>
+                  <collapsedElement isCollapsed="false">
+                    <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726675019" />
+                    </cellIdElement>
+                  </collapsedElement>
+                  <collapsedElement isCollapsed="false">
+                    <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                      <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620868" />
+                    </cellIdElement>
+                  </collapsedElement>
+                </foldable>
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -217,7 +241,7 @@
                 <restoreAlways />
                 <enabledHints />
               </inspectorMemento>
-              <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/2395210634691681910" />
+              <node node_ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620865" />
             </state>
           </provider>
         </entry>
@@ -249,7 +273,7 @@
                 </foldable>
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -269,7 +293,7 @@
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="23" />
+                    <property name="caretX" value="39" />
                     <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
                     <cellInfo cellId="constant_5" cellNumber="0" isInList="false">
@@ -282,7 +306,7 @@
                 <foldable />
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -323,11 +347,11 @@
       </array>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="150" />
-    <option name="y" value="51" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-178" />
+    <option name="y" value="189" />
     <option name="width" value="1920" />
-    <option name="height" value="897" />
+    <option name="height" value="759" />
   </component>
   <component name="ProjectPluginManager">
     <option name="pluginsState">
@@ -408,14 +432,6 @@
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e1250b04-d1e7-4dd3-aaf3-881ab9f28352" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PowerGrid" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -437,35 +453,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PowerGrid#3437871884232037721" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:c1ed82f3-bfb1-46e4-a5d4-5cd54c6af72a(main@generator) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/generator/template/main@generator.mps}" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/models/structure.mps}" />
+              <option name="myItemId" value="e1250b04-d1e7-4dd3-aaf3-881ab9f28352" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,6 +466,10 @@
               <option name="myItemId" value="e1250b04-d1e7-4dd3-aaf3-881ab9f28352" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PowerGrid" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -489,7 +481,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PowerGrid#3437871884232037721" />
+              <option name="myItemId" value="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/models/constraints.mps}" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -521,7 +513,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <SELECTED>
+          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
@@ -534,8 +526,64 @@
               <option name="myItemId" value="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/models/structure.mps}" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="8568651731614887511" />
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a9688cf4-325f-47cb-87a2-2c96d4f609b1" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PowerGrid#3437871884232037721" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:c1ed82f3-bfb1-46e4-a5d4-5cd54c6af72a(main@generator) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/generator/template/main@generator.mps}" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PowerGrid#3437871884232037721" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <SELECTED>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints) in IdeaFile{file:///am/monterey/home1/chauhakhus/swen424/SWEN424_Grid/languages/PowerGrid/models/constraints.mps}" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="8568651731614956595" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -636,7 +684,7 @@
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="ToolWindowManager">
-    <frame x="150" y="51" width="1920" height="897" extended-state="0" />
+    <frame x="-2" y="-3" width="1924" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Bookmarks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -652,16 +700,18 @@
       <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5052083" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.49479166" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890704" sideWeight="0.49479166" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Context Actions" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="RefactoringView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Node Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Typechecker State" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Supertypes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21033403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20989583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Typesystem Trace" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Classpath Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
       <window_info id="Cell Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="22" side_tool="false" content_ui="tabs" />
@@ -670,9 +720,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -687,32 +735,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="mps://node://PowerGrid#3437871884232037721/main@generator/main">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="refNodeList_dropAttrubuteRule" cellNumber="0" isInList="false">
-                  <node node_reference="r:c1ed82f3-bfb1-46e4-a5d4-5cd54c6af72a(main@generator)/3437871884232037722" />
-                </cellIdElement>
-              </collapsedElement>
-            </foldable>
-            <restoreAlways />
-          </memento>
-          <inspectorMemento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://PowerGrid.sandbox/PowerGrid.sandbox/test">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -1418,69 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://PowerGrid/PowerGrid.structure/EnergyUnitEnum">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="183" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/7803106691726741785" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://PowerGrid/PowerGrid.structure/PowerGridSimulator">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="31" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="emptyRefPlaceHolder" cellNumber="0" isInList="false">
-                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/3912689115450157634" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/3912689115450157634" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://PowerGrid.sandbox/PowerGrid.sandbox/test">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -1488,7 +1447,7 @@
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="23" />
+                <property name="caretX" value="39" />
                 <property name="caretXRelative" value="8" />
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="constant_5" cellNumber="0" isInList="false">
@@ -1501,7 +1460,7 @@
             <foldable />
             <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -1538,7 +1497,101 @@
             </foldable>
             <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://PowerGrid/PowerGrid.structure/EnergyUnitEnum">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="183" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/7803106691726741785" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://PowerGrid/PowerGrid.structure/PowerGridSimulator">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="31" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="emptyRefPlaceHolder" cellNumber="0" isInList="false">
+                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/3912689115450157634" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/3912689115450157634" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://PowerGrid/PowerGrid.constraints/???_Constraints">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState" editorFocused="true">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="271" />
+                <property name="caretXRelative" value="88" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614956595" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614956595" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -1555,21 +1608,34 @@
           <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="71" />
-                <property name="caretXRelative" value="56" />
+                <property name="selectionStart" value="0" />
+                <property name="hasNonTrivialSelection" value="true" />
+                <property name="caretX" value="127" />
+                <property name="selectionEnd" value="15" />
+                <property name="caretXRelative" value="8" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
-                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/2395210634691681910" />
+                <cellInfo cellId="ReadOnlyModelAccessor_trik0f_a0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620868" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
             <errorMarkers />
             <transactionalProperties />
-            <foldable />
+            <foldable>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726675019" />
+                </cellIdElement>
+              </collapsedElement>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620868" />
+                </cellIdElement>
+              </collapsedElement>
+            </foldable>
             <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -1577,7 +1643,7 @@
             <restoreAlways />
             <enabledHints />
           </inspectorMemento>
-          <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/2395210634691681910" />
+          <node node_ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/7803106691726620865" />
         </state>
       </provider>
     </entry>
@@ -1588,20 +1654,32 @@
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="119" />
-                <property name="caretXRelative" value="88" />
+                <property name="caretX" value="55" />
+                <property name="caretXRelative" value="8" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_ueqr71_i1c0" cellNumber="0" isInList="false">
-                  <node node_reference="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" />
+                <cellInfo cellId="Constant_trik0f_c1a" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
             <errorMarkers />
             <transactionalProperties />
-            <foldable />
-            <restoreAlways />
+            <foldable>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
+                </cellIdElement>
+              </collapsedElement>
+            </foldable>
+            <restoreAlways>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" />
+                </cellIdElement>
+              </collapsedElement>
+            </restoreAlways>
           </memento>
-          <inspectorMemento currentlyEditedNode="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614958807" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -1609,7 +1687,7 @@
             <restoreAlways />
             <enabledHints />
           </inspectorMemento>
-          <node node_ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)/8568651731614887511" />
+          <node node_ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)/8568651731614956595" />
         </state>
       </provider>
     </entry>
