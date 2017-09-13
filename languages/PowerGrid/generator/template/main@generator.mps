@@ -188,6 +188,12 @@
         <ref role="v9R2y" node="6Lad368QiXz" resolve="reduce_Producer" />
       </node>
     </node>
+    <node concept="3aamgX" id="4NGxdIp8YjD" role="3acgRq">
+      <ref role="30HIoZ" to="aw7t:4NGxdIp7Fe8" resolve="PowerGrid" />
+      <node concept="j$656" id="4NGxdIp8YL1" role="1lVwrX">
+        <ref role="v9R2y" node="4NGxdIp8YKD" resolve="reduce_Grid" />
+      </node>
+    </node>
   </node>
   <node concept="13MO4I" id="6Lad368QiXz">
     <property role="TrG5h" value="reduce_Producer" />
@@ -290,6 +296,7 @@
             </node>
             <node concept="raruj" id="6Lad368Urjd" role="lGtFl" />
           </node>
+          <node concept="3clFbH" id="4NGxdIp8WST" role="3cqZAp" />
         </node>
         <node concept="3Tm1VV" id="6Lad368UiJ5" role="1B3o_S" />
         <node concept="3cqZAl" id="6Lad368UiJj" role="3clF45" />
@@ -382,6 +389,11 @@
     <node concept="n94m4" id="6Lad368Qz3S" role="lGtFl">
       <ref role="n9lRv" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
     </node>
+  </node>
+  <node concept="13MO4I" id="4NGxdIp8YKD">
+    <property role="TrG5h" value="reduce_Grid" />
+    <ref role="3gUMe" to="aw7t:4NGxdIp7Fe8" resolve="PowerGrid" />
+    <node concept="3Tm1VV" id="4NGxdIp8YLB" role="13RCb5" />
   </node>
 </model>
 

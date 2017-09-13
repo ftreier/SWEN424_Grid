@@ -61,12 +61,22 @@
     <node concept="PrWs8" id="3pcEwkEWqD3" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="7VNv7V$vraO" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
     <node concept="1TJgyj" id="24XvQ732kGA" role="1TKVEi">
       <property role="IQ2ns" value="2395210634691693350" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="Producers" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="24XvQ732hTQ" resolve="Producer" />
+    </node>
+    <node concept="1TJgyj" id="4NGxdIp8O5J" role="1TKVEi">
+      <property role="IQ2ns" value="5542951320088166767" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Grids" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="4NGxdIp7Fe8" resolve="PowerGrid" />
     </node>
   </node>
   <node concept="1TIwiD" id="24XvQ732hTQ">
@@ -88,6 +98,12 @@
       <property role="TrG5h" value="MaxProduction" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyj" id="7VNv7V$vnR8" role="1TKVEi">
+      <property role="IQ2ns" value="9147792152560762312" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="ConnectedProducer" />
+      <ref role="20lvS9" node="24XvQ732hTQ" resolve="Producer" />
+    </node>
   </node>
   <node concept="AxPO7" id="6Lad368Q94p">
     <property role="TrG5h" value="EnergyUnitEnum" />
@@ -107,6 +123,47 @@
     <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
       <property role="1uS6qo" value="GWh" />
       <property role="1uS6qv" value="4" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4NGxdIp7Fe8">
+    <property role="EcuMT" value="5542951320087868296" />
+    <property role="TrG5h" value="PowerGrid" />
+    <property role="34LRSv" value="Power Grid" />
+    <property role="R4oN_" value="Conceptualisation of a power grid in the power network" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="4NGxdIp7FCa" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp7FCf" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320087869967" />
+      <property role="TrG5h" value="maxCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp7FCh" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320087869969" />
+      <property role="TrG5h" value="percentUsage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp7FCk" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320087869972" />
+      <property role="TrG5h" value="efficieny" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp7FCo" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320087869976" />
+      <property role="TrG5h" value="voltage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp7FCt" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320087869981" />
+      <property role="TrG5h" value="sector" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="4NGxdIp7FC_" role="1TKVEi">
+      <property role="IQ2ns" value="5542951320087869989" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="ConnectedGrid" />
+      <ref role="20lvS9" node="4NGxdIp7Fe8" resolve="PowerGrid" />
     </node>
   </node>
 </model>

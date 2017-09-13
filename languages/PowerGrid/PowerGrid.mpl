@@ -58,6 +58,7 @@
     <dependency reexport="true">a9688cf4-325f-47cb-87a2-2c96d4f609b1(PowerGrid.Runtime)</dependency>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="false">f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)</dependency>
+    <dependency reexport="false">d2a07bb2-09cf-48ad-a97b-660a7f0f2205(PowerGrid)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="5" />
