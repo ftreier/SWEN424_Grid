@@ -122,16 +122,6 @@
     <property role="34LRSv" value="Potiential Transformer" />
     <property role="R4oN_" value="Step Transmission Voltages" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="7rDXPBEWeTo" role="1TKVEl">
-      <property role="IQ2nx" value="8568651731614887512" />
-      <property role="TrG5h" value="LeftNetLevel" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="7rDXPBEWeTq" role="1TKVEl">
-      <property role="IQ2nx" value="8568651731614887514" />
-      <property role="TrG5h" value="RightNetLevel" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="1TJgyi" id="7rDXPBEWeTt" role="1TKVEl">
       <property role="IQ2nx" value="8568651731614887517" />
       <property role="TrG5h" value="MaxCapacity" />
@@ -139,12 +129,7 @@
     </node>
     <node concept="1TJgyi" id="7rDXPBEWeTx" role="1TKVEl">
       <property role="IQ2nx" value="8568651731614887521" />
-      <property role="TrG5h" value="Efficiency" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="7rDXPBEWeTA" role="1TKVEl">
-      <property role="IQ2nx" value="8568651731614887526" />
-      <property role="TrG5h" value="Usage" />
+      <property role="TrG5h" value="efficiency" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
