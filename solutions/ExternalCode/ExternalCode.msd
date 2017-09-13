@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solution name="ExternalCode" uuid="06938a7a-d23b-45e2-95a4-0d0c6d8a569c" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
   <models>
-    <modelRoot contentPath="C:/Data/Victoria/SWEN424_ModelDrivenDevelopment/MPS/SWEN424_Grid/Library" type="java_classes">
+    <modelRoot contentPath="${project_home}/Library" type="java_classes">
       <sourceRoot location="bin" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="C:/Data/Victoria/SWEN424_ModelDrivenDevelopment/MPS/SWEN424_Grid/Library/bin" />
+    <stubModelEntry path="${project_home}/Library/bin" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
