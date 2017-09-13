@@ -188,10 +188,10 @@
         <ref role="v9R2y" node="6Lad368QiXz" resolve="reduce_Producer" />
       </node>
     </node>
-    <node concept="3aamgX" id="4NGxdIp8YjD" role="3acgRq">
-      <ref role="30HIoZ" to="aw7t:4NGxdIp7Fe8" resolve="PowerGrid" />
-      <node concept="j$656" id="4NGxdIp8YL1" role="1lVwrX">
-        <ref role="v9R2y" node="4NGxdIp8YKD" resolve="reduce_Grid" />
+    <node concept="3aamgX" id="Kb51dro4xU" role="3acgRq">
+      <ref role="30HIoZ" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
+      <node concept="j$656" id="Kb51dro4y2" role="1lVwrX">
+        <ref role="v9R2y" node="Kb51dro4y0" resolve="reduce_Transformer" />
       </node>
     </node>
   </node>
@@ -296,7 +296,6 @@
             </node>
             <node concept="raruj" id="6Lad368Urjd" role="lGtFl" />
           </node>
-          <node concept="3clFbH" id="4NGxdIp8WST" role="3cqZAp" />
         </node>
         <node concept="3Tm1VV" id="6Lad368UiJ5" role="1B3o_S" />
         <node concept="3cqZAl" id="6Lad368UiJj" role="3clF45" />
@@ -317,6 +316,17 @@
       <node concept="_YKpA" id="6Lad368R4DF" role="1tU5fm">
         <node concept="3uibUv" id="6Lad368R4MZ" role="_ZDj9">
           <ref role="3uigEE" to="66tq:6Lad368QfGc" resolve="ElProducer" />
+        </node>
+      </node>
+    </node>
+    <node concept="312cEg" id="Kb51drnOYO" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="_transformers" />
+      <property role="3TUv4t" value="false" />
+      <node concept="_YKpA" id="Kb51drnMMv" role="1tU5fm">
+        <node concept="3uibUv" id="Kb51drnOYJ" role="_ZDj9">
+          <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
         </node>
       </node>
     </node>
@@ -365,6 +375,49 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="Kb51drnPeQ" role="3cqZAp" />
+        <node concept="3clFbF" id="Kb51drnPG_" role="3cqZAp">
+          <node concept="37vLTI" id="Kb51drnUDW" role="3clFbG">
+            <node concept="2ShNRf" id="Kb51drnULb" role="37vLTx">
+              <node concept="2Jqq0_" id="Kb51drnUKZ" role="2ShVmc">
+                <node concept="3uibUv" id="Kb51drnUL0" role="HW$YZ">
+                  <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="Kb51drnPGz" role="37vLTJ">
+              <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="Kb51dro0yV" role="3cqZAp">
+          <node concept="2OqwBi" id="Kb51dro1f2" role="3clFbG">
+            <node concept="10M0yZ" id="Kb51dro0SD" role="2Oq$k0">
+              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+            </node>
+            <node concept="liA8E" id="Kb51dro1_2" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <node concept="Xl_RD" id="Kb51dro1Bv" role="37wK5m">
+                <property role="Xl_RC" value="" />
+              </node>
+            </node>
+          </node>
+          <node concept="2b32R4" id="Kb51dro1Y0" role="lGtFl">
+            <node concept="3JmXsc" id="Kb51dro1Y3" role="2P8S$">
+              <node concept="3clFbS" id="Kb51dro1Y4" role="2VODD2">
+                <node concept="3clFbF" id="Kb51dro1Ya" role="3cqZAp">
+                  <node concept="2OqwBi" id="Kb51dro1Y5" role="3clFbG">
+                    <node concept="3Tsc0h" id="Kb51dro1Y8" role="2OqNvi">
+                      <ref role="3TtcxE" to="aw7t:7rDXPBEWeTI" resolve="Transformers" />
+                    </node>
+                    <node concept="30H73N" id="Kb51dro1Y9" role="2Oq$k0" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3Tm1VV" id="6Lad368Qz4n" role="1B3o_S" />
     </node>
@@ -390,10 +443,75 @@
       <ref role="n9lRv" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
     </node>
   </node>
-  <node concept="13MO4I" id="4NGxdIp8YKD">
-    <property role="TrG5h" value="reduce_Grid" />
-    <ref role="3gUMe" to="aw7t:4NGxdIp7Fe8" resolve="PowerGrid" />
-    <node concept="3Tm1VV" id="4NGxdIp8YLB" role="13RCb5" />
+  <node concept="13MO4I" id="Kb51dro4y0">
+    <property role="TrG5h" value="reduce_Transformer" />
+    <ref role="3gUMe" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
+    <node concept="312cEu" id="Kb51dro660" role="13RCb5">
+      <property role="TrG5h" value="Foo" />
+      <node concept="3clFb_" id="Kb51dro66$" role="jymVt">
+        <property role="1EzhhJ" value="false" />
+        <property role="TrG5h" value="Bar" />
+        <property role="od$2w" value="false" />
+        <property role="DiZV1" value="false" />
+        <property role="2aFKle" value="false" />
+        <node concept="3clFbS" id="Kb51dro66B" role="3clF47">
+          <node concept="3cpWs8" id="Kb51dro67F" role="3cqZAp">
+            <node concept="3cpWsn" id="Kb51dro67I" role="3cpWs9">
+              <property role="TrG5h" value="_transformers" />
+              <node concept="_YKpA" id="Kb51dro67D" role="1tU5fm">
+                <node concept="3uibUv" id="Kb51dro683" role="_ZDj9">
+                  <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                </node>
+              </node>
+              <node concept="2ShNRf" id="Kb51dro6a_" role="33vP2m">
+                <node concept="2Jqq0_" id="Kb51dro6gA" role="2ShVmc">
+                  <node concept="3uibUv" id="Kb51dro6us" role="HW$YZ">
+                    <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="Kb51dro6w8" role="3cqZAp">
+            <node concept="2OqwBi" id="Kb51dro77P" role="3clFbG">
+              <node concept="37vLTw" id="Kb51dro6w6" role="2Oq$k0">
+                <ref role="3cqZAo" node="Kb51dro67I" resolve="_transformers" />
+              </node>
+              <node concept="TSZUe" id="Kb51dro8aC" role="2OqNvi">
+                <node concept="2ShNRf" id="Kb51dro8c7" role="25WWJ7">
+                  <node concept="1pGfFk" id="Kb51dro8o8" role="2ShVmc">
+                    <ref role="37wK5l" to="66tq:Kb51drnN7D" resolve="ElTransformer" />
+                    <node concept="3cmrfG" id="Kb51dro8ry" role="37wK5m">
+                      <property role="3cmrfH" value="10" />
+                      <node concept="17Uvod" id="Kb51droaSx" role="lGtFl">
+                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                        <property role="2qtEX9" value="value" />
+                        <node concept="3zFVjK" id="Kb51droaS$" role="3zH0cK">
+                          <node concept="3clFbS" id="Kb51droaS_" role="2VODD2">
+                            <node concept="3clFbF" id="Kb51droaSF" role="3cqZAp">
+                              <node concept="2OqwBi" id="Kb51droaSA" role="3clFbG">
+                                <node concept="30H73N" id="Kb51droaSE" role="2Oq$k0" />
+                                <node concept="3TrcHB" id="Kb51drobWq" role="2OqNvi">
+                                  <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="Kb51dro8yd" role="lGtFl" />
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="Kb51dro66q" role="1B3o_S" />
+        <node concept="3cqZAl" id="Kb51dro66S" role="3clF45" />
+      </node>
+      <node concept="3Tm1VV" id="Kb51dro661" role="1B3o_S" />
+    </node>
   </node>
 </model>
 
