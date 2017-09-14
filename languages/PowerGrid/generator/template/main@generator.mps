@@ -12,6 +12,7 @@
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="8t2c" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424(ExternalCode/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -211,14 +212,14 @@
             <node concept="3cpWsn" id="6Lad368Upjw" role="3cpWs9">
               <property role="TrG5h" value="_producers" />
               <node concept="_YKpA" id="6Lad368Upjp" role="1tU5fm">
-                <node concept="3uibUv" id="6Lad368Uprm" role="_ZDj9">
-                  <ref role="3uigEE" to="66tq:6Lad368QfGc" resolve="ElProducer" />
+                <node concept="3uibUv" id="3anGR8rZNUX" role="_ZDj9">
+                  <ref role="3uigEE" to="8t2c:~ElProducer" resolve="ElProducer" />
                 </node>
               </node>
               <node concept="2ShNRf" id="6Lad368Upwd" role="33vP2m">
                 <node concept="2Jqq0_" id="6Lad368UpFn" role="2ShVmc">
-                  <node concept="3uibUv" id="6Lad368UpTe" role="HW$YZ">
-                    <ref role="3uigEE" to="66tq:6Lad368QfGc" resolve="ElProducer" />
+                  <node concept="3uibUv" id="3anGR8rZTm7" role="HW$YZ">
+                    <ref role="3uigEE" to="8t2c:~ElProducer" resolve="ElProducer" />
                   </node>
                 </node>
               </node>
@@ -232,7 +233,7 @@
               <node concept="TSZUe" id="6Lad368Uk4V" role="2OqNvi">
                 <node concept="2ShNRf" id="6Lad368UlAb" role="25WWJ7">
                   <node concept="1pGfFk" id="6Lad368UlTx" role="2ShVmc">
-                    <ref role="37wK5l" to="66tq:6Lad368QfJp" resolve="ElProducer" />
+                    <ref role="37wK5l" to="8t2c:~ElProducer.&lt;init&gt;(java.lang.String,int,int)" resolve="ElProducer" />
                     <node concept="Xl_RD" id="6Lad368UvVF" role="37wK5m">
                       <property role="Xl_RC" value="name" />
                       <node concept="17Uvod" id="6Lad368Uysj" role="lGtFl">
@@ -314,8 +315,8 @@
       <property role="TrG5h" value="_producers" />
       <property role="3TUv4t" value="false" />
       <node concept="_YKpA" id="6Lad368R4DF" role="1tU5fm">
-        <node concept="3uibUv" id="6Lad368R4MZ" role="_ZDj9">
-          <ref role="3uigEE" to="66tq:6Lad368QfGc" resolve="ElProducer" />
+        <node concept="3uibUv" id="3anGR8s0gvj" role="_ZDj9">
+          <ref role="3uigEE" to="8t2c:~ElProducer" resolve="ElProducer" />
         </node>
       </node>
     </node>
@@ -325,8 +326,8 @@
       <property role="TrG5h" value="_transformers" />
       <property role="3TUv4t" value="false" />
       <node concept="_YKpA" id="Kb51drnMMv" role="1tU5fm">
-        <node concept="3uibUv" id="Kb51drnOYJ" role="_ZDj9">
-          <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+        <node concept="3uibUv" id="3anGR8s0f0N" role="_ZDj9">
+          <ref role="3uigEE" to="8t2c:~ElTransformer" resolve="ElTransformer" />
         </node>
       </node>
     </node>
@@ -337,8 +338,8 @@
           <node concept="37vLTI" id="6Lad368R8JF" role="3clFbG">
             <node concept="2ShNRf" id="6Lad368R8QY" role="37vLTx">
               <node concept="2Jqq0_" id="6Lad368R8QM" role="2ShVmc">
-                <node concept="3uibUv" id="6Lad368R8QN" role="HW$YZ">
-                  <ref role="3uigEE" to="66tq:6Lad368QfGc" resolve="ElProducer" />
+                <node concept="3uibUv" id="3anGR8s0gcd" role="HW$YZ">
+                  <ref role="3uigEE" to="8t2c:~ElProducer" resolve="ElProducer" />
                 </node>
               </node>
             </node>
@@ -380,8 +381,8 @@
           <node concept="37vLTI" id="Kb51drnUDW" role="3clFbG">
             <node concept="2ShNRf" id="Kb51drnULb" role="37vLTx">
               <node concept="2Jqq0_" id="Kb51drnUKZ" role="2ShVmc">
-                <node concept="3uibUv" id="Kb51drnUL0" role="HW$YZ">
-                  <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                <node concept="3uibUv" id="3anGR8s0g5Y" role="HW$YZ">
+                  <ref role="3uigEE" to="8t2c:~ElTransformer" resolve="ElTransformer" />
                 </node>
               </node>
             </node>
@@ -448,6 +449,9 @@
     <ref role="3gUMe" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
     <node concept="312cEu" id="Kb51dro660" role="13RCb5">
       <property role="TrG5h" value="Foo" />
+      <node concept="3uibUv" id="6qPpZy2sHaG" role="1zkMxy">
+        <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
+      </node>
       <node concept="3clFb_" id="Kb51dro66$" role="jymVt">
         <property role="1EzhhJ" value="false" />
         <property role="TrG5h" value="Bar" />
@@ -459,14 +463,14 @@
             <node concept="3cpWsn" id="Kb51dro67I" role="3cpWs9">
               <property role="TrG5h" value="_transformers" />
               <node concept="_YKpA" id="Kb51dro67D" role="1tU5fm">
-                <node concept="3uibUv" id="Kb51dro683" role="_ZDj9">
-                  <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                <node concept="3uibUv" id="3anGR8s0b94" role="_ZDj9">
+                  <ref role="3uigEE" to="8t2c:~ElTransformer" resolve="ElTransformer" />
                 </node>
               </node>
               <node concept="2ShNRf" id="Kb51dro6a_" role="33vP2m">
                 <node concept="2Jqq0_" id="Kb51dro6gA" role="2ShVmc">
-                  <node concept="3uibUv" id="Kb51dro6us" role="HW$YZ">
-                    <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                  <node concept="3uibUv" id="3anGR8s0d7e" role="HW$YZ">
+                    <ref role="3uigEE" to="8t2c:~ElTransformer" resolve="ElTransformer" />
                   </node>
                 </node>
               </node>
@@ -480,7 +484,7 @@
               <node concept="TSZUe" id="Kb51dro8aC" role="2OqNvi">
                 <node concept="2ShNRf" id="Kb51dro8c7" role="25WWJ7">
                   <node concept="1pGfFk" id="Kb51dro8o8" role="2ShVmc">
-                    <ref role="37wK5l" to="66tq:Kb51drnN7D" resolve="ElTransformer" />
+                    <ref role="37wK5l" to="8t2c:~ElTransformer.&lt;init&gt;(int)" resolve="ElTransformer" />
                     <node concept="Xl_RD" id="6qPpZy2sRaN" role="37wK5m">
                       <property role="Xl_RC" value="name" />
                       <node concept="17Uvod" id="6qPpZy2sRUB" role="lGtFl">
@@ -551,9 +555,6 @@
         <node concept="3cqZAl" id="Kb51dro66S" role="3clF45" />
       </node>
       <node concept="3Tm1VV" id="Kb51dro661" role="1B3o_S" />
-      <node concept="3uibUv" id="6qPpZy2sHaG" role="1zkMxy">
-        <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
-      </node>
     </node>
   </node>
 </model>
