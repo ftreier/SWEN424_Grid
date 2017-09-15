@@ -10,11 +10,8 @@
   <registry>
     <language id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid">
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
-        <property id="8568651731614887512" name="LeftNetLevel" index="2s6h$1" />
-        <property id="8568651731614887514" name="RightNetLevel" index="2s6h$3" />
         <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
-        <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
-        <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
+        <property id="8568651731614887521" name="efficiency" index="2s6h$S" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
@@ -34,12 +31,9 @@
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
     <node concept="2s6h$e" id="Kb51drn_ru" role="2s6h$R">
-      <property role="TrG5h" value="asdf" />
-      <property role="2s6h$1" value="1" />
-      <property role="2s6h$3" value="2" />
+      <property role="TrG5h" value="asdf 1" />
       <property role="2s6h$4" value="10" />
-      <property role="2s6h$S" value="1" />
-      <property role="2s6h$Z" value="100" />
+      <property role="2s6h$S" value="10" />
     </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
