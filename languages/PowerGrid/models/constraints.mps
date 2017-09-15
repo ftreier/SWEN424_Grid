@@ -99,6 +99,30 @@
       </node>
     </node>
   </node>
+
+  <node concept="1M2fIO" id="50o97QFN1e1">
+    <ref role="1M2myG" to="aw7t:50o97QFMYra" resolve="Consumer" />
+    <node concept="EnEH3" id="50o97QFN1e2" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
+      <node concept="QB0g5" id="50o97QFNk5F" role="QCWH9">
+        <node concept="3clFbS" id="50o97QFNk5G" role="2VODD2">
+          <node concept="3clFbF" id="50o97QFNkgp" role="3cqZAp">
+            <node concept="1Wc70l" id="50o97QFNnDL" role="3clFbG">
+              <node concept="2dkUwp" id="50o97QFNoPn" role="3uHU7w">
+                <node concept="2OqwBi" id="50o97QFNp_4" role="3uHU7w">
+                  <node concept="EsrRn" id="50o97QFNp4W" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="50o97QFNqa_" role="2OqNvi">
+                    <ref role="3TsBF5" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
+                  </node>
+                </node>
+                <node concept="1Wqviy" id="50o97QFNnPV" role="3uHU7B" />
+              </node>
+              <node concept="2d3UOw" id="50o97QFNlio" role="3uHU7B">
+                <node concept="1Wqviy" id="50o97QFNkgo" role="3uHU7B" />
+                <node concept="3cmrfG" id="50o97QFNlpL" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+
   <node concept="1M2fIO" id="7rDXPBEWvKN">
     <ref role="1M2myG" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
     <node concept="EnEH3" id="7rDXPBEWwji" role="1MhHOB">
@@ -110,12 +134,25 @@
               <node concept="1Wqviy" id="7rDXPBEWxl1" role="3uHU7B" />
               <node concept="3cmrfG" id="7rDXPBEWz$D" role="3uHU7w">
                 <property role="3cmrfH" value="200" />
+
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
+
+    <node concept="EnEH3" id="50o97QFNlV1" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
+      <node concept="QB0g5" id="50o97QFNm6Q" role="QCWH9">
+        <node concept="3clFbS" id="50o97QFNm6R" role="2VODD2">
+          <node concept="3clFbF" id="50o97QFNs$g" role="3cqZAp">
+            <node concept="3eOSWO" id="50o97QFNsh5" role="3clFbG">
+              <node concept="3cmrfG" id="50o97QFNsot" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="1Wqviy" id="50o97QFNsh7" role="3uHU7B" />
+
     <node concept="EnEH3" id="6qPpZy2sZw9" role="1MhHOB">
       <ref role="EomxK" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
       <node concept="QB0g5" id="6qPpZy2sZOu" role="QCWH9">
@@ -137,6 +174,7 @@
                   <property role="3cmrfH" value="200" />
                 </node>
               </node>
+
             </node>
           </node>
         </node>

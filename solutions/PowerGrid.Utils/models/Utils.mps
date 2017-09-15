@@ -137,5 +137,81 @@
     </node>
     <node concept="3Tm1VV" id="Kb51drnN1b" role="1B3o_S" />
   </node>
+  <node concept="312cEu" id="50o97QFMYjg">
+    <property role="TrG5h" value="ElConsumer" />
+    <node concept="312cEg" id="50o97QFMYuc" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="_name" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="50o97QFMYtK" role="1B3o_S" />
+      <node concept="17QB3L" id="50o97QFMYtV" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="50o97QFMYv3" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="_minConsumption" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="50o97QFMYu$" role="1B3o_S" />
+      <node concept="10Oyi0" id="50o97QFMYuW" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="50o97QFMYw7" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="_maxConsumption" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="50o97QFMYvJ" role="1B3o_S" />
+      <node concept="10Oyi0" id="50o97QFMYw0" role="1tU5fm" />
+    </node>
+    <node concept="3clFbW" id="50o97QFMYxM" role="jymVt">
+      <node concept="3cqZAl" id="50o97QFMYxN" role="3clF45" />
+      <node concept="3clFbS" id="50o97QFMYxP" role="3clF47">
+        <node concept="3clFbF" id="50o97QFMYA6" role="3cqZAp">
+          <node concept="37vLTI" id="50o97QFMYN$" role="3clFbG">
+            <node concept="37vLTw" id="50o97QFMYOY" role="37vLTx">
+              <ref role="3cqZAo" node="50o97QFMYyg" resolve="name" />
+            </node>
+            <node concept="37vLTw" id="50o97QFMYA5" role="37vLTJ">
+              <ref role="3cqZAo" node="50o97QFMYuc" resolve="_name" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="50o97QFMYRw" role="3cqZAp">
+          <node concept="37vLTI" id="50o97QFMZvK" role="3clFbG">
+            <node concept="37vLTw" id="50o97QFMZHJ" role="37vLTx">
+              <ref role="3cqZAo" node="50o97QFMYyx" resolve="minConsumption" />
+            </node>
+            <node concept="37vLTw" id="50o97QFMYRu" role="37vLTJ">
+              <ref role="3cqZAo" node="50o97QFMYv3" resolve="_minConsumption" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="50o97QFMZTU" role="3cqZAp">
+          <node concept="37vLTI" id="50o97QFN0pO" role="3clFbG">
+            <node concept="37vLTw" id="50o97QFN0BY" role="37vLTx">
+              <ref role="3cqZAo" node="50o97QFMY$d" resolve="maxConsumption" />
+            </node>
+            <node concept="37vLTw" id="50o97QFMZTS" role="37vLTJ">
+              <ref role="3cqZAo" node="50o97QFMYw7" resolve="_maxConsumption" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="50o97QFMYxu" role="1B3o_S" />
+      <node concept="37vLTG" id="50o97QFMYyg" role="3clF46">
+        <property role="TrG5h" value="name" />
+        <node concept="17QB3L" id="50o97QFMYyf" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="50o97QFMYyx" role="3clF46">
+        <property role="TrG5h" value="minConsumption" />
+        <node concept="10Oyi0" id="50o97QFMYz4" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="50o97QFMY$d" role="3clF46">
+        <property role="TrG5h" value="maxConsumption" />
+        <node concept="10Oyi0" id="50o97QFMY$y" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="50o97QFMYjh" role="1B3o_S" />
+  </node>
 </model>
 

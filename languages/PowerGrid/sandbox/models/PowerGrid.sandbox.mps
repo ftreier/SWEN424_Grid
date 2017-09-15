@@ -16,10 +16,15 @@
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
+        <child id="5771403044647079878" name="Consumers" index="3VP2IV" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
+      </concept>
+      <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
+        <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
+        <property id="5771403044647069443" name="MinConsumption" index="3VOWdY" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -49,6 +54,21 @@
       <property role="TrG5h" value="asdf" />
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
+    </node>
+    <node concept="3VOWaR" id="15nlfvPiBM5" role="3VP2IV">
+      <property role="TrG5h" value="Office 1" />
+      <property role="3VOWdS" value="20" />
+      <property role="3VOWdY" value="5" />
+    </node>
+    <node concept="3VOWaR" id="15nlfvPiBMa" role="3VP2IV">
+      <property role="TrG5h" value="House 2" />
+      <property role="3VOWdS" value="75" />
+      <property role="3VOWdY" value="20" />
+    </node>
+    <node concept="3VOWaR" id="15nlfvPiC3t" role="3VP2IV">
+      <property role="TrG5h" value="Store" />
+      <property role="3VOWdS" value="40" />
+      <property role="3VOWdY" value="10" />
     </node>
   </node>
 </model>
