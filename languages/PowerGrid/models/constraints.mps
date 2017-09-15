@@ -29,6 +29,7 @@
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
+      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -98,6 +99,7 @@
       </node>
     </node>
   </node>
+
   <node concept="1M2fIO" id="50o97QFN1e1">
     <ref role="1M2myG" to="aw7t:50o97QFMYra" resolve="Consumer" />
     <node concept="EnEH3" id="50o97QFN1e2" role="1MhHOB">
@@ -120,12 +122,26 @@
                 <node concept="3cmrfG" id="50o97QFNlpL" role="3uHU7w">
                   <property role="3cmrfH" value="0" />
                 </node>
+
+  <node concept="1M2fIO" id="7rDXPBEWvKN">
+    <ref role="1M2myG" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
+    <node concept="EnEH3" id="7rDXPBEWwji" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:7rDXPBEWeTt" resolve="MaxCapacity" />
+      <node concept="QB0g5" id="7rDXPBEWwjn" role="QCWH9">
+        <node concept="3clFbS" id="7rDXPBEWwjo" role="2VODD2">
+          <node concept="3clFbF" id="7rDXPBEWxl3" role="3cqZAp">
+            <node concept="3eOVzh" id="7rDXPBEWzeN" role="3clFbG">
+              <node concept="1Wqviy" id="7rDXPBEWxl1" role="3uHU7B" />
+              <node concept="3cmrfG" id="7rDXPBEWz$D" role="3uHU7w">
+                <property role="3cmrfH" value="200" />
+
               </node>
             </node>
           </node>
         </node>
       </node>
     </node>
+
     <node concept="EnEH3" id="50o97QFNlV1" role="1MhHOB">
       <ref role="EomxK" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
       <node concept="QB0g5" id="50o97QFNm6Q" role="QCWH9">
@@ -136,6 +152,29 @@
                 <property role="3cmrfH" value="0" />
               </node>
               <node concept="1Wqviy" id="50o97QFNsh7" role="3uHU7B" />
+
+    <node concept="EnEH3" id="6qPpZy2sZw9" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+      <node concept="QB0g5" id="6qPpZy2sZOu" role="QCWH9">
+        <node concept="3clFbS" id="6qPpZy2sZOv" role="2VODD2">
+          <node concept="3clFbF" id="6qPpZy2sZVC" role="3cqZAp">
+            <node concept="1Wc70l" id="6qPpZy2t5$c" role="3clFbG">
+              <node concept="2d3UOw" id="6qPpZy2ttBG" role="3uHU7w">
+                <node concept="1Wqviy" id="6qPpZy2t5NS" role="3uHU7B" />
+                <node concept="2OqwBi" id="6qPpZy2ts$N" role="3uHU7w">
+                  <node concept="EsrRn" id="6qPpZy2ts8Y" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="6qPpZy2tsZm" role="2OqNvi">
+                    <ref role="3TsBF5" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3eOVzh" id="6qPpZy2t1KT" role="3uHU7B">
+                <node concept="1Wqviy" id="6qPpZy2sZVB" role="3uHU7B" />
+                <node concept="3cmrfG" id="6qPpZy2t1Si" role="3uHU7w">
+                  <property role="3cmrfH" value="200" />
+                </node>
+              </node>
+
             </node>
           </node>
         </node>
