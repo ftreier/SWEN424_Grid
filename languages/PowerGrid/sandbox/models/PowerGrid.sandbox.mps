@@ -9,9 +9,14 @@
   <imports />
   <registry>
     <language id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid">
+      <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
+        <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
+        <property id="8568651731614887521" name="efficiency" index="2s6h$S" />
+      </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
+        <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
-        <child id="5771403044647079878" name="Consumers" index="3VP2IV" />
+        <child id="8906079635731965358" name="Consumers" index="1YJ2mg" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
@@ -30,6 +35,11 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
+    <node concept="3VOWaR" id="7IoK3S59l$X" role="1YJ2mg">
+      <property role="TrG5h" value="house" />
+      <property role="3VOWdS" value="5" />
+      <property role="3VOWdY" value="2" />
+    </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
       <property role="3yd3hR" value="20" />
@@ -45,20 +55,10 @@
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
     </node>
-    <node concept="3VOWaR" id="15nlfvPiBM5" role="3VP2IV">
-      <property role="TrG5h" value="Office 1" />
-      <property role="3VOWdS" value="20" />
-      <property role="3VOWdY" value="5" />
-    </node>
-    <node concept="3VOWaR" id="15nlfvPiBMa" role="3VP2IV">
-      <property role="TrG5h" value="House 2" />
-      <property role="3VOWdS" value="75" />
-      <property role="3VOWdY" value="20" />
-    </node>
-    <node concept="3VOWaR" id="15nlfvPiC3t" role="3VP2IV">
-      <property role="TrG5h" value="Store" />
-      <property role="3VOWdS" value="40" />
-      <property role="3VOWdY" value="10" />
+    <node concept="2s6h$e" id="7IoK3S59l$V" role="2s6h$R">
+      <property role="TrG5h" value="test" />
+      <property role="2s6h$4" value="20" />
+      <property role="2s6h$S" value="10" />
     </node>
   </node>
 </model>

@@ -68,8 +68,15 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="24XvQ732hTQ" resolve="Producer" />
     </node>
-    <node concept="1TJgyj" id="50o97QFN0Z6" role="1TKVEi">
-      <property role="IQ2ns" value="5771403044647079878" />
+    <node concept="1TJgyj" id="7rDXPBEWeTI" role="1TKVEi">
+      <property role="IQ2ns" value="8568651731614887534" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Transformers" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
+    </node>
+    <node concept="1TJgyj" id="7IoK3S59emI" role="1TKVEi">
+      <property role="IQ2ns" value="8906079635731965358" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="Consumers" />
       <property role="20lbJX" value="1..n" />
@@ -134,6 +141,26 @@
       <property role="IQ2nx" value="5771403044647069445" />
       <property role="TrG5h" value="MaxConsumption" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7rDXPBEWeTn">
+    <property role="EcuMT" value="8568651731614887511" />
+    <property role="TrG5h" value="Transformer" />
+    <property role="34LRSv" value="Potiential Transformer" />
+    <property role="R4oN_" value="Step Transmission Voltages" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="7rDXPBEWeTt" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887517" />
+      <property role="TrG5h" value="MaxCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rDXPBEWeTx" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887521" />
+      <property role="TrG5h" value="efficiency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>
