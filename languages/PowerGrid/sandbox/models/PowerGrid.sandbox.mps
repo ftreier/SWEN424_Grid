@@ -18,21 +18,19 @@
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
-        <child id="5542951320088166767" name="Grids" index="3lNWmO" />
+        <child id="5542951320088342670" name="Grids" index="3lMnhl" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
       </concept>
-      <concept id="5542951320087868296" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lWztj">
-        <property id="5542951320087869976" name="voltage" index="3lWzV3" />
-        <property id="5542951320087869981" name="sector" index="3lWzV6" />
-        <property id="5542951320087869969" name="percentUsage" index="3lWzVa" />
-        <property id="5542951320087869972" name="efficieny" index="3lWzVf" />
-        <property id="5542951320087869967" name="maxCapacity" index="3lWzVk" />
-        <reference id="5542951320087869989" name="ConnectedGrid" index="3lWzVY" />
+      <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
+        <property id="5542951320088219697" name="sector" index="3lM9jE" />
+        <property id="5542951320088219688" name="efficiency" index="3lM9jN" />
+        <property id="5542951320088219692" name="voltage" index="3lM9jR" />
+        <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
+        <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
-        <reference id="9147792152560762312" name="ConnectedProducer" index="2qzw6Q" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -43,56 +41,36 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
-    <node concept="2s6h$e" id="Kb51drn_ru" role="2s6h$R">
-      <property role="TrG5h" value="asdf" />
+    <node concept="2s6h$e" id="4NGxdIp9$gq" role="2s6h$R">
+      <property role="TrG5h" value="Test4" />
       <property role="2s6h$1" value="1" />
-      <property role="2s6h$3" value="2" />
-      <property role="2s6h$4" value="10" />
-      <property role="2s6h$S" value="1" />
+      <property role="2s6h$3" value="4" />
+      <property role="2s6h$4" value="100" />
+      <property role="2s6h$S" value="100" />
       <property role="2s6h$Z" value="100" />
-    </node>
-    <node concept="3lWztj" id="4NGxdIp8OV8" role="3lNWmO">
-      <property role="3lWzVk" value="200" />
-      <property role="3lWzVa" value="25" />
-      <property role="3lWzV3" value="50" />
-      <property role="3lWzVf" value="100" />
-      <property role="3lWzV6" value="Auckland" />
-      <property role="TrG5h" value="Test1" />
-      <ref role="3lWzVY" node="4NGxdIp8OVi" resolve="Test2" />
-    </node>
-    <node concept="3lWztj" id="4NGxdIp8OVi" role="3lNWmO">
-      <property role="3lWzVk" value="200" />
-      <property role="3lWzVa" value="50" />
-      <property role="3lWzV3" value="100" />
-      <property role="3lWzVf" value="100" />
-      <property role="3lWzV6" value="Unassigned" />
-      <property role="TrG5h" value="Test2" />
-    </node>
-    <node concept="3lWztj" id="4NGxdIp8OVl" role="3lNWmO">
-      <property role="3lWzVk" value="200" />
-      <property role="3lWzVa" value="100" />
-      <property role="3lWzV3" value="200" />
-      <property role="3lWzVf" value="100" />
-      <property role="3lWzV6" value="Unassigned" />
-      <property role="TrG5h" value="Test3" />
     </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="10" />
-      <ref role="2qzw6Q" node="6Lad368Qvwr" resolve="Windmill 1" />
     </node>
     <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
       <property role="3yd3hR" value="1000" />
       <property role="3yd64o" value="1000" />
       <property role="TrG5h" value="Test" />
-      <ref role="2qzw6Q" node="6Lad368Qvwr" resolve="Windmill 1" />
     </node>
     <node concept="3yd64n" id="1frgxxItnxc" role="3yd3h7">
       <property role="TrG5h" value="asdf" />
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
-      <ref role="2qzw6Q" node="6Lad368Qvwr" resolve="Windmill 1" />
+    </node>
+    <node concept="3lM9jV" id="4NGxdIp9$go" role="3lMnhl">
+      <property role="TrG5h" value="Test1" />
+      <property role="3lM9jS" value="100" />
+      <property role="3lM9jY" value="100" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jR" value="100" />
+      <property role="3lM9jE" value="Auckland" />
     </node>
   </node>
 </model>

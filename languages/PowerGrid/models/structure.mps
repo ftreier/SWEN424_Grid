@@ -68,6 +68,12 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="24XvQ732hTQ" resolve="Producer" />
     </node>
+    <node concept="1TJgyj" id="4NGxdIp9v2e" role="1TKVEi">
+      <property role="IQ2ns" value="5542951320088342670" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Grids" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
     <node concept="1TJgyj" id="7rDXPBEWeTI" role="1TKVEi">
       <property role="IQ2ns" value="8568651731614887534" />
       <property role="20lmBu" value="aggregation" />
