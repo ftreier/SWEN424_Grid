@@ -72,6 +72,7 @@
       <property role="IQ2ns" value="5542951320088342670" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="Grids" />
+      <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
     </node>
     <node concept="1TJgyj" id="7rDXPBEWeTI" role="1TKVEi">
@@ -156,6 +157,18 @@
     <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyj" id="1e8K_y$VLBt" role="1TKVEi">
+      <property role="IQ2ns" value="1407588569533323741" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="LeftConnection" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
+    <node concept="1TJgyj" id="1e8K_y$VLBv" role="1TKVEi">
+      <property role="IQ2ns" value="1407588569533323743" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="RightConnection" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4NGxdIp910w">
     <property role="EcuMT" value="5542951320088219680" />
@@ -193,8 +206,8 @@
     <node concept="1TJgyj" id="4NGxdIp910R" role="1TKVEi">
       <property role="IQ2ns" value="5542951320088219703" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="ConnectedGrid" />
-      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+      <property role="20kJfa" value="ConnectedTransformer" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
     </node>
   </node>
 </model>
