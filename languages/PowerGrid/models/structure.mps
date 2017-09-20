@@ -74,6 +74,19 @@
       <property role="20kJfa" value="Consumers" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="50o97QFMYra" resolve="Consumer" />
+    </node>    <node concept="1TJgyj" id="4NGxdIp9v2e" role="1TKVEi">
+      <property role="IQ2ns" value="5542951320088342670" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Grids" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
+    <node concept="1TJgyj" id="7rDXPBEWeTI" role="1TKVEi">
+      <property role="IQ2ns" value="8568651731614887534" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Transformers" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
     </node>
   </node>
   <node concept="1TIwiD" id="24XvQ732hTQ">
@@ -114,6 +127,93 @@
     <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
       <property role="1uS6qo" value="GWh" />
       <property role="1uS6qv" value="4" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7rDXPBEWeTn">
+    <property role="EcuMT" value="8568651731614887511" />
+    <property role="TrG5h" value="Transformer" />
+    <property role="34LRSv" value="Potiential Transformer" />
+    <property role="R4oN_" value="Step Transmission Voltages" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="7rDXPBEWeTo" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887512" />
+      <property role="TrG5h" value="LeftNetLevel" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rDXPBEWeTq" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887514" />
+      <property role="TrG5h" value="RightNetLevel" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rDXPBEWeTt" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887517" />
+      <property role="TrG5h" value="MaxCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rDXPBEWeTx" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887521" />
+      <property role="TrG5h" value="Efficiency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rDXPBEWeTA" role="1TKVEl">
+      <property role="IQ2nx" value="8568651731614887526" />
+      <property role="TrG5h" value="Usage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="1e8K_y$VLBt" role="1TKVEi">
+      <property role="IQ2ns" value="1407588569533323741" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="LeftConnection" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
+    <node concept="1TJgyj" id="1e8K_y$VLBv" role="1TKVEi">
+      <property role="IQ2ns" value="1407588569533323743" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="RightConnection" />
+      <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4NGxdIp910w">
+    <property role="EcuMT" value="5542951320088219680" />
+    <property role="TrG5h" value="PowerGrid" />
+    <property role="34LRSv" value="Power Grid" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="4NGxdIp910x" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp910z" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320088219683" />
+      <property role="TrG5h" value="maxCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp910_" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320088219685" />
+      <property role="TrG5h" value="percentusage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp910C" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320088219688" />
+      <property role="TrG5h" value="efficiency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp910G" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320088219692" />
+      <property role="TrG5h" value="voltage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4NGxdIp910L" role="1TKVEl">
+      <property role="IQ2nx" value="5542951320088219697" />
+      <property role="TrG5h" value="sector" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="4NGxdIp910R" role="1TKVEi">
+      <property role="IQ2ns" value="5542951320088219703" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="ConnectedTransformer" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
     </node>
   </node>
   <node concept="1TIwiD" id="50o97QFMYra">
