@@ -30,10 +30,10 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
-    <node concept="2s6h$e" id="Kb51drn_ru" role="2s6h$R">
-      <property role="TrG5h" value="asdf 1" />
-      <property role="2s6h$4" value="10" />
-      <property role="2s6h$S" value="10" />
+    <node concept="2s6h$e" id="2skMPkA9w3$" role="2s6h$R">
+      <property role="TrG5h" value="fff" />
+      <property role="2s6h$4" value="1" />
+      <property role="2s6h$S" value="1" />
     </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
