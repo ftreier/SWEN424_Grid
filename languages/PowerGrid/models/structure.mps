@@ -74,7 +74,8 @@
       <property role="20kJfa" value="Consumers" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="50o97QFMYra" resolve="Consumer" />
-    </node>    <node concept="1TJgyj" id="4NGxdIp9v2e" role="1TKVEi">
+    </node>
+    <node concept="1TJgyj" id="4NGxdIp9v2e" role="1TKVEi">
       <property role="IQ2ns" value="5542951320088342670" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="Grids" />

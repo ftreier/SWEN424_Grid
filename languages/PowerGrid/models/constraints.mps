@@ -2,10 +2,11 @@
 <model ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)">
   <persistence version="9" />
   <languages>
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="-1" />
+    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="-1" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
-    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="8" />
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="4" />
+    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="tp23" ref="r:00000000-0000-4000-0000-011c89590307(jetbrains.mps.lang.constraints.constraints)" />
@@ -62,17 +63,61 @@
       <concept id="1153138554286" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_propertyValue" flags="nn" index="1Wqviy" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
-      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
-        <reference id="1138056395725" name="property" index="3TsBF5" />
-      </concept>
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
     </language>
   </registry>
+  <node concept="1M2fIO" id="50o97QFN1e1">
+    <ref role="1M2myG" to="aw7t:50o97QFMYra" resolve="Consumer" />
+    <node concept="EnEH3" id="50o97QFN1e2" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
+      <node concept="QB0g5" id="50o97QFNk5F" role="QCWH9">
+        <node concept="3clFbS" id="50o97QFNk5G" role="2VODD2">
+          <node concept="3clFbF" id="50o97QFNkgp" role="3cqZAp">
+            <node concept="1Wc70l" id="50o97QFNnDL" role="3clFbG">
+              <node concept="2dkUwp" id="50o97QFNoPn" role="3uHU7w">
+                <node concept="2OqwBi" id="50o97QFNp_4" role="3uHU7w">
+                  <node concept="EsrRn" id="50o97QFNp4W" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="50o97QFNqa_" role="2OqNvi">
+                    <ref role="3TsBF5" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
+                  </node>
+                </node>
+                <node concept="1Wqviy" id="50o97QFNnPV" role="3uHU7B" />
+              </node>
+              <node concept="2d3UOw" id="50o97QFNlio" role="3uHU7B">
+                <node concept="1Wqviy" id="50o97QFNkgo" role="3uHU7B" />
+                <node concept="3cmrfG" id="50o97QFNlpL" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="EnEH3" id="50o97QFNlV1" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
+      <node concept="QB0g5" id="50o97QFNm6Q" role="QCWH9">
+        <node concept="3clFbS" id="50o97QFNm6R" role="2VODD2">
+          <node concept="3clFbF" id="50o97QFNs$g" role="3cqZAp">
+            <node concept="3eOSWO" id="50o97QFNsh5" role="3clFbG">
+              <node concept="3cmrfG" id="50o97QFNsot" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="1Wqviy" id="50o97QFNsh7" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
   <node concept="1M2fIO" id="6L5ADlUjZ_d">
     <ref role="1M2myG" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
     <node concept="3EP7_v" id="7VNv7V$vZFI" role="1MtirG">
@@ -168,50 +213,6 @@
               <node concept="chp4Y" id="4NGxdIp7HHW" role="cj9EA">
                 <ref role="cht4Q" to="aw7t:24XvQ732hTQ" resolve="Producer" />
               </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="1M2fIO" id="50o97QFN1e1">
-    <ref role="1M2myG" to="aw7t:50o97QFMYra" resolve="Consumer" />
-    <node concept="EnEH3" id="50o97QFN1e2" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
-      <node concept="QB0g5" id="50o97QFNk5F" role="QCWH9">
-        <node concept="3clFbS" id="50o97QFNk5G" role="2VODD2">
-          <node concept="3clFbF" id="50o97QFNkgp" role="3cqZAp">
-            <node concept="1Wc70l" id="50o97QFNnDL" role="3clFbG">
-              <node concept="2dkUwp" id="50o97QFNoPn" role="3uHU7w">
-                <node concept="2OqwBi" id="50o97QFNp_4" role="3uHU7w">
-                  <node concept="EsrRn" id="50o97QFNp4W" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="50o97QFNqa_" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
-                  </node>
-                </node>
-                <node concept="1Wqviy" id="50o97QFNnPV" role="3uHU7B" />
-              </node>
-              <node concept="2d3UOw" id="50o97QFNlio" role="3uHU7B">
-                <node concept="1Wqviy" id="50o97QFNkgo" role="3uHU7B" />
-                <node concept="3cmrfG" id="50o97QFNlpL" role="3uHU7w">
-                  <property role="3cmrfH" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="EnEH3" id="50o97QFNlV1" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
-      <node concept="QB0g5" id="50o97QFNm6Q" role="QCWH9">
-        <node concept="3clFbS" id="50o97QFNm6R" role="2VODD2">
-          <node concept="3clFbF" id="50o97QFNs$g" role="3cqZAp">
-            <node concept="3eOSWO" id="50o97QFNsh5" role="3clFbG">
-              <node concept="3cmrfG" id="50o97QFNsot" role="3uHU7w">
-                <property role="3cmrfH" value="0" />
-              </node>
-              <node concept="1Wqviy" id="50o97QFNsh7" role="3uHU7B" />
             </node>
           </node>
         </node>
