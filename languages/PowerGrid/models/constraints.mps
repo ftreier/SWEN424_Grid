@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:0cd2d400-f339-4f4e-9bcb-4c18a4d45b05(PowerGrid.constraints)">
   <persistence version="9" />
-  <languages>
-    <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
-    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
-  </languages>
+  <languages />
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="aw7t" ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)" implicit="true" />
@@ -30,7 +27,6 @@
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
-      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -43,7 +39,6 @@
         <reference id="1147467295099" name="applicableProperty" index="EomxK" />
         <child id="1212097481299" name="propertyValidator" index="QCWH9" />
       </concept>
-      <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="6738154313879680265" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childNode" flags="nn" index="2H4GUG" />
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
@@ -67,55 +62,8 @@
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
       </concept>
-      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
-        <reference id="1138056395725" name="property" index="3TsBF5" />
-      </concept>
     </language>
   </registry>
-  <node concept="1M2fIO" id="6Lad368PFz1">
-    <ref role="1M2myG" to="aw7t:24XvQ732hTQ" resolve="Producer" />
-    <node concept="EnEH3" id="6Lad368PFz2" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:24XvQ732kGm" resolve="MaxProduction" />
-      <node concept="QB0g5" id="6Lad368PFz4" role="QCWH9">
-        <node concept="3clFbS" id="6Lad368PFz5" role="2VODD2">
-          <node concept="3clFbF" id="6Lad368PK4h" role="3cqZAp">
-            <node concept="3eOSWO" id="6Lad368PLLa" role="3clFbG">
-              <node concept="3cmrfG" id="6Lad368PLSz" role="3uHU7w">
-                <property role="3cmrfH" value="0" />
-              </node>
-              <node concept="1Wqviy" id="6Lad368PK4g" role="3uHU7B" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="EnEH3" id="6Lad368PSL2" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:24XvQ732hTT" resolve="MinProduction" />
-      <node concept="QB0g5" id="6Lad368PSLb" role="QCWH9">
-        <node concept="3clFbS" id="6Lad368PSLc" role="2VODD2">
-          <node concept="3clFbF" id="6Lad368PSSl" role="3cqZAp">
-            <node concept="1Wc70l" id="6Lad368PVA7" role="3clFbG">
-              <node concept="2dkUwp" id="6Lad368PXqI" role="3uHU7w">
-                <node concept="2OqwBi" id="6Lad368PYLi" role="3uHU7w">
-                  <node concept="EsrRn" id="6Lad368PXRd" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="6Lad368PZb8" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:24XvQ732kGm" resolve="MaxProduction" />
-                  </node>
-                </node>
-                <node concept="1Wqviy" id="6Lad368PVMk" role="3uHU7B" />
-              </node>
-              <node concept="2d3UOw" id="6Lad368PU_e" role="3uHU7B">
-                <node concept="1Wqviy" id="6Lad368PSSk" role="3uHU7B" />
-                <node concept="3cmrfG" id="6Lad368PUGB" role="3uHU7w">
-                  <property role="3cmrfH" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="6L5ADlUjZ_d">
     <ref role="1M2myG" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
     <node concept="3EP7_v" id="7VNv7V$vZFI" role="1MtirG">
@@ -210,24 +158,6 @@
             <node concept="1mIQ4w" id="4NGxdIp7Hxw" role="2OqNvi">
               <node concept="chp4Y" id="4NGxdIp7HHW" role="cj9EA">
                 <ref role="cht4Q" to="aw7t:24XvQ732hTQ" resolve="Producer" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="1M2fIO" id="7rDXPBEWvKN">
-    <ref role="1M2myG" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
-    <node concept="EnEH3" id="7rDXPBEWwji" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:7rDXPBEWeTt" resolve="MaxCapacity" />
-      <node concept="QB0g5" id="7rDXPBEWwjn" role="QCWH9">
-        <node concept="3clFbS" id="7rDXPBEWwjo" role="2VODD2">
-          <node concept="3clFbF" id="7rDXPBEWxl3" role="3cqZAp">
-            <node concept="3eOVzh" id="7rDXPBEWzeN" role="3clFbG">
-              <node concept="1Wqviy" id="7rDXPBEWxl1" role="3uHU7B" />
-              <node concept="3cmrfG" id="7rDXPBEWz$D" role="3uHU7w">
-                <property role="3cmrfH" value="200" />
               </node>
             </node>
           </node>
