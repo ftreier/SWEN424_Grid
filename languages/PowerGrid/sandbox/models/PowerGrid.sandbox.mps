@@ -22,6 +22,7 @@
         <child id="3886532124061166063" name="Consumers" index="N8dmf" />
         <child id="5542951320088342670" name="Grids" index="3lMnhl" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
+        <child id="7210842759737799191" name="Weather" index="1Hj7Pu" />
       </concept>
       <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
         <property id="5542951320088219697" name="sector" index="3lM9jE" />
@@ -35,6 +36,13 @@
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="asdf" index="nfRfV" />
+        <reference id="7210842759738047906" name="Wather" index="1Hs3bF" />
+      </concept>
+      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
+        <property id="7210842759737799182" name="day" index="1Hj7P7" />
+      </concept>
+      <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
+        <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
@@ -52,11 +60,18 @@
   </registry>
   <node concept="sJg17" id="3nJJ606O1DJ">
     <property role="TrG5h" value="test" />
+    <node concept="1Hj7UV" id="6gi3O$9oIOo" role="1Hj7Pu">
+      <property role="TrG5h" value="Wellington" />
+      <node concept="1Hj7UU" id="6gi3O$9oIOp" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
+      </node>
+    </node>
     <node concept="3yd64n" id="3nJJ606O1DK" role="3yd3h7">
       <property role="TrG5h" value="prod" />
       <property role="3yd3hR" value="50" />
       <property role="3yd64o" value="1" />
       <ref role="nfRfV" node="3nJJ606O1DM" resolve="tran" />
+      <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
     </node>
     <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
       <property role="3lM9jS" value="200" />
