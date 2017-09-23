@@ -13,13 +13,14 @@
         <property id="8568651731614887512" name="LeftNetLevel" index="2s6h$1" />
         <property id="8568651731614887514" name="RightNetLevel" index="2s6h$3" />
         <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
-        <property id="8568651731614887521" name="efficiency" index="2s6h$S" />
+        <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
         <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="5542951320088342670" name="Grids" index="3lMnhl" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
+        <child id="7210842759737799191" name="Weather" index="1Hj7Pu" />
       </concept>
       <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
         <property id="5542951320088219697" name="sector" index="3lM9jE" />
@@ -31,6 +32,13 @@
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
+        <reference id="7210842759737873659" name="RegionalWeather" index="1HjpIM" />
+      </concept>
+      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
+        <property id="7210842759737799182" name="day" index="1Hj7P7" />
+      </concept>
+      <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
+        <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -41,6 +49,12 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
+    <node concept="1Hj7UV" id="6gi3O$9nOmh" role="1Hj7Pu">
+      <property role="TrG5h" value="Wellington" />
+      <node concept="1Hj7UU" id="6gi3O$9nOmi" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
+      </node>
+    </node>
     <node concept="2s6h$e" id="4NGxdIp9$gq" role="2s6h$R">
       <property role="TrG5h" value="Test4" />
       <property role="2s6h$1" value="1" />
@@ -61,16 +75,19 @@
       <property role="TrG5h" value="Windmill 1" />
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="10" />
+      <ref role="1HjpIM" node="6gi3O$9nOmh" resolve="Wellington" />
     </node>
     <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
       <property role="3yd3hR" value="1000" />
       <property role="3yd64o" value="1000" />
       <property role="TrG5h" value="Test" />
+      <ref role="1HjpIM" node="6gi3O$9nOmh" resolve="Wellington" />
     </node>
     <node concept="3yd64n" id="1frgxxItnxc" role="3yd3h7">
       <property role="TrG5h" value="asdf" />
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
+      <ref role="1HjpIM" node="6gi3O$9nOmh" resolve="Wellington" />
     </node>
   </node>
 </model>
