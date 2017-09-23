@@ -15,4 +15,5 @@ public ElConsumer(String name, int minProduction, int maxProduction){
 	_minProduction = minProduction;
 	_maxProduction = maxProduction;
 	}
+
 }
