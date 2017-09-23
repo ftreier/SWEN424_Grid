@@ -28,6 +28,7 @@
         <property id="5542951320088219692" name="voltage" index="3lM9jR" />
         <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
         <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
+        <reference id="5542951320088219703" name="ConnectedTransformer" index="3lM9jG" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
@@ -46,26 +47,14 @@
   </registry>
   <node concept="sJg17" id="24XvQ732$Xy">
     <property role="TrG5h" value="test" />
-    <node concept="3VOWaR" id="tGKf7ZszJZ" role="3VP2IV">
-      <property role="TrG5h" value="asdf" />
-      <property role="3VOWdY" value="11" />
-      <property role="3VOWdS" value="12" />
-    </node>
-    <node concept="2s6h$e" id="4NGxdIp9$gq" role="2s6h$R">
-      <property role="TrG5h" value="Test4" />
-      <property role="2s6h$1" value="1" />
-      <property role="2s6h$3" value="4" />
-      <property role="2s6h$4" value="100" />
-      <property role="2s6h$S" value="100" />
-      <property role="2s6h$Z" value="100" />
-    </node>
-    <node concept="3lM9jV" id="4NGxdIp9$go" role="3lMnhl">
-      <property role="TrG5h" value="Test1" />
-      <property role="3lM9jS" value="100" />
-      <property role="3lM9jY" value="100" />
+    <node concept="3lM9jV" id="36Gvh80fDAH" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="0" />
+      <property role="3lM9jR" value="5" />
       <property role="3lM9jN" value="100" />
-      <property role="3lM9jR" value="100" />
-      <property role="3lM9jE" value="Auckland" />
+      <property role="3lM9jE" value="Unassigned" />
+      <property role="TrG5h" value="gridone" />
+      <ref role="3lM9jG" node="36Gvh80fg0t" resolve="testtrans" />
     </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
@@ -81,6 +70,19 @@
       <property role="TrG5h" value="asdf" />
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
+    </node>
+    <node concept="2s6h$e" id="36Gvh80fg0t" role="2s6h$R">
+      <property role="TrG5h" value="testtrans" />
+      <property role="2s6h$4" value="40" />
+      <property role="2s6h$S" value="20" />
+      <property role="2s6h$1" value="20" />
+      <property role="2s6h$3" value="20" />
+      <property role="2s6h$Z" value="10" />
+    </node>
+    <node concept="3VOWaR" id="36Gvh80fDAF" role="3VP2IV">
+      <property role="TrG5h" value="house " />
+      <property role="3VOWdS" value="20" />
+      <property role="3VOWdY" value="5" />
     </node>
   </node>
 </model>
