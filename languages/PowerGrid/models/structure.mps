@@ -102,6 +102,12 @@
       <property role="TrG5h" value="MaxProduction" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyj" id="4DN6WPtj6wQ" role="1TKVEi">
+      <property role="IQ2ns" value="5364662149975926838" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="asdf" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
+    </node>
   </node>
   <node concept="AxPO7" id="6Lad368Q94p">
     <property role="TrG5h" value="EnergyUnitEnum" />

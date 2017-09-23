@@ -21,6 +21,7 @@
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
+        <reference id="5364662149975926838" name="asdf" index="nfRfV" />
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
@@ -40,6 +41,11 @@
       <property role="3VOWdS" value="5" />
       <property role="3VOWdY" value="2" />
     </node>
+    <node concept="3VOWaR" id="4DN6WPtjoiP" role="1YJ2mg">
+      <property role="TrG5h" value="office" />
+      <property role="3VOWdS" value="20" />
+      <property role="3VOWdY" value="20" />
+    </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
       <property role="3yd3hR" value="20" />
@@ -55,10 +61,21 @@
       <property role="3yd3hR" value="40" />
       <property role="3yd64o" value="10" />
     </node>
+    <node concept="3yd64n" id="4DN6WPtjnO6" role="3yd3h7">
+      <property role="TrG5h" value="asasdf" />
+      <property role="3yd3hR" value="2" />
+      <property role="3yd64o" value="2" />
+      <ref role="nfRfV" node="7IoK3S59l$V" resolve="test" />
+    </node>
     <node concept="2s6h$e" id="7IoK3S59l$V" role="2s6h$R">
       <property role="TrG5h" value="test" />
       <property role="2s6h$4" value="20" />
       <property role="2s6h$S" value="10" />
+    </node>
+    <node concept="2s6h$e" id="4DN6WPtjoiT" role="2s6h$R">
+      <property role="TrG5h" value="optimus" />
+      <property role="2s6h$4" value="45" />
+      <property role="2s6h$S" value="56" />
     </node>
   </node>
 </model>
