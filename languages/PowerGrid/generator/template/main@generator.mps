@@ -162,6 +162,10 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
+      <concept id="779128492853369165" name="jetbrains.mps.lang.core.structure.SideTransformInfo" flags="ng" index="1KehLL">
+        <property id="779128492853934523" name="cellId" index="1K8rM7" />
+        <property id="779128492853699361" name="side" index="1Kfyot" />
+      </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="540871147943773365" name="jetbrains.mps.baseLanguage.collections.structure.SingleArgumentSequenceOperation" flags="nn" index="25WWJ4">
@@ -383,6 +387,10 @@
               <node concept="2Jqq0_" id="Kb51drnUKZ" role="2ShVmc">
                 <node concept="3uibUv" id="69N69d03P_g" role="HW$YZ">
                   <ref role="3uigEE" to="66tq:Kb51drnN1a" resolve="ElTransformer" />
+                  <node concept="1KehLL" id="73YrQo0c64R" role="lGtFl">
+                    <property role="1K8rM7" value="ReferencePresentation_91bvrs_a0a0" />
+                    <property role="1Kfyot" value="right" />
+                  </node>
                 </node>
               </node>
             </node>
