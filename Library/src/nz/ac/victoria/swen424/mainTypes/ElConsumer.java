@@ -1,4 +1,4 @@
-package nz.ac.victoria.swen424;
+package nz.ac.victoria.swen424.mainTypes;
 
 import java.awt.Image;
 
