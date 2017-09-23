@@ -2,7 +2,7 @@
 <model ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="-1" />
+    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
@@ -10,13 +10,26 @@
   <registry>
     <language id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid">
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
+        <property id="8568651731614887512" name="LeftNetLevel" index="2s6h$1" />
+        <property id="8568651731614887514" name="RightNetLevel" index="2s6h$3" />
         <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
-        <property id="8568651731614887521" name="efficiency" index="2s6h$S" />
+        <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
+        <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
+        <reference id="1407588569533323741" name="LeftConnection" index="2RpXI5" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
+        <child id="3886532124061166063" name="Consumers" index="N8dmf" />
+        <child id="5542951320088342670" name="Grids" index="3lMnhl" />
         <child id="2395210634691693350" name="Producers" index="3yd3h7" />
-        <child id="8906079635731965358" name="Consumers" index="1YJ2mg" />
+      </concept>
+      <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
+        <property id="5542951320088219697" name="sector" index="3lM9jE" />
+        <property id="5542951320088219688" name="efficiency" index="3lM9jN" />
+        <property id="5542951320088219692" name="voltage" index="3lM9jR" />
+        <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
+        <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
+        <reference id="5542951320088219703" name="ConnectedTransformer" index="3lM9jG" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
@@ -37,63 +50,37 @@
       </concept>
     </language>
   </registry>
-  <node concept="sJg17" id="24XvQ732$Xy">
+  <node concept="sJg17" id="3nJJ606O1DJ">
     <property role="TrG5h" value="test" />
-    <node concept="3VOWaR" id="7IoK3S59l$X" role="1YJ2mg">
-      <property role="TrG5h" value="house" />
-      <property role="3VOWdS" value="5" />
-      <property role="3VOWdY" value="2" />
-      <property role="OYydz" value="House" />
+    <node concept="3yd64n" id="3nJJ606O1DK" role="3yd3h7">
+      <property role="TrG5h" value="prod" />
+      <property role="3yd3hR" value="50" />
+      <property role="3yd64o" value="1" />
+      <ref role="nfRfV" node="3nJJ606O1DM" resolve="tran" />
     </node>
-    <node concept="3VOWaR" id="4DN6WPtjoiP" role="1YJ2mg">
-      <property role="TrG5h" value="office" />
+    <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="0" />
+      <property role="3lM9jR" value="10" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jE" value="Unassigned" />
+      <property role="TrG5h" value="grid" />
+      <ref role="3lM9jG" node="3nJJ606O1DM" resolve="tran" />
+    </node>
+    <node concept="2s6h$e" id="3nJJ606O1DM" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="3" />
+      <property role="2s6h$4" value="5" />
+      <property role="2s6h$S" value="100" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="tran" />
+      <ref role="2RpXI5" node="3nJJ606O1DL" resolve="grid" />
+    </node>
+    <node concept="3VOWaR" id="3nJJ606O1DN" role="N8dmf">
+      <property role="TrG5h" value="con" />
       <property role="3VOWdS" value="20" />
-      <property role="3VOWdY" value="20" />
-      <property role="OYydz" value="Office Building" />
-    </node>
-    <node concept="3VOWaR" id="3nJJ606NhL6" role="1YJ2mg">
-      <property role="TrG5h" value="anotherhouse" />
-      <property role="3VOWdS" value="6" />
       <property role="3VOWdY" value="1" />
       <property role="OYydz" value="House" />
-    </node>
-    <node concept="3VOWaR" id="3nJJ606Nziv" role="1YJ2mg">
-      <property role="TrG5h" value="factory" />
-      <property role="3VOWdS" value="1000" />
-      <property role="3VOWdY" value="700" />
-      <property role="OYydz" value="Factory" />
-    </node>
-    <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
-      <property role="TrG5h" value="Windmill 1" />
-      <property role="3yd3hR" value="20" />
-      <property role="3yd64o" value="10" />
-      <ref role="nfRfV" node="4DN6WPtjoiT" resolve="optimus" />
-    </node>
-    <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
-      <property role="3yd3hR" value="100" />
-      <property role="3yd64o" value="10" />
-      <property role="TrG5h" value="Test" />
-    </node>
-    <node concept="3yd64n" id="1frgxxItnxc" role="3yd3h7">
-      <property role="TrG5h" value="asdf" />
-      <property role="3yd3hR" value="40" />
-      <property role="3yd64o" value="10" />
-    </node>
-    <node concept="3yd64n" id="4DN6WPtjnO6" role="3yd3h7">
-      <property role="TrG5h" value="asasdf" />
-      <property role="3yd3hR" value="2" />
-      <property role="3yd64o" value="2" />
-      <ref role="nfRfV" node="7IoK3S59l$V" resolve="test" />
-    </node>
-    <node concept="2s6h$e" id="7IoK3S59l$V" role="2s6h$R">
-      <property role="TrG5h" value="test" />
-      <property role="2s6h$4" value="20" />
-      <property role="2s6h$S" value="10" />
-    </node>
-    <node concept="2s6h$e" id="4DN6WPtjoiT" role="2s6h$R">
-      <property role="TrG5h" value="optimus" />
-      <property role="2s6h$4" value="45" />
-      <property role="2s6h$S" value="56" />
     </node>
   </node>
 </model>
