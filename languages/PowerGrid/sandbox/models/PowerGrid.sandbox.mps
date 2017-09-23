@@ -29,6 +29,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1156235010670" name="alias" index="OYydz" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -40,16 +43,31 @@
       <property role="TrG5h" value="house" />
       <property role="3VOWdS" value="5" />
       <property role="3VOWdY" value="2" />
+      <property role="OYydz" value="House" />
     </node>
     <node concept="3VOWaR" id="4DN6WPtjoiP" role="1YJ2mg">
       <property role="TrG5h" value="office" />
       <property role="3VOWdS" value="20" />
       <property role="3VOWdY" value="20" />
+      <property role="OYydz" value="Office Building" />
+    </node>
+    <node concept="3VOWaR" id="3nJJ606NhL6" role="1YJ2mg">
+      <property role="TrG5h" value="anotherhouse" />
+      <property role="3VOWdS" value="6" />
+      <property role="3VOWdY" value="1" />
+      <property role="OYydz" value="House" />
+    </node>
+    <node concept="3VOWaR" id="3nJJ606Nziv" role="1YJ2mg">
+      <property role="TrG5h" value="factory" />
+      <property role="3VOWdS" value="1000" />
+      <property role="3VOWdY" value="700" />
+      <property role="OYydz" value="Factory" />
     </node>
     <node concept="3yd64n" id="6Lad368Qvwr" role="3yd3h7">
       <property role="TrG5h" value="Windmill 1" />
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="10" />
+      <ref role="nfRfV" node="4DN6WPtjoiT" resolve="optimus" />
     </node>
     <node concept="3yd64n" id="6Lad368UtBS" role="3yd3h7">
       <property role="3yd3hR" value="100" />
