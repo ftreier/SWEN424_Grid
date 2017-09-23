@@ -82,6 +82,13 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
     </node>
+    <node concept="1TJgyj" id="3nJJ606NQBJ" role="1TKVEi">
+      <property role="IQ2ns" value="3886532124061166063" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="Consumers" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="50o97QFMYra" resolve="Consumer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="24XvQ732hTQ">
     <property role="EcuMT" value="2395210634691681910" />
@@ -102,25 +109,11 @@
       <property role="TrG5h" value="MaxProduction" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-  </node>
-  <node concept="AxPO7" id="6Lad368Q94p">
-    <property role="TrG5h" value="EnergyUnitEnum" />
-    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
-    <node concept="M4N5e" id="6Lad368Q94r" role="M5hS2">
-      <property role="1uS6qv" value="1" />
-      <property role="1uS6qo" value="Wh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94q" role="M5hS2">
-      <property role="1uS6qv" value="2" />
-      <property role="1uS6qo" value="kWh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94w" role="M5hS2">
-      <property role="1uS6qo" value="MWh" />
-      <property role="1uS6qv" value="3" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
-      <property role="1uS6qo" value="GWh" />
-      <property role="1uS6qv" value="4" />
+    <node concept="1TJgyj" id="4DN6WPtj6wQ" role="1TKVEi">
+      <property role="IQ2ns" value="5364662149975926838" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="asdf" />
+      <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
     </node>
   </node>
   <node concept="1TIwiD" id="7rDXPBEWeTn">
@@ -168,6 +161,46 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="RightConnection" />
       <ref role="20lvS9" node="4NGxdIp910w" resolve="PowerGrid" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="50o97QFMYra">
+    <property role="EcuMT" value="5771403044647069386" />
+    <property role="TrG5h" value="Consumer" />
+    <property role="34LRSv" value="House, Factory, Office Building, Store" />
+    <property role="R4oN_" value="Consumes energy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="50o97QFMYrX" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="50o97QFMYs3" role="1TKVEl">
+      <property role="IQ2nx" value="5771403044647069443" />
+      <property role="TrG5h" value="MinConsumption" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="50o97QFMYs5" role="1TKVEl">
+      <property role="IQ2nx" value="5771403044647069445" />
+      <property role="TrG5h" value="MaxConsumption" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="6Lad368Q94p">
+    <property role="TrG5h" value="EnergyUnitEnum" />
+    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="M4N5e" id="6Lad368Q94r" role="M5hS2">
+      <property role="1uS6qv" value="1" />
+      <property role="1uS6qo" value="Wh" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94q" role="M5hS2">
+      <property role="1uS6qv" value="2" />
+      <property role="1uS6qo" value="kWh" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94w" role="M5hS2">
+      <property role="1uS6qo" value="MWh" />
+      <property role="1uS6qv" value="3" />
+    </node>
+    <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
+      <property role="1uS6qo" value="GWh" />
+      <property role="1uS6qv" value="4" />
     </node>
   </node>
   <node concept="1TIwiD" id="4NGxdIp910w">
