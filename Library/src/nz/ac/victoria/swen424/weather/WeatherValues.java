@@ -1,6 +1,7 @@
 package nz.ac.victoria.swen424.weather;
 
 import java.util.Map;
+import java.util.Random;
 import java.util.HashMap;
 import java.util.List;
 
@@ -11,6 +12,14 @@ public class WeatherValues
 	public WeatherValues(boolean random)
 	{
 		_weather = new HashMap<>();
+		if(random)
+		{
+			Random rand = new Random();
+			for(int i = 0; i < 50; i++)
+			{
+				AppendWeather(new Weather(WeatherEnum.valueOf(rand.nextInt(3)), WindSpeedEnum.valueOf(rand.nextInt(13))));
+			}
+		}
 	}
 	
 	public void AppendWeather(Weather w)
