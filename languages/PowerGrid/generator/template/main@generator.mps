@@ -165,10 +165,6 @@
       <concept id="1138676077309" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference" flags="nn" index="uoxfO">
         <reference id="1138676095763" name="enumMember" index="uo_Cq" />
       </concept>
-      <concept id="6973815483243445083" name="jetbrains.mps.lang.smodel.structure.EnumMemberValueRefExpression" flags="nn" index="3f7Wdw">
-        <reference id="6973815483243565416" name="member" index="3f7u_j" />
-        <reference id="6973815483243564601" name="enum" index="3f7vo2" />
-      </concept>
       <concept id="1146171026731" name="jetbrains.mps.lang.smodel.structure.Property_HasValue_Enum" flags="nn" index="3t7uKx">
         <child id="1146171026732" name="value" index="3t7uKA" />
       </concept>
@@ -189,13 +185,6 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -856,32 +845,6 @@
               </node>
             </node>
             <node concept="raruj" id="5zwZig_3ndm" role="lGtFl" />
-          </node>
-          <node concept="1X3_iC" id="5zwZig_3nk9" role="lGtFl">
-            <property role="3V$3am" value="statement" />
-            <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-            <node concept="3clFbF" id="5zwZig_0X$k" role="8Wnug">
-              <node concept="2OqwBi" id="5zwZig_0XEi" role="3clFbG">
-                <node concept="37vLTw" id="5zwZig_0X$i" role="2Oq$k0">
-                  <ref role="3cqZAo" node="5zwZig_0Xjz" resolve="wv" />
-                </node>
-                <node concept="liA8E" id="5zwZig_0XOU" role="2OqNvi">
-                  <ref role="37wK5l" to="ykoa:~WeatherValues.AppendWeather(nz.ac.victoria.swen424.weather.Weather):void" resolve="AppendWeather" />
-                  <node concept="2ShNRf" id="5zwZig_0XQ5" role="37wK5m">
-                    <node concept="1pGfFk" id="5zwZig_1rZx" role="2ShVmc">
-                      <ref role="37wK5l" to="ykoa:~Weather.&lt;init&gt;(nz.ac.victoria.swen424.weather.WeatherEnum)" resolve="Weather" />
-                      <node concept="3f7Wdw" id="5zwZig_1s0w" role="37wK5m">
-                        <ref role="3f7vo2" to="aw7t:6gi3O$9nB7P" resolve="WeatherTypeEnum" />
-                        <ref role="3f7u_j" to="aw7t:6gi3O$9nB7U" />
-                        <node concept="1sPUBX" id="5zwZig_1KNV" role="lGtFl">
-                          <ref role="v9R2y" node="5zwZig_1zDN" resolve="ReduceWeatherEnum" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
         </node>
       </node>

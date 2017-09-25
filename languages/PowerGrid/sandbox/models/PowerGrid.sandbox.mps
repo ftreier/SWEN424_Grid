@@ -36,10 +36,12 @@
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="asdf" index="nfRfV" />
-        <reference id="7210842759738047906" name="Wather" index="1Hs3bF" />
+        <reference id="7210842759738047906" name="Weather" index="1Hs3bF" />
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
         <property id="7210842759737799182" name="day" index="1Hj7P7" />
+        <property id="7210842759737799184" name="Type" index="1Hj7Pp" />
+        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
@@ -64,9 +66,11 @@
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="6gi3O$9oIOp" role="1Hjf0d">
         <property role="1Hj7P7" value="1" />
+        <property role="1Hj7Pp" value="3" />
       </node>
       <node concept="1Hj7UU" id="5zwZig_0qvb" role="1Hjf0d">
         <property role="1Hj7P7" value="2" />
+        <property role="1Hj7Pq" value="12" />
       </node>
     </node>
     <node concept="3yd64n" id="3nJJ606O1DK" role="3yd3h7">
