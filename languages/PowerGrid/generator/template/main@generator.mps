@@ -28,6 +28,10 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
+      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -40,6 +44,7 @@
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
@@ -116,7 +121,13 @@
         <child id="1167328349397" name="reductionMappingRule" index="3acgRq" />
         <child id="1167514678247" name="rootMappingRule" index="3lj3bC" />
       </concept>
+      <concept id="1177093525992" name="jetbrains.mps.lang.generator.structure.InlineTemplate_RuleConsequence" flags="lg" index="gft3U">
+        <child id="1177093586806" name="templateNode" index="gfFT$" />
+      </concept>
       <concept id="1168559333462" name="jetbrains.mps.lang.generator.structure.TemplateDeclarationReference" flags="ln" index="j$656" />
+      <concept id="1112730859144" name="jetbrains.mps.lang.generator.structure.TemplateSwitch" flags="ig" index="jVnub">
+        <child id="1167340453568" name="reductionMappingRule" index="3aUrZf" />
+      </concept>
       <concept id="1168619357332" name="jetbrains.mps.lang.generator.structure.RootTemplateAnnotation" flags="lg" index="n94m4">
         <reference id="1168619429071" name="applicableConcept" index="n9lRv" />
       </concept>
@@ -124,9 +135,11 @@
       <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
         <reference id="1722980698497626483" name="template" index="v9R2y" />
       </concept>
+      <concept id="1167168920554" name="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition" flags="in" index="30G5F_" />
       <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
+        <child id="1167169362365" name="conditionFunction" index="30HLyM" />
       </concept>
       <concept id="1092059087312" name="jetbrains.mps.lang.generator.structure.TemplateDeclaration" flags="ig" index="13MO4I">
         <reference id="1168285871518" name="applicableConcept" index="3gUMe" />
@@ -141,6 +154,7 @@
       <concept id="1167514355419" name="jetbrains.mps.lang.generator.structure.Root_MappingRule" flags="lg" index="3lhOvk">
         <reference id="1167514355421" name="template" index="3lhOvi" />
       </concept>
+      <concept id="982871510068000147" name="jetbrains.mps.lang.generator.structure.TemplateSwitchMacro" flags="lg" index="1sPUBX" />
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
       <concept id="1167951910403" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodesQuery" flags="in" index="3JmXsc" />
     </language>
@@ -148,6 +162,16 @@
       <concept id="937236280924494202" name="jetbrains.mps.baseLanguageInternal.structure.ExtractStaticInnerClassConcept" flags="ig" index="267m8k" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1138676077309" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference" flags="nn" index="uoxfO">
+        <reference id="1138676095763" name="enumMember" index="uo_Cq" />
+      </concept>
+      <concept id="6973815483243445083" name="jetbrains.mps.lang.smodel.structure.EnumMemberValueRefExpression" flags="nn" index="3f7Wdw">
+        <reference id="6973815483243565416" name="member" index="3f7u_j" />
+        <reference id="6973815483243564601" name="enum" index="3f7vo2" />
+      </concept>
+      <concept id="1146171026731" name="jetbrains.mps.lang.smodel.structure.Property_HasValue_Enum" flags="nn" index="3t7uKx">
+        <child id="1146171026732" name="value" index="3t7uKA" />
+      </concept>
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -165,6 +189,13 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -184,6 +215,12 @@
   </registry>
   <node concept="bUwia" id="2YPL$eqX1lq">
     <property role="TrG5h" value="main" />
+    <node concept="3aamgX" id="5zwZig_0Iwx" role="3acgRq">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="j$656" id="5zwZig_0IBo" role="1lVwrX">
+        <ref role="v9R2y" node="5zwZig_0IBk" resolve="reduce_Weather" />
+      </node>
+    </node>
     <node concept="3aamgX" id="6gi3O$9nYbh" role="3acgRq">
       <ref role="30HIoZ" to="aw7t:6gi3O$9nB7M" resolve="WeatherList" />
       <node concept="j$656" id="6gi3O$9nYbr" role="1lVwrX">
@@ -677,6 +714,262 @@
       <node concept="3Tm1VV" id="Kb51dro661" role="1B3o_S" />
     </node>
   </node>
+  <node concept="13MO4I" id="6gi3O$9nYbp">
+    <property role="TrG5h" value="reduce_WeatherList" />
+    <ref role="3gUMe" to="aw7t:6gi3O$9nB7M" resolve="WeatherList" />
+    <node concept="312cEu" id="6gi3O$9nYEn" role="13RCb5">
+      <property role="TrG5h" value="Foo" />
+      <node concept="3clFb_" id="6gi3O$9nZul" role="jymVt">
+        <property role="TrG5h" value="Bar" />
+        <node concept="3cqZAl" id="6gi3O$9nZun" role="3clF45" />
+        <node concept="3Tm1VV" id="6gi3O$9nZuo" role="1B3o_S" />
+        <node concept="3clFbS" id="6gi3O$9nZup" role="3clF47">
+          <node concept="3cpWs8" id="6gi3O$9nZvR" role="3cqZAp">
+            <node concept="3cpWsn" id="6gi3O$9nZvU" role="3cpWs9">
+              <property role="TrG5h" value="_weather" />
+              <node concept="_YKpA" id="6gi3O$9nZvP" role="1tU5fm">
+                <node concept="3uibUv" id="6gi3O$9o98B" role="_ZDj9">
+                  <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+                </node>
+              </node>
+              <node concept="2ShNRf" id="6gi3O$9o6sW" role="33vP2m">
+                <node concept="Tc6Ow" id="6gi3O$9o6sI" role="2ShVmc">
+                  <node concept="3uibUv" id="6gi3O$9o9rA" role="HW$YZ">
+                    <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs8" id="5zwZig_0VhT" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_0VhU" role="3cpWs9">
+              <property role="TrG5h" value="wv" />
+              <node concept="3uibUv" id="5zwZig_0VhV" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+              </node>
+              <node concept="2ShNRf" id="5zwZig_0Vr6" role="33vP2m">
+                <node concept="1pGfFk" id="5zwZig_0VAz" role="2ShVmc">
+                  <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
+                  <node concept="3clFbT" id="5zwZig_0VB5" role="37wK5m">
+                    <property role="3clFbU" value="false" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_0VBy" role="lGtFl" />
+          </node>
+          <node concept="3clFbF" id="5zwZig_0$Sp" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_0_os" role="3clFbG">
+              <node concept="10M0yZ" id="5zwZig_0_2n" role="2Oq$k0">
+                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+              </node>
+              <node concept="liA8E" id="5zwZig_0A3i" role="2OqNvi">
+                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+                <node concept="Xl_RD" id="5zwZig_0A47" role="37wK5m">
+                  <property role="Xl_RC" value="" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_0Abm" role="lGtFl" />
+            <node concept="2b32R4" id="5zwZig_0Abo" role="lGtFl">
+              <node concept="3JmXsc" id="5zwZig_0Abr" role="2P8S$">
+                <node concept="3clFbS" id="5zwZig_0Abs" role="2VODD2">
+                  <node concept="3clFbF" id="5zwZig_0Aby" role="3cqZAp">
+                    <node concept="2OqwBi" id="5zwZig_0Abt" role="3clFbG">
+                      <node concept="3Tsc0h" id="5zwZig_0Abw" role="2OqNvi">
+                        <ref role="3TtcxE" to="aw7t:6gi3O$9nJX4" resolve="Weather" />
+                      </node>
+                      <node concept="30H73N" id="5zwZig_0Abx" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="5zwZig_0Yee" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_0YY7" role="3clFbG">
+              <node concept="37vLTw" id="5zwZig_0Yec" role="2Oq$k0">
+                <ref role="3cqZAo" node="6gi3O$9nZvU" resolve="_weather" />
+              </node>
+              <node concept="TSZUe" id="5zwZig_101B" role="2OqNvi">
+                <node concept="37vLTw" id="5zwZig_1037" role="25WWJ7">
+                  <ref role="3cqZAo" node="5zwZig_0VhU" resolve="wv" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_10cU" role="lGtFl" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6gi3O$9nYEo" role="1B3o_S" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="5zwZig_0IBk">
+    <property role="TrG5h" value="reduce_Weather" />
+    <ref role="3gUMe" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+    <node concept="312cEu" id="5zwZig_0IBr" role="13RCb5">
+      <property role="TrG5h" value="Foo" />
+      <node concept="3clFb_" id="5zwZig_0IBP" role="jymVt">
+        <property role="TrG5h" value="Bar" />
+        <node concept="3cqZAl" id="5zwZig_0IBR" role="3clF45" />
+        <node concept="3Tm1VV" id="5zwZig_0IBS" role="1B3o_S" />
+        <node concept="3clFbS" id="5zwZig_0IBT" role="3clF47">
+          <node concept="3cpWs8" id="5zwZig_0Xjy" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_0Xjz" role="3cpWs9">
+              <property role="TrG5h" value="wv" />
+              <node concept="3uibUv" id="5zwZig_0Xj$" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+              </node>
+              <node concept="2ShNRf" id="5zwZig_0XkO" role="33vP2m">
+                <node concept="1pGfFk" id="5zwZig_0Xwh" role="2ShVmc">
+                  <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
+                  <node concept="3clFbT" id="5zwZig_0XwN" role="37wK5m">
+                    <property role="3clFbU" value="false" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="5zwZig_3mBf" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3mHV" role="3clFbG">
+              <node concept="37vLTw" id="5zwZig_3mBd" role="2Oq$k0">
+                <ref role="3cqZAo" node="5zwZig_0Xjz" resolve="wv" />
+              </node>
+              <node concept="liA8E" id="5zwZig_3mT3" role="2OqNvi">
+                <ref role="37wK5l" to="ykoa:~WeatherValues.AppendWeather(nz.ac.victoria.swen424.weather.Weather):void" resolve="AppendWeather" />
+                <node concept="2ShNRf" id="5zwZig_3mUJ" role="37wK5m">
+                  <node concept="1pGfFk" id="5zwZig_3n7F" role="2ShVmc">
+                    <ref role="37wK5l" to="ykoa:~Weather.&lt;init&gt;(java.lang.String)" resolve="Weather" />
+                    <node concept="10Nm6u" id="5zwZig_3n8$" role="37wK5m">
+                      <node concept="1sPUBX" id="5zwZig_3nfJ" role="lGtFl">
+                        <ref role="v9R2y" node="5zwZig_1zDN" resolve="ReduceWeatherEnum" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_3ndm" role="lGtFl" />
+          </node>
+          <node concept="1X3_iC" id="5zwZig_3nk9" role="lGtFl">
+            <property role="3V$3am" value="statement" />
+            <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+            <node concept="3clFbF" id="5zwZig_0X$k" role="8Wnug">
+              <node concept="2OqwBi" id="5zwZig_0XEi" role="3clFbG">
+                <node concept="37vLTw" id="5zwZig_0X$i" role="2Oq$k0">
+                  <ref role="3cqZAo" node="5zwZig_0Xjz" resolve="wv" />
+                </node>
+                <node concept="liA8E" id="5zwZig_0XOU" role="2OqNvi">
+                  <ref role="37wK5l" to="ykoa:~WeatherValues.AppendWeather(nz.ac.victoria.swen424.weather.Weather):void" resolve="AppendWeather" />
+                  <node concept="2ShNRf" id="5zwZig_0XQ5" role="37wK5m">
+                    <node concept="1pGfFk" id="5zwZig_1rZx" role="2ShVmc">
+                      <ref role="37wK5l" to="ykoa:~Weather.&lt;init&gt;(java.lang.String)" resolve="Weather" />
+                      <node concept="3f7Wdw" id="5zwZig_1s0w" role="37wK5m">
+                        <ref role="3f7vo2" to="aw7t:6gi3O$9nB7P" resolve="WeatherTypeEnum" />
+                        <ref role="3f7u_j" to="aw7t:6gi3O$9nB7U" />
+                        <node concept="1sPUBX" id="5zwZig_1KNV" role="lGtFl">
+                          <ref role="v9R2y" node="5zwZig_1zDN" resolve="ReduceWeatherEnum" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5zwZig_0IBs" role="1B3o_S" />
+    </node>
+  </node>
+  <node concept="jVnub" id="5zwZig_1zDN">
+    <property role="TrG5h" value="ReduceWeatherEnum" />
+    <node concept="3aamgX" id="5zwZig_1zE9" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="30G5F_" id="5zwZig_1zEw" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1zEx" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1zLG" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1_oE" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1$1y" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1zLF" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1$eW" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="test" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1_WE" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1_WG" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB7R" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="gft3U" id="5zwZig_1DN6" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1DN4" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.ClearSky" resolve="ClearSky" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_1DWu" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_1GXD" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1GXB" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.Overcast" resolve="Overcast" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_1Ek$" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1Ek_" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1ErK" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1G0h" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1EFA" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1ErJ" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1EYV" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="test" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1G$h" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1G$j" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB86" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_1H71" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_1JY$" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1K8J" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.Rain" resolve="Rain" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_1Hrd" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1Hre" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1Hyp" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1IS5" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1HI$" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1Hyo" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1HW6" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="test" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1Js5" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1Js7" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB7U" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
   <node concept="13MO4I" id="50o97QFNQSp">
     <property role="TrG5h" value="reduce_Consumer" />
     <ref role="3gUMe" to="aw7t:50o97QFMYra" resolve="Consumer" />
@@ -788,70 +1081,32 @@
       </node>
     </node>
   </node>
-  <node concept="13MO4I" id="6gi3O$9nYbp">
-    <property role="TrG5h" value="reduce_WeatherList" />
-    <ref role="3gUMe" to="aw7t:6gi3O$9nB7M" resolve="WeatherList" />
-    <node concept="312cEu" id="6gi3O$9nYEn" role="13RCb5">
+  <node concept="13MO4I" id="5zwZig_1Ef2">
+    <property role="TrG5h" value="Weather" />
+    <ref role="3gUMe" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+    <node concept="312cEu" id="5zwZig_1Ef8" role="13RCb5">
       <property role="TrG5h" value="Foo" />
-      <node concept="3clFb_" id="6gi3O$9nZul" role="jymVt">
+      <node concept="3clFb_" id="5zwZig_1EfE" role="jymVt">
         <property role="TrG5h" value="Bar" />
-        <node concept="3cqZAl" id="6gi3O$9nZun" role="3clF45" />
-        <node concept="3Tm1VV" id="6gi3O$9nZuo" role="1B3o_S" />
-        <node concept="3clFbS" id="6gi3O$9nZup" role="3clF47">
-          <node concept="3cpWs8" id="6gi3O$9nZvR" role="3cqZAp">
-            <node concept="3cpWsn" id="6gi3O$9nZvU" role="3cpWs9">
-              <property role="TrG5h" value="_weather" />
-              <node concept="_YKpA" id="6gi3O$9nZvP" role="1tU5fm">
-                <node concept="3uibUv" id="6gi3O$9o98B" role="_ZDj9">
-                  <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
-                </node>
+        <node concept="3cqZAl" id="5zwZig_1EfG" role="3clF45" />
+        <node concept="3Tm1VV" id="5zwZig_1EfH" role="1B3o_S" />
+        <node concept="3clFbS" id="5zwZig_1EfI" role="3clF47">
+          <node concept="3cpWs8" id="5zwZig_1EgP" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_1EgQ" role="3cpWs9">
+              <property role="TrG5h" value="w" />
+              <node concept="3uibUv" id="5zwZig_1EgR" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
               </node>
-              <node concept="2ShNRf" id="6gi3O$9o6sW" role="33vP2m">
-                <node concept="Tc6Ow" id="6gi3O$9o6sI" role="2ShVmc">
-                  <node concept="3uibUv" id="6gi3O$9o9rA" role="HW$YZ">
-                    <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
-                  </node>
-                </node>
+              <node concept="Rm8GO" id="5zwZig_1Ejx" role="33vP2m">
+                <ref role="Rm8GQ" to="ykoa:~WeatherEnum.Overcast" resolve="Overcast" />
+                <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+                <node concept="raruj" id="5zwZig_1Ek2" role="lGtFl" />
               </node>
             </node>
-          </node>
-          <node concept="3clFbF" id="6gi3O$9o2j8" role="3cqZAp">
-            <node concept="2OqwBi" id="6gi3O$9o2UM" role="3clFbG">
-              <node concept="37vLTw" id="6gi3O$9o2j6" role="2Oq$k0">
-                <ref role="3cqZAo" node="6gi3O$9nZvU" resolve="_weather" />
-              </node>
-              <node concept="TSZUe" id="6gi3O$9o3XP" role="2OqNvi">
-                <node concept="2ShNRf" id="6gi3O$9o3Zl" role="25WWJ7">
-                  <node concept="1pGfFk" id="6gi3O$9o6fv" role="2ShVmc">
-                    <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
-                    <node concept="3clFbT" id="6gi3O$9o6iT" role="37wK5m">
-                      <property role="3clFbU" value="false" />
-                      <node concept="17Uvod" id="6gi3O$9o6wh" role="lGtFl">
-                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123137/1068580123138" />
-                        <property role="2qtEX9" value="value" />
-                        <node concept="3zFVjK" id="6gi3O$9o6wk" role="3zH0cK">
-                          <node concept="3clFbS" id="6gi3O$9o6wl" role="2VODD2">
-                            <node concept="3clFbF" id="6gi3O$9o6wr" role="3cqZAp">
-                              <node concept="2OqwBi" id="6gi3O$9o6wm" role="3clFbG">
-                                <node concept="3TrcHB" id="6gi3O$9o6wp" role="2OqNvi">
-                                  <ref role="3TsBF5" to="aw7t:6gi3O$9nJX8" resolve="IsRandom" />
-                                </node>
-                                <node concept="30H73N" id="6gi3O$9o6wq" role="2Oq$k0" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="raruj" id="6gi3O$9o6oM" role="lGtFl" />
           </node>
         </node>
       </node>
-      <node concept="3Tm1VV" id="6gi3O$9nYEo" role="1B3o_S" />
+      <node concept="3Tm1VV" id="5zwZig_1Ef9" role="1B3o_S" />
     </node>
   </node>
 </model>

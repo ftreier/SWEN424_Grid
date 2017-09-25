@@ -6,6 +6,7 @@
   </languages>
   <imports>
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <import index="ykoa" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424.weather(ExternalCode/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -112,7 +113,7 @@
     <node concept="1TJgyj" id="6gi3O$9ozQy" role="1TKVEi">
       <property role="IQ2ns" value="7210842759738047906" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="Wather" />
+      <property role="20kJfa" value="Weather" />
       <ref role="20lvS9" node="6gi3O$9nB7M" resolve="WeatherList" />
     </node>
     <node concept="PrWs8" id="24XvQ732hTR" role="PzmwI">
@@ -248,7 +249,7 @@
     <node concept="1TJgyi" id="6gi3O$9nB8g" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799184" />
       <property role="TrG5h" value="test" />
-      <ref role="AX2Wp" node="6gi3O$9nB7P" resolve="WeatherEnum" />
+      <ref role="AX2Wp" node="6gi3O$9nB7P" resolve="WeatherTypeEnum" />
     </node>
     <node concept="1TJgyi" id="6gi3O$9nB8j" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799187" />
@@ -257,7 +258,7 @@
     </node>
   </node>
   <node concept="AxPO7" id="6gi3O$9nB7P">
-    <property role="TrG5h" value="WeatherEnum" />
+    <property role="TrG5h" value="WeatherTypeEnum" />
     <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
     <node concept="M4N5e" id="6gi3O$9nB7R" role="M5hS2">
       <property role="1uS6qo" value="Clear Sky" />
@@ -326,7 +327,7 @@
       <property role="1uS6qo" value="Storm" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOny" role="M5hS2">
-      <property role="1uS6qo" value="ViolentGtorm" />
+      <property role="1uS6qo" value="ViolentStorm" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOnJ" role="M5hS2">
       <property role="1uS6qo" value="HurricaneForce" />
