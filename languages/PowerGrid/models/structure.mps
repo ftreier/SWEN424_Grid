@@ -345,11 +345,6 @@
       <property role="TrG5h" value="MaxConsumption" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="59sIV4z61a0" role="1TKVEl">
-      <property role="IQ2nx" value="5934824778439856768" />
-      <property role="TrG5h" value="VoltageLevel" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="1TJgyj" id="59sIV4z5smM" role="1TKVEi">
       <property role="IQ2ns" value="5934824778439706034" />
       <property role="20lmBu" value="reference" />

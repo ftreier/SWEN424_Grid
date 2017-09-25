@@ -105,6 +105,12 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -332,6 +338,11 @@
       <node concept="3Tm1VV" id="4NGxdIp8v9P" role="1B3o_S" />
       <node concept="3cqZAl" id="4NGxdIp8v$9" role="3clF45" />
       <node concept="3clFbS" id="4NGxdIp8v9R" role="3clF47">
+        <node concept="3SKdUt" id="59sIV4z6POG" role="3cqZAp">
+          <node concept="3SKdUq" id="59sIV4z6POI" role="3SKWNk">
+            <property role="3SKdUp" value="Grids must be able to connect to at least one side of the transformer" />
+          </node>
+        </node>
         <node concept="3clFbJ" id="1e8K_y$V2Wz" role="3cqZAp">
           <node concept="22lmx$" id="59sIV4z5PaK" role="3clFbw">
             <node concept="3clFbC" id="59sIV4z5Rv5" role="3uHU7w">
@@ -609,6 +620,11 @@
       <node concept="3Tm1VV" id="59sIV4z4NXI" role="1B3o_S" />
       <node concept="3cqZAl" id="59sIV4z4O1d" role="3clF45" />
       <node concept="3clFbS" id="59sIV4z4NXK" role="3clF47">
+        <node concept="3SKdUt" id="59sIV4z6PhY" role="3cqZAp">
+          <node concept="3SKdUq" id="59sIV4z6Pi0" role="3SKWNk">
+            <property role="3SKdUp" value="Producers have a standard net level of 1" />
+          </node>
+        </node>
         <node concept="3clFbJ" id="59sIV4z4TfD" role="3cqZAp">
           <node concept="22lmx$" id="59sIV4z6eLD" role="3clFbw">
             <node concept="3clFbC" id="59sIV4z6haB" role="3uHU7w">
@@ -736,6 +752,11 @@
       <node concept="3Tm1VV" id="59sIV4z5tka" role="1B3o_S" />
       <node concept="3cqZAl" id="59sIV4z5tnm" role="3clF45" />
       <node concept="3clFbS" id="59sIV4z5tkc" role="3clF47">
+        <node concept="3SKdUt" id="59sIV4z6PbI" role="3cqZAp">
+          <node concept="3SKdUq" id="59sIV4z6PbK" role="3SKWNk">
+            <property role="3SKdUp" value="Consumers have a standard net level of 1" />
+          </node>
+        </node>
         <node concept="3clFbJ" id="59sIV4z5tt1" role="3cqZAp">
           <node concept="3clFbS" id="59sIV4z5tt3" role="3clFbx">
             <node concept="3clFbF" id="59sIV4z5vln" role="3cqZAp">
@@ -827,19 +848,6 @@
               <node concept="13iPFW" id="59sIV4z5qFW" role="2Oq$k0" />
               <node concept="3TrcHB" id="59sIV4z5rc8" role="2OqNvi">
                 <ref role="3TsBF5" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="59sIV4z61ry" role="3cqZAp">
-          <node concept="37vLTI" id="59sIV4z634f" role="3clFbG">
-            <node concept="3cmrfG" id="59sIV4z634x" role="37vLTx">
-              <property role="3cmrfH" value="1" />
-            </node>
-            <node concept="2OqwBi" id="59sIV4z61$d" role="37vLTJ">
-              <node concept="13iPFW" id="59sIV4z61rw" role="2Oq$k0" />
-              <node concept="3TrcHB" id="59sIV4z61Wu" role="2OqNvi">
-                <ref role="3TsBF5" to="aw7t:59sIV4z61a0" resolve="VoltageLevel" />
               </node>
             </node>
           </node>
