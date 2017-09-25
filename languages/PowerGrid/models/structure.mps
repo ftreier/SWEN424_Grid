@@ -248,7 +248,7 @@
     </node>
     <node concept="1TJgyi" id="6gi3O$9nB8g" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799184" />
-      <property role="TrG5h" value="test" />
+      <property role="TrG5h" value="Type" />
       <ref role="AX2Wp" node="6gi3O$9nB7P" resolve="WeatherTypeEnum" />
     </node>
     <node concept="1TJgyi" id="6gi3O$9nB8j" role="1TKVEl">

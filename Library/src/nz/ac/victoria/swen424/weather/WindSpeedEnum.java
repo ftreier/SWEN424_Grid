@@ -1,6 +1,6 @@
 package nz.ac.victoria.swen424.weather;
 
-public enum WindSpeed
+public enum WindSpeedEnum
 {
 	Flat,
 	LightAir,
