@@ -18,9 +18,10 @@ public ElConsumer(String name, int minConsumption, int maxConsumption){
 
 
 @Override
-public void getData() {
+public String getData() {
 	// TODO show the data related to the consumer
 	// _name, _minConsumption & _maxConsumption
+	return _name;
 }
 
 }

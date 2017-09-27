@@ -11,6 +11,7 @@ public interface IMainType {
 	/**
 	 * Should return the data stored within a singular object
 	 * eg A Transformer stores: _name, _maxcapacity, _efficiency 
+	 * @return 
 	 * */
-	public void getData();
+	public String getData();
 }

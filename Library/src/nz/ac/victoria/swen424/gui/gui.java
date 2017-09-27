@@ -6,8 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
@@ -21,7 +20,7 @@ public class gui extends JPanel {
    String[] stylenames = { "Plain", "Italic", "Bold", "Bold & Italic" };
    //Lists of objects to iterate over 
    ElConsumer c = new ElConsumer("test", 10, 20);
-   ArrayList <ElConsumer> _consumers = new ArrayList <ElConsumer>();
+   static ArrayList <ElConsumer> _consumers = new ArrayList <ElConsumer>();
    
    //Image files paths for each MainType
    private final String conImage = "/images/house.png";
@@ -32,16 +31,25 @@ public class gui extends JPanel {
    public void paint(Graphics g) {
       //stuff to paint a consumer on the pane
 	   BufferedImage img =null;
-	   try {
-		img = ImageIO.read(new File(getClass().getResource(conImage).toURI()));
-	} catch (IOException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	} catch (URISyntaxException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
-	}
-      g.drawImage(img, 0, 0, 50, 50, null);    
+	   int x=0; 
+	   int y=50;
+	   
+	   for (ElConsumer e : _consumers) {
+		   try {
+				img = ImageIO.read(new File(getClass().getResource(conImage).toURI()));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (URISyntaxException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			   //drawimage(img, x, y, width, height, null)
+		   	  x = x+100;
+		      g.drawImage(img, x, y, 50, 50, null); 
+		      g.drawString(e.getData(), x+5, y+60);
+	   }
+	   
    }
    public static void main(String[] args) {
       JFrame f = new JFrame();
@@ -53,5 +61,9 @@ public class gui extends JPanel {
       f.setContentPane(new gui());
       f.setSize(400,400);
       f.setVisible(true);
+      //test consumers
+      _consumers.add(new ElConsumer("test", 3, 5));
+      _consumers.add(new ElConsumer("two", 4, 9));
+      _consumers.add(new ElConsumer("anoth", 10, 20));
    }
 }
