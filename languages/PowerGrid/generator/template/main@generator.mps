@@ -2,8 +2,8 @@
 <model ref="r:c1ed82f3-bfb1-46e4-a5d4-5cd54c6af72a(main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="-1" />
-    <use id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal" version="-1" />
+    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <use id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal" version="0" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -28,6 +28,10 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
+      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -40,6 +44,7 @@
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
@@ -116,7 +121,13 @@
         <child id="1167328349397" name="reductionMappingRule" index="3acgRq" />
         <child id="1167514678247" name="rootMappingRule" index="3lj3bC" />
       </concept>
+      <concept id="1177093525992" name="jetbrains.mps.lang.generator.structure.InlineTemplate_RuleConsequence" flags="lg" index="gft3U">
+        <child id="1177093586806" name="templateNode" index="gfFT$" />
+      </concept>
       <concept id="1168559333462" name="jetbrains.mps.lang.generator.structure.TemplateDeclarationReference" flags="ln" index="j$656" />
+      <concept id="1112730859144" name="jetbrains.mps.lang.generator.structure.TemplateSwitch" flags="ig" index="jVnub">
+        <child id="1167340453568" name="reductionMappingRule" index="3aUrZf" />
+      </concept>
       <concept id="1168619357332" name="jetbrains.mps.lang.generator.structure.RootTemplateAnnotation" flags="lg" index="n94m4">
         <reference id="1168619429071" name="applicableConcept" index="n9lRv" />
       </concept>
@@ -124,9 +135,11 @@
       <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
         <reference id="1722980698497626483" name="template" index="v9R2y" />
       </concept>
+      <concept id="1167168920554" name="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition" flags="in" index="30G5F_" />
       <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
+        <child id="1167169362365" name="conditionFunction" index="30HLyM" />
       </concept>
       <concept id="1092059087312" name="jetbrains.mps.lang.generator.structure.TemplateDeclaration" flags="ig" index="13MO4I">
         <reference id="1168285871518" name="applicableConcept" index="3gUMe" />
@@ -141,6 +154,7 @@
       <concept id="1167514355419" name="jetbrains.mps.lang.generator.structure.Root_MappingRule" flags="lg" index="3lhOvk">
         <reference id="1167514355421" name="template" index="3lhOvi" />
       </concept>
+      <concept id="982871510068000147" name="jetbrains.mps.lang.generator.structure.TemplateSwitchMacro" flags="lg" index="1sPUBX" />
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
       <concept id="1167951910403" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodesQuery" flags="in" index="3JmXsc" />
     </language>
@@ -148,6 +162,12 @@
       <concept id="937236280924494202" name="jetbrains.mps.baseLanguageInternal.structure.ExtractStaticInnerClassConcept" flags="ig" index="267m8k" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1138676077309" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference" flags="nn" index="uoxfO">
+        <reference id="1138676095763" name="enumMember" index="uo_Cq" />
+      </concept>
+      <concept id="1146171026731" name="jetbrains.mps.lang.smodel.structure.Property_HasValue_Enum" flags="nn" index="3t7uKx">
+        <child id="1146171026732" name="value" index="3t7uKA" />
+      </concept>
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -184,6 +204,12 @@
   </registry>
   <node concept="bUwia" id="2YPL$eqX1lq">
     <property role="TrG5h" value="main" />
+    <node concept="3aamgX" id="5zwZig_0Iwx" role="3acgRq">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="j$656" id="5zwZig_0IBo" role="1lVwrX">
+        <ref role="v9R2y" node="5zwZig_0IBk" resolve="reduce_Weather" />
+      </node>
+    </node>
     <node concept="3aamgX" id="6gi3O$9nYbh" role="3acgRq">
       <ref role="30HIoZ" to="aw7t:6gi3O$9nB7M" resolve="WeatherList" />
       <node concept="j$656" id="6gi3O$9nYbr" role="1lVwrX">
@@ -354,8 +380,8 @@
       <property role="TrG5h" value="_transformers" />
       <property role="3TUv4t" value="false" />
       <node concept="_YKpA" id="Kb51drnMMv" role="1tU5fm">
-        <node concept="3uibUv" id="3nJJ606NLT7" role="_ZDj9">
-          <ref role="3uigEE" to="66tq:4NGxdIp94Q$" resolve="ElTransformer" />
+        <node concept="3uibUv" id="6zE2twpyzYn" role="_ZDj9">
+          <ref role="3uigEE" to="mgvq:~ElTransformer" resolve="ElTransformer" />
         </node>
       </node>
     </node>
@@ -465,8 +491,8 @@
           <node concept="37vLTI" id="Kb51drnUDW" role="3clFbG">
             <node concept="2ShNRf" id="Kb51drnULb" role="37vLTx">
               <node concept="2Jqq0_" id="Kb51drnUKZ" role="2ShVmc">
-                <node concept="3uibUv" id="3nJJ606NMck" role="HW$YZ">
-                  <ref role="3uigEE" to="66tq:4NGxdIp94Q$" resolve="ElTransformer" />
+                <node concept="3uibUv" id="6zE2twpy$Rl" role="HW$YZ">
+                  <ref role="3uigEE" to="mgvq:~ElTransformer" resolve="ElTransformer" />
                 </node>
               </node>
             </node>
@@ -587,14 +613,14 @@
             <node concept="3cpWsn" id="Kb51dro67I" role="3cpWs9">
               <property role="TrG5h" value="_transformers" />
               <node concept="_YKpA" id="Kb51dro67D" role="1tU5fm">
-                <node concept="3uibUv" id="4NGxdIp9buP" role="_ZDj9">
-                  <ref role="3uigEE" to="66tq:4NGxdIp94Q$" resolve="ElTransformer" />
+                <node concept="3uibUv" id="6zE2twpyGqF" role="_ZDj9">
+                  <ref role="3uigEE" to="mgvq:~ElTransformer" resolve="ElTransformer" />
                 </node>
               </node>
               <node concept="2ShNRf" id="Kb51dro6a_" role="33vP2m">
                 <node concept="2Jqq0_" id="Kb51dro6gA" role="2ShVmc">
-                  <node concept="3uibUv" id="4NGxdIp9c2e" role="HW$YZ">
-                    <ref role="3uigEE" to="66tq:4NGxdIp94Q$" resolve="ElTransformer" />
+                  <node concept="3uibUv" id="6zE2twpyDsE" role="HW$YZ">
+                    <ref role="3uigEE" to="mgvq:~ElTransformer" resolve="ElTransformer" />
                   </node>
                 </node>
               </node>
@@ -608,7 +634,26 @@
               <node concept="TSZUe" id="Kb51dro8aC" role="2OqNvi">
                 <node concept="2ShNRf" id="Kb51dro8c7" role="25WWJ7">
                   <node concept="1pGfFk" id="Kb51dro8o8" role="2ShVmc">
-                    <ref role="37wK5l" to="66tq:4NGxdIp959D" resolve="ElTransformer" />
+                    <ref role="37wK5l" to="mgvq:~ElTransformer.&lt;init&gt;(java.lang.String,int,int)" resolve="ElTransformer" />
+                    <node concept="Xl_RD" id="6zE2twpzmSn" role="37wK5m">
+                      <property role="Xl_RC" value="10" />
+                      <node concept="17Uvod" id="6zE2twpz_CI" role="lGtFl">
+                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                        <property role="2qtEX9" value="value" />
+                        <node concept="3zFVjK" id="6zE2twpz_CL" role="3zH0cK">
+                          <node concept="3clFbS" id="6zE2twpz_CM" role="2VODD2">
+                            <node concept="3clFbF" id="6zE2twpz_CS" role="3cqZAp">
+                              <node concept="2OqwBi" id="6zE2twpz_CN" role="3clFbG">
+                                <node concept="3TrcHB" id="6zE2twpz_CQ" role="2OqNvi">
+                                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                </node>
+                                <node concept="30H73N" id="6zE2twpz_CR" role="2Oq$k0" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                     <node concept="3cmrfG" id="Kb51dro8ry" role="37wK5m">
                       <property role="3cmrfH" value="10" />
                       <node concept="17Uvod" id="Kb51droaSx" role="lGtFl">
@@ -639,63 +684,6 @@
                               <node concept="2OqwBi" id="4NGxdIp9eJZ" role="3clFbG">
                                 <node concept="30H73N" id="4NGxdIp9eK0" role="2Oq$k0" />
                                 <node concept="3TrcHB" id="4NGxdIp9eK1" role="2OqNvi">
-                                  <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="3cmrfG" id="4NGxdIp9rrt" role="37wK5m">
-                      <property role="3cmrfH" value="10" />
-                      <node concept="17Uvod" id="4NGxdIp9rru" role="lGtFl">
-                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                        <property role="2qtEX9" value="value" />
-                        <node concept="3zFVjK" id="4NGxdIp9rrv" role="3zH0cK">
-                          <node concept="3clFbS" id="4NGxdIp9rrw" role="2VODD2">
-                            <node concept="3clFbF" id="4NGxdIp9rrx" role="3cqZAp">
-                              <node concept="2OqwBi" id="4NGxdIp9rry" role="3clFbG">
-                                <node concept="30H73N" id="4NGxdIp9rrz" role="2Oq$k0" />
-                                <node concept="3TrcHB" id="4NGxdIp9rr$" role="2OqNvi">
-                                  <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="3cmrfG" id="4NGxdIp9s8l" role="37wK5m">
-                      <property role="3cmrfH" value="10" />
-                      <node concept="17Uvod" id="4NGxdIp9s8m" role="lGtFl">
-                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                        <property role="2qtEX9" value="value" />
-                        <node concept="3zFVjK" id="4NGxdIp9s8n" role="3zH0cK">
-                          <node concept="3clFbS" id="4NGxdIp9s8o" role="2VODD2">
-                            <node concept="3clFbF" id="4NGxdIp9s8p" role="3cqZAp">
-                              <node concept="2OqwBi" id="4NGxdIp9s8q" role="3clFbG">
-                                <node concept="30H73N" id="4NGxdIp9s8r" role="2Oq$k0" />
-                                <node concept="3TrcHB" id="4NGxdIp9s8s" role="2OqNvi">
-                                  <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
-                                </node>
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="3cmrfG" id="4NGxdIp9sQH" role="37wK5m">
-                      <property role="3cmrfH" value="10" />
-                      <node concept="17Uvod" id="4NGxdIp9sQI" role="lGtFl">
-                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                        <property role="2qtEX9" value="value" />
-                        <node concept="3zFVjK" id="4NGxdIp9sQJ" role="3zH0cK">
-                          <node concept="3clFbS" id="4NGxdIp9sQK" role="2VODD2">
-                            <node concept="3clFbF" id="4NGxdIp9sQL" role="3cqZAp">
-                              <node concept="2OqwBi" id="4NGxdIp9sQM" role="3clFbG">
-                                <node concept="30H73N" id="4NGxdIp9sQN" role="2Oq$k0" />
-                                <node concept="3TrcHB" id="4NGxdIp9sQO" role="2OqNvi">
                                   <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
                                 </node>
                               </node>
@@ -744,43 +732,212 @@
               </node>
             </node>
           </node>
-          <node concept="3clFbF" id="6gi3O$9o2j8" role="3cqZAp">
-            <node concept="2OqwBi" id="6gi3O$9o2UM" role="3clFbG">
-              <node concept="37vLTw" id="6gi3O$9o2j6" role="2Oq$k0">
+          <node concept="3cpWs8" id="5zwZig_0VhT" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_0VhU" role="3cpWs9">
+              <property role="TrG5h" value="wv" />
+              <node concept="3uibUv" id="5zwZig_0VhV" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+              </node>
+              <node concept="2ShNRf" id="5zwZig_0Vr6" role="33vP2m">
+                <node concept="1pGfFk" id="5zwZig_0VAz" role="2ShVmc">
+                  <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
+                  <node concept="3clFbT" id="5zwZig_0VB5" role="37wK5m">
+                    <property role="3clFbU" value="false" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_0VBy" role="lGtFl" />
+          </node>
+          <node concept="3clFbF" id="5zwZig_0$Sp" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_0_os" role="3clFbG">
+              <node concept="10M0yZ" id="5zwZig_0_2n" role="2Oq$k0">
+                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+              </node>
+              <node concept="liA8E" id="5zwZig_0A3i" role="2OqNvi">
+                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+                <node concept="Xl_RD" id="5zwZig_0A47" role="37wK5m">
+                  <property role="Xl_RC" value="" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_0Abm" role="lGtFl" />
+            <node concept="2b32R4" id="5zwZig_0Abo" role="lGtFl">
+              <node concept="3JmXsc" id="5zwZig_0Abr" role="2P8S$">
+                <node concept="3clFbS" id="5zwZig_0Abs" role="2VODD2">
+                  <node concept="3clFbF" id="5zwZig_0Aby" role="3cqZAp">
+                    <node concept="2OqwBi" id="5zwZig_0Abt" role="3clFbG">
+                      <node concept="3Tsc0h" id="5zwZig_0Abw" role="2OqNvi">
+                        <ref role="3TtcxE" to="aw7t:6gi3O$9nJX4" resolve="Weather" />
+                      </node>
+                      <node concept="30H73N" id="5zwZig_0Abx" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="5zwZig_0Yee" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_0YY7" role="3clFbG">
+              <node concept="37vLTw" id="5zwZig_0Yec" role="2Oq$k0">
                 <ref role="3cqZAo" node="6gi3O$9nZvU" resolve="_weather" />
               </node>
-              <node concept="TSZUe" id="6gi3O$9o3XP" role="2OqNvi">
-                <node concept="2ShNRf" id="6gi3O$9o3Zl" role="25WWJ7">
-                  <node concept="1pGfFk" id="6gi3O$9o6fv" role="2ShVmc">
-                    <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
-                    <node concept="3clFbT" id="6gi3O$9o6iT" role="37wK5m">
-                      <property role="3clFbU" value="false" />
-                      <node concept="17Uvod" id="6gi3O$9o6wh" role="lGtFl">
-                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123137/1068580123138" />
-                        <property role="2qtEX9" value="value" />
-                        <node concept="3zFVjK" id="6gi3O$9o6wk" role="3zH0cK">
-                          <node concept="3clFbS" id="6gi3O$9o6wl" role="2VODD2">
-                            <node concept="3clFbF" id="6gi3O$9o6wr" role="3cqZAp">
-                              <node concept="2OqwBi" id="6gi3O$9o6wm" role="3clFbG">
-                                <node concept="3TrcHB" id="6gi3O$9o6wp" role="2OqNvi">
-                                  <ref role="3TsBF5" to="aw7t:6gi3O$9nJX8" resolve="IsRandom" />
-                                </node>
-                                <node concept="30H73N" id="6gi3O$9o6wq" role="2Oq$k0" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
+              <node concept="TSZUe" id="5zwZig_101B" role="2OqNvi">
+                <node concept="37vLTw" id="5zwZig_1037" role="25WWJ7">
+                  <ref role="3cqZAo" node="5zwZig_0VhU" resolve="wv" />
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="5zwZig_10cU" role="lGtFl" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6gi3O$9nYEo" role="1B3o_S" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="5zwZig_0IBk">
+    <property role="TrG5h" value="reduce_Weather" />
+    <ref role="3gUMe" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+    <node concept="312cEu" id="5zwZig_0IBr" role="13RCb5">
+      <property role="TrG5h" value="Foo" />
+      <node concept="3clFb_" id="5zwZig_0IBP" role="jymVt">
+        <property role="TrG5h" value="Bar" />
+        <node concept="3cqZAl" id="5zwZig_0IBR" role="3clF45" />
+        <node concept="3Tm1VV" id="5zwZig_0IBS" role="1B3o_S" />
+        <node concept="3clFbS" id="5zwZig_0IBT" role="3clF47">
+          <node concept="3cpWs8" id="5zwZig_0Xjy" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_0Xjz" role="3cpWs9">
+              <property role="TrG5h" value="wv" />
+              <node concept="3uibUv" id="5zwZig_0Xj$" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WeatherValues" resolve="WeatherValues" />
+              </node>
+              <node concept="2ShNRf" id="5zwZig_0XkO" role="33vP2m">
+                <node concept="1pGfFk" id="5zwZig_0Xwh" role="2ShVmc">
+                  <ref role="37wK5l" to="ykoa:~WeatherValues.&lt;init&gt;(boolean)" resolve="WeatherValues" />
+                  <node concept="3clFbT" id="5zwZig_0XwN" role="37wK5m">
+                    <property role="3clFbU" value="false" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="5zwZig_3mBf" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3mHV" role="3clFbG">
+              <node concept="37vLTw" id="5zwZig_3mBd" role="2Oq$k0">
+                <ref role="3cqZAo" node="5zwZig_0Xjz" resolve="wv" />
+              </node>
+              <node concept="liA8E" id="5zwZig_3mT3" role="2OqNvi">
+                <ref role="37wK5l" to="ykoa:~WeatherValues.AppendWeather(nz.ac.victoria.swen424.weather.Weather):void" resolve="AppendWeather" />
+                <node concept="2ShNRf" id="5zwZig_3mUJ" role="37wK5m">
+                  <node concept="1pGfFk" id="5zwZig_3n7F" role="2ShVmc">
+                    <ref role="37wK5l" to="ykoa:~Weather.&lt;init&gt;(nz.ac.victoria.swen424.weather.WeatherEnum,nz.ac.victoria.swen424.weather.WindSpeedEnum)" resolve="Weather" />
+                    <node concept="10Nm6u" id="5zwZig_3n8$" role="37wK5m">
+                      <node concept="1sPUBX" id="5zwZig_3nfJ" role="lGtFl">
+                        <ref role="v9R2y" node="5zwZig_1zDN" resolve="ReduceWeatherEnum" />
+                      </node>
+                    </node>
+                    <node concept="10Nm6u" id="5zwZig_4ESZ" role="37wK5m">
+                      <node concept="1sPUBX" id="5zwZig_4EX2" role="lGtFl">
+                        <ref role="v9R2y" node="5zwZig_3Ark" resolve="ReduceWindSpeedEnum" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="raruj" id="6gi3O$9o6oM" role="lGtFl" />
+            <node concept="raruj" id="5zwZig_3ndm" role="lGtFl" />
           </node>
         </node>
       </node>
-      <node concept="3Tm1VV" id="6gi3O$9nYEo" role="1B3o_S" />
+      <node concept="3Tm1VV" id="5zwZig_0IBs" role="1B3o_S" />
+    </node>
+  </node>
+  <node concept="jVnub" id="5zwZig_1zDN">
+    <property role="TrG5h" value="ReduceWeatherEnum" />
+    <node concept="3aamgX" id="5zwZig_1zE9" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="30G5F_" id="5zwZig_1zEw" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1zEx" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1zLG" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1_oE" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1$1y" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1zLF" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1$eW" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="Type" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1_WE" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1_WG" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB7R" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="gft3U" id="5zwZig_1DN6" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1DN4" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.ClearSky" resolve="ClearSky" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_1DWu" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_1GXD" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1GXB" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.Overcast" resolve="Overcast" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_1Ek$" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1Ek_" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1ErK" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1G0h" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1EFA" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1ErJ" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1EYV" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="Type" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1G$h" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1G$j" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB86" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_1H71" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_1JY$" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_1K8J" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WeatherEnum.Rain" resolve="Rain" />
+          <ref role="1Px2BO" to="ykoa:~WeatherEnum" resolve="WeatherEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_1Hrd" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_1Hre" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_1Hyp" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_1IS5" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_1HI$" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_1Hyo" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_1HW6" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8g" resolve="Type" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_1Js5" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_1Js7" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nB7U" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="13MO4I" id="50o97QFNQSp">
@@ -892,6 +1049,401 @@
       <node concept="3uibUv" id="50o97QFNT4e" role="1zkMxy">
         <ref role="3uigEE" to="wyt6:~Object" resolve="Object" />
       </node>
+    </node>
+  </node>
+  <node concept="jVnub" id="5zwZig_3Ark">
+    <property role="TrG5h" value="ReduceWindSpeedEnum" />
+    <node concept="3aamgX" id="5zwZig_3Art" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3AxY" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jsc" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.Flat" resolve="Flat" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3Ayj" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3Ayk" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3ADv" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3Ce0" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3ATl" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3ADu" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3BcE" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3CM0" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3CM2" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmm" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3Dbm" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3Hpp" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jth" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.LightAir" resolve="LightAir" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3DtU" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3DtV" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3D_6" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3F64" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3DLh" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3D_5" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3E4I" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3FE4" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3FE6" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmn" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3HzR" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3Kri" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4JtV" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.LightBreeze" resolve="LightBreeze" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3HRV" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3HRW" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3HZ7" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3JkN" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3Ibi" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3HZ6" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3IoO" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3JSN" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3JSP" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmq" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3K_K" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3NuF" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Ju_" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.GentleBreeze" resolve="GentleBreeze" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3KVk" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3KVl" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3L2w" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3Moc" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3LeF" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3L2v" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3Lsd" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3MWc" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3MWe" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmu" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3ND9" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3R2j" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jvf" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.ModerateBreeze" resolve="ModerateBreeze" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3O0d" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3O0e" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3O7p" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3PCn" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3Oj$" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3O7o" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3OB1" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3Qcn" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3Qcp" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmz" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3RcL" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3Uc7" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4JvT" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.FreshBreeze" resolve="FreshBreeze" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3R_l" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3R_m" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3RGx" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3T2d" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3RSG" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3RGw" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3S6e" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3TAd" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3TAf" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmD" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3Um_" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_3Xt7" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jwz" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.StrongBreeze" resolve="StrongBreeze" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3UKD" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3UKE" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3URP" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3Wdx" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3V40" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3URO" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3Vhy" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_3WLx" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_3WLz" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmK" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_40wM" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="30G5F_" id="5zwZig_40XO" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_40XP" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_4150" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_42w3" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_41hb" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_414Z" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_41uH" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_4343" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_4345" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOmS" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="gft3U" id="5zwZig_44rf" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jxd" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.ModerateGale" resolve="ModerateGale" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_3XB_" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_44IQ" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4JxR" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.FrshGale" resolve="FrshGale" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_3Y39" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_3Y3a" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_3Yal" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_3Zw1" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_3Ymw" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_3Yak" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_3Y$2" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_4041" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_4043" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOn1" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_44Tk" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_47Xb" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jyx" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.StrongGale" resolve="StrongGale" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_45nS" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_45nT" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_45v4" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_46U7" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_45Ff" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_45v3" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_45SL" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_47u7" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_47u9" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOnb" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_48$w" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_4bO8" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4Jzb" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.Storm" resolve="Storm" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_494$" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_494_" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_49bK" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_4aAN" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_49nV" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_49bJ" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_49_t" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_4baN" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_4baP" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOnm" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_4bYA" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_4ffT" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4JzP" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.ViolentStorm" resolve="ViolentStorm" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_4cwa" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_4cwb" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_4cBm" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_4e8k" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_4cNx" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_4cBl" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_4d6Y" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_4eGk" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_4eGm" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOny" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="5zwZig_4fqn" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+      <node concept="gft3U" id="5zwZig_4jfx" role="1lVwrX">
+        <node concept="Rm8GO" id="5zwZig_4J$v" role="gfFT$">
+          <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.HurricaneForce" resolve="HurricaneForce" />
+          <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="5zwZig_4fXr" role="30HLyM">
+        <node concept="3clFbS" id="5zwZig_4fXs" role="2VODD2">
+          <node concept="3clFbF" id="5zwZig_4g4B" role="3cqZAp">
+            <node concept="2OqwBi" id="5zwZig_4hvE" role="3clFbG">
+              <node concept="2OqwBi" id="5zwZig_4ggM" role="2Oq$k0">
+                <node concept="30H73N" id="5zwZig_4g4A" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5zwZig_4guk" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:6gi3O$9nB8j" resolve="Wind" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="5zwZig_4i3E" role="2OqNvi">
+                <node concept="uoxfO" id="5zwZig_4i3G" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:6gi3O$9nOnJ" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="5zwZig_4435">
+    <property role="TrG5h" value="case_Weather" />
+    <ref role="3gUMe" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
+    <node concept="312cEu" id="5zwZig_44ce" role="13RCb5">
+      <property role="TrG5h" value="Foo" />
+      <node concept="3clFb_" id="5zwZig_44cA" role="jymVt">
+        <property role="TrG5h" value="Bar" />
+        <node concept="3cqZAl" id="5zwZig_44cC" role="3clF45" />
+        <node concept="3Tm1VV" id="5zwZig_44cD" role="1B3o_S" />
+        <node concept="3clFbS" id="5zwZig_44cE" role="3clF47">
+          <node concept="3cpWs8" id="5zwZig_44ej" role="3cqZAp">
+            <node concept="3cpWsn" id="5zwZig_44ek" role="3cpWs9">
+              <property role="TrG5h" value="ws" />
+              <node concept="3uibUv" id="5zwZig_4NMi" role="1tU5fm">
+                <ref role="3uigEE" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+              </node>
+              <node concept="Rm8GO" id="5zwZig_4NOI" role="33vP2m">
+                <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.Flat" resolve="Flat" />
+                <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
+                <node concept="raruj" id="5zwZig_4NPf" role="lGtFl" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5zwZig_44cf" role="1B3o_S" />
     </node>
   </node>
 </model>

@@ -6,6 +6,7 @@
   </languages>
   <imports>
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <import index="ykoa" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424.weather(ExternalCode/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -112,7 +113,7 @@
     <node concept="1TJgyj" id="6gi3O$9ozQy" role="1TKVEi">
       <property role="IQ2ns" value="7210842759738047906" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="Wather" />
+      <property role="20kJfa" value="Weather" />
       <ref role="20lvS9" node="6gi3O$9nB7M" resolve="WeatherList" />
     </node>
     <node concept="PrWs8" id="24XvQ732hTR" role="PzmwI">
@@ -247,8 +248,8 @@
     </node>
     <node concept="1TJgyi" id="6gi3O$9nB8g" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799184" />
-      <property role="TrG5h" value="test" />
-      <ref role="AX2Wp" node="6gi3O$9nB7P" resolve="WeatherEnum" />
+      <property role="TrG5h" value="Type" />
+      <ref role="AX2Wp" node="6gi3O$9nB7P" resolve="WeatherTypeEnum" />
     </node>
     <node concept="1TJgyi" id="6gi3O$9nB8j" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799187" />
@@ -257,16 +258,19 @@
     </node>
   </node>
   <node concept="AxPO7" id="6gi3O$9nB7P">
-    <property role="TrG5h" value="WeatherEnum" />
+    <property role="TrG5h" value="WeatherTypeEnum" />
     <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
     <node concept="M4N5e" id="6gi3O$9nB7R" role="M5hS2">
       <property role="1uS6qo" value="Clear Sky" />
+      <property role="1uS6qv" value="1" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nB86" role="M5hS2">
       <property role="1uS6qo" value="Overcast" />
+      <property role="1uS6qv" value="2" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nB7U" role="M5hS2">
       <property role="1uS6qo" value="Rain" />
+      <property role="1uS6qv" value="3" />
     </node>
   </node>
   <node concept="1TIwiD" id="6gi3O$9nB7M">
@@ -294,42 +298,55 @@
     <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
     <node concept="M4N5e" id="6gi3O$9nOmm" role="M5hS2">
       <property role="1uS6qo" value="Flat" />
+      <property role="1uS6qv" value="0" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmn" role="M5hS2">
       <property role="1uS6qo" value="LightAir" />
+      <property role="1uS6qv" value="1" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmq" role="M5hS2">
       <property role="1uS6qo" value="LightBreeze" />
+      <property role="1uS6qv" value="2" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmu" role="M5hS2">
       <property role="1uS6qo" value="GentleBreeze" />
+      <property role="1uS6qv" value="3" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmz" role="M5hS2">
       <property role="1uS6qo" value="ModerateBreeze" />
+      <property role="1uS6qv" value="4" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmD" role="M5hS2">
       <property role="1uS6qo" value="FreshBreeze" />
+      <property role="1uS6qv" value="5" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmK" role="M5hS2">
       <property role="1uS6qo" value="StrongBreeze" />
+      <property role="1uS6qv" value="6" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOmS" role="M5hS2">
       <property role="1uS6qo" value="ModerateGale" />
+      <property role="1uS6qv" value="7" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOn1" role="M5hS2">
       <property role="1uS6qo" value="FrshGale" />
+      <property role="1uS6qv" value="8" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOnb" role="M5hS2">
       <property role="1uS6qo" value="StrongGale" />
+      <property role="1uS6qv" value="9" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOnm" role="M5hS2">
       <property role="1uS6qo" value="Storm" />
+      <property role="1uS6qv" value="10" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOny" role="M5hS2">
-      <property role="1uS6qo" value="ViolentGtorm" />
+      <property role="1uS6qo" value="ViolentStorm" />
+      <property role="1uS6qv" value="11" />
     </node>
     <node concept="M4N5e" id="6gi3O$9nOnJ" role="M5hS2">
       <property role="1uS6qo" value="HurricaneForce" />
+      <property role="1uS6qv" value="12" />
     </node>
   </node>
   <node concept="1TIwiD" id="50o97QFMYra">
