@@ -572,8 +572,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="5n4GHB4fSbv" role="3cqZAp" />
-        <node concept="3clFbH" id="5n4GHB4fSKB" role="3cqZAp" />
       </node>
       <node concept="3Tm1VV" id="6Lad368Qz4n" role="1B3o_S" />
     </node>
