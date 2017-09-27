@@ -2,6 +2,8 @@ package nz.ac.victoria.swen424.mainTypes;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 
 public class ElConsumer implements IMainType{
 	private String _name;
@@ -22,5 +24,4 @@ public String getData() {
 	// _name, _minConsumption & _maxConsumption
 	return _name;
 }
-
 }

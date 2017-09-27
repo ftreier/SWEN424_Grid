@@ -44,6 +44,7 @@
         <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
+        <property id="7210842759737835336" name="IsRandom" index="1Hjf01" />
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
@@ -71,6 +72,13 @@
       <node concept="1Hj7UU" id="5zwZig_0qvb" role="1Hjf0d">
         <property role="1Hj7P7" value="2" />
         <property role="1Hj7Pq" value="12" />
+      </node>
+    </node>
+    <node concept="1Hj7UV" id="4qE1Afm8XZD" role="1Hj7Pu">
+      <property role="TrG5h" value="Auckland" />
+      <property role="1Hjf01" value="true" />
+      <node concept="1Hj7UU" id="4qE1Afm8XZE" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
       </node>
     </node>
     <node concept="3yd64n" id="3nJJ606O1DK" role="3yd3h7">

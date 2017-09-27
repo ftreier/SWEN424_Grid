@@ -1,6 +1,5 @@
 package nz.ac.victoria.swen424.mainTypes;
 
-import java.awt.Image;
 /**
  * Interface for all MainTypes to extend, helps with display  
  * for graphical representation of the simulations
