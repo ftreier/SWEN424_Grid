@@ -6,7 +6,6 @@ import java.awt.Image;
  * for graphical representation of the simulations
  * */
 public interface IMainType {
-	static final String image="";
 
 	/**
 	 * Should return the data stored within a singular object
