@@ -51,6 +51,7 @@ public class gui extends JPanel {
 	   }
 	   
    }
+   
    public static void main(String[] args) {
       JFrame f = new JFrame();
       f.addWindowListener(new WindowAdapter() {

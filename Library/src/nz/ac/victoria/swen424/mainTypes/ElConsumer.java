@@ -8,7 +8,6 @@ public class ElConsumer implements IMainType{
 	private int _minConsumption;
 	private int _maxConsumption;
 	
-	/**image to be displayed in the editor*/
 	
 public ElConsumer(String name, int minConsumption, int maxConsumption){
 	_name = name;
