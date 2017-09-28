@@ -50,6 +50,7 @@
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
         <property id="5771403044647069443" name="MinConsumption" index="3VOWdY" />
+        <reference id="1948092678614246120" name="ConnectedTransformer" index="1pnA4g" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -68,12 +69,14 @@
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="house" />
       <property role="OYydz" value="house" />
+      <ref role="1pnA4g" node="59sIV4z6KxL" resolve="tran" />
     </node>
     <node concept="3VOWaR" id="1G90Zx2lXxp" role="N8dmf">
       <property role="3VOWdY" value="0" />
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="school" />
       <property role="OYydz" value="school" />
+      <ref role="1pnA4g" node="59sIV4z6MxZ" resolve="tran2" />
     </node>
     <node concept="2s6h$e" id="59sIV4z6KxL" role="2s6h$R">
       <property role="2s6h$1" value="4" />
@@ -119,7 +122,7 @@
     <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
       <property role="3lM9jS" value="200" />
       <property role="3lM9jY" value="0" />
-      <property role="3lM9jR" value="10" />
+      <property role="3lM9jR" value="4" />
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Unassigned" />
       <property role="TrG5h" value="grid" />
