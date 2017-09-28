@@ -52,7 +52,7 @@ public class Test
 		_producers.add(new ElProducer("prod", 1, 50));
 		
 		_transformers = new LinkedList<ElTransformer>();
-		_transformers.add(new ElTransformer("tran", 4, 4));
+		_transformers.add(new ElTransformer("tran", 4, 4, 1, 1));
 		
 		_consumers = new LinkedList<ElConsumer>();
 		_consumers.add(new ElConsumer("con", 1, 20));
