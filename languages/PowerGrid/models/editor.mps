@@ -109,6 +109,30 @@
       <node concept="3F0A7n" id="2K_vMQvWbJw" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
       </node>
+      <node concept="3F0ifn" id="1G90Zx2n_zr" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n__m" role="3EZMnx">
+        <property role="3F0ifm" value="Left Net Level" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_BS" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2n_$$" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_Aa" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_B0" role="3EZMnx">
+        <property role="3F0ifm" value="Right Net Level" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_CM" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2n_Ed" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTq" resolve="RightNetLevel" />
+      </node>
       <node concept="3F0ifn" id="2K_vMQvWbJx" role="3EZMnx">
         <property role="3F0ifm" value=")" />
         <node concept="11L4FC" id="2K_vMQvWbJy" role="3F10Kt">
