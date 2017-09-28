@@ -3,10 +3,12 @@
   <models>
     <modelRoot contentPath="${project_home}/Library" type="java_classes">
       <sourceRoot location="bin" />
+      <sourceRoot location="lib/stax-utils-20070216.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="${project_home}/Library/bin" />
+    <stubModelEntry path="${project_home}/Library/lib/stax-utils-20070216.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

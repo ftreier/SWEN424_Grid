@@ -23,7 +23,6 @@
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
-      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -158,21 +157,6 @@
                 <property role="3cmrfH" value="0" />
               </node>
               <node concept="1Wqviy" id="50o97QFNsh7" role="3uHU7B" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="EnEH3" id="59sIV4z63fv" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:59sIV4z61a0" resolve="VoltageLevel" />
-      <node concept="QB0g5" id="59sIV4z63K_" role="QCWH9">
-        <node concept="3clFbS" id="59sIV4z63KA" role="2VODD2">
-          <node concept="3clFbF" id="59sIV4z63RJ" role="3cqZAp">
-            <node concept="3clFbC" id="59sIV4z64TI" role="3clFbG">
-              <node concept="3cmrfG" id="59sIV4z64TS" role="3uHU7w">
-                <property role="3cmrfH" value="1" />
-              </node>
-              <node concept="1Wqviy" id="59sIV4z63RI" role="3uHU7B" />
             </node>
           </node>
         </node>

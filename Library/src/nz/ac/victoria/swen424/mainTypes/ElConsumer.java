@@ -1,18 +1,27 @@
 package nz.ac.victoria.swen424.mainTypes;
 
-import java.awt.Image;
+import java.awt.*;
+import javax.swing.*;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 
-public class ElConsumer {
+public class ElConsumer implements IMainType{
 	private String _name;
-	private int _minProduction;
-	private int _maxProduction;
+	private int _minConsumption;
+	private int _maxConsumption;
 	
-	/**image to be displayed in the editor*/
-	private Image image;
 	
-public ElConsumer(String name, int minProduction, int maxProduction){
+public ElConsumer(String name, int minConsumption, int maxConsumption){
 	_name = name;
-	_minProduction = minProduction;
-	_maxProduction = maxProduction;
+	_minConsumption = minConsumption;
+	_maxConsumption = maxConsumption;
 	}
+
+
+@Override
+public String getData() {
+	// TODO show the data related to the consumer
+	// _name, _minConsumption & _maxConsumption
+	return _name;
+}
 }

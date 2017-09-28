@@ -107,7 +107,7 @@
         </node>
       </node>
       <node concept="3F0A7n" id="2K_vMQvWbJw" role="3EZMnx">
-        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
       </node>
       <node concept="3F0ifn" id="2K_vMQvWbJx" role="3EZMnx">
         <property role="3F0ifm" value=")" />
