@@ -2,9 +2,9 @@
 <model ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="0" />
-    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
+    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="-1" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="-1" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
   </languages>
   <imports />
   <registry>
@@ -36,16 +36,18 @@
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="ConnectedTransformer" index="nfRfV" />
-        <reference id="7210842759738047906" name="Wather" index="1Hs3bF" />
+        <reference id="7210842759738047906" name="Weather" index="1Hs3bF" />
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
         <property id="7210842759737799182" name="day" index="1Hj7P7" />
+        <property id="7210842759737799184" name="Type" index="1Hj7Pp" />
+        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
+        <property id="7210842759737835336" name="IsRandom" index="1Hjf01" />
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
-        <property id="5934824778439856768" name="VoltageLevel" index="1Lha$L" />
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
         <property id="5771403044647069443" name="MinConsumption" index="3VOWdY" />
       </concept>
@@ -61,6 +63,18 @@
   </registry>
   <node concept="sJg17" id="3nJJ606O1DJ">
     <property role="TrG5h" value="test" />
+    <node concept="3VOWaR" id="1G90Zx2lXxl" role="N8dmf">
+      <property role="3VOWdY" value="0" />
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="house" />
+      <property role="OYydz" value="house" />
+    </node>
+    <node concept="3VOWaR" id="1G90Zx2lXxp" role="N8dmf">
+      <property role="3VOWdY" value="0" />
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="school" />
+      <property role="OYydz" value="school" />
+    </node>
     <node concept="2s6h$e" id="59sIV4z6KxL" role="2s6h$R">
       <property role="2s6h$1" value="4" />
       <property role="2s6h$3" value="1" />
@@ -77,23 +91,21 @@
       <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="tran2" />
     </node>
-    <node concept="3VOWaR" id="59sIV4z6Kbj" role="N8dmf">
-      <property role="3VOWdY" value="0" />
-      <property role="3VOWdS" value="1000" />
-      <property role="1Lha$L" value="1" />
-      <property role="TrG5h" value="house" />
-      <property role="OYydz" value="house" />
-    </node>
-    <node concept="3VOWaR" id="59sIV4z6MEv" role="N8dmf">
-      <property role="3VOWdY" value="0" />
-      <property role="3VOWdS" value="1000" />
-      <property role="1Lha$L" value="1" />
-      <property role="TrG5h" value="school" />
-      <property role="OYydz" value="school" />
-    </node>
     <node concept="1Hj7UV" id="6gi3O$9oIOo" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="6gi3O$9oIOp" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
+        <property role="1Hj7Pp" value="3" />
+      </node>
+      <node concept="1Hj7UU" id="5zwZig_0qvb" role="1Hjf0d">
+        <property role="1Hj7P7" value="2" />
+        <property role="1Hj7Pq" value="12" />
+      </node>
+    </node>
+    <node concept="1Hj7UV" id="4qE1Afm8XZD" role="1Hj7Pu">
+      <property role="TrG5h" value="Auckland" />
+      <property role="1Hjf01" value="true" />
+      <node concept="1Hj7UU" id="4qE1Afm8XZE" role="1Hjf0d">
         <property role="1Hj7P7" value="1" />
       </node>
     </node>
