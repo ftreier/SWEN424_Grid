@@ -1,31 +1,25 @@
 package nz.ac.victoria.swen424.weather;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.UUID;
 
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-import nz.ac.victoria.swen424.IXmlWriteLayoutData;
+import nz.ac.victoria.swen424.XmlLayoutNode;
 
-import java.util.HashMap;
-import java.util.List;
-
-public class WeatherValues implements IXmlWriteLayoutData
+public class WeatherValues extends XmlLayoutNode
 {
 	private Map<Integer, Weather> _weather;
-	private String _name;
 	private boolean _isRandom;
-	private UUID _guid;
 	
 	public WeatherValues(String name, boolean random)
 	{
-		_name = name;
+		super(name);
 		_weather = new HashMap<>();
 		_isRandom = random;
-		_guid = UUID.randomUUID();
 		if(random)
 		{
 			Random rand = new Random();
@@ -68,6 +62,7 @@ public class WeatherValues implements IXmlWriteLayoutData
 		xmlWriter.add(eventFactory.createStartElement("", "", "weather"));
 		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
+		xmlWriter.add(eventFactory.createAttribute("isRandom", Boolean.toString(_isRandom)));
 
 		for (int i = 0; i < _weather.size(); i++)
 		{
