@@ -41,11 +41,14 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
-      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
+        <child id="1070534760952" name="componentType" index="10Q1$1" />
+      </concept>
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
@@ -577,19 +580,37 @@
       </node>
       <node concept="3Tm1VV" id="6Lad368Qz4n" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="6Lad368RSEr" role="jymVt" />
-    <node concept="3clFb_" id="6Lad368RTxH" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="Test" />
+    <node concept="2tJIrI" id="4HjWx5jLnYr" role="jymVt" />
+    <node concept="2YIFZL" id="4HjWx5jLru4" role="jymVt">
+      <property role="TrG5h" value="main" />
       <property role="od$2w" value="false" />
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
-      <node concept="3clFbS" id="6Lad368RTxK" role="3clF47" />
-      <node concept="3Tm1VV" id="6Lad368RTfK" role="1B3o_S" />
-      <node concept="3cqZAl" id="6Lad368RTxB" role="3clF45" />
-      <node concept="37vLTG" id="6Lad368RTPA" role="3clF46">
-        <property role="TrG5h" value="i" />
-        <node concept="10Oyi0" id="6Lad368RTP_" role="1tU5fm" />
+      <node concept="3clFbS" id="4HjWx5jLru7" role="3clF47">
+        <node concept="3clFbF" id="4HjWx5jLtyG" role="3cqZAp">
+          <node concept="2OqwBi" id="4HjWx5jLtSU" role="3clFbG">
+            <node concept="10M0yZ" id="4HjWx5jLtz3" role="2Oq$k0">
+              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+            </node>
+            <node concept="liA8E" id="4HjWx5jLuzQ" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <node concept="Xl_RD" id="4HjWx5jLu_c" role="37wK5m">
+                <property role="Xl_RC" value="hello" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="4HjWx5jLqSD" role="1B3o_S" />
+      <node concept="3cqZAl" id="4HjWx5jLrtZ" role="3clF45" />
+      <node concept="37vLTG" id="4HjWx5jLs3I" role="3clF46">
+        <property role="TrG5h" value="args" />
+        <node concept="10Q1$e" id="4HjWx5jLs4B" role="1tU5fm">
+          <node concept="3uibUv" id="4HjWx5jLs3H" role="10Q1$1">
+            <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="3Tm1VV" id="6Lad368Qz3R" role="1B3o_S" />
