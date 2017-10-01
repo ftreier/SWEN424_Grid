@@ -100,18 +100,15 @@
             <node concept="1Wc70l" id="6qPpZy2t5$c" role="3clFbG">
               <node concept="2d3UOw" id="6qPpZy2ttBG" role="3uHU7w">
                 <node concept="1Wqviy" id="6qPpZy2t5NS" role="3uHU7B" />
-                <node concept="2OqwBi" id="6qPpZy2ts$N" role="3uHU7w">
-                  <node concept="EsrRn" id="6qPpZy2ts8Y" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="6qPpZy2tsZm" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
-                  </node>
+                <node concept="3cmrfG" id="4qR36Xfvzsa" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
                 </node>
               </node>
-              <node concept="3eOVzh" id="6qPpZy2t1KT" role="3uHU7B">
-                <node concept="1Wqviy" id="6qPpZy2sZVB" role="3uHU7B" />
-                <node concept="3cmrfG" id="6qPpZy2t1Si" role="3uHU7w">
-                  <property role="3cmrfH" value="200" />
+              <node concept="2dkUwp" id="4qR36Xfvy5y" role="3uHU7B">
+                <node concept="3cmrfG" id="4qR36Xfvyk2" role="3uHU7w">
+                  <property role="3cmrfH" value="100" />
                 </node>
+                <node concept="1Wqviy" id="6qPpZy2sZVB" role="3uHU7B" />
               </node>
             </node>
           </node>

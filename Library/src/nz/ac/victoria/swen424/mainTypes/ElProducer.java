@@ -15,6 +15,7 @@ public class ElProducer extends MainBaseType
 	private ProducitionMethodeType _productionType;
 	private WeatherValues _weather;
 	
+
 	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
 		super(name);
@@ -23,22 +24,13 @@ public class ElProducer extends MainBaseType
 		_productionType = prodType;
 	}
 	
-	public void connectTransformer(ElTransformer connect)
-	{
-		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1)
-		{
-			if(_connect == null)
-			{
-				_connect = connect;
+	public void connectTransformer(ElTransformer connect){
+		if(connect.increaseUsage(_maxProduction, this) == true){
+			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
+				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
+				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1");}
 			}
-			else
-			{
-				System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1"); 
-			}
-		}
-		else
-		{
-			System.out.println("Could not connect transformer due to a difference in voltage levels");
+			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
 		}
 	}
 
