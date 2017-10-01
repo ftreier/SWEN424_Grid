@@ -4,12 +4,16 @@ import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
+import nz.ac.victoria.swen424.weather.Weather;
+import nz.ac.victoria.swen424.weather.WeatherValues;
+
 public class ElProducer extends MainBaseType
 {
 	private int _minProduction;
 	private int _maxProduction;
 	private ElTransformer _connect;
 	private ProducitionMethodeType _productionType;
+	private WeatherValues _weather;
 	
 	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
@@ -64,5 +68,56 @@ public class ElProducer extends MainBaseType
 		xmlWriter.add(eventFactory.createEndElement("", "", "connectedTo")); // </connectedTo>
 		
 		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
+	}
+
+	@Override
+	SimulationStatus Simulate(int time)
+	{
+		int daytiem = time % 24;
+		int day = (time - daytiem) / 24;
+		
+		switch (_productionType)
+		{
+		case Wind:
+			return simulateWind(day)
+		case Solar:
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+	
+	private SimulationStatus simulateWind(int day) throws Exception
+	{
+		SimulationStatus s = new SimulationStatus();
+		s.type = this;
+		
+		Weather w = _weather.GetWeatherForDay(day);
+		
+		int windSpeed = w.getWindSpeed().WindSpeedValue();
+		
+		// Shutdown because of strong winds
+		if(windSpeed > 11)
+		{
+			s.maxElectricity = 0;
+		}
+		else if (windSpeed == 10)
+		{
+			s.maxElectricity = _maxProduction / 3.0;
+		}
+		else if (windSpeed == 9)
+		{
+			s.maxElectricity = 2 * _maxProduction / 3.0;
+		}
+		else
+		{
+			s.maxElectricity = windSpeed* _maxProduction / 8.0;
+		}
+		
+		s.minElectricity = s.maxElectricity;
+		return s;
+				
 	}
 }
