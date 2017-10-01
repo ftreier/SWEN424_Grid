@@ -381,6 +381,18 @@
       <node concept="3F0A7n" id="1G90Zx2snUF" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:24XvQ732kGm" resolve="MaxProduction" />
       </node>
+      <node concept="3F0ifn" id="7Erv4TlUNCM" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="7Erv4TlUNDm" role="3EZMnx">
+        <property role="3F0ifm" value="production type" />
+      </node>
+      <node concept="3F0ifn" id="7Erv4TlUNDW" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="7Erv4TlUNE$" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:7Erv4TlTI1p" resolve="ProductionMethode" />
+      </node>
       <node concept="3F0ifn" id="1G90Zx2snVl" role="3EZMnx">
         <property role="3F0ifm" value="," />
       </node>

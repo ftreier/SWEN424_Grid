@@ -33,6 +33,7 @@
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
+        <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="ConnectedTransformer" index="nfRfV" />
@@ -119,6 +120,12 @@
       <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
       <ref role="nfRfV" node="59sIV4z6KxL" resolve="tran" />
     </node>
+    <node concept="3yd64n" id="7Erv4TlUPps" role="3yd3h7">
+      <property role="3yd64o" value="02" />
+      <property role="3yd3hR" value="100" />
+      <property role="JvpKn" value="2" />
+      <ref role="nfRfV" node="59sIV4z6MxZ" resolve="tran2" />
+    </node>
     <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
       <property role="3lM9jS" value="200" />
       <property role="3lM9jY" value="0" />
@@ -126,6 +133,16 @@
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Unassigned" />
       <property role="TrG5h" value="grid" />
+      <ref role="3lM9jG" node="59sIV4z6KxL" resolve="tran" />
+      <ref role="1LiVe8" node="59sIV4z6MxZ" resolve="tran2" />
+    </node>
+    <node concept="3lM9jV" id="7Erv4TlV1e$" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="0" />
+      <property role="3lM9jR" value="40" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jE" value="Unassigned" />
+      <property role="TrG5h" value="grid2" />
       <ref role="3lM9jG" node="59sIV4z6KxL" resolve="tran" />
       <ref role="1LiVe8" node="59sIV4z6MxZ" resolve="tran2" />
     </node>
