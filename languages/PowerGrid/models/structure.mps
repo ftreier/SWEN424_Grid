@@ -12,6 +12,7 @@
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1082978164219" name="jetbrains.mps.lang.structure.structure.EnumerationDataTypeDeclaration" flags="ng" index="AxPO7">
+        <property id="1197591154882" name="memberIdentifierPolicy" index="3lZH7k" />
         <reference id="1083171729157" name="memberDataType" index="M4eZT" />
         <child id="1083172003582" name="member" index="M5hS2" />
       </concept>
@@ -128,6 +129,11 @@
       <property role="IQ2nx" value="2395210634691693334" />
       <property role="TrG5h" value="MaxProduction" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7Erv4TlTI1p" role="1TKVEl">
+      <property role="IQ2nx" value="8834791769907847257" />
+      <property role="TrG5h" value="ProductionMethode" />
+      <ref role="AX2Wp" node="7Erv4TlTGP0" resolve="ProductionMethodeType" />
     </node>
   </node>
   <node concept="AxPO7" id="6Lad368Q94p">
@@ -367,6 +373,23 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="ConnectedTransformer" />
       <ref role="20lvS9" node="7rDXPBEWeTn" resolve="Transformer" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="7Erv4TlTGP0">
+    <property role="TrG5h" value="ProductionMethodeType" />
+    <property role="3lZH7k" value="derive_from_internal_value" />
+    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="M4N5e" id="7Erv4TlTGP1" role="M5hS2">
+      <property role="1uS6qv" value="1" />
+      <property role="1uS6qo" value="Wind" />
+    </node>
+    <node concept="M4N5e" id="7Erv4TlTGP2" role="M5hS2">
+      <property role="1uS6qo" value="Solar" />
+      <property role="1uS6qv" value="2" />
+    </node>
+    <node concept="M4N5e" id="7Erv4TlTGP5" role="M5hS2">
+      <property role="1uS6qo" value="Conventinal" />
+      <property role="1uS6qv" value="3" />
     </node>
   </node>
 </model>

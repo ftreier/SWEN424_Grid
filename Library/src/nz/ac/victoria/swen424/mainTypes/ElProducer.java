@@ -9,12 +9,14 @@ public class ElProducer extends MainBaseType
 	private int _minProduction;
 	private int _maxProduction;
 	private ElTransformer _connect;
+	private ProducitionMethodeType _productionType;
 	
-	public ElProducer(String name, int minProduction, int maxProduction)
+	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
 		super(name);
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
+		_productionType = prodType;
 	}
 	
 	public void connectTransformer(ElTransformer connect)
