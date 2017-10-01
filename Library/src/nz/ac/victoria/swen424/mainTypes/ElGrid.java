@@ -21,7 +21,7 @@ public class ElGrid implements IMainType{
 	public void connectTransformer(ElTransformer connect){
 		if(connect.increaseUsage(_percentUsage*_maxCapacity, this) == true){
 			if(connect.getLeftNet() == _voltage || connect.getRightNet() == _voltage){
-				if(connect1 == null){ connect1 = connect; System.out.println("Grid connected to transformer");}
+				if(connect1 == null){ connect1 = connect; }
 				else if(connect2 == null){ connect2 = connect; }
 				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
 			}

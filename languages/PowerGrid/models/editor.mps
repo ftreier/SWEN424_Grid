@@ -22,7 +22,7 @@
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
-      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
+      <concept id="8313721352726366579" name="jetbrains.mps.lang.editor.structure.CellModel_Empty" flags="ng" index="35HoNQ" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -65,16 +65,7 @@
       </node>
       <node concept="3F0A7n" id="2K_vMQvWbJi" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="2K_vMQvWbJj" role="3EZMnx">
-        <property role="3F0ifm" value="(" />
-        <node concept="11L4FC" id="2K_vMQvWbJk" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="3mYdg7" id="2K_vMQvWbJl" role="3F10Kt">
-          <property role="1413C4" value="body-paren" />
-        </node>
-        <node concept="11LMrY" id="2K_vMQvWbJm" role="3F10Kt">
+        <node concept="ljvvj" id="4qR36XftKSY" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -95,10 +86,7 @@
         <node concept="lj46D" id="2K_vMQvWqJP" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-      </node>
-      <node concept="3F0ifn" id="2K_vMQvWbJr" role="3EZMnx">
-        <property role="3F0ifm" value="," />
-        <node concept="11L4FC" id="2K_vMQvWbJs" role="3F10Kt">
+        <node concept="ljvvj" id="4qR36XftKXR" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -113,9 +101,9 @@
       </node>
       <node concept="3F0A7n" id="2K_vMQvWbJw" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2n_zr" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKYi" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2n__m" role="3EZMnx">
         <property role="3F0ifm" value="Left Net Level" />
@@ -125,9 +113,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2n_$$" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2n_Aa" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKYG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2n_B0" role="3EZMnx">
         <property role="3F0ifm" value="Right Net Level" />
@@ -137,16 +125,11 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2n_Ed" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:7rDXPBEWeTq" resolve="RightNetLevel" />
-      </node>
-      <node concept="3F0ifn" id="2K_vMQvWbJx" role="3EZMnx">
-        <property role="3F0ifm" value=")" />
-        <node concept="11L4FC" id="2K_vMQvWbJy" role="3F10Kt">
+        <node concept="ljvvj" id="4qR36XftMEi" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-        <node concept="3mYdg7" id="2K_vMQvWbJz" role="3F10Kt">
-          <property role="1413C4" value="body-paren" />
-        </node>
       </node>
+      <node concept="35HoNQ" id="4qR36XftMEH" role="3EZMnx" />
     </node>
   </node>
   <node concept="24kQdi" id="15nlfvPiBM8">
@@ -232,7 +215,11 @@
               <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
             </node>
           </node>
+          <node concept="ljvvj" id="4qR36XftMC9" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
         </node>
+        <node concept="35HoNQ" id="4qR36XftOu8" role="3EZMnx" />
       </node>
       <node concept="3F0ifn" id="3nJJ606NoXQ" role="3EZMnx">
         <property role="3F0ifm" value="}" />
@@ -251,9 +238,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2pnfK" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnfS" role="3EZMnx">
-        <property role="3F0ifm" value="(" />
+        <node concept="ljvvj" id="4qR36XftKLG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2png2" role="3EZMnx">
         <property role="3F0ifm" value="max capacity" />
@@ -263,9 +250,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2png$" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4NGxdIp910z" resolve="maxCapacity" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pngO" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKMN" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pnh6" role="3EZMnx">
         <property role="3F0ifm" value="percent usage" />
@@ -275,9 +262,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2pnhW" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4NGxdIp910_" resolve="percentusage" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnik" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKNm" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pnj4" role="3EZMnx">
         <property role="3F0ifm" value="efficiency" />
@@ -287,9 +274,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2pnke" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4NGxdIp910C" resolve="efficiency" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnkI" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKNT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pnlg" role="3EZMnx">
         <property role="3F0ifm" value="voltage" />
@@ -299,9 +286,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2pnmI" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4NGxdIp910G" resolve="voltage" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnnm" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKOs" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pno0" role="3EZMnx">
         <property role="3F0ifm" value="sector" />
@@ -311,9 +298,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2pnqw" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4NGxdIp910L" resolve="sector" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnrg" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKOZ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pns2" role="3EZMnx">
         <property role="3F0ifm" value="transformer1" />
@@ -329,9 +316,9 @@
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           </node>
         </node>
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2pnvb" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKPy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2pnw9" role="3EZMnx">
         <property role="3F0ifm" value="transformer2" />
@@ -347,7 +334,11 @@
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           </node>
         </node>
+        <node concept="ljvvj" id="4qR36XftOwy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
+      <node concept="35HoNQ" id="4qR36XftOx9" role="3EZMnx" />
       <node concept="l2Vlx" id="1G90Zx2pnfA" role="2iSdaV" />
     </node>
   </node>
@@ -357,8 +348,14 @@
       <node concept="3F0ifn" id="1G90Zx2snSL" role="3EZMnx">
         <property role="3F0ifm" value="producer" />
       </node>
-      <node concept="3F0ifn" id="1G90Zx2snSR" role="3EZMnx">
+      <node concept="3F0ifn" id="4qR36XftKRt" role="3EZMnx">
         <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="4qR36XftKSh" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="ljvvj" id="4qR36XftKSz" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2snSZ" role="3EZMnx">
         <property role="3F0ifm" value="min production" />
@@ -368,9 +365,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2snTs" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:24XvQ732hTT" resolve="MinProduction" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2snTE" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKPR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2snTU" role="3EZMnx">
         <property role="3F0ifm" value="max production" />
@@ -380,9 +377,9 @@
       </node>
       <node concept="3F0A7n" id="1G90Zx2snUF" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:24XvQ732kGm" resolve="MaxProduction" />
-      </node>
-      <node concept="3F0ifn" id="1G90Zx2snVl" role="3EZMnx">
-        <property role="3F0ifm" value="," />
+        <node concept="ljvvj" id="4qR36XftKQ8" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="1G90Zx2snVH" role="3EZMnx">
         <property role="3F0ifm" value="Connected Transformer" />
@@ -398,7 +395,11 @@
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           </node>
         </node>
+        <node concept="ljvvj" id="4qR36XftOvR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
+      <node concept="35HoNQ" id="4qR36XftOwd" role="3EZMnx" />
       <node concept="l2Vlx" id="1G90Zx2snSz" role="2iSdaV" />
     </node>
   </node>
