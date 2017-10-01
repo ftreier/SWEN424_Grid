@@ -4,7 +4,6 @@ import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-import nz.ac.victoria.swen424.weather.Weather;
 import nz.ac.victoria.swen424.weather.WeatherValues;
 
 public class ElProducer extends MainBaseType
@@ -65,22 +64,24 @@ public class ElProducer extends MainBaseType
 	@Override
 	SimulationStatus Simulate(int time) throws Exception
 	{
-		int daytiem = time % 24;
-		int day = (time - daytiem) / 24;
+		int daytime = time % 24;
+		int day = (time - daytime) / 24;
 		
 		switch (_productionType)
 		{
 		case Wind:
 			return simulateWind(day);
 		case Solar:
-			
-			break;
-
+			return simulateSolar(day, daytime);
+		case Conventional:
+			SimulationStatus s = new SimulationStatus();
+			s.type = this;
+			s.maxElectricity = _maxProduction;
+			s.minElectricity = _minProduction;
 		default:
-			break;
+			throw new Exception("Unexpected power generation type found.");
 		}
-		
-		return null;
+
 	}
 	
 	private SimulationStatus simulateWind(int day) throws Exception
@@ -88,30 +89,63 @@ public class ElProducer extends MainBaseType
 		SimulationStatus s = new SimulationStatus();
 		s.type = this;
 		
-		Weather w = _weather.GetWeatherForDay(day);
+		int windSpeed = _weather.GetWeatherForDay(day).getWindSpeed().WindSpeedValue();
 		
-		int windSpeed = w.getWindSpeed().WindSpeedValue();
-		
-		// Shutdown because of strong winds
-		if(windSpeed > 11)
+		// Shutdown because of strong winds, no production
+		if(windSpeed >= 10)
 		{
 			s.maxElectricity = 0;
 		}
-		else if (windSpeed == 10)
+		// Optimal region, maximum production
+		else if (windSpeed >= 7)
 		{
 			s.maxElectricity = _maxProduction / 3.0;
 		}
-		else if (windSpeed == 9)
+		// Linear approximation for low wind production
+		else
 		{
-			s.maxElectricity = 2 * _maxProduction / 3.0;
+			s.maxElectricity = windSpeed * _maxProduction / 6.0;
+		}
+		
+		// Electricity production of wind turbines can not be reduced
+		s.minElectricity = s.maxElectricity;
+		return s;		
+	}
+	
+	private SimulationStatus simulateSolar(int day, int time) throws Exception
+	{
+		SimulationStatus s = new SimulationStatus();
+		s.type = this;
+		
+		// Only producing energy from 6am to 6pm
+		if(time < 6 || time > 18)
+		{
+			s.maxElectricity = 0;
 		}
 		else
 		{
-			s.maxElectricity = windSpeed * _maxProduction / 8.0;
+			switch(_weather.GetWeatherForDay(day).getWeather())
+			{
+			case ClearSky:
+				// Maximum production
+				s.maxElectricity = _maxProduction;
+				break;
+			case Overcast:
+				// Producing about 20% of max capacity
+				s.maxElectricity = _maxProduction * 0.2;
+			case Rain:
+				// No production at all
+				s.maxElectricity = 0;
+			default:
+				throw new Exception("Unexpected Weaterh type found.");
+			}
+			
+			// reduce production due to non optimal angle (midday normally has the best angle)
+			s.maxElectricity = s.maxElectricity * (1 - Math.abs(time - 12) / 12);
 		}
 		
+		// Solar panels can not be reduced in production
 		s.minElectricity = s.maxElectricity;
 		return s;
-				
 	}
 }

@@ -30,4 +30,9 @@ public class Weather
 	{
 		return _windSpeed;
 	}
+	
+	public WeatherEnum getWeather()
+	{
+		return _weather;
+	}
 }
