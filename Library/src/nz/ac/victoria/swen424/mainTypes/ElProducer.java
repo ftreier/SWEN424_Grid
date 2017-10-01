@@ -17,7 +17,7 @@ public class ElProducer extends MainBaseType
 	}
 	
 	public void connectTransformer(ElTransformer connect){
-		if(connect.increaseUsage(_maxProduction) == true){
+		if(connect.increaseUsage(_maxProduction, this) == true){
 			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 				if(_connect == null){ _connect = connect; }
 				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1");}

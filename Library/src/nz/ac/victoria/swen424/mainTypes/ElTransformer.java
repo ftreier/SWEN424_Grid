@@ -1,5 +1,8 @@
 package nz.ac.victoria.swen424.mainTypes;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ElTransformer
 {
 	private String _name;
@@ -8,6 +11,7 @@ public class ElTransformer
 	private int _efficiency;
 	private int leftNetLevel;
 	private int rightNetLevel;
+	Set<IMainType> connections;
 
 	public ElTransformer(String name, int maxcapacity, int usage, int efficiency, int leftNet, int rightNet){
 		_name = name;
@@ -16,6 +20,7 @@ public class ElTransformer
 		_efficiency = efficiency;
 		leftNetLevel = leftNet;
 		rightNetLevel = rightNet;
+		connections = new HashSet<IMainType>();
 	}
 	
 	public int getLeftNet(){
@@ -26,21 +31,35 @@ public class ElTransformer
 		return rightNetLevel;
 	}
 	
-	public Boolean increaseUsage(int increment){
+	public Boolean increaseUsage(int increment, IMainType connect){
 		if(_usage+(increment*_efficiency) > _maxcapacity){
 			System.out.println("Cannot exceed maximum capacity of transformer");
 			return false;
 		}
 		_usage += (increment*_efficiency);
+		addConnection(connect);
 		return true;
 	}
 	
-	public Boolean decreaseUsage(int increment){
+	public Boolean decreaseUsage(int increment, IMainType connect){
 		if(_usage-(increment*_efficiency) < 0){
 			System.out.println("Cannot fall below 0 usage on transformer");
 			return false;
 		}
 		_usage -= (increment*_efficiency);
+		addConnection(connect);
 		return true;
+	}
+	
+	public void addConnection(IMainType connect){
+		connections.add(connect);
+	}
+	
+	public void removeConnection(IMainType remove){
+		connections.remove(remove);
+	}
+	
+	public Set<IMainType> getConnections(){
+		return connections;
 	}
 }

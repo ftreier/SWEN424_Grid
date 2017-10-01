@@ -20,7 +20,7 @@ public ElConsumer(String name, int minConsumption, int maxConsumption){
 	}
 
 public void connectTransformer(ElTransformer connect){
-	if(connect.decreaseUsage(_maxConsumption) == true){
+	if(connect.decreaseUsage(_maxConsumption, this) == true){
 		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 			if(_connect == null){ _connect = connect; }
 			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1"); }
