@@ -23,10 +23,15 @@
       </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
       <concept id="1236262245656" name="jetbrains.mps.lang.editor.structure.MatchingLabelStyleClassItem" flags="ln" index="3mYdg7">
         <property id="1238091709220" name="labelName" index="1413C4" />
       </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -107,7 +112,31 @@
         </node>
       </node>
       <node concept="3F0A7n" id="2K_vMQvWbJw" role="3EZMnx">
-        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_zr" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n__m" role="3EZMnx">
+        <property role="3F0ifm" value="Left Net Level" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_BS" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2n_$$" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_Aa" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_B0" role="3EZMnx">
+        <property role="3F0ifm" value="Right Net Level" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2n_CM" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2n_Ed" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:7rDXPBEWeTq" resolve="RightNetLevel" />
       </node>
       <node concept="3F0ifn" id="2K_vMQvWbJx" role="3EZMnx">
         <property role="3F0ifm" value=")" />
@@ -189,6 +218,21 @@
             <property role="VOm3f" value="true" />
           </node>
         </node>
+        <node concept="3F0ifn" id="1G90Zx2rOo7" role="3EZMnx">
+          <property role="3F0ifm" value="connected transformer" />
+        </node>
+        <node concept="3F0ifn" id="1G90Zx2rOoH" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+        </node>
+        <node concept="1iCGBv" id="1G90Zx2rOpE" role="3EZMnx">
+          <ref role="1NtTu8" to="aw7t:1G90Zx2lQbC" resolve="ConnectedTransformer" />
+          <node concept="1sVBvm" id="1G90Zx2rOpG" role="1sWHZn">
+            <node concept="3F0A7n" id="1G90Zx2rU2r" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="3nJJ606NoXQ" role="3EZMnx">
         <property role="3F0ifm" value="}" />
@@ -198,6 +242,165 @@
       </node>
     </node>
     <node concept="24uvON" id="3nJJ606NslN" role="lGtFl" />
+  </node>
+  <node concept="24kQdi" id="1G90Zx2pnfh">
+    <ref role="1XX52x" to="aw7t:4NGxdIp910w" resolve="PowerGrid" />
+    <node concept="3EZMnI" id="1G90Zx2pnfz" role="2wV5jI">
+      <node concept="3F0ifn" id="1G90Zx2pnfE" role="3EZMnx">
+        <property role="3F0ifm" value="PowerGrid:" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2pnfK" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnfS" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2png2" role="3EZMnx">
+        <property role="3F0ifm" value="max capacity" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnge" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2png$" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910z" resolve="maxCapacity" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pngO" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnh6" role="3EZMnx">
+        <property role="3F0ifm" value="percent usage" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnhq" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2pnhW" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnik" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnj4" role="3EZMnx">
+        <property role="3F0ifm" value="efficiency" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnjw" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2pnke" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910C" resolve="efficiency" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnkI" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnlg" role="3EZMnx">
+        <property role="3F0ifm" value="voltage" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnlO" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2pnmI" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910G" resolve="voltage" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnnm" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pno0" role="3EZMnx">
+        <property role="3F0ifm" value="sector" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnoG" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2pnqw" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910L" resolve="sector" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnrg" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pns2" role="3EZMnx">
+        <property role="3F0ifm" value="transformer1" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnsQ" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="1iCGBv" id="1G90Zx2pnu8" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4NGxdIp910R" resolve="ConnectedTransformer1" />
+        <node concept="1sVBvm" id="1G90Zx2pnua" role="1sWHZn">
+          <node concept="3F0A7n" id="1G90Zx2rVpN" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnvb" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnw9" role="3EZMnx">
+        <property role="3F0ifm" value="transformer2" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2pnx9" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="1iCGBv" id="1G90Zx2pnyH" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:59sIV4z5KwT" resolve="ConnectedTransformer2" />
+        <node concept="1sVBvm" id="1G90Zx2pnyJ" role="1sWHZn">
+          <node concept="3F0A7n" id="1G90Zx2rVpQ" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1G90Zx2pnfA" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1G90Zx2snSu">
+    <ref role="1XX52x" to="aw7t:24XvQ732hTQ" resolve="Producer" />
+    <node concept="3EZMnI" id="1G90Zx2snSw" role="2wV5jI">
+      <node concept="3F0ifn" id="1G90Zx2snSL" role="3EZMnx">
+        <property role="3F0ifm" value="producer" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snSR" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snSZ" role="3EZMnx">
+        <property role="3F0ifm" value="min production" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snT9" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2snTs" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:24XvQ732hTT" resolve="MinProduction" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snTE" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snTU" role="3EZMnx">
+        <property role="3F0ifm" value="max production" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snUc" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="1G90Zx2snUF" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:24XvQ732kGm" resolve="MaxProduction" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snVl" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snVH" role="3EZMnx">
+        <property role="3F0ifm" value="Connected Transformer" />
+      </node>
+      <node concept="3F0ifn" id="1G90Zx2snW7" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="1iCGBv" id="1G90Zx2snWM" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:4DN6WPtj6wQ" resolve="ConnectedTransformer" />
+        <node concept="1sVBvm" id="1G90Zx2snWO" role="1sWHZn">
+          <node concept="3F0A7n" id="1G90Zx2snX7" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1G90Zx2snSz" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

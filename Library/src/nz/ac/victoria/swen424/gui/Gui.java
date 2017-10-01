@@ -14,7 +14,7 @@ import javax.swing.*;
 
 import nz.ac.victoria.swen424.mainTypes.ElConsumer;
 
-public class gui extends JPanel {
+public abstract class Gui extends JPanel {
    String[] type = { "Serif","SansSerif"}; 
    int[] styles = { Font.PLAIN, Font.ITALIC, Font.BOLD, Font.ITALIC + Font.BOLD };
    String[] stylenames = { "Plain", "Italic", "Bold", "Bold & Italic" };
@@ -27,6 +27,10 @@ public class gui extends JPanel {
    private final String tranImage = "/images/";
    private final String prodImage = "/images/";
    private final String gridImage = "/images/";
+   
+   public Gui() {
+	   
+   }
    
    public void paint(Graphics g) {
       //stuff to paint a consumer on the pane
@@ -47,7 +51,7 @@ public class gui extends JPanel {
 			   //drawimage(img, x, y, width, height, null)
 		   	  x = x+100;
 		      g.drawImage(img, x, y, 50, 50, null); 
-		      g.drawString(e.getData(), x+5, y+60);
+		      //g.drawString(e.getData(), x+5, y+60);
 	   }
 	   
    }
@@ -59,7 +63,7 @@ public class gui extends JPanel {
             System.exit(0);
          }
       });
-      f.setContentPane(new gui());
+      //f.setContentPane(new Gui());
       f.setSize(400,400);
       f.setVisible(true);
       //test consumers

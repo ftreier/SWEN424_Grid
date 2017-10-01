@@ -93,7 +93,7 @@
       </node>
     </node>
     <node concept="EnEH3" id="6qPpZy2sZw9" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+      <ref role="EomxK" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
       <node concept="QB0g5" id="6qPpZy2sZOu" role="QCWH9">
         <node concept="3clFbS" id="6qPpZy2sZOv" role="2VODD2">
           <node concept="3clFbF" id="6qPpZy2sZVC" role="3cqZAp">
@@ -103,7 +103,7 @@
                 <node concept="2OqwBi" id="6qPpZy2ts$N" role="3uHU7w">
                   <node concept="EsrRn" id="6qPpZy2ts8Y" role="2Oq$k0" />
                   <node concept="3TrcHB" id="6qPpZy2tsZm" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:7rDXPBEWeTx" resolve="efficiency" />
+                    <ref role="3TsBF5" to="aw7t:7rDXPBEWeTx" resolve="Efficiency" />
                   </node>
                 </node>
               </node>
