@@ -47,6 +47,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
@@ -55,6 +56,9 @@
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
+        <child id="1070534760952" name="componentType" index="10Q1$1" />
+      </concept>
       <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
@@ -1375,6 +1379,32 @@
         <property role="TrG5h" value="i" />
         <node concept="10Oyi0" id="6Lad368RTP_" role="1tU5fm" />
       </node>
+    </node>
+    <node concept="2tJIrI" id="4qR36XftTgq" role="jymVt" />
+    <node concept="2YIFZL" id="4qR36Xfu4gq" role="jymVt">
+      <property role="TrG5h" value="main" />
+      <property role="DiZV1" value="false" />
+      <property role="od$2w" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="4qR36Xfu4gs" role="3clF47">
+        <node concept="3clFbF" id="4qR36XfuEdl" role="3cqZAp">
+          <node concept="2ShNRf" id="4qR36XfuEdj" role="3clFbG">
+            <node concept="1pGfFk" id="4qR36XfuEqM" role="2ShVmc">
+              <ref role="37wK5l" node="6Lad368Qz4z" resolve="PowerGridSimulator" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3cqZAl" id="4qR36Xfu4gu" role="3clF45" />
+      <node concept="37vLTG" id="4qR36Xfu4gv" role="3clF46">
+        <property role="TrG5h" value="args" />
+        <node concept="10Q1$e" id="4qR36XfuE6A" role="1tU5fm">
+          <node concept="3uibUv" id="4qR36Xfu4gw" role="10Q1$1">
+            <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="4qR36Xfu4gt" role="1B3o_S" />
     </node>
     <node concept="3Tm1VV" id="6Lad368Qz3R" role="1B3o_S" />
     <node concept="n94m4" id="6Lad368Qz3S" role="lGtFl">
