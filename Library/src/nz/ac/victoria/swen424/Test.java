@@ -4,6 +4,7 @@ import java.util.List;
 import nz.ac.victoria.swen424.weather.WeatherValues;
 import nz.ac.victoria.swen424.mainTypes.ElProducer;
 import nz.ac.victoria.swen424.mainTypes.ElTransformer;
+import nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType;
 import nz.ac.victoria.swen424.mainTypes.ElConsumer;
 import java.util.LinkedList;
 import nz.ac.victoria.swen424.weather.Weather;
@@ -48,11 +49,14 @@ public class Test
 		wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.Flat));
 		_weather.add(wv);
 		
-		_producers = new LinkedList<ElProducer>();
-		_producers.add(new ElProducer("prod", 1, 50));
-		
 		_transformers = new LinkedList<ElTransformer>();
-		_transformers.add(new ElTransformer("tran", 4, 4, 1, 1));
+		ElTransformer transformer = new ElTransformer("tran", 4, 4, 1, 1);
+		_transformers.add(transformer);
+		
+		_producers = new LinkedList<ElProducer>();
+		ElProducer elProducer = new ElProducer("prod", 1, 50, ProducitionMethodeType.Wind);
+		elProducer.connectTransformer(transformer);
+		_producers.add(elProducer);
 		
 		_consumers = new LinkedList<ElConsumer>();
 		_consumers.add(new ElConsumer("con", 1, 20));

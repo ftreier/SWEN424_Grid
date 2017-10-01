@@ -55,9 +55,14 @@ public class ElProducer extends MainBaseType
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
 		xmlWriter.add(eventFactory.createAttribute("minProduction", Integer.toString(_minProduction)));
 		xmlWriter.add(eventFactory.createAttribute("maxProduction", Integer.toString(_maxProduction)));
+		xmlWriter.add(eventFactory.createAttribute("productionMethode", _productionType.toString()));
 		
-		// TODO further information comes here
+		// Write connection
+		xmlWriter.add(eventFactory.createStartElement("", "", "connectedTo"));
+		xmlWriter.add(eventFactory.createAttribute("transformerId", _connect.GetGuid().toString()));
+		xmlWriter.add(eventFactory.createAttribute("transformerName", _connect.GetName()));
+		xmlWriter.add(eventFactory.createEndElement("", "", "connectedTo")); // </connectedTo>
 		
-		xmlWriter.add(eventFactory.createEndElement("", "", "producer"));
+		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
 	}
 }
