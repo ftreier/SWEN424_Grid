@@ -32,21 +32,21 @@ public class ElTransformer
 	}
 	
 	public Boolean increaseUsage(int increment, IMainType connect){
-		if(_usage+(increment*_efficiency) > _maxcapacity){
+		if(_usage+(increment*(_efficiency)/100) > _maxcapacity){
 			System.out.println("Cannot exceed maximum capacity of transformer");
 			return false;
 		}
-		_usage += (increment*_efficiency);
+		_usage += (increment*(_efficiency/100));
 		addConnection(connect);
 		return true;
 	}
 	
 	public Boolean decreaseUsage(int increment, IMainType connect){
-		if(_usage-(increment*_efficiency) < 0){
+		if(_usage-(increment*(_efficiency/100)) < 0){
 			System.out.println("Cannot fall below 0 usage on transformer");
 			return false;
 		}
-		_usage -= (increment*_efficiency);
+		_usage -= (increment*(_efficiency/100));
 		addConnection(connect);
 		return true;
 	}

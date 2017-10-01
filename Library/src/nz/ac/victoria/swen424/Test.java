@@ -48,8 +48,8 @@ public class Test
 	    _producers.add(producer);
 
 	    _transformers = new LinkedList<ElTransformer>();
-	    _transformers.add(new ElTransformer("tran", 80, 20, 1, 4, 1));
-	    _transformers.add(new ElTransformer("tran2", 80, 20, 1, 4, 1));
+	    _transformers.add(new ElTransformer("tran", 80, 20, 100, 4, 1));
+	    _transformers.add(new ElTransformer("tran2", 80, 20, 100, 4, 1));
 
 	    ElConsumer consumer;
 	    _consumers = new LinkedList<ElConsumer>();
