@@ -37,4 +37,10 @@ public class ElTransformer extends MainBaseType
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	SimulationStatus Simulate(int time) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

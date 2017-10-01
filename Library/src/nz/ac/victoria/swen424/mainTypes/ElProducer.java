@@ -71,7 +71,7 @@ public class ElProducer extends MainBaseType
 	}
 
 	@Override
-	SimulationStatus Simulate(int time)
+	SimulationStatus Simulate(int time) throws Exception
 	{
 		int daytiem = time % 24;
 		int day = (time - daytiem) / 24;
@@ -79,7 +79,7 @@ public class ElProducer extends MainBaseType
 		switch (_productionType)
 		{
 		case Wind:
-			return simulateWind(day)
+			return simulateWind(day);
 		case Solar:
 			
 			break;
@@ -87,6 +87,8 @@ public class ElProducer extends MainBaseType
 		default:
 			break;
 		}
+		
+		return null;
 	}
 	
 	private SimulationStatus simulateWind(int day) throws Exception
@@ -113,7 +115,7 @@ public class ElProducer extends MainBaseType
 		}
 		else
 		{
-			s.maxElectricity = windSpeed* _maxProduction / 8.0;
+			s.maxElectricity = windSpeed * _maxProduction / 8.0;
 		}
 		
 		s.minElectricity = s.maxElectricity;

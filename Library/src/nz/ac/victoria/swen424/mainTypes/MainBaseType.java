@@ -9,5 +9,5 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		super(name);
 	}
 	
-	abstract SimulationStatus Simulate(int time);
+	abstract SimulationStatus Simulate(int time) throws Exception;
 }

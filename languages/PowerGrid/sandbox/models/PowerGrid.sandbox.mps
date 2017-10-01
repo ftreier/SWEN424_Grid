@@ -136,6 +136,16 @@
       <ref role="3lM9jG" node="59sIV4z6KxL" resolve="tran" />
       <ref role="1LiVe8" node="59sIV4z6MxZ" resolve="tran2" />
     </node>
+    <node concept="3lM9jV" id="7Erv4TlZkrp" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="0" />
+      <property role="3lM9jR" value="40" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jE" value="Unassigned" />
+      <property role="TrG5h" value="test" />
+      <ref role="3lM9jG" node="59sIV4z6KxL" resolve="tran" />
+      <ref role="1LiVe8" node="59sIV4z6MxZ" resolve="tran2" />
+    </node>
   </node>
 </model>
 
