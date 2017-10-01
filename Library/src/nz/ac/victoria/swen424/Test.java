@@ -7,6 +7,7 @@ import nz.ac.victoria.swen424.mainTypes.ElGrid;
 import nz.ac.victoria.swen424.mainTypes.ElProducer;
 import nz.ac.victoria.swen424.mainTypes.ElTransformer;
 import nz.ac.victoria.swen424.mainTypes.ElConsumer;
+import nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType;
 
 import java.util.LinkedList;
 
@@ -44,7 +45,7 @@ public class Test
 	    _weather.add(wv);
 
 	    _producers = new LinkedList<ElProducer>();
-	    ElProducer producer = new ElProducer("prod", 1, 50);
+	    ElProducer producer = new ElProducer("prod", 1, 50, ProducitionMethodeType.Wind);
 	    _producers.add(producer);
 
 	    _transformers = new LinkedList<ElTransformer>();
