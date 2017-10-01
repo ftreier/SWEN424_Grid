@@ -1,20 +1,16 @@
 package nz.ac.victoria.swen424.mainTypes;
 
-import java.awt.*;
-
-import javax.swing.*;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-public class ElConsumer implements IMainType{
-	private String _name;
+public class ElConsumer extends MainBaseType{
 	private int _minConsumption;
 	private int _maxConsumption;
 	private ElTransformer _connect;
 	
 	
 public ElConsumer(String name, int minConsumption, int maxConsumption){
-	_name = name;
+	super(name);
 	_minConsumption = minConsumption;
 	_maxConsumption = maxConsumption;
 	}
@@ -35,5 +31,17 @@ public String getData() {
 	// TODO show the data related to the consumer
 	// _name, _minConsumption & _maxConsumption
 	return _name;
+}
+
+@Override
+public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+SimulationStatus Simulate(int time) throws Exception {
+	// TODO Auto-generated method stub
+	return null;
 }
 }

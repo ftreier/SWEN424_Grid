@@ -12,7 +12,7 @@ public class ElTransformer extends MainBaseType
 	private int _efficiency;
 	private int leftNetLevel;
 	private int rightNetLevel;
-	Set<IMainType> connections;
+	Set<MainBaseType> connections;
 
 	public ElTransformer(String name, int maxcapacity, int usage, int efficiency, int leftNet, int rightNet){
 		super(name);
@@ -21,7 +21,7 @@ public class ElTransformer extends MainBaseType
 		_efficiency = efficiency;
 		leftNetLevel = leftNet;
 		rightNetLevel = rightNet;
-		connections = new HashSet<IMainType>();
+		connections = new HashSet<MainBaseType>();
 	}
 	
 	public int getLeftNet(){
@@ -32,7 +32,7 @@ public class ElTransformer extends MainBaseType
 		return rightNetLevel;
 	}
 	
-	public Boolean increaseUsage(int increment, IMainType connect){
+	public Boolean increaseUsage(int increment, MainBaseType connect){
 		if(_usage+(increment*(_efficiency)/100) > _maxcapacity){
 			System.out.println("Cannot exceed maximum capacity of transformer");
 			return false;
@@ -42,7 +42,7 @@ public class ElTransformer extends MainBaseType
 		return true;
 	}
 	
-	public Boolean decreaseUsage(int increment, IMainType connect){
+	public Boolean decreaseUsage(int increment, MainBaseType connect){
 		if(_usage-(increment*(_efficiency/100)) < 0){
 			System.out.println("Cannot fall below 0 usage on transformer");
 			return false;
@@ -52,15 +52,15 @@ public class ElTransformer extends MainBaseType
 		return true;
 	}
 	
-	public void addConnection(IMainType connect){
+	public void addConnection(MainBaseType connect){
 		connections.add(connect);
 	}
 	
-	public void removeConnection(IMainType remove){
+	public void removeConnection(MainBaseType remove){
 		connections.remove(remove);
 	}
 	
-	public Set<IMainType> getConnections(){
+	public Set<MainBaseType> getConnections(){
 		return connections;
 	}
 
