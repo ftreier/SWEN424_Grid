@@ -104,11 +104,6 @@
       <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
       <ref role="nfRfV" node="59sIV4z6KxL" resolve="tran" />
     </node>
-    <node concept="3yd64n" id="3mLLVl5q_lA" role="3yd3h7">
-      <property role="3yd64o" value="4" />
-      <property role="3yd3hR" value="1000" />
-      <ref role="nfRfV" node="59sIV4z6MxZ" resolve="tran2" />
-    </node>
     <node concept="3VOWaR" id="3mLLVl5oLL4" role="N8dmf">
       <property role="3VOWdS" value="60" />
       <property role="3VOWdY" value="11" />
