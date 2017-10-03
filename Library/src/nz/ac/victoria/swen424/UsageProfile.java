@@ -6,8 +6,6 @@ import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-import com.sun.xml.internal.stream.XMLBufferListener;
-
 public class UsageProfile extends XmlLayoutNode
 {
 	private int _night;
@@ -16,6 +14,18 @@ public class UsageProfile extends XmlLayoutNode
 	private int _afternoon;
 	private int _eavening;
 	private Boolean _random;
+	
+	public UsageProfile(String name)
+	{
+		super(name);
+		Random rand = new Random();
+		_night = rand.nextInt(101);
+		_morning = rand.nextInt(101);
+		_midday = rand.nextInt(101);
+		_afternoon = rand.nextInt(101);
+		_eavening = rand.nextInt(101);
+		_random = true;
+	}
 	
 	public UsageProfile(String name, int night, int morning, int midday, int afternoon, int eavening, Boolean random)
 	{
@@ -39,10 +49,36 @@ public class UsageProfile extends XmlLayoutNode
 		}
 		_random = random;
 	}
+	
+	public int GetNight()
+	{
+		return _night;
+	}
+
+	public int GetMorning()
+	{
+		return _morning;
+	}
+
+	public int GetMidday()
+	{
+		return _midday;
+	}
+
+	public int GetAfternoon()
+	{
+		return _afternoon;
+	}
+
+	public int GetEavening()
+	{
+		return _eavening;
+	}
 
 	@Override
 	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException
 	{
+		System.out.println("fffff");
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		
 		xmlWriter.add(eventFactory.createStartElement("", "", "usageProfile"));
@@ -57,5 +93,11 @@ public class UsageProfile extends XmlLayoutNode
 		xmlWriter.add(eventFactory.createAttribute("eavening", Integer.toString(_eavening)));
 		
 		xmlWriter.add(eventFactory.createEndElement("", "", "usageProfile")); // </usageProfile>
+	}
+
+	@Override
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException
+	{
+		// No data to write
 	}
 }

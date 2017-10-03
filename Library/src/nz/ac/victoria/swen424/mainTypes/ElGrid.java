@@ -48,4 +48,10 @@ public class ElGrid extends MainBaseType{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -21,6 +21,8 @@ public class ElProducer extends MainBaseType
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
 		_productionType = prodType;
+		// TODO: Real reference
+		_weather = new WeatherValues("test", true);
 	}
 	
 	public void connectTransformer(ElTransformer connect){
@@ -133,9 +135,11 @@ public class ElProducer extends MainBaseType
 			case Overcast:
 				// Producing about 20% of max capacity
 				s.maxElectricity = _maxProduction * 0.2;
+				break;
 			case Rain:
 				// No production at all
 				s.maxElectricity = 0;
+				break;
 			default:
 				throw new Exception("Unexpected Weaterh type found.");
 			}
@@ -147,5 +151,11 @@ public class ElProducer extends MainBaseType
 		// Solar panels can not be reduced in production
 		s.minElectricity = s.maxElectricity;
 		return s;
+	}
+
+	@Override
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException {
+		// TODO Auto-generated method stub
+		
 	}
 }

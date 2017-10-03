@@ -188,21 +188,6 @@
         <node concept="lj46D" id="3nJJ606NoXF" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-        <node concept="3F0ifn" id="3nJJ606NoXG" role="3EZMnx">
-          <property role="3F0ifm" value="min consumption" />
-        </node>
-        <node concept="3F0ifn" id="3nJJ606NoXH" role="3EZMnx">
-          <property role="3F0ifm" value=":" />
-          <node concept="11L4FC" id="3nJJ606NoXI" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="3F0A7n" id="3nJJ606NoXJ" role="3EZMnx">
-          <ref role="1NtTu8" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
-          <node concept="ljvvj" id="3nJJ606NoXK" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
         <node concept="3F0ifn" id="3nJJ606NoXL" role="3EZMnx">
           <property role="3F0ifm" value="max consumption" />
         </node>

@@ -58,7 +58,6 @@
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
-        <property id="5771403044647069443" name="MinConsumption" index="3VOWdY" />
         <reference id="1948092678614246120" name="ConnectedTransformer" index="1pnA4g" />
         <reference id="5097090694229163123" name="UsageProfile" index="1vLJM8" />
       </concept>
@@ -73,7 +72,14 @@
     </language>
   </registry>
   <node concept="sJg17" id="3nJJ606O1DJ">
-    <property role="TrG5h" value="test" />
+    <property role="TrG5h" value="Test" />
+    <node concept="3VOWaR" id="4qWwfGpxjgN" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="house" />
+      <property role="OYydz" value="house" />
+      <ref role="1pnA4g" node="4qR36Xfvtz0" resolve="tran" />
+      <ref role="1vLJM8" node="4qWwfGpvRuX" resolve="House" />
+    </node>
     <node concept="1vLJl6" id="4qWwfGpvRuX" role="1vLJPo">
       <property role="TrG5h" value="House" />
       <property role="1vLJIY" value="10" />
@@ -106,21 +112,12 @@
       <property role="2s6h$Z" value="20" />
       <property role="TrG5h" value="tran2" />
     </node>
-    <node concept="3VOWaR" id="1G90Zx2lXxl" role="N8dmf">
-      <property role="3VOWdY" value="0" />
-      <property role="3VOWdS" value="10" />
-      <property role="TrG5h" value="house" />
-      <property role="OYydz" value="house" />
-      <ref role="1pnA4g" node="4qR36Xfvtz0" resolve="tran" />
-      <ref role="1vLJM8" node="4qWwfGpvRuX" resolve="House" />
-    </node>
-    <node concept="3VOWaR" id="1G90Zx2lXxp" role="N8dmf">
-      <property role="3VOWdY" value="0" />
-      <property role="3VOWdS" value="10" />
-      <property role="TrG5h" value="school" />
+    <node concept="3VOWaR" id="4qWwfGpxjpH" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="shool" />
       <property role="OYydz" value="school" />
-      <ref role="1pnA4g" node="4qR36Xfvtz2" resolve="tran2" />
       <ref role="1vLJM8" node="4qWwfGpvRuZ" resolve="Office Building" />
+      <ref role="1pnA4g" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
     <node concept="1Hj7UV" id="6gi3O$9oIOo" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
