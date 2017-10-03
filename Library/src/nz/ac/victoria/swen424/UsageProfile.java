@@ -78,7 +78,6 @@ public class UsageProfile extends XmlLayoutNode
 	@Override
 	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException
 	{
-		System.out.println("fffff");
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		
 		xmlWriter.add(eventFactory.createStartElement("", "", "usageProfile"));

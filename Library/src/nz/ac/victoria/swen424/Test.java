@@ -44,9 +44,9 @@ public class Test {
 
     ElProducer producer;
     _producers = new LinkedList<ElProducer>();
-    producer = new ElProducer("prod", 1, 20, ProducitionMethodeType.Wind);
+    producer = new ElProducer("prod", 1, 20, ProducitionMethodeType.Solar);
     _producers.add(producer);
-    producer = new ElProducer("prod2", 1, 20, ProducitionMethodeType.Solar);
+    producer = new ElProducer("prod2", 1, 20, ProducitionMethodeType.Conventional);
     _producers.add(producer);
 
     _transformers = new LinkedList<ElTransformer>();
@@ -55,9 +55,9 @@ public class Test {
 
     ElConsumer consumer;
     _consumers = new LinkedList<ElConsumer>();
-    consumer = new ElConsumer("house", 1000);
+    consumer = new ElConsumer("house", 10);
     _consumers.add(consumer);
-    consumer = new ElConsumer("shool", 1000);
+    consumer = new ElConsumer("shool", 10);
     _consumers.add(consumer);
 
     for (ElConsumer consumer_ : _consumers) {
@@ -93,7 +93,7 @@ public class Test {
 
     writeLayoutXML(xmlWriter);
 
-    MainBaseType.Simulate(1, 24, _producers, _consumers, xmlWriter);
+    MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, xmlWriter);
 
     xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
     xmlWriter.add(eventFactory.createEndDocument());
@@ -126,7 +126,6 @@ public class Test {
 
   public static void main(String[] args) throws Exception {
     Test simulator = new Test();
-    System.out.println("asdf");
     simulator.writeXML();
   }
 }

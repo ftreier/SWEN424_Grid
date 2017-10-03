@@ -74,7 +74,7 @@
   <node concept="sJg17" id="3nJJ606O1DJ">
     <property role="TrG5h" value="Test" />
     <node concept="3VOWaR" id="4qWwfGpxjgN" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
+      <property role="3VOWdS" value="10" />
       <property role="TrG5h" value="house" />
       <property role="OYydz" value="house" />
       <ref role="1pnA4g" node="4qR36Xfvtz0" resolve="tran" />
@@ -113,7 +113,7 @@
       <property role="TrG5h" value="tran2" />
     </node>
     <node concept="3VOWaR" id="4qWwfGpxjpH" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
+      <property role="3VOWdS" value="10" />
       <property role="TrG5h" value="shool" />
       <property role="OYydz" value="school" />
       <ref role="1vLJM8" node="4qWwfGpvRuZ" resolve="Office Building" />
@@ -141,13 +141,14 @@
       <property role="TrG5h" value="prod" />
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="1" />
+      <property role="JvpKn" value="2" />
       <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
       <ref role="nfRfV" node="4qR36Xfvtz0" resolve="tran" />
     </node>
     <node concept="3yd64n" id="7Erv4TlUPps" role="3yd3h7">
       <property role="3yd64o" value="1" />
       <property role="3yd3hR" value="20" />
-      <property role="JvpKn" value="2" />
+      <property role="JvpKn" value="3" />
       <property role="TrG5h" value="prod2" />
       <ref role="nfRfV" node="4qR36Xfvtz2" resolve="tran2" />
       <ref role="1Hs3bF" node="4qE1Afm8XZD" resolve="Auckland" />

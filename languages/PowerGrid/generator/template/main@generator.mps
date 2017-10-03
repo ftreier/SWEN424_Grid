@@ -57,7 +57,6 @@
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
-      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
@@ -209,13 +208,6 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -1060,8 +1052,8 @@
         <node concept="3clFbH" id="4qE1Afm7Hv2" role="3cqZAp" />
         <node concept="3clFbF" id="4qWwfGpx_zo" role="3cqZAp">
           <node concept="2YIFZM" id="4qWwfGpx_T9" role="3clFbG">
-            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <ref role="1Pybhc" to="mgvq:~MainBaseType" resolve="MainBaseType" />
+            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <node concept="3cmrfG" id="4qWwfGpxYZW" role="37wK5m">
               <property role="3cmrfH" value="1" />
             </node>
@@ -1074,20 +1066,11 @@
             <node concept="37vLTw" id="4qWwfGpxZvn" role="37wK5m">
               <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
             </node>
+            <node concept="37vLTw" id="4qWwfGp_fRK" role="37wK5m">
+              <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+            </node>
             <node concept="37vLTw" id="4qWwfGpxZTr" role="37wK5m">
               <ref role="3cqZAo" node="4qE1Afm7nTR" resolve="xmlWriter" />
-            </node>
-          </node>
-        </node>
-        <node concept="1X3_iC" id="4qWwfGpx_5J" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8yJ9" role="8Wnug">
-            <node concept="1rXfSq" id="4qE1Afm8yJ7" role="3clFbG">
-              <ref role="37wK5l" node="4qE1Afm8ujS" resolve="simulateAndExport" />
-              <node concept="37vLTw" id="4qE1Afm8yYk" role="37wK5m">
-                <ref role="3cqZAo" node="4qE1Afm7nTR" resolve="xmlWriter" />
-              </node>
             </node>
           </node>
         </node>
@@ -1203,37 +1186,6 @@
             <property role="3SKdUp" value="Export Weather" />
           </node>
         </node>
-        <node concept="1X3_iC" id="4qWwfGpyB9R" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8$c$" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm8$c_" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm8$cA" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm8$cB" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm8$cC" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm8$cD" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm8$cE" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createStartElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.StartElement" resolve="createStartElement" />
-                    <node concept="Xl_RD" id="4qE1Afm8$cF" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8$cG" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8$cH" role="37wK5m">
-                      <property role="Xl_RC" value="weatherList" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="2Gpval" id="4qE1Afm8$cI" role="3cqZAp">
           <node concept="2GrKxI" id="4qE1Afm8$cJ" role="2Gsz3X">
             <property role="TrG5h" value="weather" />
@@ -1257,72 +1209,10 @@
             </node>
           </node>
         </node>
-        <node concept="1X3_iC" id="4qWwfGpyBE9" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8$cR" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm8$cS" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm8$cT" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm8$cU" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm8$cV" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm8$cW" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm8$cX" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createEndElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.EndElement" resolve="createEndElement" />
-                    <node concept="Xl_RD" id="4qE1Afm8$cY" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8$cZ" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8$d0" role="37wK5m">
-                      <property role="Xl_RC" value="weatherList" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbH" id="4qWwfGpwaOw" role="3cqZAp" />
         <node concept="3SKdUt" id="4qWwfGpwa22" role="3cqZAp">
           <node concept="3SKdUq" id="4qWwfGpwa23" role="3SKWNk">
             <property role="3SKdUp" value="Export Usage Profiles" />
-          </node>
-        </node>
-        <node concept="1X3_iC" id="4qWwfGpyCDI" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qWwfGpwa24" role="8Wnug">
-            <node concept="2OqwBi" id="4qWwfGpwa25" role="3clFbG">
-              <node concept="37vLTw" id="4qWwfGpwa26" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qWwfGpwa27" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qWwfGpwa28" role="37wK5m">
-                  <node concept="37vLTw" id="4qWwfGpwa29" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qWwfGpwa2a" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createStartElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.StartElement" resolve="createStartElement" />
-                    <node concept="Xl_RD" id="4qWwfGpwa2b" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qWwfGpwa2c" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qWwfGpwa2d" role="37wK5m">
-                      <property role="Xl_RC" value="usageProfiles" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
         </node>
         <node concept="2Gpval" id="4qWwfGpwa2e" role="3cqZAp">
@@ -1348,72 +1238,10 @@
             </node>
           </node>
         </node>
-        <node concept="1X3_iC" id="4qWwfGpyD85" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qWwfGpwa2n" role="8Wnug">
-            <node concept="2OqwBi" id="4qWwfGpwa2o" role="3clFbG">
-              <node concept="37vLTw" id="4qWwfGpwa2p" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qWwfGpwa2q" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qWwfGpwa2r" role="37wK5m">
-                  <node concept="37vLTw" id="4qWwfGpwa2s" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qWwfGpwa2t" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createEndElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.EndElement" resolve="createEndElement" />
-                    <node concept="Xl_RD" id="4qWwfGpwa2u" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qWwfGpwa2v" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qWwfGpwa2w" role="37wK5m">
-                      <property role="Xl_RC" value="usageProfiles" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbH" id="4qE1Afm8zXw" role="3cqZAp" />
         <node concept="3SKdUt" id="4qE1Afm8zIt" role="3cqZAp">
           <node concept="3SKdUq" id="4qE1Afm8zIv" role="3SKWNk">
             <property role="3SKdUp" value="Export Producers" />
-          </node>
-        </node>
-        <node concept="1X3_iC" id="4qWwfGpyD_t" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8784" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm87tb" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm8782" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm87Dv" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm87NQ" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm87G6" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm880$" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createStartElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.StartElement" resolve="createStartElement" />
-                    <node concept="Xl_RD" id="4qE1Afm8846" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm88eI" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm88j1" role="37wK5m">
-                      <property role="Xl_RC" value="producers" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
         </node>
         <node concept="2Gpval" id="4qE1Afm7K2e" role="3cqZAp">
@@ -1433,37 +1261,6 @@
                   <ref role="37wK5l" to="mgvq:~ElProducer.writeHeaderData(javax.xml.stream.XMLEventWriter):void" resolve="writeHeaderData" />
                   <node concept="37vLTw" id="4qE1Afm89Iw" role="37wK5m">
                     <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1X3_iC" id="4qWwfGpyE2F" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm88rk" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm88rl" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm88rm" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm88rn" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm88ro" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm88rp" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm83zj" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm88rq" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createEndElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.EndElement" resolve="createEndElement" />
-                    <node concept="Xl_RD" id="4qE1Afm88rr" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm88rs" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm88rt" role="37wK5m">
-                      <property role="Xl_RC" value="producers" />
-                    </node>
                   </node>
                 </node>
               </node>
@@ -1518,125 +1315,6 @@
       </node>
     </node>
     <node concept="2tJIrI" id="4qE1Afm7hiJ" role="jymVt" />
-    <node concept="3clFb_" id="4qE1Afm8ujS" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="simulateAndExport" />
-      <property role="od$2w" value="false" />
-      <property role="DiZV1" value="false" />
-      <property role="2aFKle" value="false" />
-      <node concept="3clFbS" id="4qE1Afm8ujV" role="3clF47">
-        <node concept="1X3_iC" id="4qWwfGpx_3d" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3cpWs8" id="4qE1Afm8vY8" role="8Wnug">
-            <node concept="3cpWsn" id="4qE1Afm8vY9" role="3cpWs9">
-              <property role="TrG5h" value="eventFactory" />
-              <node concept="3uibUv" id="4qE1Afm8vYa" role="1tU5fm">
-                <ref role="3uigEE" to="91n3:~XMLEventFactory" resolve="XMLEventFactory" />
-              </node>
-              <node concept="2YIFZM" id="4qE1Afm8vYb" role="33vP2m">
-                <ref role="1Pybhc" to="91n3:~XMLEventFactory" resolve="XMLEventFactory" />
-                <ref role="37wK5l" to="91n3:~XMLEventFactory.newInstance():javax.xml.stream.XMLEventFactory" resolve="newInstance" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1X3_iC" id="4qWwfGpx$PP" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8vYc" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm8vYd" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm8vYe" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm8vao" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm8vYf" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm8vYg" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm8vYh" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm8vY9" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm8vYi" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createStartElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.StartElement" resolve="createStartElement" />
-                    <node concept="Xl_RD" id="4qE1Afm8vYj" role="37wK5m" />
-                    <node concept="Xl_RD" id="4qE1Afm8vYk" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8vYl" role="37wK5m">
-                      <property role="Xl_RC" value="simulation" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="4qE1Afm8vXW" role="3cqZAp" />
-        <node concept="3SKdUt" id="4qE1Afm8vXK" role="3cqZAp">
-          <node concept="3SKdUq" id="4qE1Afm8vXL" role="3SKWNk">
-            <property role="3SKdUp" value="TODO The fun stuff comes in here" />
-          </node>
-        </node>
-        <node concept="3clFbH" id="4qE1Afm8zpe" role="3cqZAp" />
-        <node concept="1X3_iC" id="4qWwfGpx$XD" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="4qE1Afm8z9D" role="8Wnug">
-            <node concept="2OqwBi" id="4qE1Afm8z9E" role="3clFbG">
-              <node concept="37vLTw" id="4qE1Afm8z9F" role="2Oq$k0">
-                <ref role="3cqZAo" node="4qE1Afm8vao" resolve="xmlWriter" />
-              </node>
-              <node concept="liA8E" id="4qE1Afm8z9G" role="2OqNvi">
-                <ref role="37wK5l" to="91n3:~XMLEventWriter.add(javax.xml.stream.events.XMLEvent):void" resolve="add" />
-                <node concept="2OqwBi" id="4qE1Afm8z9H" role="37wK5m">
-                  <node concept="37vLTw" id="4qE1Afm8z9I" role="2Oq$k0">
-                    <ref role="3cqZAo" node="4qE1Afm8vY9" resolve="eventFactory" />
-                  </node>
-                  <node concept="liA8E" id="4qE1Afm8z9J" role="2OqNvi">
-                    <ref role="37wK5l" to="91n3:~XMLEventFactory.createEndElement(java.lang.String,java.lang.String,java.lang.String):javax.xml.stream.events.EndElement" resolve="createEndElement" />
-                    <node concept="Xl_RD" id="4qE1Afm8z9K" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8z9L" role="37wK5m">
-                      <property role="Xl_RC" value="" />
-                    </node>
-                    <node concept="Xl_RD" id="4qE1Afm8z9M" role="37wK5m">
-                      <property role="Xl_RC" value="simulation" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm6S6" id="4qE1Afm8ttr" role="1B3o_S" />
-      <node concept="3cqZAl" id="4qE1Afm8ujJ" role="3clF45" />
-      <node concept="37vLTG" id="4qE1Afm8vao" role="3clF46">
-        <property role="TrG5h" value="xmlWriter" />
-        <node concept="3uibUv" id="4qE1Afm8van" role="1tU5fm">
-          <ref role="3uigEE" to="91n3:~XMLEventWriter" resolve="XMLEventWriter" />
-        </node>
-      </node>
-      <node concept="3uibUv" id="4qE1Afm8xtH" role="Sfmx6">
-        <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="4qE1Afm8rKU" role="jymVt" />
-    <node concept="3clFb_" id="6Lad368RTxH" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="Test" />
-      <property role="od$2w" value="false" />
-      <property role="DiZV1" value="false" />
-      <property role="2aFKle" value="false" />
-      <node concept="3clFbS" id="6Lad368RTxK" role="3clF47" />
-      <node concept="3Tm1VV" id="6Lad368RTfK" role="1B3o_S" />
-      <node concept="3cqZAl" id="6Lad368RTxB" role="3clF45" />
-      <node concept="37vLTG" id="6Lad368RTPA" role="3clF46">
-        <property role="TrG5h" value="i" />
-        <node concept="10Oyi0" id="6Lad368RTP_" role="1tU5fm" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="4qR36XftTgq" role="jymVt" />
     <node concept="2YIFZL" id="4qR36Xfu4gq" role="jymVt">
       <property role="TrG5h" value="main" />
       <property role="DiZV1" value="false" />
@@ -1652,20 +1330,6 @@
             <node concept="2ShNRf" id="4qR36XfuEdj" role="33vP2m">
               <node concept="1pGfFk" id="4qR36XfuEqM" role="2ShVmc">
                 <ref role="37wK5l" node="6Lad368Qz4z" resolve="PowerGridSimulator" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="4qWwfGpyEvM" role="3cqZAp">
-          <node concept="2OqwBi" id="4qWwfGpyESs" role="3clFbG">
-            <node concept="10M0yZ" id="4qWwfGpyExo" role="2Oq$k0">
-              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-            </node>
-            <node concept="liA8E" id="4qWwfGpyF$j" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-              <node concept="Xl_RD" id="4qWwfGpyF_N" role="37wK5m">
-                <property role="Xl_RC" value="asdf" />
               </node>
             </node>
           </node>
