@@ -126,7 +126,6 @@ public class Test {
 
   public static void main(String[] args) throws Exception {
     Test simulator = new Test();
-    System.out.println("asdf");
     simulator.writeXML();
   }
 }

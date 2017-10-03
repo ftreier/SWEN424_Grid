@@ -1331,20 +1331,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="4qWwfGpyEvM" role="3cqZAp">
-          <node concept="2OqwBi" id="4qWwfGpyESs" role="3clFbG">
-            <node concept="10M0yZ" id="4qWwfGpyExo" role="2Oq$k0">
-              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-            </node>
-            <node concept="liA8E" id="4qWwfGpyF$j" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-              <node concept="Xl_RD" id="4qWwfGpyF_N" role="37wK5m">
-                <property role="Xl_RC" value="asdf" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="4qWwfGpyxtz" role="3cqZAp">
           <node concept="2OqwBi" id="4qWwfGpyxzo" role="3clFbG">
             <node concept="37vLTw" id="4qWwfGpyxtx" role="2Oq$k0">
