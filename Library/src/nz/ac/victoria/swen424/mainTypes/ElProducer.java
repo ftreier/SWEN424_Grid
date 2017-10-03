@@ -72,18 +72,22 @@ public class ElProducer extends MainBaseType
 		switch (_productionType)
 		{
 		case Wind:
-			return simulateWind(day);
+			_simStat = simulateWind(day);
+			break;
 		case Solar:
-			return simulateSolar(day, daytime);
+			_simStat = simulateSolar(day, daytime);
+			break;
 		case Conventional:
-			SimulationStatus s = new SimulationStatus();
-			s.type = this;
-			s.maxElectricity = _maxProduction;
-			s.minElectricity = _minProduction;
+			_simStat = new SimulationStatus();
+			_simStat.type = this;
+			_simStat.maxElectricity = _maxProduction;
+			_simStat.minElectricity = _minProduction;
+			break;
 		default:
 			throw new Exception("Unexpected power generation type found.");
 		}
-
+		
+		return _simStat;
 	}
 	
 	private SimulationStatus simulateWind(int day) throws Exception
