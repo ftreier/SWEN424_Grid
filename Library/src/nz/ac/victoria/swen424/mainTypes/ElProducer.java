@@ -34,6 +34,11 @@ public class ElProducer extends MainBaseType
 			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
 		}
 	}
+	
+	public boolean canChange() 
+	{
+		return _productionType == ProducitionMethodeType.Conventional; 
+	}
 
 	@Override
 	public String getData()
@@ -82,6 +87,7 @@ public class ElProducer extends MainBaseType
 			_simStat.type = this;
 			_simStat.maxElectricity = _maxProduction;
 			_simStat.minElectricity = _minProduction;
+			_simStat.currentElectricity = _minProduction;
 			break;
 		default:
 			throw new Exception("Unexpected power generation type found.");
@@ -114,7 +120,7 @@ public class ElProducer extends MainBaseType
 		}
 		
 		// Electricity production of wind turbines can not be reduced
-		s.minElectricity = s.maxElectricity;
+		s.currentElectricity = s.minElectricity = s.maxElectricity;
 		return s;		
 	}
 	
@@ -153,13 +159,27 @@ public class ElProducer extends MainBaseType
 		}
 		
 		// Solar panels can not be reduced in production
-		s.minElectricity = s.maxElectricity;
+		s.currentElectricity = s.minElectricity = s.maxElectricity;
 		return s;
 	}
 
 	@Override
-	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException {
-		// TODO Auto-generated method stub
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException
+	{
+		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		
+		xmlWriter.add(eventFactory.createStartElement("", "", "producer"));
+		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
+		xmlWriter.add(eventFactory.createAttribute("name", _name));
+		xmlWriter.add(eventFactory.createAttribute("production", Double.toString(_simStat.currentElectricity)));
+		xmlWriter.add(eventFactory.createAttribute("maxProduction", Double.toString(_maxProduction)));
+		if(_productionType == ProducitionMethodeType.Conventional)
+		{
+			xmlWriter.add(eventFactory.createAttribute("minProduction", Double.toString(_minProduction)));
+			double percentage = (_simStat.currentElectricity - _simStat.minElectricity) / (_simStat.maxElectricity - _simStat.minElectricity) * 100;
+			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(percentage)));
+		}
+		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
+
 	}
 }

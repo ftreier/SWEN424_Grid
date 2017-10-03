@@ -1052,8 +1052,8 @@
         <node concept="3clFbH" id="4qE1Afm7Hv2" role="3cqZAp" />
         <node concept="3clFbF" id="4qWwfGpx_zo" role="3cqZAp">
           <node concept="2YIFZM" id="4qWwfGpx_T9" role="3clFbG">
-            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <ref role="1Pybhc" to="mgvq:~MainBaseType" resolve="MainBaseType" />
+            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <node concept="3cmrfG" id="4qWwfGpxYZW" role="37wK5m">
               <property role="3cmrfH" value="1" />
             </node>
@@ -1065,6 +1065,9 @@
             </node>
             <node concept="37vLTw" id="4qWwfGpxZvn" role="37wK5m">
               <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
+            </node>
+            <node concept="37vLTw" id="4qWwfGp_fRK" role="37wK5m">
+              <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
             </node>
             <node concept="37vLTw" id="4qWwfGpxZTr" role="37wK5m">
               <ref role="3cqZAo" node="4qE1Afm7nTR" resolve="xmlWriter" />

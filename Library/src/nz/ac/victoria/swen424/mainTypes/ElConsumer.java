@@ -72,7 +72,8 @@ SimulationStatus Simulate(int time) throws Exception {
 		_simStat.maxElectricity = -_maxConsumption * _usageProfile.GetEavening() / 100.0;
 	}
 	
-	_simStat.minElectricity = _simStat.maxElectricity;
+	_simStat.currentElectricity = _simStat.minElectricity = _simStat.maxElectricity;
+	
 	
 	return _simStat;
 }
@@ -85,6 +86,8 @@ public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamExcept
 	xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
 	xmlWriter.add(eventFactory.createAttribute("name", _name));
 	xmlWriter.add(eventFactory.createAttribute("consumption", Double.toString(-_simStat.maxElectricity)));
+	xmlWriter.add(eventFactory.createAttribute("usage", Double.toString((-_simStat.maxElectricity) / _maxConsumption * 100)));
+	xmlWriter.add(eventFactory.createAttribute("maxConsumption", Integer.toString(_maxConsumption)));
 	xmlWriter.add(eventFactory.createEndElement("", "", "consumer")); // </consumer>
 }
 }
