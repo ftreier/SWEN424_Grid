@@ -2,8 +2,15 @@ package nz.ac.victoria.swen424.mainTypes;
 
 public class SimulationStatus
 {
-	public double maxElectricity;
-	public double minElectricity;
-	public double currentElectricity;
-	public MainBaseType type;
+	public double maxElectricity = 0;
+	public double minElectricity = 0;
+	public double currentElectricity = 0;
+	public double loss = 0;
+	public MainBaseType type = null;
+	public boolean isOk = true;
+	
+	public double getUsage()
+	{
+		return (Math.abs(currentElectricity) - Math.abs(minElectricity) + loss) / (Math.abs(maxElectricity) - Math.abs(minElectricity)) * 100;
+	}
 }

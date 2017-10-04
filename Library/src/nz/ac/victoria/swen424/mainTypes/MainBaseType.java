@@ -37,7 +37,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			xmlWriter.add(eventFactory.createAttribute("time", Integer.toString(time % 24)));
 			xmlWriter.add(eventFactory.createAttribute("day", Boolean.toString(result)));
 			
-			MainBaseType.WriteSimulationStep(time, producers, consumers, xmlWriter);
+			MainBaseType.WriteSimulationStep(time, producers, consumers, transformers, xmlWriter);
 			
 			xmlWriter.add(eventFactory.createEndElement("", "", "step")); // </step>
 			
@@ -48,16 +48,21 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 
 	}
 	
-	public static void WriteSimulationStep(int time, List<ElProducer> producers, List<ElConsumer> consumers, XMLEventWriter xmlWriter) throws Exception
+	public static void WriteSimulationStep(int time, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, XMLEventWriter xmlWriter) throws Exception
 	{
 		for (ElConsumer consumer : consumers)
 		{
 			consumer.writeSimulationData(xmlWriter);
 		}
-	
+
 		for (ElProducer producer : producers)
 		{
 			producer.writeSimulationData(xmlWriter);
+		}
+
+		for (ElTransformer transformer : transformers)
+		{
+			transformer.writeSimulationData(xmlWriter);
 		}
 	}
 	
@@ -74,7 +79,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		
 		// add general 10% for loss (estimate)
 		double lossAssumption = elUsage * 0.1;
-		//elUsage += lossAssumption;
+		elUsage += lossAssumption;
 
 		// accumulate production capacity
 		List<SimulationStatus> prodStatus = new LinkedList<>();
@@ -83,8 +88,8 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			SimulationStatus simStat = producer.Simulate(time);
 			if (producer.canChange())
 			{
-				elUsage += simStat.minElectricity;
-				possibleProduction += simStat.maxElectricity - simStat.minElectricity;
+				elUsage += simStat.currentElectricity;
+				possibleProduction += simStat.maxElectricity - simStat.currentElectricity;
 				prodStatus.add(simStat);
 			}
 			else
@@ -99,7 +104,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			double percentage = Math.abs(elUsage) / possibleProduction;
 			for (SimulationStatus simStat : prodStatus)
 			{
-				double diff = (simStat.maxElectricity - simStat.minElectricity) * percentage;
+				double diff = (simStat.maxElectricity - simStat.currentElectricity) * percentage;
 				elUsage += diff;
 				possibleProduction -= diff;
 				simStat.currentElectricity += diff;
@@ -111,11 +116,15 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		}
 		
 		// remove remove loss assumption and replace with actual losses
-		//elUsage -= lossAssumption;
+		elUsage -= lossAssumption;
 		
 		// Check Transformers and calculate loss
+		for (ElTransformer transformer : transformers)
+		{
+			elUsage -= transformer.Simulate(time).loss;
+		}
 		
-		
+		// Allow for some small imbalance due to precision issues 
 		return elUsage >= -0.1 && elUsage <= 0.1;
 	}
 }

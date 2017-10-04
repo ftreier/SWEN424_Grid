@@ -100,7 +100,7 @@
       <property role="2s6h$1" value="4" />
       <property role="2s6h$3" value="1" />
       <property role="2s6h$4" value="150" />
-      <property role="2s6h$S" value="100" />
+      <property role="2s6h$S" value="98" />
       <property role="2s6h$Z" value="20" />
       <property role="TrG5h" value="tran" />
     </node>
@@ -108,7 +108,7 @@
       <property role="2s6h$1" value="4" />
       <property role="2s6h$3" value="1" />
       <property role="2s6h$4" value="80" />
-      <property role="2s6h$S" value="100" />
+      <property role="2s6h$S" value="95" />
       <property role="2s6h$Z" value="20" />
       <property role="TrG5h" value="tran2" />
     </node>

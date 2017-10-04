@@ -837,7 +837,7 @@
                   <ref role="2Gs0qQ" node="1G90Zx2sFQQ" resolve="grid_" />
                 </node>
                 <node concept="liA8E" id="1G90Zx2sH7m" role="2OqNvi">
-                  <ref role="37wK5l" to="mgvq:~ElGrid.connectTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectTransformer" />
+                  <ref role="37wK5l" to="mgvq:~ElGrid.connectLeftTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectLeftTransformer" />
                   <node concept="2OqwBi" id="1G90Zx2sIJG" role="37wK5m">
                     <node concept="37vLTw" id="1G90Zx2sHkq" role="2Oq$k0">
                       <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
@@ -857,7 +857,7 @@
                   <ref role="2Gs0qQ" node="1G90Zx2sFQQ" resolve="grid_" />
                 </node>
                 <node concept="liA8E" id="1G90Zx2sVMg" role="2OqNvi">
-                  <ref role="37wK5l" to="mgvq:~ElGrid.connectTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectTransformer" />
+                  <ref role="37wK5l" to="mgvq:~ElGrid.connectRightTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectRightTransformer" />
                   <node concept="2OqwBi" id="1G90Zx2sXD2" role="37wK5m">
                     <node concept="37vLTw" id="1G90Zx2sWbs" role="2Oq$k0">
                       <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />

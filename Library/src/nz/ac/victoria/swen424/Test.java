@@ -50,8 +50,8 @@ public class Test {
     _producers.add(producer);
 
     _transformers = new LinkedList<ElTransformer>();
-    _transformers.add(new ElTransformer("tran", 150, 20, 100, 4, 1));
-    _transformers.add(new ElTransformer("tran2", 80, 20, 100, 4, 1));
+    _transformers.add(new ElTransformer("tran", 150, 20, 95, 4, 1));
+    _transformers.add(new ElTransformer("tran2", 80, 20, 90, 4, 1));
 
     ElConsumer consumer;
     _consumers = new LinkedList<ElConsumer>();
@@ -73,8 +73,10 @@ public class Test {
     System.out.println("");
 
     for (ElGrid grid_ : _grids) {
-      grid_.connectTransformer(_transformers.get(0));
-      grid_.connectTransformer(_transformers.get(1));
+    	grid_.connectLeftTransformer(_transformers.get(0));
+    	grid_.connectRightTransformer(_transformers.get(1));
+//      grid_.connectTransformer(_transformers.get(0));
+//      grid_.connectTransformer(_transformers.get(1));
     }
 
     for (ElProducer producer_ : _producers) {

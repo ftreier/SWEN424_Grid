@@ -20,16 +20,29 @@ public class ElGrid extends MainBaseType{
 		_voltage = voltage;
 	}
 	
-	public void connectTransformer(ElTransformer connect){
-		if(connect.increaseUsage((_percentUsage/100)*_maxCapacity, this) == true){
-			if(connect.getLeftNet() == _voltage || connect.getRightNet() == _voltage){
-				if(connect1 == null){ connect1 = connect; System.out.println("Grid " + _name + " connected to transformer 1");}
-				else if(connect2 == null){ connect2 = connect; System.out.println("Grid " + _name + " connected to transformer 2");}
-				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
-			}
-			else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
-		}
+	public void connectLeftTransformer(ElTransformer connect)
+	{
+		connect1 = connect;
+		connect.addRightConnection(this);
 	}
+	
+	public void connectRightTransformer(ElTransformer connect)
+	{
+		connect2 = connect;
+		connect.addRightConnection(this);
+	}
+	
+//	public void connectTransformer(ElTransformer connect)
+//	{
+//		if(connect.increaseUsage((_percentUsage/100)*_maxCapacity, this) == true){
+//			if(connect.getLeftNet() == _voltage || connect.getRightNet() == _voltage){
+//				if(connect1 == null){ connect1 = connect; System.out.println("Grid " + _name + " connected to transformer 1");}
+//				else if(connect2 == null){ connect2 = connect; System.out.println("Grid " + _name + " connected to transformer 2");}
+//				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
+//			}
+//			else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
+//		}
+//	}
 
 	@Override
 	public String getData() {
