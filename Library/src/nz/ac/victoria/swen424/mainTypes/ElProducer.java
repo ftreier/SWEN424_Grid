@@ -182,6 +182,25 @@ public class ElProducer extends MainBaseType
 			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(_simStat.getUsage())));
 		}
 		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
-
+	}
+	
+	public boolean updateProduction(double diff)
+	{
+		_simStat.currentElectricity += diff;
+		if(_connect._simStat != null)
+		{
+			_connect._simStat.currentElectricity += diff;
+		}
+		
+		if(_simStat.currentElectricity > _maxProduction)
+		{
+			_simStat.isOk = false;
+		}
+		else
+		{
+			_simStat.isOk = false;			
+		}
+		
+		return _simStat.isOk;
 	}
 }
