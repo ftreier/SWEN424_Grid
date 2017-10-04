@@ -26,13 +26,15 @@ public class ElProducer extends MainBaseType
 	}
 	
 	public void connectTransformer(ElTransformer connect){
-		if(connect.increaseUsage(_maxProduction, this) == true){
-			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
-				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
-				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1");}
-			}
-			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
-		}
+		_connect = connect;
+		connect.addLeftConnection(this);
+//		if(connect.increaseUsage(_maxProduction, this) == true){
+//			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
+//				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
+//				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1");}
+//			}
+//			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
+//		}
 	}
 	
 	public boolean canChange() 
@@ -100,27 +102,27 @@ public class ElProducer extends MainBaseType
 	{
 		SimulationStatus s = new SimulationStatus();
 		s.type = this;
-		
+		s.maxElectricity = _maxProduction;
+		s.minElectricity = 0;
+
 		int windSpeed = _weather.GetWeatherForDay(day).getWindSpeed().WindSpeedValue();
 		
 		// Shutdown because of strong winds, no production
 		if(windSpeed >= 10)
 		{
-			s.maxElectricity = 0;
+			s.currentElectricity = 0;
 		}
 		// Optimal region, maximum production
 		else if (windSpeed >= 7)
 		{
-			s.maxElectricity = _maxProduction / 3.0;
+			s.currentElectricity = _maxProduction / 3.0;
 		}
 		// Linear approximation for low wind production
 		else
 		{
-			s.maxElectricity = windSpeed * _maxProduction / 6.0;
+			s.currentElectricity = windSpeed * _maxProduction / 6.0;
 		}
 		
-		// Electricity production of wind turbines can not be reduced
-		s.currentElectricity = s.minElectricity = s.maxElectricity;
 		return s;		
 	}
 	
@@ -128,6 +130,8 @@ public class ElProducer extends MainBaseType
 	{
 		SimulationStatus s = new SimulationStatus();
 		s.type = this;
+		s.maxElectricity = _maxProduction;
+		s.minElectricity = 0;
 		
 		// Only producing energy from 6am to 6pm
 		if(time < 6 || time > 18)
@@ -140,15 +144,15 @@ public class ElProducer extends MainBaseType
 			{
 			case ClearSky:
 				// Maximum production
-				s.maxElectricity = _maxProduction;
+				s.currentElectricity = _maxProduction;
 				break;
 			case Overcast:
 				// Producing about 20% of max capacity
-				s.maxElectricity = _maxProduction * 0.2;
+				s.currentElectricity = _maxProduction * 0.2;
 				break;
 			case Rain:
 				// No production at all
-				s.maxElectricity = 0;
+				s.currentElectricity = 0;
 				break;
 			default:
 				throw new Exception("Unexpected Weaterh type found.");
@@ -158,8 +162,6 @@ public class ElProducer extends MainBaseType
 			s.maxElectricity = s.maxElectricity * (1 - Math.abs(time - 12) / 12);
 		}
 		
-		// Solar panels can not be reduced in production
-		s.currentElectricity = s.minElectricity = s.maxElectricity;
 		return s;
 	}
 
@@ -176,8 +178,8 @@ public class ElProducer extends MainBaseType
 		if(_productionType == ProducitionMethodeType.Conventional)
 		{
 			xmlWriter.add(eventFactory.createAttribute("minProduction", Double.toString(_minProduction)));
-			double percentage = (_simStat.currentElectricity - _simStat.minElectricity) / (_simStat.maxElectricity - _simStat.minElectricity) * 100;
-			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(percentage)));
+			//double percentage = (_simStat.currentElectricity - _simStat.minElectricity) / (_simStat.maxElectricity - _simStat.minElectricity) * 100;
+			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(_simStat.getUsage())));
 		}
 		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
 
