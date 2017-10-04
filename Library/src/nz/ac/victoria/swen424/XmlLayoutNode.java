@@ -12,4 +12,9 @@ public abstract class XmlLayoutNode implements IXmlWriteLayoutData
 		_name = name;
 		_guid = UUID.randomUUID();
 	}
+	
+	public UUID getGuid() {
+		return _guid;
+	}
+	
 }

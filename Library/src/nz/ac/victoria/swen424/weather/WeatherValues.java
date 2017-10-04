@@ -12,6 +12,7 @@ import nz.ac.victoria.swen424.XmlLayoutNode;
 
 public class WeatherValues extends XmlLayoutNode
 {
+	private static final int _numberOfRandomDays = 20;
 	private Map<Integer, Weather> _weather;
 	private boolean _isRandom;
 	
@@ -23,7 +24,7 @@ public class WeatherValues extends XmlLayoutNode
 		if(random)
 		{
 			Random rand = new Random();
-			for(int i = 0; i < 50; i++)
+			for(int i = 0; i < _numberOfRandomDays; i++)
 			{
 				AppendWeather(new Weather(WeatherEnum.valueOf(rand.nextInt(3)), WindSpeedEnum.valueOf(rand.nextInt(13))));
 			}

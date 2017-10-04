@@ -1,0 +1,64 @@
+<powerGridSimulator>
+	<modelDefinition>
+		<simulationPeriode resolution="15" start="1.1.17T00:00" steps="20"/>
+		<!--Groth potential-->
+		<!--<weather />-->
+			<producer id="p1" name="Windmill" minProduction="0" maxProductin="10">
+				<connectedTo>t1l</connectedTo>
+			</producer>
+			<producer id="p2" name="Thermal Power Plant" minProduction="100" maxProductin="900">
+				<connectedTo>tl</connectedTo>
+			</producer>
+			<consumer id="c1" name="Residence_1" minConsumtion="1" maxConsumtion="10" >
+				<connectedTo>t1l</connectedTo>
+				<!--Groth potential-->
+				<!--<usageProfile />-->
+			</consumer>
+			<consumer id="c2" name="Greenhouse" minConsumtion="10" maxConsumtion="100" >
+				<connectedTo>t1l</connectedTo>
+			</consumer>
+			<grid id="g1" name="Auckland - Wellington" maxCapacity="1000" loss="1.5%">
+				<connectedTo>t1h</connectedTo>
+				<connectedTo>t2h</connectedTo>
+			</grid>
+			<grid id="g2" name="North Island - South Island" maxCapacity="2000" loss="1%" />
+			<transformator id="t1" name="Wellington1" maxCapacity="1000" loss="1.5%">
+				<side id="t1l" level="1" name="Low voltage">
+					<!--not absolutely neccessary, but since file is always generated, it should not be problematic to add references from both sides-->
+					<connectedTo>c1</connectedTo>
+					<connectedTo>c2</connectedTo>
+					<connectedTo>g1</connectedTo>
+				</side>
+				<side id="t1h" level="7" name="High voltage">
+					<connectedTo>p1</connectedTo>
+				</side>
+			</transformator>
+			<transformator id="t2" name="Auckland1" maxCapacity="1000" loss="1.5%">
+				<side id="t1l" level="1" name="Low voltage" />
+				<side id="t1h" level="7" name="High voltage" />
+			</transformator>
+	</modelDefinition>
+	<simulation>
+		<step number="1" time="1.1.2017T00:00" result="OK">
+			<results>
+				<result ref="p1" curentProduction="7" result="OK"/> 
+				<result ref="p2" curentProduction="100" result="OK"/>
+				<result ref="c1" currentUsage="3" result="OK"/>
+				<result ref="g2" usage="10%" loss="2" result="OK"/>
+				<result ref="t1" lowSum="-100" highSum="150" loss="3" result="OK"/>
+			<!--...-->
+			</results>
+		</step>
+		<step number="2" time="1.1.2017T00:00" result="Not OK">
+			<results>
+				<result ref="p1" curentProduction="7" result="OK"/> 
+				<result ref="p2" curentProduction="100" result="OK"/>
+				<result ref="c1" currentUsage="3" result="OK"/>
+				<result ref="g2" usage="10%" loss="2" result="OK"/>
+				<result ref="t1" lowSum="-100" highSum="2000" loss="3" result="NotOk"/>
+			<!--...-->
+			</results>
+		</step>
+			<!--...-->
+	</simulation>
+</powerGridSimulator>
