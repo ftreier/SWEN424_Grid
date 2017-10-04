@@ -85,7 +85,7 @@
             <node concept="3eOVzh" id="7rDXPBEWzeN" role="3clFbG">
               <node concept="1Wqviy" id="7rDXPBEWxl1" role="3uHU7B" />
               <node concept="3cmrfG" id="7rDXPBEWz$D" role="3uHU7w">
-                <property role="3cmrfH" value="200" />
+                <property role="3cmrfH" value="1000" />
               </node>
             </node>
           </node>
@@ -98,17 +98,17 @@
         <node concept="3clFbS" id="6qPpZy2sZOv" role="2VODD2">
           <node concept="3clFbF" id="6qPpZy2sZVC" role="3cqZAp">
             <node concept="1Wc70l" id="6qPpZy2t5$c" role="3clFbG">
-              <node concept="2d3UOw" id="6qPpZy2ttBG" role="3uHU7w">
+              <node concept="3eOSWO" id="4qWwfGpAzLn" role="3uHU7w">
                 <node concept="1Wqviy" id="6qPpZy2t5NS" role="3uHU7B" />
                 <node concept="3cmrfG" id="4qR36Xfvzsa" role="3uHU7w">
-                  <property role="3cmrfH" value="0" />
+                  <property role="3cmrfH" value="49" />
                 </node>
               </node>
-              <node concept="2dkUwp" id="4qR36Xfvy5y" role="3uHU7B">
+              <node concept="3eOVzh" id="4qWwfGpAzzc" role="3uHU7B">
+                <node concept="1Wqviy" id="6qPpZy2sZVB" role="3uHU7B" />
                 <node concept="3cmrfG" id="4qR36Xfvyk2" role="3uHU7w">
                   <property role="3cmrfH" value="100" />
                 </node>
-                <node concept="1Wqviy" id="6qPpZy2sZVB" role="3uHU7B" />
               </node>
             </node>
           </node>
@@ -118,32 +118,6 @@
   </node>
   <node concept="1M2fIO" id="50o97QFN1e1">
     <ref role="1M2myG" to="aw7t:50o97QFMYra" resolve="Consumer" />
-    <node concept="EnEH3" id="50o97QFN1e2" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
-      <node concept="QB0g5" id="50o97QFNk5F" role="QCWH9">
-        <node concept="3clFbS" id="50o97QFNk5G" role="2VODD2">
-          <node concept="3clFbF" id="50o97QFNkgp" role="3cqZAp">
-            <node concept="1Wc70l" id="50o97QFNnDL" role="3clFbG">
-              <node concept="2dkUwp" id="50o97QFNoPn" role="3uHU7w">
-                <node concept="2OqwBi" id="50o97QFNp_4" role="3uHU7w">
-                  <node concept="EsrRn" id="50o97QFNp4W" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="50o97QFNqa_" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
-                  </node>
-                </node>
-                <node concept="1Wqviy" id="50o97QFNnPV" role="3uHU7B" />
-              </node>
-              <node concept="2d3UOw" id="50o97QFNlio" role="3uHU7B">
-                <node concept="1Wqviy" id="50o97QFNkgo" role="3uHU7B" />
-                <node concept="3cmrfG" id="50o97QFNlpL" role="3uHU7w">
-                  <property role="3cmrfH" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="EnEH3" id="50o97QFNlV1" role="1MhHOB">
       <ref role="EomxK" to="aw7t:50o97QFMYs5" resolve="MaxConsumption" />
       <node concept="QB0g5" id="50o97QFNm6Q" role="QCWH9">

@@ -16,4 +16,12 @@ public interface IXmlWriteLayoutData
 	 * @throws XMLStreamException
 	 */
 	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException;
+	
+	/**
+	 * Method to write the current simulation state of this element
+	 * @param xmlWriter
+	 * the xmlWriter to write the element into
+	 * @throws XMLStreamException
+	 */
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException;
 }

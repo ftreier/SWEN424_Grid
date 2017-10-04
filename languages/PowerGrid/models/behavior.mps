@@ -826,19 +826,6 @@
     </node>
     <node concept="13hLZK" id="59sIV4z5phB" role="13h7CW">
       <node concept="3clFbS" id="59sIV4z5phC" role="2VODD2">
-        <node concept="3clFbF" id="59sIV4z5phM" role="3cqZAp">
-          <node concept="37vLTI" id="59sIV4z5qAE" role="3clFbG">
-            <node concept="3cmrfG" id="59sIV4z5qAW" role="37vLTx">
-              <property role="3cmrfH" value="0" />
-            </node>
-            <node concept="2OqwBi" id="59sIV4z5ppo" role="37vLTJ">
-              <node concept="13iPFW" id="59sIV4z5phL" role="2Oq$k0" />
-              <node concept="3TrcHB" id="59sIV4z5pJB" role="2OqNvi">
-                <ref role="3TsBF5" to="aw7t:50o97QFMYs3" resolve="MinConsumption" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="59sIV4z5qFY" role="3cqZAp">
           <node concept="37vLTI" id="59sIV4z5sby" role="3clFbG">
             <node concept="3cmrfG" id="59sIV4z5sbO" role="37vLTx">

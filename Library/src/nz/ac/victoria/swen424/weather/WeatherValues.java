@@ -72,4 +72,10 @@ public class WeatherValues extends XmlLayoutNode
 		
 		xmlWriter.add(eventFactory.createEndElement("", "", "weather"));
 	}
+
+	@Override
+	public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamException
+	{
+		// No data to write
+	}
 }
