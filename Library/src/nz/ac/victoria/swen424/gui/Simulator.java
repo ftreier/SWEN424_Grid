@@ -1,13 +1,13 @@
 package nz.ac.victoria.swen424.gui;
 
-import java.awt.*;
+//import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -25,10 +25,10 @@ import nz.ac.victoria.swen424.mainTypes.ElProducer;
 import nz.ac.victoria.swen424.mainTypes.ElTransformer;
 
 public class Simulator extends JPanel {
-   List _consumers = new List();
-   static ArrayList <ElProducer> _producers = new ArrayList <ElProducer>();
-   static ArrayList <ElTransformer> _transformers = new ArrayList <ElTransformer>();
-   static ArrayList <ElGrid> _grids = new ArrayList <ElGrid>();
+   List <ElConsumer>_consumers = new ArrayList<ElConsumer>();
+   List <ElProducer> _producers = new ArrayList <ElProducer>();
+   //static ArrayList <ElTransformer> _transformers = new ArrayList <ElTransformer>();
+   //static ArrayList <ElGrid> _grids = new ArrayList <ElGrid>();
    
    //Image files paths for each MainType
    private final String conImage = "/imports/house.png";

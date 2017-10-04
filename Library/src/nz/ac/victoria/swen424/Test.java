@@ -86,7 +86,7 @@ public class Test {
 
   public void writeXML() throws Exception {
     XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
-    XMLEventWriter xmlWriter = outputFactory.createXMLEventWriter(new FileOutputStream("C:/Data/output.xml"));
+    XMLEventWriter xmlWriter = outputFactory.createXMLEventWriter(new FileOutputStream("output.xml"));
     xmlWriter = new IndentingXMLEventWriter(xmlWriter);
     XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 

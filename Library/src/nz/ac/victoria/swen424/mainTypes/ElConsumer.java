@@ -10,7 +10,7 @@ import javax.xml.stream.XMLStreamException;
 import nz.ac.victoria.swen424.UsageProfile;
 
 public class ElConsumer extends MainBaseType implements IMainType {
-	private String _name;
+	//private String _name;
 	private int _minConsumption;
 	private int _maxConsumption;
 	private ElTransformer _connect;

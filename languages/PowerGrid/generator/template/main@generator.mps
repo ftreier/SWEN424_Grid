@@ -17,7 +17,7 @@
     <import index="91n3" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.xml.stream(JDK/)" />
     <import index="na6w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.xml.stream.events(JDK/)" />
     <import index="e82u" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:javanet.staxutils(ExternalCode/)" />
-    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
+    <import index="ufsh" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424.gui(ExternalCode/)" />
     <import index="8t2c" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424(ExternalCode/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
@@ -29,12 +29,18 @@
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="2820489544401957797" name="jetbrains.mps.baseLanguage.structure.DefaultClassCreator" flags="nn" index="HV5vD">
+        <reference id="2820489544401957798" name="classifier" index="HV5vE" />
+      </concept>
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
+        <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
       <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
         <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
@@ -959,7 +965,7 @@
                   <node concept="1pGfFk" id="4qE1Afm7qZk" role="2ShVmc">
                     <ref role="37wK5l" to="guwi:~FileOutputStream.&lt;init&gt;(java.lang.String)" resolve="FileOutputStream" />
                     <node concept="Xl_RD" id="4qE1Afm7r0W" role="37wK5m">
-                      <property role="Xl_RC" value="C:/Data/output.xml" />
+                      <property role="Xl_RC" value="output.xml" />
                     </node>
                   </node>
                 </node>
@@ -1270,39 +1276,10 @@
         <node concept="3clFbH" id="4qE1Afm8a1Z" role="3cqZAp" />
         <node concept="3SKdUt" id="4qE1Afm8aw4" role="3cqZAp">
           <node concept="3SKdUq" id="4qE1Afm8aw6" role="3SKWNk">
-            <property role="3SKdUp" value="Export Consumers" />
+            <property role="3SKdUp" value="TODO For all the types" />
           </node>
         </node>
-        <node concept="2Gpval" id="3mLLVl5p5eO" role="3cqZAp">
-          <node concept="2GrKxI" id="3mLLVl5p5eQ" role="2Gsz3X">
-            <property role="TrG5h" value="consumer" />
-          </node>
-          <node concept="37vLTw" id="3mLLVl5p5IB" role="2GsD0m">
-            <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
-          </node>
-          <node concept="3clFbS" id="3mLLVl5p5eU" role="2LFqv$">
-            <node concept="3clFbF" id="3mLLVl5p5Xv" role="3cqZAp">
-              <node concept="2OqwBi" id="3mLLVl5p6eH" role="3clFbG">
-                <node concept="2GrUjf" id="3mLLVl5p5Xu" role="2Oq$k0">
-                  <ref role="2Gs0qQ" node="3mLLVl5p5eQ" resolve="consumer" />
-                </node>
-                <node concept="liA8E" id="3mLLVl5p6Y$" role="2OqNvi">
-                  <ref role="37wK5l" to="mgvq:~ElConsumer.writeHeaderData(javax.xml.stream.XMLEventWriter):void" resolve="writeHeaderData" />
-                  <node concept="37vLTw" id="3mLLVl5p7cZ" role="37wK5m">
-                    <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbH" id="3mLLVl5piwS" role="3cqZAp" />
-        <node concept="3SKdUt" id="3mLLVl5pgwJ" role="3cqZAp">
-          <node concept="3SKdUq" id="3mLLVl5pgwL" role="3SKWNk">
-            <property role="3SKdUp" value="TODO the rest of the xml writers" />
-          </node>
-        </node>
-        <node concept="3clFbH" id="3mLLVl5pi3h" role="3cqZAp" />
+        <node concept="3clFbH" id="4qE1Afm7Icy" role="3cqZAp" />
         <node concept="3clFbF" id="4qE1Afm7IjB" role="3cqZAp">
           <node concept="2OqwBi" id="4qE1Afm7Iuz" role="3clFbG">
             <node concept="37vLTw" id="4qE1Afm7Ij_" role="2Oq$k0">
@@ -1343,7 +1320,6 @@
         <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
       </node>
     </node>
-    <node concept="2tJIrI" id="3mLLVl5pdgg" role="jymVt" />
     <node concept="2tJIrI" id="4qE1Afm7hiJ" role="jymVt" />
     <node concept="2YIFZL" id="4qR36Xfu4gq" role="jymVt">
       <property role="TrG5h" value="main" />
@@ -1374,6 +1350,26 @@
             </node>
             <node concept="liA8E" id="4qWwfGpyxIp" role="2OqNvi">
               <ref role="37wK5l" node="4qE1Afm7k62" resolve="writeXML" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="6GCCMjNWDDn" role="3cqZAp">
+          <node concept="2OqwBi" id="6GCCMjNWY36" role="3clFbG">
+            <node concept="2ShNRf" id="6GCCMjNWDDj" role="2Oq$k0">
+              <node concept="HV5vD" id="6GCCMjNWDS5" role="2ShVmc">
+                <ref role="HV5vE" to="ufsh:~Simulator" resolve="Simulator" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6GCCMjNWZjW" role="2OqNvi">
+              <ref role="37wK5l" to="ufsh:~Simulator.parseModelDefinition(java.util.List):void" resolve="parseModelDefinition" />
+              <node concept="2OqwBi" id="6GCCMjNWZsC" role="37wK5m">
+                <node concept="37vLTw" id="6GCCMjNWZly" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4qWwfGpy0e2" resolve="simulator" />
+                </node>
+                <node concept="2OwXpG" id="6GCCMjNWZD4" role="2OqNvi">
+                  <ref role="2Oxat5" node="7IoK3S59rx8" resolve="_consumers" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -2630,7 +2626,7 @@
             <node concept="3cpWsn" id="4qWwfGpuCVr" role="3cpWs9">
               <property role="TrG5h" value="_usageProfiles" />
               <node concept="_YKpA" id="4qWwfGpuCVm" role="1tU5fm">
-                <node concept="3uibUv" id="4qWwfGpuFPN" role="_ZDj9">
+                <node concept="3uibUv" id="6GCCMjNX3dJ" role="_ZDj9">
                   <ref role="3uigEE" to="8t2c:~UsageProfile" resolve="UsageProfile" />
                 </node>
               </node>

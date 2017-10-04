@@ -82,7 +82,7 @@
     </node>
     <node concept="3VOWaR" id="4qWwfGpxjpH" role="N8dmf">
       <property role="3VOWdS" value="10" />
-      <property role="TrG5h" value="shool" />
+      <property role="TrG5h" value="school" />
       <property role="OYydz" value="school" />
       <ref role="1vLJM8" node="4qWwfGpvRuZ" resolve="Office Building" />
       <ref role="1pnA4g" node="4qR36Xfvtz2" resolve="tran2" />

@@ -74,6 +74,12 @@
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
+      <concept id="2565736246230036150" name="jetbrains.mps.lang.core.structure.ExportScopePublic" flags="ig" index="24uvON" />
+    </language>
   </registry>
   <node concept="1M2fIO" id="7rDXPBEWvKN">
     <ref role="1M2myG" to="aw7t:7rDXPBEWeTn" resolve="Transformer" />
@@ -133,6 +139,7 @@
         </node>
       </node>
     </node>
+    <node concept="24uvON" id="6GCCMjNWIiY" role="lGtFl" />
   </node>
   <node concept="1M2fIO" id="6Lad368PFz1">
     <ref role="1M2myG" to="aw7t:24XvQ732hTQ" resolve="Producer" />
