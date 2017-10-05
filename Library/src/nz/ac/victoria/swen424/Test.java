@@ -66,21 +66,19 @@ public class Test {
 
     ElGrid grid;
     _grids = new LinkedList<ElGrid>();
-    grid = new ElGrid(200, 10, 100, 4, "Wellington");
+    grid = new ElGrid(200, 10, 98, 4, "Wellington");
     _grids.add(grid);
-    grid = new ElGrid(200, 0, 100, 4, "Auckland");
+    grid = new ElGrid(200, 0, 95, 4, "Auckland");
     _grids.add(grid);
     System.out.println("");
 
     for (ElGrid grid_ : _grids) {
     	grid_.connectLeftTransformer(_transformers.get(0));
     	grid_.connectRightTransformer(_transformers.get(1));
-//      grid_.connectTransformer(_transformers.get(0));
-//      grid_.connectTransformer(_transformers.get(1));
     }
 
     for (ElProducer producer_ : _producers) {
-      producer_.connectTransformer(_transformers.get(0));
+      producer_.connectTransformer(_transformers.get(1));
     }
   }
 
@@ -95,7 +93,7 @@ public class Test {
 
     writeLayoutXML(xmlWriter);
 
-    MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, xmlWriter);
+    MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, _grids, xmlWriter);
 
     xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
     xmlWriter.add(eventFactory.createEndDocument());
@@ -121,7 +119,13 @@ public class Test {
       producer.writeHeaderData(xmlWriter);
     }
 
-    // TODO For all the types 
+    for (ElGrid grid : _grids) {
+        grid.writeHeaderData(xmlWriter);
+    }
+    for (ElTransformer transformer : _transformers) {
+        transformer.writeHeaderData(xmlWriter);
+    }
+// TODO For all the types 
 
     xmlWriter.add(eventFactory.createEndElement("", "", "modelDefinition"));
   }

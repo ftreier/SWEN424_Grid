@@ -39,9 +39,6 @@
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
       </concept>
-      <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
-        <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
-      </concept>
       <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
         <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
         <reference id="1144432896254" name="enumClass" index="1Px2BO" />
@@ -1059,7 +1056,7 @@
         <node concept="3clFbF" id="4qWwfGpx_zo" role="3cqZAp">
           <node concept="2YIFZM" id="4qWwfGpx_T9" role="3clFbG">
             <ref role="1Pybhc" to="mgvq:~MainBaseType" resolve="MainBaseType" />
-            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
+            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <node concept="3cmrfG" id="4qWwfGpxYZW" role="37wK5m">
               <property role="3cmrfH" value="1" />
             </node>
@@ -1074,6 +1071,9 @@
             </node>
             <node concept="37vLTw" id="4qWwfGp_fRK" role="37wK5m">
               <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+            </node>
+            <node concept="37vLTw" id="4qWwfGpBi_S" role="37wK5m">
+              <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
             </node>
             <node concept="37vLTw" id="4qWwfGpxZTr" role="37wK5m">
               <ref role="3cqZAo" node="4qE1Afm7nTR" resolve="xmlWriter" />
@@ -1274,6 +1274,53 @@
           </node>
         </node>
         <node concept="3clFbH" id="4qE1Afm8a1Z" role="3cqZAp" />
+        <node concept="2Gpval" id="4qWwfGpBQTi" role="3cqZAp">
+          <node concept="2GrKxI" id="4qWwfGpBQTk" role="2Gsz3X">
+            <property role="TrG5h" value="grid" />
+          </node>
+          <node concept="37vLTw" id="4qWwfGpBRmV" role="2GsD0m">
+            <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
+          </node>
+          <node concept="3clFbS" id="4qWwfGpBQTo" role="2LFqv$">
+            <node concept="3clFbF" id="4qWwfGpBRyk" role="3cqZAp">
+              <node concept="2OqwBi" id="4qWwfGpBRNk" role="3clFbG">
+                <node concept="2GrUjf" id="4qWwfGpBRyj" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4qWwfGpBQTk" resolve="grid" />
+                </node>
+                <node concept="liA8E" id="4qWwfGpBSvK" role="2OqNvi">
+                  <ref role="37wK5l" to="mgvq:~ElGrid.writeHeaderData(javax.xml.stream.XMLEventWriter):void" resolve="writeHeaderData" />
+                  <node concept="37vLTw" id="4qWwfGpBSIb" role="37wK5m">
+                    <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2Gpval" id="4qWwfGpBTrb" role="3cqZAp">
+          <node concept="2GrKxI" id="4qWwfGpBTrd" role="2Gsz3X">
+            <property role="TrG5h" value="transformer" />
+          </node>
+          <node concept="37vLTw" id="4qWwfGpBUao" role="2GsD0m">
+            <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+          </node>
+          <node concept="3clFbS" id="4qWwfGpBTrh" role="2LFqv$">
+            <node concept="3clFbF" id="4qWwfGpBUme" role="3cqZAp">
+              <node concept="2OqwBi" id="4qWwfGpBUBm" role="3clFbG">
+                <node concept="2GrUjf" id="4qWwfGpBUmd" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="4qWwfGpBTrd" resolve="transformer" />
+                </node>
+                <node concept="liA8E" id="4qWwfGpBVk5" role="2OqNvi">
+                  <ref role="37wK5l" to="mgvq:~ElTransformer.writeHeaderData(javax.xml.stream.XMLEventWriter):void" resolve="writeHeaderData" />
+                  <node concept="37vLTw" id="4qWwfGpBVyw" role="37wK5m">
+                    <ref role="3cqZAo" node="4qE1Afm7n8z" resolve="xmlWriter" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4qWwfGpBQ8V" role="3cqZAp" />
         <node concept="3SKdUt" id="4qE1Afm8aw4" role="3cqZAp">
           <node concept="3SKdUq" id="4qE1Afm8aw6" role="3SKWNk">
             <property role="3SKdUp" value="TODO For all the types" />
@@ -1320,6 +1367,33 @@
         <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
       </node>
     </node>
+    <node concept="2tJIrI" id="6GCCMjNYfu4" role="jymVt" />
+    <node concept="3clFb_" id="6GCCMjNYl07" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="parseSimulationXML" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="6GCCMjNYl0a" role="3clF47">
+        <node concept="3clFbF" id="6GCCMjNYmQ4" role="3cqZAp">
+          <node concept="2OqwBi" id="6GCCMjNYnxY" role="3clFbG">
+            <node concept="2ShNRf" id="6GCCMjNYmQ2" role="2Oq$k0">
+              <node concept="HV5vD" id="6GCCMjNYn3P" role="2ShVmc">
+                <ref role="HV5vE" to="ufsh:~Simulator" resolve="Simulator" />
+              </node>
+            </node>
+            <node concept="liA8E" id="6GCCMjNYoM1" role="2OqNvi">
+              <ref role="37wK5l" to="ufsh:~Simulator.parseSimulationXML(java.util.List):void" resolve="parseSimulationXML" />
+              <node concept="37vLTw" id="6GCCMjNZDUd" role="37wK5m">
+                <ref role="3cqZAo" node="6Lad368R4N5" resolve="_producers" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="6GCCMjNYj99" role="1B3o_S" />
+      <node concept="3cqZAl" id="6GCCMjNYkYJ" role="3clF45" />
+    </node>
     <node concept="2tJIrI" id="4qE1Afm7hiJ" role="jymVt" />
     <node concept="2YIFZL" id="4qR36Xfu4gq" role="jymVt">
       <property role="TrG5h" value="main" />
@@ -1353,23 +1427,13 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="6GCCMjNWDDn" role="3cqZAp">
-          <node concept="2OqwBi" id="6GCCMjNWY36" role="3clFbG">
-            <node concept="2ShNRf" id="6GCCMjNWDDj" role="2Oq$k0">
-              <node concept="HV5vD" id="6GCCMjNWDS5" role="2ShVmc">
-                <ref role="HV5vE" to="ufsh:~Simulator" resolve="Simulator" />
-              </node>
+        <node concept="3clFbF" id="6GCCMjNYDz1" role="3cqZAp">
+          <node concept="2OqwBi" id="6GCCMjNYDDN" role="3clFbG">
+            <node concept="37vLTw" id="6GCCMjNYDyZ" role="2Oq$k0">
+              <ref role="3cqZAo" node="4qWwfGpy0e2" resolve="simulator" />
             </node>
-            <node concept="liA8E" id="6GCCMjNWZjW" role="2OqNvi">
-              <ref role="37wK5l" to="ufsh:~Simulator.parseModelDefinition(java.util.List):void" resolve="parseModelDefinition" />
-              <node concept="2OqwBi" id="6GCCMjNWZsC" role="37wK5m">
-                <node concept="37vLTw" id="6GCCMjNWZly" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4qWwfGpy0e2" resolve="simulator" />
-                </node>
-                <node concept="2OwXpG" id="6GCCMjNWZD4" role="2OqNvi">
-                  <ref role="2Oxat5" node="7IoK3S59rx8" resolve="_consumers" />
-                </node>
-              </node>
+            <node concept="liA8E" id="6GCCMjNYDKr" role="2OqNvi">
+              <ref role="37wK5l" node="6GCCMjNYl07" resolve="parseSimulationXML" />
             </node>
           </node>
         </node>

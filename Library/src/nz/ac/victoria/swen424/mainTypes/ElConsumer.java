@@ -26,7 +26,7 @@ public ElConsumer(String name, int maxConsumption){
 
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
-	connect.addRightConnection(this);
+	connect.addLeftConnection(this);
 //	if(connect.decreaseUsage(_maxConsumption, this) == true){
 //		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
@@ -93,7 +93,6 @@ public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamExcept
 	xmlWriter.add(eventFactory.createAttribute("name", _name));
 	xmlWriter.add(eventFactory.createAttribute("consumption", Double.toString(-_simStat.currentElectricity)));
 	xmlWriter.add(eventFactory.createAttribute("usage", Double.toString(_simStat.getUsage())));
-//	xmlWriter.add(eventFactory.createAttribute("usage2", Double.toString((-_simStat.currentElectricity) / _maxConsumption * 100)));
 	xmlWriter.add(eventFactory.createAttribute("maxConsumption", Integer.toString(_maxConsumption)));
 	xmlWriter.add(eventFactory.createEndElement("", "", "consumer")); // </consumer>
 }

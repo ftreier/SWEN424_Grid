@@ -17,7 +17,7 @@ public class ElTransformer extends MainBaseType
 	private int leftNetLevel;
 	private int rightNetLevel;
 	private List<MainBaseType> _leftConnection;
-	private List<MainBaseType> _rightConnection;
+	private List<ElGrid> _rightConnection;
 	//private Set<MainBaseType> connections;
 
 	public ElTransformer(String name, int maxcapacity, int usage, int efficiency, int leftNet, int rightNet){
@@ -45,7 +45,7 @@ public class ElTransformer extends MainBaseType
 		_leftConnection.add(object);
 	}
 
-	public void addRightConnection(MainBaseType object)
+	public void addRightConnection(ElGrid object)
 	{
 		_rightConnection.add(object);
 	}
@@ -55,7 +55,7 @@ public class ElTransformer extends MainBaseType
 		return _leftConnection;
 	}
 	
-	public List<MainBaseType> getRightConnections()
+	public List<ElGrid> getRightConnections()
 	{
 		return _rightConnection;
 	}
@@ -99,9 +99,54 @@ public class ElTransformer extends MainBaseType
 	}
 
 	@Override
-	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException {
-		// TODO Auto-generated method stub
+	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException
+	{
+		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		
+		xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
+		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
+		xmlWriter.add(eventFactory.createAttribute("name", _name));
+		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxcapacity)));
+		xmlWriter.add(eventFactory.createAttribute("efficiency", Integer.toString(_efficiency)));
+		
+		// Write connection
+		xmlWriter.add(eventFactory.createStartElement("", "", "connections"));
+		for (MainBaseType mainBaseType : _leftConnection)
+		{
+			if(mainBaseType instanceof ElProducer)
+			{
+				xmlWriter.add(eventFactory.createStartElement("", "", "producer"));
+			}
+			else if (mainBaseType instanceof ElConsumer)
+			{
+				xmlWriter.add(eventFactory.createStartElement("", "", "consumer"));
+			}
+
+			xmlWriter.add(eventFactory.createAttribute("id", mainBaseType.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", mainBaseType.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "left"));
+
+			if(mainBaseType instanceof ElProducer)
+			{
+				xmlWriter.add(eventFactory.createEndElement("", "", "producer"));
+			}
+			else if (mainBaseType instanceof ElConsumer)
+			{
+				xmlWriter.add(eventFactory.createEndElement("", "", "consumer"));
+			}
+		}
+		
+		for (ElGrid grid : _rightConnection)
+		{
+			xmlWriter.add(eventFactory.createStartElement("", "", "grid"));
+			xmlWriter.add(eventFactory.createAttribute("id", grid.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", grid.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "right"));
+			xmlWriter.add(eventFactory.createEndElement("", "", "grid"));
+		}
+		xmlWriter.add(eventFactory.createEndElement("", "", "connections")); // </connections>
+		
+		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
 	}
 
 	@Override
