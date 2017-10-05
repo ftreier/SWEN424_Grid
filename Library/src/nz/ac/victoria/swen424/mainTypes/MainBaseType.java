@@ -37,7 +37,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			xmlWriter.add(eventFactory.createAttribute("number", Integer.toString(i+1)));
 			xmlWriter.add(eventFactory.createAttribute("day", Integer.toString(time / 24)));
 			xmlWriter.add(eventFactory.createAttribute("time", Integer.toString(time % 24)));
-			xmlWriter.add(eventFactory.createAttribute("day", Boolean.toString(result)));
+			xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(result)));
 			
 			MainBaseType.WriteSimulationStep(time, producers, consumers, transformers, grids, xmlWriter);
 			

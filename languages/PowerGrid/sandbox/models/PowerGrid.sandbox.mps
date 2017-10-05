@@ -30,6 +30,7 @@
         <property id="5542951320088219692" name="voltage" index="3lM9jR" />
         <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
         <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
+        <property id="6305030178195650853" name="probabilityOfFailure" index="3M1WUJ" />
         <reference id="5542951320088219703" name="ConnectedTransformer1" index="3lM9jG" />
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
@@ -160,6 +161,7 @@
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Wellington" />
       <property role="TrG5h" value="grid" />
+      <property role="3M1WUJ" value="0" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
@@ -170,6 +172,7 @@
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Auckland" />
       <property role="TrG5h" value="grid2" />
+      <property role="3M1WUJ" value="500" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>

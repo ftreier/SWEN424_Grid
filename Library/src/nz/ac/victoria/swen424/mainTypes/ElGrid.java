@@ -1,5 +1,7 @@
 package nz.ac.victoria.swen424.mainTypes;
 
+import java.util.Random;
+
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -14,13 +16,15 @@ public class ElGrid extends MainBaseType{
 	private int _voltage;
 	private ElTransformer leftTransformer;
 	private ElTransformer rightTransformer;
+	private int _probabilityOfFailure;
 	
-	public ElGrid(int maxCapacity, int percentUsage, int efficiency, int voltage, String sector){
+	public ElGrid(int maxCapacity, int percentUsage, int efficiency, int voltage, String sector, int probabilityOfFailure){
 		super(sector);
 		_maxCapacity = maxCapacity;
 		_percentUsage = percentUsage;
 		_efficiency = efficiency;
 		_voltage = voltage;
+		_probabilityOfFailure = probabilityOfFailure;
 	}
 	
 	public void connectLeftTransformer(ElTransformer connect)
@@ -63,6 +67,7 @@ public class ElGrid extends MainBaseType{
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
 		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxCapacity)));
 		xmlWriter.add(eventFactory.createAttribute("efficiency", Integer.toString(_efficiency)));
+		xmlWriter.add(eventFactory.createAttribute("probabilityOfFailure", Integer.toString(_probabilityOfFailure)));
 		
 		// Write connection
 		xmlWriter.add(eventFactory.createStartElement("", "", "connections"));
@@ -86,10 +91,19 @@ public class ElGrid extends MainBaseType{
 	@Override
 	SimulationStatus Simulate(int time) throws Exception
 	{
+		Random r = new Random();
 		_simStat = new SimulationStatus();
 		_simStat.type = this;
 		_simStat.maxElectricity = _maxCapacity;
 		_simStat.minElectricity = 0;
+		
+		int failure = r.nextInt(1000);
+		if(failure < _probabilityOfFailure)
+		{
+			_simStat.isFailure = true;
+			_simStat.currentElectricity = 0;
+			return _simStat;
+		}
 		
 		// direct connection of two transformers
 		if(leftTransformer.getRightConnections().size() == 1 && rightTransformer.getRightConnections().size() == 1)
@@ -235,6 +249,7 @@ public class ElGrid extends MainBaseType{
 		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
 		xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(_simStat.isOk)));
+		xmlWriter.add(eventFactory.createAttribute("isFailure", Boolean.toString(_simStat.isFailure)));
 		xmlWriter.add(eventFactory.createAttribute("currentUsage", Double.toString(Math.abs(_simStat.currentElectricity))));
 		xmlWriter.add(eventFactory.createAttribute("loss", Double.toString(Math.abs(_simStat.loss))));
 		xmlWriter.add(eventFactory.createAttribute("usage", Double.toString(_simStat.getUsage())));
