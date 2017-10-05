@@ -55,11 +55,13 @@ public class Simulator extends JPanel {
 	   
 	   // try extract producers from _producers list based on ID# parsed in XML
 	   try {
-		   TimeUnit.SECONDS.sleep(10);
-		   URL url = Simulator.class.getResource("output.xml");
-		   File file = Paths.get(url.toURI()).toFile();
+		   //TimeUnit.SECONDS.sleep(10);
+		   //URL url = Simulator.class.getResource("output.xml");
+		   //File file = Paths.get(url.toURI()).toFile();
 		  
 		   //File file = new File(url.getPath());
+		   
+		   File file = new File("/Users/koe/Desktop/SWEN424_Grid/output.xml");
 				   
 		   DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		   DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -88,11 +90,11 @@ public class Simulator extends JPanel {
 						if (dNode.getNodeType() == Node.ELEMENT_NODE) {
 							Element elem = (Element) dNode;
 							System.out.println("Producer: "+elem.getAttribute("id"));
-							for (int p=0; p<_producers.size()-1; p++) {
-								System.out.println("From the list: "+_producers.get(p).GetGuid());
-//								if (_producers.get(p).GetGuid()==elem.getAttribute("id")) {
-//									System.out.println("Made it.");
-//								}
+							for (int p=0; p<_producers.size(); p++) {
+								if (_producers.get(p).GetGuid().toString().equals(elem.getAttribute("id"))) {
+									System.out.println("Made it.");
+									System.out.println("From the list: "+_producers.get(p).GetGuid());
+								}
 							}
 						}
 					j++;
