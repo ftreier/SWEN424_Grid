@@ -235,6 +235,11 @@
       <property role="TrG5h" value="sector" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="5tZXSE_u3$_" role="1TKVEl">
+      <property role="IQ2nx" value="6305030178195650853" />
+      <property role="TrG5h" value="probabilityOfFailure" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="4NGxdIp910R" role="1TKVEi">
       <property role="IQ2ns" value="5542951320088219703" />
       <property role="20lmBu" value="reference" />
