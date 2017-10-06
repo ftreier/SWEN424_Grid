@@ -66,10 +66,10 @@ public class Test {
 
     ElGrid grid;
     _grids = new LinkedList<ElGrid>();
-    grid = new ElGrid(200, 10, 98, 4, "Wellington");
-    _grids.add(grid);
-    grid = new ElGrid(200, 0, 95, 4, "Auckland");
-    _grids.add(grid);
+    //grid = new ElGrid(200, 10, 98, 4, "Wellington");
+    //_grids.add(grid);
+    //grid = new ElGrid(200, 0, 95, 4, "Auckland");
+    //_grids.add(grid);
     System.out.println("");
 
     for (ElGrid grid_ : _grids) {

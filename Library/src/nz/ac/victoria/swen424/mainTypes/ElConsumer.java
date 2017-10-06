@@ -96,4 +96,13 @@ public void writeSimulationData(XMLEventWriter xmlWriter) throws XMLStreamExcept
 	xmlWriter.add(eventFactory.createAttribute("maxConsumption", Integer.toString(_maxConsumption)));
 	xmlWriter.add(eventFactory.createEndElement("", "", "consumer")); // </consumer>
 }
+
+// return a stateObject for graphical rendering
+public StateObject getState() {
+	StateObject prodState = new StateObject();
+	prodState.id = this._guid;
+	prodState.name = this._name;
+	prodState.type = this;
+	return prodState;
+}
 }

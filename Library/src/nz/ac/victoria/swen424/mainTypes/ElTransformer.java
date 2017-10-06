@@ -95,7 +95,7 @@ public class ElTransformer extends MainBaseType
 	@Override
 	public String getData() {
 		// TODO Auto-generated method stub
-		return null;
+		return this._name;
 	}
 
 	@Override
@@ -188,5 +188,14 @@ public class ElTransformer extends MainBaseType
 		xmlWriter.add(eventFactory.createAttribute("usage", Double.toString(_simStat.getUsage())));
 		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxcapacity)));
 		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+	}
+	
+	// return a stateObject for graphical rendering
+	public StateObject getState() {
+		StateObject prodState = new StateObject();
+		prodState.id = this._guid;
+		prodState.name = this._name;
+		prodState.type = this;
+		return prodState;
 	}
 }

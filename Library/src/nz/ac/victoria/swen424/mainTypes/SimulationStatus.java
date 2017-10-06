@@ -8,6 +8,7 @@ public class SimulationStatus
 	public double loss = 0;
 	public MainBaseType type = null;
 	public boolean isOk = true;
+	public boolean isFailure = false;
 	
 	public double getUsage()
 	{

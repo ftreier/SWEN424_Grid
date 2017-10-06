@@ -318,6 +318,21 @@
       <node concept="3F0ifn" id="1G90Zx2pnrg" role="3EZMnx">
         <property role="3F0ifm" value="," />
       </node>
+      <node concept="3F0ifn" id="5tZXSE_vGnT" role="3EZMnx">
+        <property role="3F0ifm" value="Probability of Failure" />
+      </node>
+      <node concept="3F0ifn" id="5tZXSE_vGqa" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0A7n" id="5tZXSE_vGsv" role="3EZMnx">
+        <ref role="1NtTu8" to="aw7t:5tZXSE_u3$_" resolve="probabilityOfFailure" />
+      </node>
+      <node concept="3F0ifn" id="5tZXSE_vV4g" role="3EZMnx">
+        <property role="3F0ifm" value="‰" />
+      </node>
+      <node concept="3F0ifn" id="5tZXSE_vGuS" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
       <node concept="3F0ifn" id="1G90Zx2pns2" role="3EZMnx">
         <property role="3F0ifm" value="transformer1" />
       </node>

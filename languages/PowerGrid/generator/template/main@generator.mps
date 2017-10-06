@@ -1407,14 +1407,23 @@
         <node concept="3clFbF" id="6GCCMjNYmQ4" role="3cqZAp">
           <node concept="2OqwBi" id="6GCCMjNYnxY" role="3clFbG">
             <node concept="2ShNRf" id="6GCCMjNYmQ2" role="2Oq$k0">
-              <node concept="HV5vD" id="6GCCMjNYn3P" role="2ShVmc">
-                <ref role="HV5vE" to="ufsh:~Simulator" resolve="Simulator" />
+              <node concept="HV5vD" id="6GCCMjO4uvy" role="2ShVmc">
+                <ref role="HV5vE" to="ufsh:~XMLParser" resolve="XMLParser" />
               </node>
             </node>
             <node concept="liA8E" id="6GCCMjNYoM1" role="2OqNvi">
-              <ref role="37wK5l" to="ufsh:~Simulator.parseSimulationXML(java.util.List):void" resolve="parseSimulationXML" />
+              <ref role="37wK5l" to="ufsh:~XMLParser.initialiseStates(java.util.List,java.util.List,java.util.List,java.util.List):void" resolve="initialiseStates" />
               <node concept="37vLTw" id="6GCCMjNZDUd" role="37wK5m">
                 <ref role="3cqZAo" node="6Lad368R4N5" resolve="_producers" />
+              </node>
+              <node concept="37vLTw" id="6GCCMjO5bNM" role="37wK5m">
+                <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
+              </node>
+              <node concept="37vLTw" id="6GCCMjO6WZN" role="37wK5m">
+                <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+              </node>
+              <node concept="37vLTw" id="jCjOAzq0Mp" role="37wK5m">
+                <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
               </node>
             </node>
           </node>
@@ -2491,7 +2500,7 @@
             <node concept="37vLTI" id="S4oOKOEmQW" role="3clFbG">
               <node concept="2ShNRf" id="S4oOKOEmRs" role="37vLTx">
                 <node concept="1pGfFk" id="S4oOKOEpvW" role="2ShVmc">
-                  <ref role="37wK5l" to="mgvq:~ElGrid.&lt;init&gt;(int,int,int,int,java.lang.String)" resolve="ElGrid" />
+                  <ref role="37wK5l" to="mgvq:~ElGrid.&lt;init&gt;(int,int,int,int,java.lang.String,int)" resolve="ElGrid" />
                   <node concept="3cmrfG" id="S4oOKOEpws" role="37wK5m">
                     <property role="3cmrfH" value="200" />
                     <node concept="17Uvod" id="S4oOKOEpQu" role="lGtFl">
@@ -2581,6 +2590,25 @@
                                 <ref role="3TsBF5" to="aw7t:4NGxdIp910L" resolve="sector" />
                               </node>
                               <node concept="30H73N" id="S4oOKOEvYj" role="2Oq$k0" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3cmrfG" id="5tZXSE_vFjb" role="37wK5m">
+                    <property role="3cmrfH" value="2" />
+                    <node concept="17Uvod" id="5tZXSE_vFQp" role="lGtFl">
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                      <property role="2qtEX9" value="value" />
+                      <node concept="3zFVjK" id="5tZXSE_vFQs" role="3zH0cK">
+                        <node concept="3clFbS" id="5tZXSE_vFQt" role="2VODD2">
+                          <node concept="3clFbF" id="5tZXSE_vFQz" role="3cqZAp">
+                            <node concept="2OqwBi" id="5tZXSE_vFQu" role="3clFbG">
+                              <node concept="3TrcHB" id="5tZXSE_vFQx" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:5tZXSE_u3$_" resolve="probabilityOfFailure" />
+                              </node>
+                              <node concept="30H73N" id="5tZXSE_vFQy" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>

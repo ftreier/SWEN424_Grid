@@ -30,6 +30,7 @@
         <property id="5542951320088219692" name="voltage" index="3lM9jR" />
         <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
         <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
+        <property id="6305030178195650853" name="probabilityOfFailure" index="3M1WUJ" />
         <reference id="5542951320088219703" name="ConnectedTransformer1" index="3lM9jG" />
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
@@ -153,23 +154,25 @@
       <ref role="nfRfV" node="4qR36Xfvtz2" resolve="tran2" />
       <ref role="1Hs3bF" node="4qE1Afm8XZD" resolve="Auckland" />
     </node>
-    <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
-      <property role="3lM9jS" value="200" />
-      <property role="3lM9jY" value="10" />
-      <property role="3lM9jR" value="4" />
-      <property role="3lM9jN" value="100" />
-      <property role="3lM9jE" value="Wellington" />
-      <property role="TrG5h" value="grid" />
-      <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
-      <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
-    </node>
-    <node concept="3lM9jV" id="7Erv4TlV1e$" role="3lMnhl">
+    <node concept="3lM9jV" id="6GCCMjO3c3_" role="3lMnhl">
       <property role="3lM9jS" value="200" />
       <property role="3lM9jY" value="0" />
       <property role="3lM9jR" value="4" />
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Auckland" />
       <property role="TrG5h" value="grid2" />
+      <property role="3M1WUJ" value="20" />
+      <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
+      <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
+    </node>
+    <node concept="3lM9jV" id="6GCCMjO3c5Z" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="10" />
+      <property role="3lM9jR" value="4" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jE" value="Wellington" />
+      <property role="TrG5h" value="grid" />
+      <property role="3M1WUJ" value="5" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>

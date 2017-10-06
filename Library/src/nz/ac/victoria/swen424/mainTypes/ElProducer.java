@@ -46,7 +46,7 @@ public class ElProducer extends MainBaseType
 	public String getData()
 	{
 		// TODO return useful data
-		return _name;
+		return "Prod: "+_name+" Min: "+_minProduction+" Max: "+_maxProduction;
 	}
 
 	@Override
@@ -202,5 +202,14 @@ public class ElProducer extends MainBaseType
 		}
 		
 		return _simStat.isOk;
+	}
+	
+	// return a stateObject for graphical rendering
+	public StateObject getState() {
+		StateObject prodState = new StateObject();
+		prodState.id = this._guid;
+		prodState.name = this._name;
+		prodState.type = this;
+		return prodState;
 	}
 }
