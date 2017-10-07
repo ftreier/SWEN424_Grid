@@ -199,7 +199,7 @@ public class ElProducer extends MainBaseType
 		}
 		else
 		{
-			_simStat.isOk = false;			
+			_simStat.isOk = true;			
 		}
 		
 		return _simStat.isOk;

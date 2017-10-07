@@ -80,7 +80,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 	private static double redistributeProduction(double elUsage, double possibleProduction, List<SimulationStatus> prodStatus) throws Exception
 	{
 		double globalDiff = 0;
-		double percentage = Math.abs(elUsage) / possibleProduction;
+		double percentage = -1 * elUsage / possibleProduction;
 		for (SimulationStatus simStat : prodStatus)
 		{
 			double diff = (simStat.maxElectricity - simStat.currentElectricity) * percentage;
@@ -184,9 +184,14 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		
 		netSimStat.loss = Math.abs(elUsage);
 		
-		diff = redistributeProduction(elUsage, possibleProduction, prodStatus);
-		elUsage += diff;
-		possibleProduction -= diff;
+		double diff2 = redistributeProduction(elUsage, possibleProduction, prodStatus);
+		elUsage += diff2;
+		possibleProduction -= diff2;
+		
+		if(diff + diff2 < 0)
+		{
+			isOk = false;
+		}
 		
 		// Allow for some small imbalance due to precision issues
 		netSimStat.isOk = compareRange(elUsage, 0, null) && isOk && possibleProduction > 0;

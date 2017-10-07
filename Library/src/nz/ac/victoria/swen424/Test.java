@@ -61,7 +61,7 @@ public class Test {
 	    producer = new ElProducer("CConv", 100, 800, ProducitionMethodeType.Conventional);
 	    producer.connectTransformer(_transformers.get(0));
 	    _producers.add(producer);
-	    producer = new ElProducer("NSolar", 0, 50, ProducitionMethodeType.Solar);
+	    producer = new ElProducer("CSolar", 0, 50, ProducitionMethodeType.Solar);
 	    producer.connectTransformer(_transformers.get(0));
 	    _producers.add(producer);
 	    producer = new ElProducer("SWind", 0, 1000, ProducitionMethodeType.Wind);
