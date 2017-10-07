@@ -61,7 +61,7 @@ public class Test {
 	    producer = new ElProducer("CConv", 100, 800, ProducitionMethodeType.Conventional);
 	    producer.connectTransformer(_transformers.get(0));
 	    _producers.add(producer);
-	    producer = new ElProducer("NSolar", 0, 50, ProducitionMethodeType.Solar);
+	    producer = new ElProducer("CSolar", 0, 50, ProducitionMethodeType.Solar);
 	    producer.connectTransformer(_transformers.get(0));
 	    _producers.add(producer);
 	    producer = new ElProducer("SWind", 0, 1000, ProducitionMethodeType.Wind);
@@ -83,7 +83,6 @@ public class Test {
 	    producer.connectTransformer(_transformers.get(2));
 	    _producers.add(producer);
 
-	    
 	    ElConsumer consumer;
 	    _consumers = new LinkedList<ElConsumer>();
 	    consumer = new ElConsumer("CHouses", 200);
@@ -122,19 +121,15 @@ public class Test {
 	    consumer = new ElConsumer("SIndustry", 200);
 	    consumer.connectTransformer(_transformers.get(3));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CHouses", 300);
+	    consumer = new ElConsumer("WHouses", 300);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CBuisness", 150);
+	    consumer = new ElConsumer("WBuisness", 150);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CIndustry", 100);
+	    consumer = new ElConsumer("WIndustry", 100);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
-
-//	    for (ElConsumer consumer_ : _consumers) {
-//	      consumer_.connectTransformer(_transformers.get(0));
-//	    }
 
 	    ElGrid grid;
 	    _grids = new LinkedList<ElGrid>();
@@ -142,8 +137,8 @@ public class Test {
 	    _grids.add(new ElGrid(500, 0, 95, 4, "T2", 2));
 	    _grids.add(new ElGrid(700, 0, 99, 4, "T3", 2));
 	    _grids.add(new ElGrid(1000, 0, 97, 4, "T4", 1));
-	    _grids.add(new ElGrid(700, 0, 95, 4, "T5", 1));
-	    _grids.add(new ElGrid(1000, 0, 95, 4, "T6", 1));
+	    _grids.add(new ElGrid(700, 0, 95, 4, "T5", 500));
+	    _grids.add(new ElGrid(1000, 0, 95, 4, "T6", 500));
 	    System.out.println("");
 
     	_grids.get(0).connectLeftTransformer(_transformers.get(0));
@@ -158,15 +153,6 @@ public class Test {
     	_grids.get(4).connectRightTransformer(_transformers.get(2));
     	_grids.get(5).connectLeftTransformer(_transformers.get(0));
     	_grids.get(5).connectRightTransformer(_transformers.get(4));
-
-//	    for (ElGrid grid_ : _grids) {
-//	    	grid_.connectLeftTransformer(_transformers.get(0));
-//	    	grid_.connectRightTransformer(_transformers.get(1));
-//	    }
-//
-//	    for (ElProducer producer_ : _producers) {
-//	      producer_.connectTransformer(_transformers.get(1));
-//	    }
 	  }
 
 //  public Test() {
