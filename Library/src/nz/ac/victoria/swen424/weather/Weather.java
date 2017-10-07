@@ -25,4 +25,14 @@ public class Weather
 		xmlWriter.add(eventFactory.createAttribute("windSpeed", _windSpeed.toString()));		
 		xmlWriter.add(eventFactory.createEndElement("", "", "value"));
 	}
+	
+	public WindSpeedEnum getWindSpeed()
+	{
+		return _windSpeed;
+	}
+	
+	public WeatherEnum getWeather()
+	{
+		return _weather;
+	}
 }

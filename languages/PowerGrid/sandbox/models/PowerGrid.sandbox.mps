@@ -2,12 +2,19 @@
 <model ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="-1" />
-    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="-1" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
+    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="0" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
-  <imports />
+  <imports>
+    <import index="z6cp" ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)" />
+  </imports>
   <registry>
+    <language id="00000000-0000-0000-0000-000000000000" name="">
+      <concept id="0" name="" flags="ng" index="00000">
+        <property id="0" name="" index="00000" />
+      </concept>
+    </language>
     <language id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid">
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
         <property id="8568651731614887512" name="LeftNetLevel" index="2s6h$1" />
@@ -24,6 +31,8 @@
         <child id="7210842759737799191" name="Weather" index="1Hj7Pu" />
       </concept>
       <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
+        <property id="5758246778675430566" name="ConnectTransName2" index="245u99" />
+        <property id="5758246778675430558" name="ConnectTransName1" index="245u9L" />
         <property id="5097016817291261152" name="TransName1" index="eq$$E" />
         <property id="5097016817291261159" name="TransName2" index="eq$$H" />
         <property id="5542951320088219697" name="sector" index="3lM9jE" />
@@ -35,6 +44,7 @@
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
+        <property id="5758246778675384565" name="TransName" index="244Foq" />
         <property id="5097016817291242739" name="TransName" index="eqx4T" />
         <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
@@ -124,6 +134,7 @@
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="1" />
       <property role="eqx4T" value="tran" />
+      <property role="244Foq" value="tran" />
       <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
       <ref role="nfRfV" node="4qR36Xfvtz0" resolve="tran" />
     </node>
@@ -133,6 +144,7 @@
       <property role="JvpKn" value="2" />
       <property role="TrG5h" value="prod2" />
       <property role="eqx4T" value="tran2" />
+      <property role="244Foq" value="tran2" />
       <ref role="nfRfV" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
     <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
@@ -144,6 +156,8 @@
       <property role="TrG5h" value="grid" />
       <property role="eq$$E" value="tran" />
       <property role="eq$$H" value="tran2" />
+      <property role="245u9L" value="tran" />
+      <property role="245u99" value="tran2" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
@@ -156,8 +170,51 @@
       <property role="TrG5h" value="grid2" />
       <property role="eq$$E" value="tran" />
       <property role="eq$$H" value="tran2" />
+      <property role="245u9L" value="tran" />
+      <property role="245u99" value="tran2" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
+    </node>
+  </node>
+  <node concept="sJg17" id="4MYZAN8q2md">
+    <property role="TrG5h" value="asdf" />
+    <node concept="1Hj7UV" id="4MYZAN8q2me" role="1Hj7Pu">
+      <property role="TrG5h" value="asdf" />
+      <node concept="1Hj7UU" id="4MYZAN8q2mf" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
+      </node>
+    </node>
+    <node concept="3yd64n" id="4MYZAN8q2mg" role="3yd3h7">
+      <property role="TrG5h" value="asdf" />
+      <property role="3yd3hR" value="2" />
+      <property role="3yd64o" value="1" />
+      <property role="244Foq" value="asdf" />
+    </node>
+    <node concept="3lM9jV" id="4MYZAN8q2mh" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jY" value="0" />
+      <property role="3lM9jR" value="1" />
+      <property role="3lM9jN" value="100" />
+      <property role="3lM9jE" value="Unassigned" />
+      <property role="TrG5h" value="asd" />
+      <property role="00000" value="asdf" />
+      <property role="245u9L" value="asdf" />
+      <property role="245u99" value="asdf" />
+    </node>
+    <node concept="2s6h$e" id="4MYZAN8q2mi" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="3" />
+      <property role="2s6h$S" value="100" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="asdf" />
+      <property role="2s6h$4" value="100" />
+    </node>
+    <node concept="3VOWaR" id="4MYZAN8q2mj" role="N8dmf">
+      <property role="TrG5h" value="asdf" />
+      <property role="OYydz" value="adf" />
+      <property role="3VOWdS" value="10" />
+      <property role="3VOWdY" value="10" />
+      <property role="eq3CR" value="asdf" />
     </node>
   </node>
 </model>

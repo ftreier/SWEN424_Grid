@@ -19,7 +19,9 @@ public class gui extends JPanel {
    int[] styles = { Font.PLAIN, Font.ITALIC, Font.BOLD, Font.ITALIC + Font.BOLD };
    String[] stylenames = { "Plain", "Italic", "Bold", "Bold & Italic" };
    //Lists of objects to iterate over 
-   ElConsumer c = new ElConsumer("test", 10, 20, "tran", null);
+
+   ElConsumer c = new ElConsumer("test", 10, "tran");
+
    static ArrayList <ElConsumer> _consumers = new ArrayList <ElConsumer>();
    
    //Image files paths for each MainType
@@ -63,8 +65,10 @@ public class gui extends JPanel {
       f.setSize(400,400);
       f.setVisible(true);
       //test consumers
-      _consumers.add(new ElConsumer("test", 3, 5, "tran", null));
-      _consumers.add(new ElConsumer("two", 4, 9, "tran", null));
-      _consumers.add(new ElConsumer("anoth", 10, 20, "tran", null));
+
+      _consumers.add(new ElConsumer("test", 3, "tran"));
+      _consumers.add(new ElConsumer("two", 4, "tran"));
+      _consumers.add(new ElConsumer("anoth", 10, "tran"));
+
    }
 }

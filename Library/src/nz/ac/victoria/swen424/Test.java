@@ -1,29 +1,22 @@
 package nz.ac.victoria.swen424;
 
 import java.util.List;
-
 import nz.ac.victoria.swen424.weather.WeatherValues;
-import nz.ac.victoria.swen424.mainTypes.ElGrid;
+import nz.ac.victoria.swen424.UsageProfile;
 import nz.ac.victoria.swen424.mainTypes.ElProducer;
 import nz.ac.victoria.swen424.mainTypes.ElTransformer;
 import nz.ac.victoria.swen424.mainTypes.ElConsumer;
-import nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType;
-
+import nz.ac.victoria.swen424.mainTypes.ElGrid;
 import java.util.LinkedList;
-
 import nz.ac.victoria.swen424.weather.Weather;
 import nz.ac.victoria.swen424.weather.WeatherEnum;
 import nz.ac.victoria.swen424.weather.WindSpeedEnum;
-
+import nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLEventWriter;
-
 import java.io.FileOutputStream;
-
 import javanet.staxutils.IndentingXMLEventWriter;
-
 import javax.xml.stream.XMLEventFactory;
-
 public class Test
 {
 	/*package*/ List<WeatherValues> _weather;
@@ -45,8 +38,8 @@ public class Test
 	    _weather.add(wv);
 
 	    _transformers = new LinkedList<ElTransformer>();
-	    _transformers.add(new ElTransformer("tran", 80, 20, 100, 4, 1));
-	    _transformers.add(new ElTransformer("tran2", 80, 20, 100, 4, 1));
+	    _transformers.add(new ElTransformer("tran", 80, 20, 100));
+	    _transformers.add(new ElTransformer("tran2", 80, 20, 100));
 
 	    
 	    _producers = new LinkedList<ElProducer>();
@@ -55,9 +48,9 @@ public class Test
 
 	    ElConsumer consumer;
 	    _consumers = new LinkedList<ElConsumer>();
-	    consumer = new ElConsumer("house", 0, 10, "tran", null);
+	    consumer = new ElConsumer("house", 10, "tran");
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("school", 0, 10, "tran", null);
+	    consumer = new ElConsumer("school", 10, "tran");
 	    _consumers.add(consumer);
 
 	    for (ElConsumer consumer_ : _consumers) {
@@ -65,7 +58,7 @@ public class Test
 	    }
 
 	    _grids = new LinkedList<ElGrid>();
-	    ElGrid grid = new ElGrid(200, 10, 100, 4, "Unassigned", "tran", "tran2");
+	    ElGrid grid = new ElGrid("Unassigned", 10, 100, 4, "tran", "tran2");
 	    _grids.add(grid);
 	    System.out.println("");
 
