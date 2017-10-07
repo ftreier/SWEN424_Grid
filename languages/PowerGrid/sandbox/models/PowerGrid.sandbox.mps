@@ -42,6 +42,7 @@
         <property id="5097090694229162830" name="Afternoon" index="1vLJIP" />
         <property id="5097090694229162823" name="Morning" index="1vLJIW" />
         <property id="5097090694229162821" name="Night" index="1vLJIY" />
+        <property id="5097090694229163126" name="IsRandom" index="1vLJMd" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
@@ -92,6 +93,10 @@
       <property role="1vLJIL" value="4" />
       <property role="1vLJIP" value="5" />
       <property role="1vLJIC" value="6" />
+    </node>
+    <node concept="1vLJl6" id="3X184CBaz0c" role="1vLJPo">
+      <property role="1vLJMd" value="true" />
+      <property role="TrG5h" value="ffff" />
     </node>
     <node concept="1Hj7UV" id="4MYZAN8q2me" role="1Hj7Pu">
       <property role="TrG5h" value="asdf" />
