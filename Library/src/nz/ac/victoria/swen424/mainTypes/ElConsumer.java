@@ -33,10 +33,16 @@ public void connectTransformer(ElTransformer connect){
 //	}
 }
 
+<<<<<<< HEAD
 public String getTransName(){
 	return _connectName;
 }
 
+=======
+public int getMaxConsumption(){
+	return _maxConsumption;
+}
+>>>>>>> refs/remotes/origin/dev
 
 @Override
 public String getData() {
