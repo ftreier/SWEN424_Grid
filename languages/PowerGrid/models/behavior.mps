@@ -160,8 +160,8 @@
                 <node concept="17qRlL" id="1e8K_y$VybV" role="1eOMHV">
                   <node concept="2OqwBi" id="1e8K_y$VyAj" role="3uHU7w">
                     <node concept="13iPFW" id="1e8K_y$Vyc6" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="1e8K_y$VyZx" role="2OqNvi">
-                      <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                    <node concept="3TrcHB" id="68AEjYhWGF_" role="2OqNvi">
+                      <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                     </node>
                   </node>
                   <node concept="2OqwBi" id="1e8K_y$VwZy" role="3uHU7B">
@@ -179,8 +179,8 @@
               <node concept="37vLTI" id="4NGxdIp8bDE" role="3clFbG">
                 <node concept="2OqwBi" id="4NGxdIp89Zr" role="37vLTJ">
                   <node concept="13iPFW" id="4NGxdIp89_V" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="1e8K_y$UYxw" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                  <node concept="3TrcHB" id="68AEjYhWHe5" role="2OqNvi">
+                    <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                   </node>
                 </node>
                 <node concept="FJ1c_" id="1e8K_y$VFsN" role="37vLTx">
@@ -199,8 +199,8 @@
                         <node concept="17qRlL" id="1e8K_y$VBOP" role="1eOMHV">
                           <node concept="2OqwBi" id="1e8K_y$VCnD" role="3uHU7w">
                             <node concept="13iPFW" id="1e8K_y$VBP0" role="2Oq$k0" />
-                            <node concept="3TrcHB" id="1e8K_y$VCTj" role="2OqNvi">
-                              <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                            <node concept="3TrcHB" id="68AEjYhWHH0" role="2OqNvi">
+                              <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                             </node>
                           </node>
                           <node concept="2OqwBi" id="1e8K_y$VAiX" role="3uHU7B">
@@ -253,8 +253,8 @@
                 <node concept="17qRlL" id="1e8K_y$ViVo" role="1eOMHV">
                   <node concept="2OqwBi" id="1e8K_y$Vjtb" role="3uHU7w">
                     <node concept="13iPFW" id="1e8K_y$ViVz" role="2Oq$k0" />
-                    <node concept="3TrcHB" id="1e8K_y$VjQn" role="2OqNvi">
-                      <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                    <node concept="3TrcHB" id="68AEjYhWIo3" role="2OqNvi">
+                      <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                     </node>
                   </node>
                   <node concept="2OqwBi" id="4NGxdIp8m8h" role="3uHU7B">
@@ -275,8 +275,8 @@
               <node concept="37vLTI" id="1e8K_y$Vn0B" role="3clFbG">
                 <node concept="2OqwBi" id="1e8K_y$Vn0E" role="37vLTJ">
                   <node concept="13iPFW" id="1e8K_y$Vn0F" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="1e8K_y$Vn0G" role="2OqNvi">
-                    <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                  <node concept="3TrcHB" id="68AEjYhWIMa" role="2OqNvi">
+                    <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                   </node>
                 </node>
                 <node concept="FJ1c_" id="1e8K_y$VsxQ" role="37vLTx">
@@ -295,8 +295,8 @@
                         <node concept="17qRlL" id="1e8K_y$VpmX" role="1eOMHV">
                           <node concept="2OqwBi" id="1e8K_y$VpB9" role="3uHU7w">
                             <node concept="13iPFW" id="1e8K_y$Vpn8" role="2Oq$k0" />
-                            <node concept="3TrcHB" id="1e8K_y$Vq87" role="2OqNvi">
-                              <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                            <node concept="3TrcHB" id="68AEjYhWJ8I" role="2OqNvi">
+                              <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                             </node>
                           </node>
                           <node concept="2OqwBi" id="1e8K_y$VnQt" role="3uHU7B">
@@ -357,16 +357,16 @@
               </node>
               <node concept="2OqwBi" id="59sIV4z5PGk" role="3uHU7B">
                 <node concept="13iPFW" id="59sIV4z5PyD" role="2Oq$k0" />
-                <node concept="3TrcHB" id="59sIV4z5QcD" role="2OqNvi">
-                  <ref role="3TsBF5" to="aw7t:4NGxdIp910G" resolve="voltage" />
+                <node concept="3TrcHB" id="68AEjYhWJz5" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:68AEjYhWzJ6" resolve="voltage" />
                 </node>
               </node>
             </node>
             <node concept="3clFbC" id="1e8K_y$V4h0" role="3uHU7B">
               <node concept="2OqwBi" id="1e8K_y$V36d" role="3uHU7B">
                 <node concept="13iPFW" id="1e8K_y$V2WR" role="2Oq$k0" />
-                <node concept="3TrcHB" id="1e8K_y$V3h_" role="2OqNvi">
-                  <ref role="3TsBF5" to="aw7t:4NGxdIp910G" resolve="voltage" />
+                <node concept="3TrcHB" id="68AEjYhWKcg" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:68AEjYhWzJ6" resolve="voltage" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1e8K_y$V4Q0" role="3uHU7w">
@@ -494,8 +494,8 @@
             </node>
             <node concept="2OqwBi" id="4NGxdIp7WMR" role="37vLTJ">
               <node concept="13iPFW" id="4NGxdIp7WCQ" role="2Oq$k0" />
-              <node concept="3TrcHB" id="1e8K_y$UWLb" role="2OqNvi">
-                <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+              <node concept="3TrcHB" id="68AEjYhWEOz" role="2OqNvi">
+                <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
               </node>
             </node>
           </node>
@@ -507,8 +507,8 @@
             </node>
             <node concept="2OqwBi" id="4NGxdIp7Y59" role="37vLTJ">
               <node concept="13iPFW" id="4NGxdIp7XWN" role="2Oq$k0" />
-              <node concept="3TrcHB" id="1e8K_y$UWYr" role="2OqNvi">
-                <ref role="3TsBF5" to="aw7t:4NGxdIp910G" resolve="voltage" />
+              <node concept="3TrcHB" id="68AEjYhWFvP" role="2OqNvi">
+                <ref role="3TsBF5" to="aw7t:68AEjYhWzJ6" resolve="voltage" />
               </node>
             </node>
           </node>
@@ -533,8 +533,8 @@
             </node>
             <node concept="2OqwBi" id="4NGxdIp81e0" role="37vLTJ">
               <node concept="13iPFW" id="4NGxdIp814W" role="2Oq$k0" />
-              <node concept="3TrcHB" id="1e8K_y$UXoV" role="2OqNvi">
-                <ref role="3TsBF5" to="aw7t:4NGxdIp910L" resolve="sector" />
+              <node concept="3TrcHB" id="68AEjYhWG9a" role="2OqNvi">
+                <ref role="3TsBF5" to="aw7t:68AEjYhWzJc" resolve="sector" />
               </node>
             </node>
           </node>

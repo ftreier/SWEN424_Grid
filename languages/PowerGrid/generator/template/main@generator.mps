@@ -20,7 +20,6 @@
     <import index="8t2c" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424(ExternalCode/)" />
     <import index="91n3" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.xml.stream(JDK/)" />
     <import index="na6w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.xml.stream.events(JDK/)" />
-    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -2090,8 +2089,8 @@
                         <node concept="3clFbS" id="S4oOKOErwa" role="2VODD2">
                           <node concept="3clFbF" id="S4oOKOErwg" role="3cqZAp">
                             <node concept="2OqwBi" id="S4oOKOErwb" role="3clFbG">
-                              <node concept="3TrcHB" id="S4oOKOErwe" role="2OqNvi">
-                                <ref role="3TsBF5" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+                              <node concept="3TrcHB" id="2kMGzNPYVVi" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
                               </node>
                               <node concept="30H73N" id="S4oOKOErwf" role="2Oq$k0" />
                             </node>
@@ -2128,8 +2127,8 @@
                         <node concept="3clFbS" id="S4oOKOEtUj" role="2VODD2">
                           <node concept="3clFbF" id="S4oOKOEtUp" role="3cqZAp">
                             <node concept="2OqwBi" id="S4oOKOEtUk" role="3clFbG">
-                              <node concept="3TrcHB" id="S4oOKOEtUn" role="2OqNvi">
-                                <ref role="3TsBF5" to="aw7t:4NGxdIp910G" resolve="voltage" />
+                              <node concept="3TrcHB" id="2kMGzNPYWMk" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:68AEjYhWzJ6" resolve="voltage" />
                               </node>
                               <node concept="30H73N" id="S4oOKOEtUo" role="2Oq$k0" />
                             </node>
@@ -2147,8 +2146,8 @@
                         <node concept="3clFbS" id="S4oOKOEvYe" role="2VODD2">
                           <node concept="3clFbF" id="S4oOKOEvYk" role="3cqZAp">
                             <node concept="2OqwBi" id="S4oOKOEvYf" role="3clFbG">
-                              <node concept="3TrcHB" id="S4oOKOEvYi" role="2OqNvi">
-                                <ref role="3TsBF5" to="aw7t:4NGxdIp910L" resolve="sector" />
+                              <node concept="3TrcHB" id="2kMGzNPYYp3" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:68AEjYhWzJc" resolve="sector" />
                               </node>
                               <node concept="30H73N" id="S4oOKOEvYj" role="2Oq$k0" />
                             </node>
