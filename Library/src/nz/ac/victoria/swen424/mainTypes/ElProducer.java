@@ -29,7 +29,7 @@ public class ElProducer extends MainBaseType
 	
 	public void connectTransformer(ElTransformer connect){
 		_connect = connect;
-		connect.addConnection(this);
+		connect.addLeftConnection(this);
 //		if(connect.increaseUsage(_maxProduction, this) == true){
 //			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
