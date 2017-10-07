@@ -189,4 +189,35 @@ public class ElTransformer extends MainBaseType
 		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxcapacity)));
 		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
 	}
+
+	public boolean IsOk()
+	{
+		if(!compareRange(_simStat.currentElectricity, 0))
+//		{
+//		}
+//		else
+		{
+			if(_rightConnection.size() == 0)
+			{
+				_simStat.isOk = false;
+			}
+			
+			boolean hasInput = false;
+			for(ElGrid g : _rightConnection)
+			{
+				if (!g._simStat.isFailure)
+				{
+					hasInput = true;
+					break;
+				}
+			}
+			
+			if(!hasInput)
+			{
+				_simStat.isOk = false;
+			}
+		}
+		
+		return _simStat.isOk;
+	}
 }

@@ -193,6 +193,11 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			isOk = false;
 		}
 		
+		for (ElTransformer transformer : transformers)
+		{
+			isOk = isOk && transformer.IsOk();
+		}
+		
 		// Allow for some small imbalance due to precision issues
 		netSimStat.isOk = compareRange(elUsage, 0, null) && isOk && possibleProduction > 0;
 		return netSimStat;
