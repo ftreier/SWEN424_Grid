@@ -42,8 +42,10 @@
         <property id="5097090694229162830" name="Afternoon" index="1vLJIP" />
         <property id="5097090694229162823" name="Morning" index="1vLJIW" />
         <property id="5097090694229162821" name="Night" index="1vLJIY" />
+        <property id="5097090694229163126" name="IsRandom" index="1vLJMd" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
+        <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="ConnectedTransformer" index="nfRfV" />
@@ -87,11 +89,15 @@
     </node>
     <node concept="1vLJl6" id="68AEjYhSLu0" role="1vLJPo">
       <property role="TrG5h" value="gg" />
-      <property role="1vLJIY" value="1" />
-      <property role="1vLJIW" value="3" />
-      <property role="1vLJIL" value="4" />
-      <property role="1vLJIP" value="5" />
-      <property role="1vLJIC" value="6" />
+      <property role="1vLJIY" value="0" />
+      <property role="1vLJIW" value="00" />
+      <property role="1vLJIL" value="00" />
+      <property role="1vLJIP" value="00" />
+      <property role="1vLJIC" value="00" />
+    </node>
+    <node concept="1vLJl6" id="3X184CBaz0c" role="1vLJPo">
+      <property role="1vLJMd" value="true" />
+      <property role="TrG5h" value="ffff" />
     </node>
     <node concept="1Hj7UV" id="4MYZAN8q2me" role="1Hj7Pu">
       <property role="TrG5h" value="asdf" />
@@ -109,6 +115,7 @@
       <property role="3yd64o" value="0" />
       <property role="3yd3hR" value="1000" />
       <property role="TrG5h" value="asdf" />
+      <property role="JvpKn" value="2" />
       <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
     </node>
     <node concept="2s6h$e" id="4MYZAN8q2mi" role="2s6h$R">
