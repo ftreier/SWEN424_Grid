@@ -2,7 +2,7 @@
 <model ref="r:962bfeb6-6039-41c3-a510-88073d6ca721(PowerGrid.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="-1" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
@@ -11,6 +11,7 @@
     <import index="aw7t" ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -560,40 +561,40 @@
       <node concept="3clFbS" id="1e8K_y$VLB$" role="2VODD2">
         <node concept="3clFbF" id="1e8K_y$VLBI" role="3cqZAp">
           <node concept="37vLTI" id="1e8K_y$VNds" role="3clFbG">
+            <node concept="3cmrfG" id="4qR36XfvCeg" role="37vLTx">
+              <property role="3cmrfH" value="4" />
+            </node>
             <node concept="2OqwBi" id="1e8K_y$VLJs" role="37vLTJ">
               <node concept="13iPFW" id="1e8K_y$VLBH" role="2Oq$k0" />
               <node concept="3TrcHB" id="1e8K_y$VM5F" role="2OqNvi">
                 <ref role="3TsBF5" to="aw7t:7rDXPBEWeTo" resolve="LeftNetLevel" />
               </node>
             </node>
-            <node concept="3cmrfG" id="4qR36XfvCeg" role="37vLTx">
-              <property role="3cmrfH" value="4" />
-            </node>
           </node>
         </node>
         <node concept="3clFbF" id="1e8K_y$VNiK" role="3cqZAp">
           <node concept="37vLTI" id="1e8K_y$VPkd" role="3clFbG">
+            <node concept="3cmrfG" id="59sIV4z6k2U" role="37vLTx">
+              <property role="3cmrfH" value="1" />
+            </node>
             <node concept="2OqwBi" id="1e8K_y$VNqH" role="37vLTJ">
               <node concept="13iPFW" id="1e8K_y$VNiI" role="2Oq$k0" />
               <node concept="3TrcHB" id="1e8K_y$VNMU" role="2OqNvi">
                 <ref role="3TsBF5" to="aw7t:7rDXPBEWeTq" resolve="RightNetLevel" />
               </node>
             </node>
-            <node concept="3cmrfG" id="59sIV4z6k2U" role="37vLTx">
-              <property role="3cmrfH" value="1" />
-            </node>
           </node>
         </node>
         <node concept="3clFbF" id="1e8K_y$VPGI" role="3cqZAp">
           <node concept="37vLTI" id="1e8K_y$VRla" role="3clFbG">
+            <node concept="3cmrfG" id="4qR36XfvDxs" role="37vLTx">
+              <property role="3cmrfH" value="200" />
+            </node>
             <node concept="2OqwBi" id="1e8K_y$VPRa" role="37vLTJ">
               <node concept="13iPFW" id="1e8K_y$VPGG" role="2Oq$k0" />
               <node concept="3TrcHB" id="1e8K_y$VQdp" role="2OqNvi">
                 <ref role="3TsBF5" to="aw7t:7rDXPBEWeTt" resolve="MaxCapacity" />
               </node>
-            </node>
-            <node concept="3cmrfG" id="4qR36XfvDxs" role="37vLTx">
-              <property role="3cmrfH" value="200" />
             </node>
           </node>
         </node>
