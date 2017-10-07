@@ -193,9 +193,6 @@ public class ElTransformer extends MainBaseType
 	public boolean IsOk()
 	{
 		if(!compareRange(_simStat.currentElectricity, 0))
-//		{
-//		}
-//		else
 		{
 			if(_rightConnection.size() == 0)
 			{

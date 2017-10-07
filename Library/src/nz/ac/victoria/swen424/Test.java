@@ -121,13 +121,13 @@ public class Test {
 	    consumer = new ElConsumer("SIndustry", 200);
 	    consumer.connectTransformer(_transformers.get(3));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CHouses", 300);
+	    consumer = new ElConsumer("WHouses", 300);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CBuisness", 150);
+	    consumer = new ElConsumer("WBuisness", 150);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("CIndustry", 100);
+	    consumer = new ElConsumer("WIndustry", 100);
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
 
