@@ -147,26 +147,6 @@
       <ref role="AX2Wp" node="7Erv4TlTGP0" resolve="ProductionMethodeType" />
     </node>
   </node>
-  <node concept="AxPO7" id="6Lad368Q94p">
-    <property role="TrG5h" value="EnergyUnitEnum" />
-    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
-    <node concept="M4N5e" id="6Lad368Q94r" role="M5hS2">
-      <property role="1uS6qv" value="1" />
-      <property role="1uS6qo" value="Wh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94q" role="M5hS2">
-      <property role="1uS6qv" value="2" />
-      <property role="1uS6qo" value="kWh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94w" role="M5hS2">
-      <property role="1uS6qo" value="MWh" />
-      <property role="1uS6qv" value="3" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
-      <property role="1uS6qo" value="GWh" />
-      <property role="1uS6qv" value="4" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="7rDXPBEWeTn">
     <property role="EcuMT" value="8568651731614887511" />
     <property role="TrG5h" value="Transformer" />
