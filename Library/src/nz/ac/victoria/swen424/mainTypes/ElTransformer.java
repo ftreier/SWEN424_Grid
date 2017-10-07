@@ -184,7 +184,7 @@ public class ElTransformer extends MainBaseType
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
 		xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(_simStat.isOk)));
 		xmlWriter.add(eventFactory.createAttribute("loss", Double.toString(_simStat.loss)));
-		xmlWriter.add(eventFactory.createAttribute("currentUsage", Double.toString(_simStat.currentElectricity)));
+		xmlWriter.add(eventFactory.createAttribute("currentUsage", Double.toString(Math.abs(_simStat.currentElectricity))));
 		xmlWriter.add(eventFactory.createAttribute("usage", Double.toString(_simStat.getUsage())));
 		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxcapacity)));
 		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
