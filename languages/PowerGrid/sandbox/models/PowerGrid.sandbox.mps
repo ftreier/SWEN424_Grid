@@ -88,11 +88,11 @@
     </node>
     <node concept="1vLJl6" id="68AEjYhSLu0" role="1vLJPo">
       <property role="TrG5h" value="gg" />
-      <property role="1vLJIY" value="1" />
-      <property role="1vLJIW" value="3" />
-      <property role="1vLJIL" value="4" />
-      <property role="1vLJIP" value="5" />
-      <property role="1vLJIC" value="6" />
+      <property role="1vLJIY" value="0" />
+      <property role="1vLJIW" value="00" />
+      <property role="1vLJIL" value="00" />
+      <property role="1vLJIP" value="00" />
+      <property role="1vLJIC" value="00" />
     </node>
     <node concept="1vLJl6" id="3X184CBaz0c" role="1vLJPo">
       <property role="1vLJMd" value="true" />
