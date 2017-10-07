@@ -50,10 +50,7 @@
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="ConnectedTransformer" index="nfRfV" />
       </concept>
-      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
-        <property id="7210842759737799182" name="day" index="1Hj7P7" />
-        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
-      </concept>
+      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU" />
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
         <property id="7210842759737835336" name="IsRandom" index="1Hjf01" />
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
@@ -104,10 +101,6 @@
     <node concept="1Hj7UV" id="4MYZAN8q2me" role="1Hj7Pu">
       <property role="TrG5h" value="asdf" />
       <node concept="1Hj7UU" id="3X184CBdCa1" role="1Hjf0d" />
-      <node concept="1Hj7UU" id="4MYZAN8q2mf" role="1Hjf0d">
-        <property role="1Hj7P7" value="1" />
-        <property role="1Hj7Pq" value="12" />
-      </node>
     </node>
     <node concept="1Hj7UV" id="3X184CBdCa6" role="1Hj7Pu">
       <property role="TrG5h" value="Auckland" />
@@ -157,6 +150,7 @@
       <property role="2s6h$4" value="1000" />
       <property role="2s6h$S" value="100" />
       <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="fff" />
     </node>
   </node>
 </model>

@@ -23,10 +23,9 @@ public class WeatherValues extends XmlLayoutNode
 		_isRandom = random;
 		if(random)
 		{
-			Random rand = new Random();
 			for(int i = 0; i < _numberOfRandomDays; i++)
 			{
-				AppendWeather(new Weather(WeatherEnum.valueOf(rand.nextInt(3)), WindSpeedEnum.valueOf(rand.nextInt(13))));
+				AppendWeather(new Weather());
 			}
 		}
 	}
@@ -49,7 +48,7 @@ public class WeatherValues extends XmlLayoutNode
 	{
 		if (!_weather.containsKey(day))
 		{
-			throw new Exception("nix gut");
+			AppendWeather(new Weather());
 		}
 		
 		return _weather.get(day);

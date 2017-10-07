@@ -257,11 +257,6 @@
     <property role="EcuMT" value="7210842759737799155" />
     <property role="TrG5h" value="Weather" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6gi3O$9nB8e" role="1TKVEl">
-      <property role="IQ2nx" value="7210842759737799182" />
-      <property role="TrG5h" value="day" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="1TJgyi" id="6gi3O$9nB8g" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799184" />
       <property role="TrG5h" value="Type" />
