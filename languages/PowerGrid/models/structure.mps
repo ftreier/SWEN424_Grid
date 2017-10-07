@@ -7,8 +7,8 @@
   <imports>
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="ykoa" ref="06938a7a-d23b-45e2-95a4-0d0c6d8a569c/java:nz.ac.victoria.swen424.weather(ExternalCode/)" />
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -215,25 +215,25 @@
       <property role="TrG5h" value="maxCapacity" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="4NGxdIp910_" role="1TKVEl">
-      <property role="IQ2nx" value="5542951320088219685" />
+    <node concept="1TJgyi" id="68AEjYhWzJ1" role="1TKVEl">
+      <property role="IQ2nx" value="7072526355328547777" />
       <property role="TrG5h" value="percentusage" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="68AEjYhWzJ6" role="1TKVEl">
+      <property role="IQ2nx" value="7072526355328547782" />
+      <property role="TrG5h" value="voltage" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="68AEjYhWzJc" role="1TKVEl">
+      <property role="IQ2nx" value="7072526355328547788" />
+      <property role="TrG5h" value="sector" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyi" id="4NGxdIp910C" role="1TKVEl">
       <property role="IQ2nx" value="5542951320088219688" />
       <property role="TrG5h" value="efficiency" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="4NGxdIp910G" role="1TKVEl">
-      <property role="IQ2nx" value="5542951320088219692" />
-      <property role="TrG5h" value="voltage" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="4NGxdIp910L" role="1TKVEl">
-      <property role="IQ2nx" value="5542951320088219697" />
-      <property role="TrG5h" value="sector" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyi" id="5tZXSE_u3$_" role="1TKVEl">
       <property role="IQ2nx" value="6305030178195650853" />

@@ -204,7 +204,7 @@
       </node>
     </node>
     <node concept="EnEH3" id="4NGxdIp7KbS" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:4NGxdIp910_" resolve="percentusage" />
+      <ref role="EomxK" to="aw7t:68AEjYhWzJ1" resolve="percentusage" />
       <node concept="QB0g5" id="4NGxdIp7KfR" role="QCWH9">
         <node concept="3clFbS" id="4NGxdIp7KfS" role="2VODD2">
           <node concept="3clFbF" id="4NGxdIp7KqF" role="3cqZAp">
@@ -250,15 +250,15 @@
       </node>
     </node>
     <node concept="EnEH3" id="4NGxdIp7SoA" role="1MhHOB">
-      <ref role="EomxK" to="aw7t:4NGxdIp910G" resolve="voltage" />
+      <ref role="EomxK" to="aw7t:68AEjYhWzJ6" resolve="voltage" />
       <node concept="QB0g5" id="4NGxdIp7Spt" role="QCWH9">
         <node concept="3clFbS" id="4NGxdIp7Spu" role="2VODD2">
           <node concept="3clFbF" id="4NGxdIp7SwB" role="3cqZAp">
-            <node concept="3eOSWO" id="4NGxdIp7TEY" role="3clFbG">
+            <node concept="2d3UOw" id="4KTrld8W2jH" role="3clFbG">
+              <node concept="1Wqviy" id="4NGxdIp7SwA" role="3uHU7B" />
               <node concept="3cmrfG" id="4NGxdIp7TF4" role="3uHU7w">
                 <property role="3cmrfH" value="0" />
               </node>
-              <node concept="1Wqviy" id="4NGxdIp7SwA" role="3uHU7B" />
             </node>
           </node>
         </node>
