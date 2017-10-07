@@ -83,7 +83,6 @@ public class Test {
 	    producer.connectTransformer(_transformers.get(2));
 	    _producers.add(producer);
 
-	    
 	    ElConsumer consumer;
 	    _consumers = new LinkedList<ElConsumer>();
 	    consumer = new ElConsumer("CHouses", 200);
@@ -132,18 +131,14 @@ public class Test {
 	    consumer.connectTransformer(_transformers.get(4));
 	    _consumers.add(consumer);
 
-//	    for (ElConsumer consumer_ : _consumers) {
-//	      consumer_.connectTransformer(_transformers.get(0));
-//	    }
-
 	    ElGrid grid;
 	    _grids = new LinkedList<ElGrid>();
 	    _grids.add(new ElGrid(1200, 10, 98, 4, "T1", 5));
 	    _grids.add(new ElGrid(500, 0, 95, 4, "T2", 2));
 	    _grids.add(new ElGrid(700, 0, 99, 4, "T3", 2));
 	    _grids.add(new ElGrid(1000, 0, 97, 4, "T4", 1));
-	    _grids.add(new ElGrid(700, 0, 95, 4, "T5", 1));
-	    _grids.add(new ElGrid(1000, 0, 95, 4, "T6", 1));
+	    _grids.add(new ElGrid(700, 0, 95, 4, "T5", 500));
+	    _grids.add(new ElGrid(1000, 0, 95, 4, "T6", 500));
 	    System.out.println("");
 
     	_grids.get(0).connectLeftTransformer(_transformers.get(0));
@@ -158,15 +153,6 @@ public class Test {
     	_grids.get(4).connectRightTransformer(_transformers.get(2));
     	_grids.get(5).connectLeftTransformer(_transformers.get(0));
     	_grids.get(5).connectRightTransformer(_transformers.get(4));
-
-//	    for (ElGrid grid_ : _grids) {
-//	    	grid_.connectLeftTransformer(_transformers.get(0));
-//	    	grid_.connectRightTransformer(_transformers.get(1));
-//	    }
-//
-//	    for (ElProducer producer_ : _producers) {
-//	      producer_.connectTransformer(_transformers.get(1));
-//	    }
 	  }
 
 //  public Test() {
