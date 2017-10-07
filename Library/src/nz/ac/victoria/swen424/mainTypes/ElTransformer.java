@@ -14,57 +14,47 @@ public class ElTransformer extends MainBaseType
 	private int _maxcapacity;
 	private int _usage;
 	private int _efficiency;
-	private Set<MainBaseType> connections;
+	private List<MainBaseType> _leftConnection;
+	private List<ElGrid> _rightConnection;
+	//private Set<MainBaseType> connections;
 
 	public ElTransformer(String name, int maxcapacity, int usage, int efficiency){
 		super(name);
 		_maxcapacity = maxcapacity;
 		_usage = usage;
 		_efficiency = efficiency;
-		connections = new HashSet<MainBaseType>();
+		_leftConnection = new LinkedList<>();
+		_rightConnection = new LinkedList<>();
+		//connections = new HashSet<MainBaseType>();
 	}
 	
-	public void addConnection(MainBaseType object)
+	public void addLeftConnection(MainBaseType object)
 	{
-		connections.add(object);
+		_leftConnection.add(object);
+	}
+
+	public void addRightConnection(ElGrid object)
+	{
+		_rightConnection.add(object);
 	}
 	
-	public Set<MainBaseType> getConnections()
+	public List<MainBaseType> getLeftConnections()
 	{
-		return connections;
+		return _leftConnection;
+	}
+	
+	public List<ElGrid> getRightConnections()
+	{
+		return _rightConnection;
 	}
 	
 	public String getName(){
 		return _name;
 	}
 	
-//	public Boolean increaseUsage(int increment, MainBaseType connect){
-//		if(_usage+(increment*(_efficiency)/100) > _maxcapacity){
-//			System.out.println("Cannot exceed maximum capacity of transformer");
-//			return false;
-//		}
-//		_usage += (increment*(_efficiency/100));
-//		addConnection(connect);
-//		return true;
-//	}
-//	
-//	public Boolean decreaseUsage(int increment, MainBaseType connect){
-//		if(_usage-(increment*(_efficiency/100)) < 0){
-//			System.out.println("Cannot fall below 0 usage on transformer");
-//			return false;
-//		}
-//		_usage -= (increment*(_efficiency/100));
-//		addConnection(connect);
-//		return true;
-//	}
+	//public Set<IMainType> getConnections(){
+		//return connections;
 	
-//	public void addConnection(MainBaseType connect){
-//		connections.add(connect);
-//	}
-//	
-//	public void removeConnection(MainBaseType remove){
-//		connections.remove(remove);
-//	}
 //	
 //	public Set<MainBaseType> getConnections(){
 //		return connections;
@@ -89,7 +79,7 @@ public class ElTransformer extends MainBaseType
 		
 		// Write connection
 		xmlWriter.add(eventFactory.createStartElement("", "", "connections"));
-		for (MainBaseType mainBaseType : connections)
+		for (MainBaseType mainBaseType : _leftConnection)
 		{
 			if(mainBaseType instanceof ElProducer)
 			{
@@ -114,7 +104,7 @@ public class ElTransformer extends MainBaseType
 			}
 		}
 		
-		for (ElGrid grid : connections)
+		for (ElGrid grid : _rightConnection)
 		{
 			xmlWriter.add(eventFactory.createStartElement("", "", "grid"));
 			xmlWriter.add(eventFactory.createAttribute("id", grid.GetGuid().toString()));
@@ -137,7 +127,7 @@ public class ElTransformer extends MainBaseType
 		
 		double elUsage = 0;
 		
-		for (MainBaseType mainBaseType : connections)
+		for (MainBaseType mainBaseType : _leftConnection)
 		{
 			elUsage += mainBaseType._simStat.currentElectricity;
 		}

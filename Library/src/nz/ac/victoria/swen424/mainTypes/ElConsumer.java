@@ -23,7 +23,7 @@ public ElConsumer(String name, int maxConsumption, String connectName){
 
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
-	connect.addConnection(this);
+	connect.addLeftConnection(this);
 //	if(connect.decreaseUsage(_maxConsumption, this) == true){
 //		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
