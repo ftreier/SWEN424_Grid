@@ -52,6 +52,7 @@
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
         <property id="7210842759737799182" name="day" index="1Hj7P7" />
+        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
         <property id="7210842759737835336" name="IsRandom" index="1Hjf01" />
@@ -83,7 +84,7 @@
       <ref role="1LiVe8" node="4MYZAN8q2mi" resolve="a" />
     </node>
     <node concept="3VOWaR" id="2kMGzNPZBS2" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
+      <property role="3VOWdS" value="10" />
       <property role="TrG5h" value="asdf" />
       <ref role="1vLJM8" node="68AEjYhSLu0" resolve="gg" />
       <ref role="1pnA4g" node="4MYZAN8q2mi" resolve="a" />
@@ -105,6 +106,7 @@
       <node concept="1Hj7UU" id="3X184CBdCa1" role="1Hjf0d" />
       <node concept="1Hj7UU" id="4MYZAN8q2mf" role="1Hjf0d">
         <property role="1Hj7P7" value="1" />
+        <property role="1Hj7Pq" value="12" />
       </node>
     </node>
     <node concept="1Hj7UV" id="3X184CBdCa6" role="1Hj7Pu">
@@ -119,10 +121,10 @@
       <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
     </node>
     <node concept="3yd64n" id="68AEjYhVt7v" role="3yd3h7">
-      <property role="3yd64o" value="0" />
+      <property role="3yd64o" value="1000" />
       <property role="3yd3hR" value="1000" />
       <property role="TrG5h" value="asdf" />
-      <property role="JvpKn" value="2" />
+      <property role="JvpKn" value="3" />
       <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
     </node>
     <node concept="2s6h$e" id="4MYZAN8q2mi" role="2s6h$R">
@@ -148,6 +150,13 @@
       <property role="2s6h$S" value="95" />
       <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="gggg" />
+    </node>
+    <node concept="2s6h$e" id="3X184CBeCsn" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="1" />
+      <property role="2s6h$4" value="1000" />
+      <property role="2s6h$S" value="100" />
+      <property role="2s6h$Z" value="0" />
     </node>
   </node>
 </model>
