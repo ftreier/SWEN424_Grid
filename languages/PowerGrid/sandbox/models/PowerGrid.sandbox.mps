@@ -45,6 +45,7 @@
         <property id="5097090694229163126" name="IsRandom" index="1vLJMd" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
+        <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="5364662149975926838" name="ConnectedTransformer" index="nfRfV" />
@@ -114,6 +115,7 @@
       <property role="3yd64o" value="0" />
       <property role="3yd3hR" value="1000" />
       <property role="TrG5h" value="asdf" />
+      <property role="JvpKn" value="2" />
       <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
     </node>
     <node concept="2s6h$e" id="4MYZAN8q2mi" role="2s6h$R">
