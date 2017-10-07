@@ -173,6 +173,7 @@ public class ElProducer extends MainBaseType
 		xmlWriter.add(eventFactory.createStartElement("", "", "producer"));
 		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
+		xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(_simStat.isOk)));
 		xmlWriter.add(eventFactory.createAttribute("production", Double.toString(_simStat.currentElectricity)));
 		xmlWriter.add(eventFactory.createAttribute("maxProduction", Double.toString(_maxProduction)));
 		if(_productionType == ProducitionMethodeType.Conventional)
@@ -192,7 +193,7 @@ public class ElProducer extends MainBaseType
 			_connect._simStat.currentElectricity += diff;
 		}
 		
-		if(_simStat.currentElectricity > _maxProduction)
+		if(_simStat.currentElectricity > _maxProduction || _simStat.currentElectricity < _minProduction)
 		{
 			_simStat.isOk = false;
 		}
@@ -202,5 +203,10 @@ public class ElProducer extends MainBaseType
 		}
 		
 		return _simStat.isOk;
+	}
+
+	public double getMaxProduction()
+	{
+		return _maxProduction;
 	}
 }

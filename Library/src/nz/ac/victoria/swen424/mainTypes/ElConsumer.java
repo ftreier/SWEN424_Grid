@@ -31,6 +31,9 @@ public void connectTransformer(ElTransformer connect){
 //	}
 }
 
+public int getMaxConsumption(){
+	return _maxConsumption;
+}
 
 @Override
 public String getData() {
