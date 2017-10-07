@@ -84,6 +84,9 @@
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
+      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
+        <child id="1068581517676" name="expression" index="3cqZAk" />
+      </concept>
       <concept id="1068581242869" name="jetbrains.mps.baseLanguage.structure.MinusExpression" flags="nn" index="3cpWsd" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
@@ -98,6 +101,9 @@
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
       <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
+      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
+        <reference id="1107535924139" name="classifier" index="3uigEE" />
+      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -607,6 +613,23 @@
               <node concept="3TrcHB" id="1e8K_y$VTH3" role="2OqNvi">
                 <ref role="3TsBF5" to="aw7t:7rDXPBEWeTA" resolve="Usage" />
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="4ZDpIZbNHXS" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <node concept="3Tm1VV" id="4ZDpIZbNHXT" role="1B3o_S" />
+      <node concept="3uibUv" id="4ZDpIZbNI1F" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="4ZDpIZbNHXV" role="3clF47">
+        <node concept="3cpWs6" id="4ZDpIZbNI2f" role="3cqZAp">
+          <node concept="2OqwBi" id="4ZDpIZbNIcg" role="3cqZAk">
+            <node concept="13iPFW" id="4ZDpIZbNI2H" role="2Oq$k0" />
+            <node concept="3TrcHB" id="4ZDpIZbNInC" role="2OqNvi">
+              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
             </node>
           </node>
         </node>

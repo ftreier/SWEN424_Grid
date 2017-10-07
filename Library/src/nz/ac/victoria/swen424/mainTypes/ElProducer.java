@@ -8,16 +8,18 @@ public class ElProducer extends MainBaseType
 {
 	private int _minProduction;
 	private int _maxProduction;
+	private String _connectName;
 	private ElTransformer _connect;
 	private ProducitionMethodeType _productionType;
 	
 
-	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
+	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType, String connectName)
 	{
 		super(name);
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
 		_productionType = prodType;
+		_connectName = connectName;
 	}
 	
 	public void connectTransformer(ElTransformer connect){
@@ -28,6 +30,10 @@ public class ElProducer extends MainBaseType
 			}
 			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
 		}
+	}
+	
+	public String getTransName(){
+		return _connectName;
 	}
 
 	@Override

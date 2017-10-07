@@ -59,6 +59,10 @@ public class ElTransformer
 		connections.remove(remove);
 	}
 	
+	public String getName(){
+		return _name;
+	}
+	
 	public Set<IMainType> getConnections(){
 		return connections;
 	}

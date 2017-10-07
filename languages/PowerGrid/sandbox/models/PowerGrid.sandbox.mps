@@ -24,6 +24,8 @@
         <child id="7210842759737799191" name="Weather" index="1Hj7Pu" />
       </concept>
       <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
+        <property id="5097016817291261152" name="TransName1" index="eq$$E" />
+        <property id="5097016817291261159" name="TransName2" index="eq$$H" />
         <property id="5542951320088219697" name="sector" index="3lM9jE" />
         <property id="5542951320088219688" name="efficiency" index="3lM9jN" />
         <property id="5542951320088219692" name="voltage" index="3lM9jR" />
@@ -33,6 +35,7 @@
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
+        <property id="5097016817291242739" name="TransName" index="eqx4T" />
         <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
@@ -49,6 +52,7 @@
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
+        <property id="5097016817291102205" name="TransName" index="eq3CR" />
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
         <property id="5771403044647069443" name="MinConsumption" index="3VOWdY" />
         <reference id="1948092678614246120" name="ConnectedTransformer" index="1pnA4g" />
@@ -86,6 +90,7 @@
       <property role="3VOWdS" value="10" />
       <property role="TrG5h" value="house" />
       <property role="OYydz" value="house" />
+      <property role="eq3CR" value="tran" />
       <ref role="1pnA4g" node="4qR36Xfvtz0" resolve="tran" />
     </node>
     <node concept="3VOWaR" id="1G90Zx2lXxp" role="N8dmf">
@@ -93,6 +98,7 @@
       <property role="3VOWdS" value="10" />
       <property role="TrG5h" value="school" />
       <property role="OYydz" value="school" />
+      <property role="eq3CR" value="tran2" />
       <ref role="1pnA4g" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
     <node concept="1Hj7UV" id="6gi3O$9oIOo" role="1Hj7Pu">
@@ -117,6 +123,7 @@
       <property role="TrG5h" value="prod" />
       <property role="3yd3hR" value="20" />
       <property role="3yd64o" value="1" />
+      <property role="eqx4T" value="tran" />
       <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
       <ref role="nfRfV" node="4qR36Xfvtz0" resolve="tran" />
     </node>
@@ -125,6 +132,7 @@
       <property role="3yd3hR" value="20" />
       <property role="JvpKn" value="2" />
       <property role="TrG5h" value="prod2" />
+      <property role="eqx4T" value="tran2" />
       <ref role="nfRfV" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
     <node concept="3lM9jV" id="3nJJ606O1DL" role="3lMnhl">
@@ -134,6 +142,8 @@
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Wellington" />
       <property role="TrG5h" value="grid" />
+      <property role="eq$$E" value="tran" />
+      <property role="eq$$H" value="tran2" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>
@@ -144,6 +154,8 @@
       <property role="3lM9jN" value="100" />
       <property role="3lM9jE" value="Auckland" />
       <property role="TrG5h" value="grid2" />
+      <property role="eq$$E" value="tran" />
+      <property role="eq$$H" value="tran2" />
       <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
       <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
     </node>

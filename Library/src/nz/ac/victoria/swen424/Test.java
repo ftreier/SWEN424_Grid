@@ -44,19 +44,20 @@ public class Test
 	    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.Flat));
 	    _weather.add(wv);
 
-	    _producers = new LinkedList<ElProducer>();
-	    ElProducer producer = new ElProducer("prod", 1, 50, ProducitionMethodeType.Wind);
-	    _producers.add(producer);
-
 	    _transformers = new LinkedList<ElTransformer>();
 	    _transformers.add(new ElTransformer("tran", 80, 20, 100, 4, 1));
 	    _transformers.add(new ElTransformer("tran2", 80, 20, 100, 4, 1));
 
+	    
+	    _producers = new LinkedList<ElProducer>();
+	    ElProducer producer = new ElProducer("prod", 1, 50, ProducitionMethodeType.Wind, "tran");
+	    _producers.add(producer);
+
 	    ElConsumer consumer;
 	    _consumers = new LinkedList<ElConsumer>();
-	    consumer = new ElConsumer("house", 0, 10);
+	    consumer = new ElConsumer("house", 0, 10, "tran", null);
 	    _consumers.add(consumer);
-	    consumer = new ElConsumer("school", 0, 10);
+	    consumer = new ElConsumer("school", 0, 10, "tran", null);
 	    _consumers.add(consumer);
 
 	    for (ElConsumer consumer_ : _consumers) {
@@ -64,7 +65,7 @@ public class Test
 	    }
 
 	    _grids = new LinkedList<ElGrid>();
-	    ElGrid grid = new ElGrid(200, 10, 100, 4, "Unassigned");
+	    ElGrid grid = new ElGrid(200, 10, 100, 4, "Unassigned", "tran", "tran2");
 	    _grids.add(grid);
 	    System.out.println("");
 
