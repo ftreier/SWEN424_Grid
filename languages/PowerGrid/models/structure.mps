@@ -109,6 +109,16 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="50o97QFMYra" resolve="Consumer" />
     </node>
+    <node concept="1TJgyi" id="3X184CBgxCW" role="1TKVEl">
+      <property role="IQ2nx" value="4557959800733964860" />
+      <property role="TrG5h" value="SimulationInterval" />
+      <ref role="AX2Wp" node="3X184CBgw1_" resolve="SimulationInterval" />
+    </node>
+    <node concept="1TJgyi" id="3X184CBhSHk" role="1TKVEl">
+      <property role="IQ2nx" value="4557959800734321492" />
+      <property role="TrG5h" value="SimulationSteps" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="24XvQ732hTQ">
     <property role="EcuMT" value="2395210634691681910" />
@@ -421,6 +431,34 @@
       <property role="IQ2nx" value="5097090694229163126" />
       <property role="TrG5h" value="IsRandom" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="3X184CBgw1_">
+    <property role="TrG5h" value="SimulationInterval" />
+    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="M4N5e" id="3X184CBgw1A" role="M5hS2">
+      <property role="1uS6qo" value="1 hour" />
+      <property role="1uS6qv" value="1" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6f" role="M5hS2">
+      <property role="1uS6qo" value="2 hours" />
+      <property role="1uS6qv" value="2" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgQgl" role="M5hS2">
+      <property role="1uS6qo" value="3 hours" />
+      <property role="1uS6qv" value="3" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6i" role="M5hS2">
+      <property role="1uS6qo" value="4 hours" />
+      <property role="1uS6qv" value="4" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6m" role="M5hS2">
+      <property role="1uS6qo" value="6 hours" />
+      <property role="1uS6qv" value="6" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6r" role="M5hS2">
+      <property role="1uS6qo" value="8 hours" />
+      <property role="1uS6qv" value="8" />
     </node>
   </node>
 </model>

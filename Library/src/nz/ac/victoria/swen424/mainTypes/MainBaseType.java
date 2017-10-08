@@ -9,6 +9,7 @@ import javax.xml.stream.events.XMLEvent;
 
 import com.sun.imageio.plugins.gif.GIFImageReaderSpi;
 
+import nz.ac.victoria.swen424.SimulationIntervalEnum;
 import nz.ac.victoria.swen424.XmlLayoutNode;
 
 public abstract class MainBaseType extends XmlLayoutNode implements IMainType
@@ -22,8 +23,31 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 	
 	abstract SimulationStatus Simulate(int time) throws Exception;
 	
-	public static void Simulate(int timeSteps, int noOfSteps, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, List<ElGrid> grids, XMLEventWriter xmlWriter) throws Exception
+	public static void Simulate(SimulationIntervalEnum simInterval, int noOfSteps, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, List<ElGrid> grids, XMLEventWriter xmlWriter) throws Exception
 	{
+		int timeSteps = 1;
+		switch (simInterval)
+		{
+		case OneHour:
+			timeSteps = 1;
+			break;
+		case TwoHours:
+			timeSteps = 2;
+			break;
+		case ThreeHours:
+			timeSteps = 3;
+			break;
+		case FourHours:
+			timeSteps = 4;
+			break;
+		case SixHours:
+			timeSteps = 6;
+			break;
+		case EightHours:
+			timeSteps = 8;
+			break;
+		}
+		
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		
 		xmlWriter.add(eventFactory.createStartElement("", "", "simulation"));

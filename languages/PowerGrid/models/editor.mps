@@ -392,6 +392,24 @@
         <node concept="lj46D" id="NibI7nzWsZ" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+        <node concept="3F0ifn" id="3X184CBh8aQ" role="3EZMnx">
+          <property role="3F0ifm" value="Simulation Intervall        " />
+        </node>
+        <node concept="3F0A7n" id="3X184CBh8eE" role="3EZMnx">
+          <ref role="1NtTu8" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+          <node concept="ljvvj" id="3X184CBh8g_" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3X184CBhSJj" role="3EZMnx">
+          <property role="3F0ifm" value="Number of Simulation Steps  " />
+        </node>
+        <node concept="3F0A7n" id="3X184CBhSR5" role="3EZMnx">
+          <ref role="1NtTu8" to="aw7t:3X184CBhSHk" resolve="SimulationSteps" />
+          <node concept="ljvvj" id="3X184CBhST3" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
         <node concept="3F0ifn" id="3J7IQQkIlJ" role="3EZMnx">
           <node concept="ljvvj" id="3J7IQQkKwA" role="3F10Kt">
             <property role="VOm3f" value="true" />
