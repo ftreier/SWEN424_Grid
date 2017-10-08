@@ -106,5 +106,47 @@
       <property role="2KmOhT" value="Residential" />
     </node>
   </node>
+  <node concept="sJg17" id="351O6720jb$">
+    <property role="o1EGu" value="24" />
+    <property role="TrG5h" value="NewZealand" />
+    <node concept="1Hj7UV" id="351O6720jb_" role="1Hj7Pu">
+      <property role="TrG5h" value="asdf" />
+      <node concept="1Hj7UU" id="351O6720jbA" role="1Hjf0d" />
+    </node>
+    <node concept="1vLJl6" id="351O6720jbB" role="1vLJPo">
+      <property role="TrG5h" value="asdf" />
+      <property role="1vLJIY" value="1" />
+      <property role="1vLJIW" value="1" />
+      <property role="1vLJIL" value="1" />
+      <property role="1vLJIP" value="1" />
+      <property role="1vLJIC" value="1" />
+    </node>
+    <node concept="3yd64n" id="351O6720jbC" role="3yd3h7">
+      <property role="3yd64o" value="0" />
+      <property role="3yd3hR" value="100" />
+      <property role="TrG5h" value="asdf" />
+      <property role="244Foq" value="asdf" />
+      <property role="2KFMDS" value="asdf" />
+    </node>
+    <node concept="3lM9jV" id="351O6720jbD" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jN" value="98" />
+      <property role="244Ey0" value="1" />
+      <property role="TrG5h" value="asdf" />
+      <property role="245u9L" value="asdf" />
+      <property role="245u99" value="asdf" />
+    </node>
+    <node concept="2s6h$e" id="351O6720jbE" role="2s6h$R">
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="98" />
+      <property role="TrG5h" value="asdf" />
+    </node>
+    <node concept="3VOWaR" id="351O6720jbF" role="N8dmf">
+      <property role="3VOWdS" value="100" />
+      <property role="TrG5h" value="asdf" />
+      <property role="eq3CR" value="asdf" />
+      <property role="2KmOhT" value="asdf" />
+    </node>
+  </node>
 </model>
 
