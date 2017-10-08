@@ -348,13 +348,6 @@
     <property role="34LRSv" value="House, Factory, Office Building, Store" />
     <property role="R4oN_" value="Consumes energy" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="4ZDpIZbYWqg" role="1TKVEi">
-      <property role="IQ2ns" value="5758246778675381904" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="UsageProfile" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="4qWwfGpuBmX" resolve="UsageProfile" />
-    </node>
     <node concept="PrWs8" id="50o97QFMYrX" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
