@@ -204,6 +204,29 @@
   </node>
   <node concept="1M2fIO" id="6L5ADlUjZ_d">
     <ref role="1M2myG" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+    <node concept="EnEH3" id="3X184CBiVJy" role="1MhHOB">
+      <ref role="EomxK" to="aw7t:3X184CBhSHk" resolve="SimulationSteps" />
+      <node concept="QB0g5" id="3X184CBiVJ$" role="QCWH9">
+        <node concept="3clFbS" id="3X184CBiVJ_" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBiWvZ" role="3cqZAp">
+            <node concept="1Wc70l" id="3X184CBj00G" role="3clFbG">
+              <node concept="2dkUwp" id="3X184CBj1PW" role="3uHU7w">
+                <node concept="3cmrfG" id="3X184CBj25u" role="3uHU7w">
+                  <property role="3cmrfH" value="100" />
+                </node>
+                <node concept="1Wqviy" id="3X184CBj0cN" role="3uHU7B" />
+              </node>
+              <node concept="3eOSWO" id="3X184CBiYZ4" role="3uHU7B">
+                <node concept="1Wqviy" id="3X184CBiWvY" role="3uHU7B" />
+                <node concept="3cmrfG" id="3X184CBiZ6t" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="3EP7_v" id="7VNv7V$vZFI" role="1MtirG">
       <node concept="1dDu$B" id="7VNv7V$w02C" role="3EP$qY">
         <ref role="1dDu$A" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />

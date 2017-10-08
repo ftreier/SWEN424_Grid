@@ -221,7 +221,7 @@ public class Test {
 
     writeLayoutXML(xmlWriter);
 
-    MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, _grids, xmlWriter);
+    MainBaseType.Simulate(SimulationIntervalEnum.OneHour, 24, _producers, _consumers, _transformers, _grids, xmlWriter);
 
     xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
     xmlWriter.add(eventFactory.createEndDocument());
