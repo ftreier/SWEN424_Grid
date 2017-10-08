@@ -54,6 +54,10 @@ public class WeatherValues extends XmlLayoutNode
 		
 		return _weather.get(day);
 	}
+	
+	public String getName(){
+		return _name;
+	}
 
 	@Override
 	public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException

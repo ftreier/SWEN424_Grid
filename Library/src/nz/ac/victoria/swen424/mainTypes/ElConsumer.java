@@ -8,6 +8,8 @@ import nz.ac.victoria.swen424.UsageProfile;
 
 public class ElConsumer extends MainBaseType{
 	private int _maxConsumption;
+	private String _connectName;
+	private String _usageName;
 	private ElTransformer _connect;
 	private UsageProfile _usageProfile;
 	
@@ -16,12 +18,13 @@ public ElConsumer(String name, int maxConsumption){
 	super(name);
 	_maxConsumption = maxConsumption;
 	// TODO: Real reference
-	_usageProfile = new UsageProfile("test");
+	//_usageProfile = new UsageProfile("test");
 	}
 
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
 	connect.addLeftConnection(this);
+	System.out.println("Consumer " + _name + " Transformer connect");
 //	if(connect.decreaseUsage(_maxConsumption, this) == true){
 //		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
@@ -29,6 +32,18 @@ public void connectTransformer(ElTransformer connect){
 //		}
 //		else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
 //	}
+}
+
+public void connectUsageProfile(UsageProfile usage){
+	_usageProfile = usage;
+	System.out.println("Consumer "+_name+" Usage Profile register");
+}
+
+public String getTransName(){
+	return _connectName;
+}
+public String getUsageName(){
+	return _usageName;
 }
 
 public int getMaxConsumption(){
