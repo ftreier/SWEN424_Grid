@@ -41,6 +41,7 @@
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="5758246778675384565" name="TransName" index="244Foq" />
+        <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
         <property id="7841080990075074533" name="WeatherName" index="2KFMDS" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
@@ -66,7 +67,7 @@
     </language>
   </registry>
   <node concept="sJg17" id="4ZDpIZc4bMv">
-    <property role="TrG5h" value="tester" />
+    <property role="TrG5h" value="Test" />
     <property role="o1EGu" value="12" />
     <node concept="1Hj7UV" id="4ZDpIZc4bMw" role="1Hj7Pu">
       <property role="TrG5h" value="Auckland" />
@@ -76,11 +77,11 @@
     </node>
     <node concept="1vLJl6" id="4ZDpIZc4bMy" role="1vLJPo">
       <property role="TrG5h" value="yester" />
-      <property role="1vLJIY" value="45" />
-      <property role="1vLJIW" value="18" />
-      <property role="1vLJIL" value="92" />
-      <property role="1vLJIP" value="55" />
-      <property role="1vLJIC" value="99" />
+      <property role="1vLJIY" value="20" />
+      <property role="1vLJIW" value="40" />
+      <property role="1vLJIL" value="100" />
+      <property role="1vLJIP" value="50" />
+      <property role="1vLJIC" value="70" />
     </node>
     <node concept="3yd64n" id="4ZDpIZc4bMz" role="3yd3h7">
       <property role="3yd64o" value="0" />
@@ -88,6 +89,7 @@
       <property role="TrG5h" value="Dam" />
       <property role="244Foq" value="Tran" />
       <property role="2KFMDS" value="Auckland" />
+      <property role="JvpKn" value="2" />
       <ref role="1Hs3bF" node="4ZDpIZc4bMw" resolve="Auckland" />
     </node>
     <node concept="3lM9jV" id="4ZDpIZc4bM$" role="3lMnhl">
@@ -113,7 +115,7 @@
     <node concept="3VOWaR" id="4ZDpIZc4bMA" role="N8dmf">
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="House" />
-      <property role="eq3CR" value="Tran" />
+      <property role="eq3CR" value="Tran2" />
       <property role="2KmOhT" value="yester" />
       <ref role="244E1Z" node="4ZDpIZc4bMy" resolve="yester" />
     </node>
