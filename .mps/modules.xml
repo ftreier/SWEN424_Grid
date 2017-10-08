@@ -5,7 +5,6 @@
       <modulePath path="$PROJECT_DIR$/languages/PowerGrid/PowerGrid.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/PowerGrid/sandbox/PowerGrid.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/ExternalCode/ExternalCode.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/PowerGrid.Utils/PowerGrid.Runtime.msd" folder="" />
     </projectModules>
   </component>
 </project>
