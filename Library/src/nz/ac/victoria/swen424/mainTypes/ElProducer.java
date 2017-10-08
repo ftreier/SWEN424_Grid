@@ -175,7 +175,7 @@ public class ElProducer extends MainBaseType
 			}
 			
 			// reduce production due to non optimal angle (midday normally has the best angle)
-			s.maxElectricity = s.maxElectricity * (1 - Math.abs(time - 12) / 12);
+			s.currentElectricity = s.currentElectricity * (1 - Math.abs(time - 12) / 24.0);
 		}
 		
 		return s;
@@ -195,7 +195,6 @@ public class ElProducer extends MainBaseType
 		if(_productionType == ProducitionMethodeType.Conventional)
 		{
 			xmlWriter.add(eventFactory.createAttribute("minProduction", Double.toString(_minProduction)));
-			//double percentage = (_simStat.currentElectricity - _simStat.minElectricity) / (_simStat.maxElectricity - _simStat.minElectricity) * 100;
 			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(_simStat.getUsage())));
 		}
 		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
@@ -215,7 +214,7 @@ public class ElProducer extends MainBaseType
 		}
 		else
 		{
-			_simStat.isOk = false;			
+			_simStat.isOk = true;			
 		}
 		
 		return _simStat.isOk;
