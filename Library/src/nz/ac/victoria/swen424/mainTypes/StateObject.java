@@ -9,6 +9,11 @@ public class StateObject {
 	public UUID id; 
 	public String usage;
 	public String max;
+	
+	//for rendering purposes
+	public String imgPath;
+	public int x,y;
+	public double size;
 
 	//consumer and producer
 	public String prodcon;

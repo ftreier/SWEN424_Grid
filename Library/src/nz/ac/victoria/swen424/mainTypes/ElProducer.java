@@ -159,7 +159,7 @@ public class ElProducer extends MainBaseType
 			}
 			
 			// reduce production due to non optimal angle (midday normally has the best angle)
-			s.maxElectricity = s.maxElectricity * (1 - Math.abs(time - 12) / 12);
+			s.currentElectricity = s.currentElectricity * (1 - Math.abs(time - 12) / 24.0);
 		}
 		
 		return s;
@@ -173,12 +173,12 @@ public class ElProducer extends MainBaseType
 		xmlWriter.add(eventFactory.createStartElement("", "", "producer"));
 		xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
 		xmlWriter.add(eventFactory.createAttribute("name", _name));
+		xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(_simStat.isOk)));
 		xmlWriter.add(eventFactory.createAttribute("production", Double.toString(_simStat.currentElectricity)));
 		xmlWriter.add(eventFactory.createAttribute("maxProduction", Double.toString(_maxProduction)));
 		if(_productionType == ProducitionMethodeType.Conventional)
 		{
 			xmlWriter.add(eventFactory.createAttribute("minProduction", Double.toString(_minProduction)));
-			//double percentage = (_simStat.currentElectricity - _simStat.minElectricity) / (_simStat.maxElectricity - _simStat.minElectricity) * 100;
 			xmlWriter.add(eventFactory.createAttribute("used", Double.toString(_simStat.getUsage())));
 		}
 		xmlWriter.add(eventFactory.createEndElement("", "", "producer")); // </producer>
@@ -192,18 +192,18 @@ public class ElProducer extends MainBaseType
 			_connect._simStat.currentElectricity += diff;
 		}
 		
-		if(_simStat.currentElectricity > _maxProduction)
+		if(_simStat.currentElectricity > _maxProduction || _simStat.currentElectricity < _minProduction)
 		{
 			_simStat.isOk = false;
 		}
 		else
 		{
-			_simStat.isOk = false;			
+			_simStat.isOk = true;
 		}
 		
 		return _simStat.isOk;
 	}
-	
+
 	// return a stateObject for graphical rendering
 	public StateObject getState() {
 		StateObject prodState = new StateObject();
@@ -211,5 +211,11 @@ public class ElProducer extends MainBaseType
 		prodState.name = this._name;
 		prodState.type = this;
 		return prodState;
+	}
+
+
+	public double getMaxProduction()
+	{
+		return _maxProduction;
 	}
 }

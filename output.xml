@@ -1,310 +1,499 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <powerGridSimulator>
   <modelDefinition>
-    <weather id="c47ea041-2ae1-4132-b532-4dfe66826ac8" name="Wellington" isRandom="false">
-      <value day="0" weather="Rain" windSpeed="Flat"></value>
+    <weather id="a7d981c3-8374-4a95-911a-ca8f9f6c0862" name="asdf" isRandom="false">
+      <value day="0" weather="ClearSky" windSpeed="Flat"></value>
       <value day="1" weather="ClearSky" windSpeed="HurricaneForce"></value>
     </weather>
-    <weather id="682d52bd-cbd5-420e-870b-bcdb8a6ee271" name="Auckland" isRandom="true">
-      <value day="0" weather="Overcast" windSpeed="FreshBreeze"></value>
-      <value day="1" weather="Overcast" windSpeed="HurricaneForce"></value>
-      <value day="2" weather="Overcast" windSpeed="HurricaneForce"></value>
-      <value day="3" weather="Rain" windSpeed="LightBreeze"></value>
-      <value day="4" weather="ClearSky" windSpeed="GentleBreeze"></value>
-      <value day="5" weather="Rain" windSpeed="StrongGale"></value>
-      <value day="6" weather="ClearSky" windSpeed="StrongBreeze"></value>
-      <value day="7" weather="Rain" windSpeed="LightAir"></value>
-      <value day="8" weather="Overcast" windSpeed="FreshBreeze"></value>
-      <value day="9" weather="ClearSky" windSpeed="LightAir"></value>
-      <value day="10" weather="Rain" windSpeed="FrshGale"></value>
-      <value day="11" weather="Overcast" windSpeed="Flat"></value>
-      <value day="12" weather="Rain" windSpeed="StrongBreeze"></value>
-      <value day="13" weather="Rain" windSpeed="StrongBreeze"></value>
-      <value day="14" weather="Overcast" windSpeed="LightBreeze"></value>
-      <value day="15" weather="Overcast" windSpeed="GentleBreeze"></value>
-      <value day="16" weather="ClearSky" windSpeed="Flat"></value>
-      <value day="17" weather="ClearSky" windSpeed="HurricaneForce"></value>
-      <value day="18" weather="Overcast" windSpeed="StrongGale"></value>
-      <value day="19" weather="Overcast" windSpeed="GentleBreeze"></value>
+    <weather id="25473073-4fee-4433-afc4-af3ef7f70c17" name="Auckland" isRandom="true">
+      <value day="0" weather="ClearSky" windSpeed="HurricaneForce"></value>
+      <value day="1" weather="Overcast" windSpeed="LightAir"></value>
+      <value day="2" weather="Overcast" windSpeed="Storm"></value>
+      <value day="3" weather="ClearSky" windSpeed="StrongBreeze"></value>
+      <value day="4" weather="ClearSky" windSpeed="ModerateBreeze"></value>
+      <value day="5" weather="ClearSky" windSpeed="LightAir"></value>
+      <value day="6" weather="Overcast" windSpeed="Storm"></value>
+      <value day="7" weather="ClearSky" windSpeed="ModerateGale"></value>
+      <value day="8" weather="Rain" windSpeed="ModerateGale"></value>
+      <value day="9" weather="ClearSky" windSpeed="StrongGale"></value>
+      <value day="10" weather="ClearSky" windSpeed="Flat"></value>
+      <value day="11" weather="ClearSky" windSpeed="Storm"></value>
+      <value day="12" weather="Overcast" windSpeed="LightBreeze"></value>
+      <value day="13" weather="Rain" windSpeed="GentleBreeze"></value>
+      <value day="14" weather="ClearSky" windSpeed="StrongBreeze"></value>
+      <value day="15" weather="Rain" windSpeed="LightBreeze"></value>
+      <value day="16" weather="Rain" windSpeed="ModerateGale"></value>
+      <value day="17" weather="Overcast" windSpeed="ViolentStorm"></value>
+      <value day="18" weather="ClearSky" windSpeed="ModerateBreeze"></value>
+      <value day="19" weather="Overcast" windSpeed="LightBreeze"></value>
       <value day="20" weather="ClearSky" windSpeed="Flat"></value>
+      <value day="21" weather="ClearSky" windSpeed="Flat"></value>
     </weather>
-    <usageProfile id="ed379d7e-eadc-4638-8bc7-c20a199e0bf9" name="House" isRandom="false" night="10" morning="20" midday="90" afternoon="40" eavening="40"></usageProfile>
-    <usageProfile id="fc709ba1-242d-4b74-90c0-20823028e270" name="Office Building" isRandom="false" night="20" morning="90" midday="100" afternoon="100" eavening="30"></usageProfile>
-    <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" minProduction="1" maxProduction="20" productionMethode="Solar">
-      <connectedTo transformerId="cef7d77e-81c0-490a-85b2-5191cec6ee82" transformerName="tran"></connectedTo>
+    <usageProfile id="4f0008cf-fc69-4a16-8a27-7220a3b62f48" name="gg" isRandom="false" night="0" morning="0" midday="0" afternoon="0" eavening="0"></usageProfile>
+    <usageProfile id="a1551e26-0185-4b8c-a7c3-b8bb84f9a356" name="ffff" isRandom="true" night="29" morning="16" midday="70" afternoon="42" eavening="75"></usageProfile>
+    <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" minProduction="1" maxProduction="2" productionMethode="Wind">
+      <connectedTo transformerId="4e50ee53-d6d8-46a1-a000-f07364b629c7" transformerName="a"></connectedTo>
     </producer>
-    <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" minProduction="1" maxProduction="20" productionMethode="Conventional">
-      <connectedTo transformerId="cef7d77e-81c0-490a-85b2-5191cec6ee82" transformerName="tran"></connectedTo>
+    <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" minProduction="1000" maxProduction="1000" productionMethode="Conventional">
+      <connectedTo transformerId="4e50ee53-d6d8-46a1-a000-f07364b629c7" transformerName="a"></connectedTo>
     </producer>
-    <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" maxCapacity="200" efficiency="100" probabilityOfFailure="20">
+    <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" minProduction="0" maxProduction="1000" productionMethode="Wind">
+      <connectedTo transformerId="4e50ee53-d6d8-46a1-a000-f07364b629c7" transformerName="a"></connectedTo>
+    </producer>
+    <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" minProduction="0" maxProduction="1000" productionMethode="Solar">
+      <connectedTo transformerId="4e50ee53-d6d8-46a1-a000-f07364b629c7" transformerName="a"></connectedTo>
+    </producer>
+    <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," minProduction="0" maxProduction="1000" productionMethode="Wind">
+      <connectedTo transformerId="4e50ee53-d6d8-46a1-a000-f07364b629c7" transformerName="a"></connectedTo>
+    </producer>
+    <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" maxCapacity="200" efficiency="100" probabilityOfFailure="10">
       <connections>
-        <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" side="left"></transformer>
-        <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" side="right"></transformer>
+        <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" side="left"></transformer>
+        <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" side="right"></transformer>
       </connections>
     </grid>
-    <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" maxCapacity="200" efficiency="100" probabilityOfFailure="5">
+    <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" maxCapacity="200" efficiency="100" probabilityOfFailure="70">
       <connections>
-        <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" side="left"></transformer>
-        <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" side="right"></transformer>
+        <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" side="left"></transformer>
+        <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" side="right"></transformer>
       </connections>
     </grid>
-    <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" maxCapacity="150" efficiency="98">
+    <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" maxCapacity="100" efficiency="99">
       <connections>
-        <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" side="left"></consumer>
-        <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" side="left"></consumer>
-        <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" side="left"></producer>
-        <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" side="left"></producer>
-        <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" side="right"></grid>
-        <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" side="right"></grid>
+        <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" side="left"></consumer>
+        <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" side="left"></consumer>
+        <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" side="left"></consumer>
+        <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" side="left"></consumer>
+        <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" side="left"></producer>
+        <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" side="left"></producer>
+        <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" side="left"></producer>
+        <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" side="left"></producer>
+        <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," side="left"></producer>
+        <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" side="right"></grid>
+        <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" side="right"></grid>
       </connections>
     </transformer>
-    <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" maxCapacity="80" efficiency="95">
+    <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" maxCapacity="200" efficiency="99">
       <connections>
-        <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" side="right"></grid>
-        <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" side="right"></grid>
+        <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" side="right"></grid>
+        <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" side="right"></grid>
       </connections>
+    </transformer>
+    <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" maxCapacity="200" efficiency="95">
+      <connections></connections>
+    </transformer>
+    <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" maxCapacity="100" efficiency="50">
+      <connections></connections>
     </transformer>
   </modelDefinition>
   <simulation>
-    <step number="1" day="0" time="0" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="1" day="0" time="0" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="2" day="0" time="1" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="2" day="0" time="1" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="3" day="0" time="2" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="3" day="0" time="2" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="4" day="0" time="3" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="4" day="0" time="3" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="5" day="0" time="4" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="5" day="0" time="4" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="6" day="0" time="5" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="14.3" maxProduction="20.0" minProduction="1.0" used="70.0"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="6" day="0" time="5" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="7" day="0" time="6" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="8.8" usage="88.00000000000001" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="4.2" usage="42.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="10.3" maxProduction="20.0" minProduction="1.0" used="48.94736842105264"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.026000000000000013" currentUsage="1.2740000000000007" usage="0.8666666666666671" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.6370000000000003" loss="0.0" usage="0.31850000000000017" maxCapacity="200"></grid>
+    <step number="7" day="0" time="6" isOk="false" overallLoss="NaN" currentConsumption="1553.0" minProduction="1483.3333333333333" maxProduction="1483.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="3.0" usage="30.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="690.0" usage="69.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="510.0" usage="51.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="150.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="8" day="0" time="7" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="6.7" usage="67.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.87" maxProduction="20.0" minProduction="1.0" used="41.421052631578945"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.023399999999999997" currentUsage="1.1465999999999998" usage="0.7799999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
+    <step number="8" day="0" time="7" isOk="false" overallLoss="NaN" currentConsumption="2151.2" minProduction="1491.6666666666665" maxProduction="1491.6666666666665">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.2" usage="12.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="900.0" usage="90.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="650.0" usage="65.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="158.33333333333331" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="9" day="0" time="8" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="6.7" usage="67.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.87" maxProduction="20.0" minProduction="1.0" used="41.421052631578945"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.023399999999999997" currentUsage="1.1465999999999998" usage="0.7799999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
+    <step number="9" day="0" time="8" isOk="false" overallLoss="NaN" currentConsumption="2151.2" minProduction="1500.0" maxProduction="1500.0">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.2" usage="12.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="900.0" usage="90.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="650.0" usage="65.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="166.66666666666669" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="10" day="0" time="9" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="6.7" usage="67.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.87" maxProduction="20.0" minProduction="1.0" used="41.421052631578945"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.023399999999999997" currentUsage="1.1465999999999998" usage="0.7799999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
+    <step number="10" day="0" time="9" isOk="false" overallLoss="NaN" currentConsumption="2151.2" minProduction="1508.3333333333333" maxProduction="1508.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.2" usage="12.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="900.0" usage="90.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="650.0" usage="65.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="175.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="11" day="0" time="10" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="6.7" usage="67.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.87" maxProduction="20.0" minProduction="1.0" used="41.421052631578945"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.023399999999999997" currentUsage="1.1465999999999998" usage="0.7799999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
+    <step number="11" day="0" time="10" isOk="false" overallLoss="NaN" currentConsumption="2151.2" minProduction="1516.6666666666665" maxProduction="1516.6666666666665">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.2" usage="12.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="900.0" usage="90.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="650.0" usage="65.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="183.33333333333331" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="12" day="0" time="11" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="6.7" usage="67.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.87" maxProduction="20.0" minProduction="1.0" used="41.421052631578945"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.023399999999999997" currentUsage="1.1465999999999998" usage="0.7799999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.5732999999999999" loss="0.0" usage="0.28664999999999996" maxCapacity="200"></grid>
+    <step number="12" day="0" time="11" isOk="false" overallLoss="NaN" currentConsumption="2151.2" minProduction="1525.0" maxProduction="1525.0">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.2" usage="12.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="900.0" usage="90.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="650.0" usage="65.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="191.66666666666669" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="13" day="0" time="12" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="0.4" usage="4.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="5.9" usage="59.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="2.9300000000000006" maxProduction="20.0" minProduction="1.0" used="10.157894736842108"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.012599999999999998" currentUsage="0.6174" usage="0.4199999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3087" loss="0.0" usage="0.15435" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3087" loss="0.0" usage="0.15435" maxCapacity="200"></grid>
+    <step number="13" day="0" time="12" isOk="false" overallLoss="NaN" currentConsumption="835.0" minProduction="1533.3333333333333" maxProduction="1533.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="640.0" usage="64.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="70.0" usage="7.000000000000001" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="120.0" usage="12.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="200.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="14" day="0" time="13" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="0.4" usage="4.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="5.9" usage="59.00000000000001" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="2.9300000000000006" maxProduction="20.0" minProduction="1.0" used="10.157894736842108"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.012599999999999998" currentUsage="0.6174" usage="0.4199999999999999" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3087" loss="0.0" usage="0.15435" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3087" loss="0.0" usage="0.15435" maxCapacity="200"></grid>
+    <step number="14" day="0" time="13" isOk="false" overallLoss="NaN" currentConsumption="835.0" minProduction="1525.0" maxProduction="1525.0">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="5.0" usage="50.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="640.0" usage="64.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="70.0" usage="7.000000000000001" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="120.0" usage="12.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="191.66666666666669" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="true" currentUsage="0.0" loss="0.0" usage="0.0" maxCapacity="200"></grid>
     </step>
-    <step number="15" day="0" time="14" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.2" usage="32.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="1.6099999999999994" maxProduction="20.0" minProduction="1.0" used="3.210526315789471"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.010199999999999996" currentUsage="0.4997999999999998" usage="0.33999999999999986" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
+    <step number="15" day="0" time="14" isOk="false" overallLoss="NaN" currentConsumption="1228.9" minProduction="1516.6666666666665" maxProduction="1516.6666666666665">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="8.9" usage="89.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="570.0" usage="56.99999999999999" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="320.0" usage="32.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="330.0" usage="33.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="183.33333333333331" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="16" day="0" time="15" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.2" usage="32.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="1.6099999999999994" maxProduction="20.0" minProduction="1.0" used="3.210526315789471"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.010199999999999996" currentUsage="0.4997999999999998" usage="0.33999999999999986" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
+    <step number="16" day="0" time="15" isOk="false" overallLoss="NaN" currentConsumption="1228.9" minProduction="1508.3333333333333" maxProduction="1508.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="8.9" usage="89.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="570.0" usage="56.99999999999999" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="320.0" usage="32.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="330.0" usage="33.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="175.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="17" day="0" time="16" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.2" usage="32.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="1.6099999999999994" maxProduction="20.0" minProduction="1.0" used="3.210526315789471"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.010199999999999996" currentUsage="0.4997999999999998" usage="0.33999999999999986" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
+    <step number="17" day="0" time="16" isOk="false" overallLoss="NaN" currentConsumption="1228.9" minProduction="1500.0" maxProduction="1500.0">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="8.9" usage="89.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="570.0" usage="56.99999999999999" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="320.0" usage="32.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="330.0" usage="33.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="166.66666666666669" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="18" day="0" time="17" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.2" usage="32.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="1.6099999999999994" maxProduction="20.0" minProduction="1.0" used="3.210526315789471"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.010199999999999996" currentUsage="0.4997999999999998" usage="0.33999999999999986" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.2498999999999999" loss="0.0" usage="0.12494999999999995" maxCapacity="200"></grid>
+    <step number="18" day="0" time="17" isOk="false" overallLoss="NaN" currentConsumption="1228.9" minProduction="1491.6666666666665" maxProduction="1491.6666666666665">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="8.9" usage="89.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="570.0" usage="56.99999999999999" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="320.0" usage="32.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="330.0" usage="33.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="158.33333333333331" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="19" day="0" time="18" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="4.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="4.359999999999999" maxProduction="20.0" minProduction="1.0" used="17.684210526315784"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="19" day="0" time="18" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1483.3333333333333" maxProduction="1483.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="150.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="20" day="0" time="19" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.36" maxProduction="20.0" minProduction="1.0" used="38.73684210526315"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="20" day="0" time="19" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="true" currentUsage="0.0" loss="0.0" usage="0.0" maxCapacity="200"></grid>
     </step>
-    <step number="21" day="0" time="20" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.36" maxProduction="20.0" minProduction="1.0" used="38.73684210526315"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="21" day="0" time="20" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="22" day="0" time="21" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.36" maxProduction="20.0" minProduction="1.0" used="38.73684210526315"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="22" day="0" time="21" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="23" day="0" time="22" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.36" maxProduction="20.0" minProduction="1.0" used="38.73684210526315"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="23" day="0" time="22" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="true" currentUsage="0.0" loss="0.0" usage="0.0" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
-    <step number="24" day="0" time="23" isOk="false">
-      <consumer id="d26fcd65-914a-4bb4-9327-1071736f876d" name="house" consumption="3.7" usage="37.0" maxConsumption="10"></consumer>
-      <consumer id="700955d6-8cac-4e40-9e3c-b4a6cda1125d" name="school" consumption="3.9" usage="39.0" maxConsumption="10"></consumer>
-      <producer id="4cee5da9-a6ff-406e-a800-b4603723109b" name="prod" production="0.0" maxProduction="20.0"></producer>
-      <producer id="80fcb8c7-bc04-444e-97c5-443bd9dd2edf" name="prod2" production="8.36" maxProduction="20.0" minProduction="1.0" used="38.73684210526315"></producer>
-      <transformer id="cef7d77e-81c0-490a-85b2-5191cec6ee82" name="tran" isOk="true" loss="0.015199999999999997" currentUsage="0.7447999999999998" usage="0.5066666666666666" maxCapacity="150"></transformer>
-      <transformer id="dc3e389e-d26b-45bc-b6a9-38bda8aca23e" name="tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="80"></transformer>
-      <grid id="e21e64e5-5844-4e75-ab21-82a9feea970f" name="Auckland" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
-      <grid id="d5dc575f-3e0c-427e-9a5e-a5841f368cbf" name="Wellington" isOk="true" isFailure="false" currentUsage="0.3723999999999999" loss="0.0" usage="0.18619999999999995" maxCapacity="200"></grid>
+    <step number="24" day="0" time="23" isOk="false" overallLoss="NaN" currentConsumption="1071.9" minProduction="1333.3333333333333" maxProduction="1333.3333333333333">
+      <consumer id="8ac8d3ac-c8ab-4118-9a6b-3859616d309d" name="asdf" consumption="1.9" usage="19.0" maxConsumption="10"></consumer>
+      <consumer id="4ee0d937-4000-43ac-bab2-193f4155b5db" name="kjsdv" consumption="350.0" usage="35.0" maxConsumption="1000"></consumer>
+      <consumer id="0bf55402-858b-4456-9365-e5de1fd39d15" name="kbcj" consumption="190.0" usage="19.0" maxConsumption="1000"></consumer>
+      <consumer id="7d2be88b-5bac-47fd-8eb5-cf98b8afd410" name="gvbhnjmk" consumption="530.0" usage="53.0" maxConsumption="1000"></consumer>
+      <producer id="7e7b58e8-13a6-405f-b571-85d89214b3b8" name="asdf" isOk="true" production="0.0" maxProduction="2.0"></producer>
+      <producer id="af276462-def3-460f-83fb-2a03dbd19c31" name="asdf" isOk="true" production="NaN" maxProduction="1000.0" minProduction="1000.0" used="NaN"></producer>
+      <producer id="c7e29b88-ac92-41e8-a423-752a2cca40e8" name="traaaan" isOk="true" production="333.3333333333333" maxProduction="1000.0"></producer>
+      <producer id="0365f79e-646b-4626-81e3-0d699b4b473a" name="jhkl" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <producer id="39f383d6-b61b-4e0a-92a1-7965841bc277" name="njmk," isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="4e50ee53-d6d8-46a1-a000-f07364b629c7" name="a" isOk="true" loss="NaN" currentUsage="NaN" usage="NaN" maxCapacity="100"></transformer>
+      <transformer id="5a29d3b9-7425-4e14-bd0d-fbe0440594c1" name="ddff" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="dd16ff6b-10c8-422b-a93f-26e6a7a89929" name="gggg" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <transformer id="1ba44e97-81e2-45fe-b3f3-f69d4f5abd5f" name="tran" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="100"></transformer>
+      <grid id="6d3c12a9-eaba-450e-89d0-d1c9c47ed4ee" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
+      <grid id="46fc4796-8714-4307-97df-a78c5b2a7c83" name="Unassigned" isOk="true" isFailure="false" currentUsage="NaN" loss="NaN" usage="NaN" maxCapacity="200"></grid>
     </step>
   </simulation>
 </powerGridSimulator>

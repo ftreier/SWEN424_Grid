@@ -6,7 +6,9 @@
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
-  <imports />
+  <imports>
+    <import index="z6cp" ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)" />
+  </imports>
   <registry>
     <language id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid">
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
@@ -25,12 +27,12 @@
         <child id="7210842759737799191" name="Weather" index="1Hj7Pu" />
       </concept>
       <concept id="5542951320088219680" name="PowerGrid.structure.PowerGrid" flags="ng" index="3lM9jV">
-        <property id="5542951320088219697" name="sector" index="3lM9jE" />
         <property id="5542951320088219688" name="efficiency" index="3lM9jN" />
-        <property id="5542951320088219692" name="voltage" index="3lM9jR" />
         <property id="5542951320088219683" name="maxCapacity" index="3lM9jS" />
-        <property id="5542951320088219685" name="percentusage" index="3lM9jY" />
         <property id="6305030178195650853" name="probabilityOfFailure" index="3M1WUJ" />
+        <property id="7072526355328547788" name="sector" index="3NP9bN" />
+        <property id="7072526355328547782" name="voltage" index="3NP9bT" />
+        <property id="7072526355328547777" name="percentusage" index="3NP9bY" />
         <reference id="5542951320088219703" name="ConnectedTransformer1" index="3lM9jG" />
         <reference id="5934824778439788601" name="ConnectedTransformer2" index="1LiVe8" />
       </concept>
@@ -40,6 +42,7 @@
         <property id="5097090694229162830" name="Afternoon" index="1vLJIP" />
         <property id="5097090694229162823" name="Morning" index="1vLJIW" />
         <property id="5097090694229162821" name="Night" index="1vLJIY" />
+        <property id="5097090694229163126" name="IsRandom" index="1vLJMd" />
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="8834791769907847257" name="ProductionMethode" index="JvpKn" />
@@ -50,7 +53,6 @@
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
         <property id="7210842759737799182" name="day" index="1Hj7P7" />
-        <property id="7210842759737799184" name="Type" index="1Hj7Pp" />
         <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
@@ -72,109 +74,158 @@
       </concept>
     </language>
   </registry>
-  <node concept="sJg17" id="3nJJ606O1DJ">
+  <node concept="sJg17" id="4MYZAN8q2md">
     <property role="TrG5h" value="Test" />
-    <node concept="3VOWaR" id="4qWwfGpxjgN" role="N8dmf">
-      <property role="3VOWdS" value="10" />
-      <property role="TrG5h" value="house" />
-      <property role="OYydz" value="house" />
-      <ref role="1pnA4g" node="4qR36Xfvtz0" resolve="tran" />
-      <ref role="1vLJM8" node="4qWwfGpvRuX" resolve="House" />
+    <node concept="3lM9jV" id="jCjOAzsIjU" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3NP9bY" value="0" />
+      <property role="3NP9bT" value="0" />
+      <property role="3lM9jN" value="100" />
+      <property role="3NP9bN" value="Unassigned" />
+      <property role="3M1WUJ" value="10" />
+      <property role="TrG5h" value="Auckland" />
+      <ref role="3lM9jG" node="68AEjYhTtjo" resolve="gggg" />
+      <ref role="1LiVe8" node="5XqOYe0gGMe" resolve="ddff" />
     </node>
-    <node concept="3VOWaR" id="4qWwfGpxjpH" role="N8dmf">
-      <property role="3VOWdS" value="10" />
-      <property role="TrG5h" value="school" />
-      <property role="OYydz" value="school" />
-      <ref role="1vLJM8" node="4qWwfGpvRuZ" resolve="Office Building" />
-      <ref role="1pnA4g" node="4qR36Xfvtz2" resolve="tran2" />
-    </node>
-    <node concept="1vLJl6" id="4qWwfGpvRuX" role="1vLJPo">
-      <property role="TrG5h" value="House" />
-      <property role="1vLJIY" value="10" />
-      <property role="1vLJIW" value="20" />
-      <property role="1vLJIL" value="90" />
-      <property role="1vLJIP" value="40" />
-      <property role="1vLJIC" value="40" />
-    </node>
-    <node concept="1vLJl6" id="4qWwfGpvRuZ" role="1vLJPo">
-      <property role="TrG5h" value="Office Building" />
-      <property role="1vLJIY" value="20" />
-      <property role="1vLJIW" value="90" />
-      <property role="1vLJIL" value="100" />
-      <property role="1vLJIP" value="100" />
-      <property role="1vLJIC" value="30" />
-    </node>
-    <node concept="2s6h$e" id="4qR36Xfvtz0" role="2s6h$R">
-      <property role="2s6h$1" value="4" />
-      <property role="2s6h$3" value="1" />
-      <property role="2s6h$4" value="150" />
-      <property role="2s6h$S" value="98" />
-      <property role="2s6h$Z" value="20" />
-      <property role="TrG5h" value="tran" />
-    </node>
-    <node concept="2s6h$e" id="4qR36Xfvtz2" role="2s6h$R">
-      <property role="2s6h$1" value="4" />
-      <property role="2s6h$3" value="1" />
-      <property role="2s6h$4" value="80" />
-      <property role="2s6h$S" value="95" />
-      <property role="2s6h$Z" value="20" />
-      <property role="TrG5h" value="tran2" />
-    </node>
-    <node concept="1Hj7UV" id="6gi3O$9oIOo" role="1Hj7Pu">
+    <node concept="3lM9jV" id="jCjOAztmqz" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3NP9bY" value="0" />
+      <property role="3NP9bT" value="0" />
+      <property role="3lM9jN" value="100" />
+      <property role="3NP9bN" value="Unassigned" />
+      <property role="3M1WUJ" value="70" />
       <property role="TrG5h" value="Wellington" />
-      <node concept="1Hj7UU" id="6gi3O$9oIOp" role="1Hjf0d">
-        <property role="1Hj7P7" value="1" />
-        <property role="1Hj7Pp" value="3" />
-      </node>
-      <node concept="1Hj7UU" id="5zwZig_0qvb" role="1Hjf0d">
+      <ref role="3lM9jG" node="3X184CBeCsn" resolve="tran" />
+      <ref role="1LiVe8" node="4MYZAN8q2mi" resolve="a" />
+    </node>
+    <node concept="3VOWaR" id="2kMGzNPZBS2" role="N8dmf">
+      <property role="3VOWdS" value="10" />
+      <property role="TrG5h" value="asdf" />
+      <property role="OYydz" value="House" />
+      <ref role="1vLJM8" node="68AEjYhSLu0" resolve="gg" />
+      <ref role="1pnA4g" node="4MYZAN8q2mi" resolve="a" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAztI2a" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="kjsdv" />
+      <ref role="1pnA4g" node="68AEjYhTtjo" resolve="gggg" />
+      <ref role="1vLJM8" node="3X184CBaz0c" resolve="ffff" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAztI2d" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="kbcj" />
+      <ref role="1pnA4g" node="3X184CBeCsn" resolve="tran" />
+      <ref role="1vLJM8" node="68AEjYhSLu0" resolve="gg" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAztI2w" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="gvbhnjmk" />
+      <ref role="1pnA4g" node="3X184CBeCsn" resolve="tran" />
+      <ref role="1vLJM8" node="3X184CBaz0c" resolve="ffff" />
+    </node>
+    <node concept="1vLJl6" id="68AEjYhSLu0" role="1vLJPo">
+      <property role="TrG5h" value="gg" />
+      <property role="1vLJIY" value="0" />
+      <property role="1vLJIW" value="00" />
+      <property role="1vLJIL" value="00" />
+      <property role="1vLJIP" value="00" />
+      <property role="1vLJIC" value="00" />
+    </node>
+    <node concept="1vLJl6" id="3X184CBaz0c" role="1vLJPo">
+      <property role="1vLJMd" value="true" />
+      <property role="TrG5h" value="ffff" />
+      <property role="1vLJIY" value="20" />
+      <property role="1vLJIW" value="10" />
+      <property role="1vLJIL" value="1" />
+      <property role="1vLJIP" value="3" />
+      <property role="1vLJIC" value="12" />
+    </node>
+    <node concept="1Hj7UV" id="4MYZAN8q2me" role="1Hj7Pu">
+      <property role="TrG5h" value="asdf" />
+      <node concept="1Hj7UU" id="3X184CBdCa1" role="1Hjf0d">
         <property role="1Hj7P7" value="2" />
+      </node>
+      <node concept="1Hj7UU" id="4MYZAN8q2mf" role="1Hjf0d">
+        <property role="1Hj7P7" value="1" />
         <property role="1Hj7Pq" value="12" />
       </node>
     </node>
-    <node concept="1Hj7UV" id="4qE1Afm8XZD" role="1Hj7Pu">
+    <node concept="1Hj7UV" id="3X184CBdCa6" role="1Hj7Pu">
       <property role="TrG5h" value="Auckland" />
       <property role="1Hjf01" value="true" />
-      <node concept="1Hj7UU" id="4qE1Afm8XZE" role="1Hjf0d">
+      <node concept="1Hj7UU" id="jCjOAzsrgV" role="1Hjf0d">
         <property role="1Hj7P7" value="1" />
       </node>
+      <node concept="1Hj7UU" id="jCjOAzsrgX" role="1Hjf0d">
+        <property role="1Hj7P7" value="2" />
+      </node>
     </node>
-    <node concept="3yd64n" id="3nJJ606O1DK" role="3yd3h7">
-      <property role="TrG5h" value="prod" />
-      <property role="3yd3hR" value="20" />
+    <node concept="3yd64n" id="4MYZAN8q2mg" role="3yd3h7">
+      <property role="TrG5h" value="asdf" />
+      <property role="3yd3hR" value="2" />
       <property role="3yd64o" value="1" />
-      <property role="JvpKn" value="2" />
-      <ref role="1Hs3bF" node="6gi3O$9oIOo" resolve="Wellington" />
-      <ref role="nfRfV" node="4qR36Xfvtz0" resolve="tran" />
+      <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
     </node>
-    <node concept="3yd64n" id="7Erv4TlUPps" role="3yd3h7">
-      <property role="3yd64o" value="1" />
-      <property role="3yd3hR" value="20" />
+    <node concept="3yd64n" id="68AEjYhVt7v" role="3yd3h7">
+      <property role="3yd64o" value="1000" />
+      <property role="3yd3hR" value="1000" />
+      <property role="TrG5h" value="asdf" />
       <property role="JvpKn" value="3" />
-      <property role="TrG5h" value="prod2" />
-      <ref role="nfRfV" node="4qR36Xfvtz2" resolve="tran2" />
-      <ref role="1Hs3bF" node="4qE1Afm8XZD" resolve="Auckland" />
+      <ref role="nfRfV" node="4MYZAN8q2mi" resolve="a" />
+      <ref role="1Hs3bF" node="3X184CBdCa6" resolve="Auckland" />
     </node>
-    <node concept="3lM9jV" id="6GCCMjO3c3_" role="3lMnhl">
-      <property role="3lM9jS" value="200" />
-      <property role="3lM9jY" value="0" />
-      <property role="3lM9jR" value="4" />
-      <property role="3lM9jN" value="100" />
-      <property role="3lM9jE" value="Auckland" />
-      <property role="TrG5h" value="grid2" />
-      <property role="3M1WUJ" value="20" />
-      <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
-      <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
+    <node concept="3yd64n" id="jCjOAztI2q" role="3yd3h7">
+      <property role="3yd64o" value="0" />
+      <property role="3yd3hR" value="1000" />
+      <property role="TrG5h" value="traaaan" />
+      <ref role="nfRfV" node="3X184CBeCsn" resolve="tran" />
+      <ref role="1Hs3bF" node="4MYZAN8q2me" resolve="asdf" />
     </node>
-    <node concept="3lM9jV" id="6GCCMjO3c5Z" role="3lMnhl">
-      <property role="3lM9jS" value="200" />
-      <property role="3lM9jY" value="10" />
-      <property role="3lM9jR" value="4" />
-      <property role="3lM9jN" value="100" />
-      <property role="3lM9jE" value="Wellington" />
-      <property role="TrG5h" value="grid" />
-      <property role="3M1WUJ" value="5" />
-      <ref role="3lM9jG" node="4qR36Xfvtz0" resolve="tran" />
-      <ref role="1LiVe8" node="4qR36Xfvtz2" resolve="tran2" />
+    <node concept="3yd64n" id="jCjOAztI2h" role="3yd3h7">
+      <property role="3yd64o" value="0" />
+      <property role="3yd3hR" value="1000" />
+      <property role="TrG5h" value="jhkl" />
+      <property role="JvpKn" value="2" />
+      <ref role="nfRfV" node="3X184CBeCsn" resolve="tran" />
+      <ref role="1Hs3bF" node="4MYZAN8q2me" resolve="asdf" />
+    </node>
+    <node concept="3yd64n" id="jCjOAztI2l" role="3yd3h7">
+      <property role="3yd64o" value="0" />
+      <property role="3yd3hR" value="1000" />
+      <property role="TrG5h" value="njmk," />
+      <ref role="nfRfV" node="3X184CBeCsn" resolve="tran" />
+    </node>
+    <node concept="2s6h$e" id="4MYZAN8q2mi" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="3" />
+      <property role="2s6h$S" value="99" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="a" />
+      <property role="2s6h$4" value="100" />
+    </node>
+    <node concept="2s6h$e" id="5XqOYe0gGMe" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="1" />
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="99" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="ddff" />
+    </node>
+    <node concept="2s6h$e" id="68AEjYhTtjo" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="1" />
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="95" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="gggg" />
+    </node>
+    <node concept="2s6h$e" id="3X184CBeCsn" role="2s6h$R">
+      <property role="2s6h$1" value="4" />
+      <property role="2s6h$3" value="1" />
+      <property role="2s6h$4" value="100" />
+      <property role="2s6h$S" value="50" />
+      <property role="2s6h$Z" value="0" />
+      <property role="TrG5h" value="tran" />
     </node>
   </node>
 </model>

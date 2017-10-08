@@ -34,6 +34,8 @@ public class XMLParser {
 	   List <ElProducer> producers;
 	   List <ElTransformer> transformers;
 	   List <ElGrid> grids;
+	   Window w;
+	   
 	   
 	  
 	   public final void initialiseStates(List<ElProducer> producers, List<ElConsumer> consumers, 
@@ -48,21 +50,54 @@ public class XMLParser {
 		   Step initialStep = new Step();
 		   initialStep.id = 0;
 		   
+		   // holder stateobject
+		   StateObject toBeAdded;
+		   
+		   //logic for where and how objects are drawn
+		   int maxProdCon = 0;
+		   
+		   //get the largest number of consumers/producers attached to a singular transformer
+		   for (ElTransformer tran : transformers) {
+			   if (maxProdCon < (tran.getLeftConnections().size())) 
+				   System.out.println("tran: "+tran.GetName()+" children: "+tran.getLeftConnections().size());
+				   //maxProdCon = tran.getLeftConnections().size();
+		   }
+		   
+		   System.out.println("Most children: "+maxProdCon);
+		   
+		   int numGrids = grids.size();
+		   int numTrans = transformers.size();
+		   int numProdCons = consumers.size()+producers.size();
+		   
+		   
+		   
+		   System.out.println("There are: "+numGrids+" grids to render");
+		   System.out.println("There are: "+numTrans+" transformers to render");
+		   System.out.println("There are: "+numProdCons+" producers and consumers to render");
+		   
 		   //create stateobjs for producers
 		   for (ElProducer p : producers) {
-			   initialStep.states.add(p.getState());
+			   toBeAdded = p.getState();
+			   //assign x, y and size
+			   initialStep.states.add(toBeAdded);
 		   }
 		 //create stateobjs for consumers
 		   for (ElConsumer c : consumers) {
-			   initialStep.states.add(c.getState());
+			   toBeAdded = c.getState();
+			 //assign x, y and size
+			   initialStep.states.add(toBeAdded);
 		   }
 		 //create stateobjs for transformers
 		   for (ElTransformer t : transformers) {
-			   initialStep.states.add(t.getState());
+			   toBeAdded = t.getState();
+			 //assign x, y and size
+			   initialStep.states.add(toBeAdded);
 		   }
 		 //create stateobjs for grids
 		   for (ElGrid g : grids) {
-			   initialStep.states.add(g.getState());
+			   toBeAdded = g.getState();
+			 //assign x, y and size
+			   initialStep.states.add(toBeAdded);
 		   }
 		   steps.add(initialStep);
 		   parseXMLSteps();
@@ -90,6 +125,7 @@ public class XMLParser {
 				while (j <= stepList.getLength()-2) {
 					Step currStep = new Step();
 					currStep.id = idCount;
+					
 					Node sNode = stepList.item(j);
 					//the items within that <step> are our stateNodes
 					NodeList stateList = sNode.getChildNodes();
@@ -106,6 +142,7 @@ public class XMLParser {
 										state.prodcon = elem.getAttribute("consumption");
 										state.max = elem.getAttribute("maxConsumption");
 										state.usage = elem.getAttribute("usage");
+										state.imgPath = "/images/house.png";
 										currStep.states.add(state);
 									}
 								}
@@ -124,6 +161,7 @@ public class XMLParser {
 											state.max = elem.getAttribute("maxProduction");
 											if (elem.getAttribute("minProduction") != null)
 												state.min = elem.getAttribute("minProduction");
+											state.imgPath = "/images/powerplant.png";
 											currStep.states.add(state);
 										}
 									}
@@ -184,7 +222,8 @@ public class XMLParser {
 				} catch(Exception e) {
 			   e.printStackTrace();
 		   }	
-		   this.print();	
+		   w = new Window();
+		   w.startSimulation(steps);
 	}
 
 
@@ -196,16 +235,22 @@ public class XMLParser {
 	    * */
 	   public void print() {
 		   for (Step step : steps) {
+			   
+			   //potentially void code, 
 			   for (StateObject state : step.states) {
 				   String type = state.getClassType();
 				   if (type.equals("ElTransformer")) {
 					   //DO TRANSFORMER
+					   System.out.println("Tran: "+state.name);
 				   } else if (type.equals("ElGrid")) {
 					   //DO GRID
+					   System.out.println("Grid: "+state.name);
 				   } else if (type.equals("ElProducer")) {
 					   //DO PRODUCER
+					   System.out.println("Prod: "+state.name);
 				   } else if (type.equals("ElConsumer")) {
 					   //DO CONSUMER
+					   System.out.println("Cons: "+state.name);
 				   }
 			   }
 		   }

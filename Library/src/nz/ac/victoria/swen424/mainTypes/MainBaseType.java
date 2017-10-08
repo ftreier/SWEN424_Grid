@@ -32,12 +32,16 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		
 		for (int i = 0; i < noOfSteps; i++)
 		{
-			Boolean result = MainBaseType.SimulateStep(time, producers, consumers, transformers, grids);
+			SimulationStatus result = MainBaseType.SimulateStep(time, producers, consumers, transformers, grids);
 			xmlWriter.add(eventFactory.createStartElement("", "", "step"));
 			xmlWriter.add(eventFactory.createAttribute("number", Integer.toString(i+1)));
 			xmlWriter.add(eventFactory.createAttribute("day", Integer.toString(time / 24)));
 			xmlWriter.add(eventFactory.createAttribute("time", Integer.toString(time % 24)));
-			xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(result)));
+			xmlWriter.add(eventFactory.createAttribute("isOk", Boolean.toString(result.isOk)));
+			xmlWriter.add(eventFactory.createAttribute("overallLoss", Double.toString(result.loss)));
+			xmlWriter.add(eventFactory.createAttribute("currentConsumption", Double.toString(result.currentElectricity)));
+			xmlWriter.add(eventFactory.createAttribute("minProduction", Double.toString(result.minElectricity)));
+			xmlWriter.add(eventFactory.createAttribute("maxProduction", Double.toString(result.maxElectricity)));
 			
 			MainBaseType.WriteSimulationStep(time, producers, consumers, transformers, grids, xmlWriter);
 			
@@ -76,27 +80,20 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 	private static double redistributeProduction(double elUsage, double possibleProduction, List<SimulationStatus> prodStatus) throws Exception
 	{
 		double globalDiff = 0;
-		if (elUsage < 0 && possibleProduction > 0 && Math.abs(elUsage) <= possibleProduction)
+		double percentage = -1 * elUsage / possibleProduction;
+		for (SimulationStatus simStat : prodStatus)
 		{
-			double percentage = Math.abs(elUsage) / possibleProduction;
-			for (SimulationStatus simStat : prodStatus)
-			{
-				double diff = (simStat.maxElectricity - simStat.currentElectricity) * percentage;
-				globalDiff += diff;
-				//simStat.currentElectricity += diff;
-				((ElProducer)(simStat.type)).updateProduction(diff);
-				if(simStat.currentElectricity > simStat.maxElectricity)
-				{
-					throw new Exception("To much energy porduction");
-				}
-			}
+			double diff = (simStat.maxElectricity - simStat.currentElectricity) * percentage;
+			globalDiff += diff;
+			((ElProducer)(simStat.type)).updateProduction(diff);
 		}
 		
 		return globalDiff;
 	}
 	
-	public static Boolean SimulateStep(int time, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, List<ElGrid> grids) throws Exception
+	public static SimulationStatus SimulateStep(int time, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, List<ElGrid> grids) throws Exception
 	{
+		SimulationStatus netSimStat = new SimulationStatus();
 		double elUsage = 0;
 		double possibleProduction = 0;
 		boolean isOk = true;
@@ -106,10 +103,8 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		{
 			elUsage += consumer.Simulate(time).currentElectricity;
 		}
-		
-		// add general 10% for loss (estimate)
-		double lossAssumption = elUsage * 0.1;
-		elUsage += lossAssumption;
+
+		netSimStat.currentElectricity = Math.abs(elUsage);
 
 		// accumulate production capacity
 		List<SimulationStatus> prodStatus = new LinkedList<>();
@@ -121,35 +116,21 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 				elUsage += simStat.currentElectricity;
 				possibleProduction += simStat.maxElectricity - simStat.currentElectricity;
 				prodStatus.add(simStat);
+				netSimStat.maxElectricity += simStat.maxElectricity;
 			}
 			else
 			{
 				elUsage += simStat.currentElectricity;
+				netSimStat.maxElectricity += simStat.currentElectricity;
 			}
+			
+			netSimStat.minElectricity += simStat.currentElectricity;
 		}
 		
 		// Try and meet the exact consumption
 		double diff = redistributeProduction(elUsage, possibleProduction, prodStatus);
 		elUsage+= diff;
 		possibleProduction -= diff;
-//		if (elUsage < 0 && possibleProduction > 0 && Math.abs(elUsage) <= possibleProduction)
-//		{
-//			double percentage = Math.abs(elUsage) / possibleProduction;
-//			for (SimulationStatus simStat : prodStatus)
-//			{
-//				double diff = (simStat.maxElectricity - simStat.currentElectricity) * percentage;
-//				elUsage += diff;
-//				possibleProduction -= diff;
-//				simStat.currentElectricity += diff;
-//				if(simStat.currentElectricity > simStat.maxElectricity)
-//				{
-//					throw new Exception("To much energy porduction");
-//				}
-//			}
-//		}
-		
-		// remove remove loss assumption and replace with actual losses
-		elUsage -= lossAssumption;
 		
 		// Check Transformers and calculate loss
 		for (ElTransformer transformer : transformers)
@@ -201,13 +182,25 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 			gridSize = gridSimStat.size();
 		}
 		
-		diff = redistributeProduction(elUsage, possibleProduction, prodStatus);
-		elUsage += diff;
-		possibleProduction -= diff;
+		netSimStat.loss = Math.abs(elUsage);
+		
+		double diff2 = redistributeProduction(elUsage, possibleProduction, prodStatus);
+		elUsage += diff2;
+		possibleProduction -= diff2;
+		
+		if(diff + diff2 < 0)
+		{
+			isOk = false;
+		}
+		
+		for (ElTransformer transformer : transformers)
+		{
+			isOk = isOk && transformer.IsOk();
+		}
 		
 		// Allow for some small imbalance due to precision issues
-		return compareRange(elUsage, 0, null) && isOk;
-		//return elUsage >= -0.1 && elUsage <= 0.1 && isOk;
+		netSimStat.isOk = compareRange(elUsage, 0, null) && isOk && possibleProduction > 0;
+		return netSimStat;
 	}
 	
 	public static boolean compareRange(double a, double b, SimulationStatus simStat)
