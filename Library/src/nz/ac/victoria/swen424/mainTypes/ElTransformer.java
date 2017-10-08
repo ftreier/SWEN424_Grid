@@ -10,15 +10,13 @@ import javax.xml.stream.XMLStreamException;
 public class ElTransformer extends MainBaseType
 {
 	private int _maxcapacity;
-	private int _usage;
 	private int _efficiency;
 	private List<MainBaseType> _leftConnection;
 	private List<ElGrid> _rightConnection;
 
-	public ElTransformer(String name, int maxcapacity, int usage, int efficiency){
+	public ElTransformer(String name, int maxcapacity, int efficiency){
 		super(name);
 		_maxcapacity = maxcapacity;
-		_usage = usage;
 		_efficiency = efficiency;
 		_leftConnection = new LinkedList<>();
 		_rightConnection = new LinkedList<>();

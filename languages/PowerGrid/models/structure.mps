@@ -177,11 +177,6 @@
       <property role="TrG5h" value="Efficiency" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="7rDXPBEWeTA" role="1TKVEl">
-      <property role="IQ2nx" value="8568651731614887526" />
-      <property role="TrG5h" value="Usage" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

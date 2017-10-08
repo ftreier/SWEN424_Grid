@@ -1666,7 +1666,7 @@
             <node concept="37vLTI" id="1jFWy4D3jK1" role="3clFbG">
               <node concept="2ShNRf" id="1jFWy4D3jKB" role="37vLTx">
                 <node concept="1pGfFk" id="1jFWy4D3jYh" role="2ShVmc">
-                  <ref role="37wK5l" to="mgvq:~ElTransformer.&lt;init&gt;(java.lang.String,int,int,int)" resolve="ElTransformer" />
+                  <ref role="37wK5l" to="mgvq:~ElTransformer.&lt;init&gt;(java.lang.String,int,int)" resolve="ElTransformer" />
                   <node concept="Xl_RD" id="1jFWy4D3oO9" role="37wK5m">
                     <property role="Xl_RC" value="10" />
                     <node concept="17Uvod" id="1jFWy4D3oQq" role="lGtFl">
@@ -1699,25 +1699,6 @@
                                 <ref role="3TsBF5" to="aw7t:7rDXPBEWeTt" resolve="MaxCapacity" />
                               </node>
                               <node concept="30H73N" id="1jFWy4D3pqN" role="2Oq$k0" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="1jFWy4D3qlc" role="37wK5m">
-                    <property role="3cmrfH" value="10" />
-                    <node concept="17Uvod" id="1jFWy4D3qMZ" role="lGtFl">
-                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                      <property role="2qtEX9" value="value" />
-                      <node concept="3zFVjK" id="1jFWy4D3qN2" role="3zH0cK">
-                        <node concept="3clFbS" id="1jFWy4D3qN3" role="2VODD2">
-                          <node concept="3clFbF" id="1jFWy4D3qN9" role="3cqZAp">
-                            <node concept="2OqwBi" id="1jFWy4D3qN4" role="3clFbG">
-                              <node concept="3TrcHB" id="1jFWy4D3qN7" role="2OqNvi">
-                                <ref role="3TsBF5" to="aw7t:7rDXPBEWeTA" resolve="Usage" />
-                              </node>
-                              <node concept="30H73N" id="1jFWy4D3qN8" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>

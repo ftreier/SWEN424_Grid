@@ -14,7 +14,6 @@
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
         <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
         <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
-        <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
         <property id="4557959800734321492" name="SimulationSteps" index="o1EGu" />
@@ -64,6 +63,11 @@
   <node concept="sJg17" id="5n4IGwrWnq1">
     <property role="TrG5h" value="Test" />
     <property role="o1EGu" value="24" />
+    <node concept="2s6h$e" id="2djYxgKlzXH" role="2s6h$R">
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="100" />
+      <property role="TrG5h" value="Trans1" />
+    </node>
     <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d" />
@@ -90,12 +94,6 @@
       <property role="TrG5h" value="abc" />
       <property role="245u9L" value="Trans1" />
       <property role="245u99" value="Trans1" />
-    </node>
-    <node concept="2s6h$e" id="5n4IGwrWnq7" role="2s6h$R">
-      <property role="2s6h$4" value="200" />
-      <property role="2s6h$S" value="100" />
-      <property role="2s6h$Z" value="0" />
-      <property role="TrG5h" value="Trans1" />
     </node>
     <node concept="3VOWaR" id="5n4IGwrWnq8" role="N8dmf">
       <property role="3VOWdS" value="1000" />

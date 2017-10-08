@@ -42,9 +42,9 @@ public class Test {
 
     ElTransformer toAdd;
     _transformers = new LinkedList<ElTransformer>();
-    toAdd = new ElTransformer("Tran", 200, 0, 99);
+    toAdd = new ElTransformer("Tran", 200, 99);
     _transformers.add(toAdd);
-    toAdd = new ElTransformer("Tran2", 200, 0, 99);
+    toAdd = new ElTransformer("Tran2", 200, 99);
     _transformers.add(toAdd);
 
     ElProducer producer;
