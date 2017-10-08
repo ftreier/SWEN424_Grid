@@ -44,7 +44,9 @@
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
       </concept>
-      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU" />
+      <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
+        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
+      </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
       </concept>
@@ -65,41 +67,43 @@
     <property role="o1EGu" value="24" />
     <node concept="2s6h$e" id="2djYxgKlzXH" role="2s6h$R">
       <property role="2s6h$4" value="200" />
-      <property role="2s6h$S" value="100" />
+      <property role="2s6h$S" value="99" />
       <property role="TrG5h" value="Trans1" />
     </node>
     <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
-      <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d" />
+      <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d">
+        <property role="1Hj7Pq" value="3" />
+      </node>
     </node>
     <node concept="1vLJl6" id="5n4IGwrWnq4" role="1vLJPo">
-      <property role="TrG5h" value="A" />
-      <property role="1vLJIY" value="1" />
-      <property role="1vLJIW" value="2" />
-      <property role="1vLJIL" value="3" />
-      <property role="1vLJIP" value="4" />
-      <property role="1vLJIC" value="5" />
+      <property role="TrG5h" value="Residential" />
+      <property role="1vLJIY" value="20" />
+      <property role="1vLJIW" value="40" />
+      <property role="1vLJIL" value="100" />
+      <property role="1vLJIP" value="50" />
+      <property role="1vLJIC" value="90" />
     </node>
     <node concept="3yd64n" id="5n4IGwrWnq5" role="3yd3h7">
       <property role="3yd64o" value="0" />
-      <property role="3yd3hR" value="1000" />
-      <property role="TrG5h" value="abc" />
+      <property role="3yd3hR" value="100" />
       <property role="2KFMDS" value="Wellington" />
       <property role="244Foq" value="Trans1" />
+      <property role="TrG5h" value="Wellington Wind Mill" />
     </node>
     <node concept="3lM9jV" id="5n4IGwrWnq6" role="3lMnhl">
       <property role="3lM9jS" value="200" />
-      <property role="3lM9jN" value="100" />
-      <property role="244Ey0" value="0" />
-      <property role="TrG5h" value="abc" />
+      <property role="3lM9jN" value="99" />
+      <property role="244Ey0" value="1" />
+      <property role="TrG5h" value="Wellington -Auckland" />
       <property role="245u9L" value="Trans1" />
       <property role="245u99" value="Trans1" />
     </node>
     <node concept="3VOWaR" id="5n4IGwrWnq8" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="abc" />
+      <property role="3VOWdS" value="10" />
+      <property role="TrG5h" value="House 1" />
       <property role="eq3CR" value="Trans1" />
-      <property role="2KmOhT" value="A" />
+      <property role="2KmOhT" value="Residential" />
     </node>
   </node>
 </model>
