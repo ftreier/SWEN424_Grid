@@ -5,9 +5,6 @@ import java.util.List;
 
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
-import javax.xml.stream.events.XMLEvent;
-
-import com.sun.imageio.plugins.gif.GIFImageReaderSpi;
 
 import nz.ac.victoria.swen424.SimulationIntervalEnum;
 import nz.ac.victoria.swen424.XmlLayoutNode;
