@@ -18,19 +18,17 @@ public class ElGrid extends MainBaseType{
 	private ElTransformer rightTransformer;
 	private int _probabilityOfFailure;
 	
-	public ElGrid(String name, int maxCapacity, int efficiency, int probabilityOfFailure, String connectName1, String connectName2){
+	public ElGrid(String name, int maxCapacity, int efficiency, int probabilityOfFailure){
 		super(name);
 		_maxCapacity = maxCapacity;
 		_efficiency = efficiency;
-		_connectName1 = connectName1;
-		_connectName2 = connectName2;
 		_probabilityOfFailure = probabilityOfFailure;
 		
 	}
 	
 	public void connectTransformer(ElTransformer connect){
-			if(_connectName1 == connect.getName()){ leftTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
-			else if(_connectName2 == connect.getName()){ rightTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
+			if(leftTransformer == null){ leftTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
+			else if(rightTransformer == null){ rightTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
 			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
 	}
 	

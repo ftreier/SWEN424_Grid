@@ -1,200 +1,200 @@
 <?xml version="1.0"?>
 <powerGridSimulator>
   <modelDefinition>
-    <weather id="36039be1-4e6b-407a-83a2-4cee869d31e1" name="Auckland" isRandom="false">
+    <weather id="43972dd8-67f9-44a0-aeba-68d9151cce42" name="Auckland" isRandom="false">
       <value day="0" weather="ClearSky" windSpeed="Flat"></value>
     </weather>
-    <usageProfile id="4a254031-3e63-40e0-a734-8ccabded806c" name="yester" isRandom="false" night="45" morning="18" midday="92" afternoon="55" eavening="99"></usageProfile>
-    <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" minProduction="0" maxProduction="1000" productionMethode="Wind">
-      <connectedTo transformerId="34f0648a-495c-4a50-bb7a-d66c2db5a494" transformerName="Tran"></connectedTo>
+    <usageProfile id="a99aaf21-194e-4220-bb45-f2789813f369" name="yester" isRandom="false" night="45" morning="18" midday="92" afternoon="55" eavening="99"></usageProfile>
+    <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" minProduction="0" maxProduction="1000" productionMethode="Wind">
+      <connectedTo transformerId="2d3dece4-e268-4920-9016-facf00c2dda8" transformerName="Tran"></connectedTo>
     </producer>
-    <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" maxCapacity="200" efficiency="100" probabilityOfFailure="0">
+    <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" maxCapacity="200" efficiency="100" probabilityOfFailure="0">
       <connections>
-        <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" side="left"></transformer>
-        <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" side="right"></transformer>
+        <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" side="left"></transformer>
+        <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" side="right"></transformer>
       </connections>
     </grid>
-    <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" maxCapacity="200" efficiency="99">
+    <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" maxCapacity="200" efficiency="99">
       <connections>
-        <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" side="left"></producer>
-        <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" side="left"></consumer>
-        <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" side="right"></grid>
+        <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" side="left"></producer>
+        <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" side="left"></consumer>
+        <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" side="right"></grid>
       </connections>
     </transformer>
-    <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" maxCapacity="200" efficiency="99">
+    <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" maxCapacity="200" efficiency="99">
       <connections>
-        <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" side="right"></grid>
+        <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" side="right"></grid>
       </connections>
     </transformer>
   </modelDefinition>
   <simulation>
     <step number="1" day="0" time="0" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="2" day="0" time="1" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="3" day="0" time="2" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="4" day="0" time="3" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="5" day="0" time="4" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="6" day="0" time="5" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="7" day="0" time="6" isOk="false" overallLoss="454.5" currentConsumption="450.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="4.5" currentUsage="454.5" usage="229.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="454.5" loss="0.0" usage="227.25" maxCapacity="200"></grid>
     </step>
     <step number="8" day="0" time="7" isOk="false" overallLoss="181.8" currentConsumption="180.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
     </step>
     <step number="9" day="0" time="8" isOk="false" overallLoss="181.8" currentConsumption="180.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
     </step>
     <step number="10" day="0" time="9" isOk="false" overallLoss="181.8" currentConsumption="180.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
     </step>
     <step number="11" day="0" time="10" isOk="false" overallLoss="181.8" currentConsumption="180.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
     </step>
     <step number="12" day="0" time="11" isOk="false" overallLoss="181.8" currentConsumption="180.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="1.8" currentUsage="181.8" usage="91.80000000000001" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="181.8" loss="0.0" usage="90.9" maxCapacity="200"></grid>
     </step>
     <step number="13" day="0" time="12" isOk="false" overallLoss="929.2" currentConsumption="920.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.2" currentUsage="929.2" usage="469.20000000000005" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="929.2" loss="0.0" usage="464.59999999999997" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.2" currentUsage="929.2" usage="469.20000000000005" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="929.2" loss="0.0" usage="464.59999999999997" maxCapacity="200"></grid>
     </step>
     <step number="14" day="0" time="13" isOk="false" overallLoss="929.2" currentConsumption="920.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.2" currentUsage="929.2" usage="469.20000000000005" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="929.2" loss="0.0" usage="464.59999999999997" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.2" currentUsage="929.2" usage="469.20000000000005" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="929.2" loss="0.0" usage="464.59999999999997" maxCapacity="200"></grid>
     </step>
     <step number="15" day="0" time="14" isOk="false" overallLoss="555.5" currentConsumption="550.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
     </step>
     <step number="16" day="0" time="15" isOk="false" overallLoss="555.5" currentConsumption="550.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
     </step>
     <step number="17" day="0" time="16" isOk="false" overallLoss="555.5" currentConsumption="550.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
     </step>
     <step number="18" day="0" time="17" isOk="false" overallLoss="555.5" currentConsumption="550.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="5.5" currentUsage="555.5" usage="280.5" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="555.5" loss="0.0" usage="277.75" maxCapacity="200"></grid>
     </step>
     <step number="19" day="0" time="18" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
     <step number="20" day="0" time="19" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
     <step number="21" day="0" time="20" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
     <step number="22" day="0" time="21" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
     <step number="23" day="0" time="22" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
     <step number="24" day="0" time="23" isOk="false" overallLoss="999.9" currentConsumption="990.0" minProduction="0.0" maxProduction="0.0">
-      <consumer id="4d8341bb-afa5-49dd-9a36-cf752154f5d3" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
-      <producer id="36572f06-c55b-49aa-b762-2b4de5ea2fcb" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
-      <transformer id="34f0648a-495c-4a50-bb7a-d66c2db5a494" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
-      <transformer id="27a33614-e387-48e9-9bc3-5f8d1de5614f" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
-      <grid id="1a2aa334-2178-4e27-960a-11155af695d9" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
+      <consumer id="b1f59f0b-ee82-4eb3-b93c-720e51002cb2" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="207d7a3b-a0ae-4a92-a946-ff9853932dd3" name="Dam" isOk="true" production="0.0" maxProduction="1000.0"></producer>
+      <transformer id="2d3dece4-e268-4920-9016-facf00c2dda8" name="Tran" isOk="true" loss="9.9" currentUsage="999.9" usage="504.9" maxCapacity="200"></transformer>
+      <transformer id="4cab9e61-0220-40b3-b3da-35bdc14e8aa3" name="Tran2" isOk="true" loss="0.0" currentUsage="0.0" usage="0.0" maxCapacity="200"></transformer>
+      <grid id="0cb1d619-bfde-46db-aa78-f2184ec90e2c" name="Auck" isOk="true" isFailure="false" currentUsage="999.9" loss="0.0" usage="499.95000000000005" maxCapacity="200"></grid>
     </step>
   </simulation>
 </powerGridSimulator>

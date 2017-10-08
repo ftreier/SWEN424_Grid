@@ -20,7 +20,7 @@ public class gui extends JPanel {
    String[] stylenames = { "Plain", "Italic", "Bold", "Bold & Italic" };
    //Lists of objects to iterate over 
 
-   ElConsumer c = new ElConsumer("test", 10, "tran", "usage");
+   ElConsumer c = new ElConsumer("test", 10);
 
    static ArrayList <ElConsumer> _consumers = new ArrayList <ElConsumer>();
    
@@ -66,9 +66,9 @@ public class gui extends JPanel {
       f.setVisible(true);
       //test consumers
 
-      _consumers.add(new ElConsumer("test", 3, "tran", "usage"));
-      _consumers.add(new ElConsumer("two", 4, "tran", "usage"));
-      _consumers.add(new ElConsumer("anoth", 10, "tran", "usage"));
+      _consumers.add(new ElConsumer("test", 3));
+      _consumers.add(new ElConsumer("two", 4));
+      _consumers.add(new ElConsumer("anoth", 10));
 
    }
 }

@@ -17,14 +17,12 @@ public class ElProducer extends MainBaseType
 	private WeatherValues _weather;
 	
 
-	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType, String connectName, String weatherName)
+	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
 		super(name);
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
 		_productionType = prodType;
-		_connectName = connectName;
-		_weatherName = weatherName;
 		// TODO: Real reference
 		//_weather = new WeatherValues("test", true);
 	}

@@ -14,11 +14,9 @@ public class ElConsumer extends MainBaseType{
 	private UsageProfile _usageProfile;
 	
 	
-public ElConsumer(String name, int maxConsumption, String connectName, String usageName){
+public ElConsumer(String name, int maxConsumption){
 	super(name);
 	_maxConsumption = maxConsumption;
-	_connectName = connectName;
-	_usageName = usageName;
 	// TODO: Real reference
 	//_usageProfile = new UsageProfile("test");
 	}
