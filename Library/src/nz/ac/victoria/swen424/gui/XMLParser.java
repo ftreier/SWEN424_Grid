@@ -1,9 +1,23 @@
 package nz.ac.victoria.swen424.gui;
 
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.Timer;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -12,32 +26,29 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import nz.ac.victoria.swen424.gui.XMLParser.Step;
 import nz.ac.victoria.swen424.mainTypes.ElConsumer;
 import nz.ac.victoria.swen424.mainTypes.ElGrid;
 import nz.ac.victoria.swen424.mainTypes.ElProducer;
 import nz.ac.victoria.swen424.mainTypes.ElTransformer;
+import nz.ac.victoria.swen424.mainTypes.MainBaseType;
 import nz.ac.victoria.swen424.mainTypes.StateObject;
 
-public class XMLParser {
-	   
-	   //Image files paths for each MainType
-	   private final String conImage = "/images/house.png";
-	   private final String tranImage = "/images/";
-	   private final String prodImage = "/images/powerplant.png";
-	   private final String gridImage = "/images/";
-
-	   
+public class XMLParser {   
 	   // Array to save initial stepobjects in
-	   List <Step> steps = new ArrayList<Step>();
+	   static List <Step> steps = new ArrayList<Step>();
+	   
+	   // Arrays of MainBaseTypes passed in by PowerGridSimulator
 	   List <ElConsumer> consumers;
 	   List <ElProducer> producers;
 	   List <ElTransformer> transformers;
 	   List <ElGrid> grids;
+	   
+	   private int windowWidth = 1275;
+	   private int windowHeight = 1000;
+	   
+	   //Window object to display our simulation
 	   Window w;
 	   
-	   
-	  
 	   public final void initialiseStates(List<ElProducer> producers, List<ElConsumer> consumers, 
 			   								List<ElTransformer> transformers, List <ElGrid> grids) {
 		   this.consumers = consumers;
@@ -59,44 +70,107 @@ public class XMLParser {
 		   //get the largest number of consumers/producers attached to a singular transformer
 		   for (ElTransformer tran : transformers) {
 			   if (maxProdCon < (tran.getLeftConnections().size())) 
-				   System.out.println("tran: "+tran.GetName()+" children: "+tran.getLeftConnections().size());
-				   //maxProdCon = tran.getLeftConnections().size();
+				   maxProdCon = tran.getLeftConnections().size();
 		   }
 		   
-		   System.out.println("Most children: "+maxProdCon);
-		   
+		   //rendering #'s for grids
 		   int numGrids = grids.size();
 		   int numTrans = transformers.size();
 		   int numProdCons = consumers.size()+producers.size();
+		   //rendering #'s for transformers
+		   int gridSpace = windowHeight/(grids.size()+1);
+		   System.out.println("Have gridSize: "+gridSpace);
+		   int initialY = 50;
+		   int imgSize = 30;
+		   int gridX = windowWidth/2;
+		   int tranSpace = windowHeight/(transformers.size()+1);
+		   boolean leftSideTran=true;
+		   int leftTranX=gridX/2;
+		   int rightTranX=gridX+leftTranX;
+		   //rendering #'s for prodcons
+		   int leftProdConX = (leftTranX/2);
+		   int rightProdConX = rightTranX+(leftProdConX);
 		   
 		   
+		   //create stateobjs for grids
+		   for (ElGrid g : grids) {
+			   toBeAdded = g.getState();
+			   toBeAdded.imgPath = "/images/powergrid.png";
+			 //assign x, y and size
+			   int y = initialY;
+			   g.setRender(gridX, y, imgSize);
+			   initialY = (initialY+(gridSpace-imgSize));
+			   toBeAdded.x = g.getX();
+			   toBeAdded.y = g.getY();
+			   toBeAdded.size = g.getSize();
+			   initialStep.states.add(toBeAdded);
+		   }
 		   
-		   System.out.println("There are: "+numGrids+" grids to render");
-		   System.out.println("There are: "+numTrans+" transformers to render");
-		   System.out.println("There are: "+numProdCons+" producers and consumers to render");
-		   
+		   initialY=50;
+		   int pcimg = 20;
+			 //create stateobjs for transformers
+		   for (ElTransformer t : transformers) {
+			   toBeAdded = t.getState();
+			   toBeAdded.imgPath = "/images/transformer/png";
+			 //assign x, y and size
+			   int y = initialY;
+			   if (leftSideTran) {
+				   t.setRender(leftTranX, y, imgSize);
+				   int pcY = y;
+				   for (int pc=0; pc < t.getLeftConnections().size(); pc++) {
+					   MainBaseType prodcon = t.getLeftConnections().get(pc);
+					   if (pcY >= t.getY()+tranSpace) {
+						   leftProdConX = leftProdConX - (3*pcimg);
+						   pcY = y;
+					   }
+					   if (pcY < 0 || pcY > windowHeight  || rightProdConX < 0) {throw new Error();}
+						   prodcon.setRender(leftProdConX, pcY, pcimg);
+						   pcY = pcY + (pcimg*3);
+				   }
+				   initialY = (initialY+(tranSpace-(imgSize)));
+				   leftSideTran=false;
+			   } 
+			   else {
+				   t.setRender(rightTranX, y, imgSize);
+				   int pcY = y;
+				   for (int pc=0; pc < t.getLeftConnections().size(); pc++) {
+					   MainBaseType prodcon = t.getLeftConnections().get(pc);
+					   if (pcY >= t.getY()+tranSpace) {
+						   rightProdConX = rightProdConX + (3*pcimg);
+						   pcY = y;
+					   }
+					   if (pcY < 0 || pcY > windowHeight || rightProdConX >= windowWidth) {throw new Error();}
+						   prodcon.setRender(rightProdConX, pcY, pcimg);
+						   pcY = pcY + (pcimg*3);
+				   }
+				   
+				   initialY = (initialY+(tranSpace-imgSize));
+				   leftSideTran=true;
+			   }
+			   toBeAdded.x=t.getX();
+			   toBeAdded.y=t.getY();
+			   toBeAdded.size=t.getSize();
+			   initialStep.states.add(toBeAdded);
+			   
+		   }
 		   //create stateobjs for producers
 		   for (ElProducer p : producers) {
 			   toBeAdded = p.getState();
+			   toBeAdded.imgPath = "/images/powerplant.png";
 			   //assign x, y and size
+			   toBeAdded.x = p.getX();
+			   toBeAdded.y = p.getY();
+			   toBeAdded.size = p.getSize();
 			   initialStep.states.add(toBeAdded);
 		   }
 		 //create stateobjs for consumers
 		   for (ElConsumer c : consumers) {
 			   toBeAdded = c.getState();
+			   toBeAdded.imgPath = "/images/house.png";
 			 //assign x, y and size
-			   initialStep.states.add(toBeAdded);
-		   }
-		 //create stateobjs for transformers
-		   for (ElTransformer t : transformers) {
-			   toBeAdded = t.getState();
-			 //assign x, y and size
-			   initialStep.states.add(toBeAdded);
-		   }
-		 //create stateobjs for grids
-		   for (ElGrid g : grids) {
-			   toBeAdded = g.getState();
-			 //assign x, y and size
+			   toBeAdded.x = c.getX();
+			   toBeAdded.y = c.getY();
+			   toBeAdded.size = c.getSize();
 			   initialStep.states.add(toBeAdded);
 		   }
 		   steps.add(initialStep);
@@ -127,6 +201,12 @@ public class XMLParser {
 					currStep.id = idCount;
 					
 					Node sNode = stepList.item(j);
+					if (sNode.getNodeType() == Node.ELEMENT_NODE) {
+						Element elem = (Element) sNode;
+						currStep.number = elem.getAttribute("number");
+						currStep.overallLoss = elem.getAttribute("overallLoss");
+						currStep.currentConsumption = elem.getAttribute("currentConsumption");
+					}
 					//the items within that <step> are our stateNodes
 					NodeList stateList = sNode.getChildNodes();
 					int i=0;
@@ -143,6 +223,9 @@ public class XMLParser {
 										state.max = elem.getAttribute("maxConsumption");
 										state.usage = elem.getAttribute("usage");
 										state.imgPath = "/images/house.png";
+										state.x = consumers.get(c).getX();
+										state.y = consumers.get(c).getY();
+										state.size = consumers.get(c).getSize();
 										currStep.states.add(state);
 									}
 								}
@@ -162,6 +245,9 @@ public class XMLParser {
 											if (elem.getAttribute("minProduction") != null)
 												state.min = elem.getAttribute("minProduction");
 											state.imgPath = "/images/powerplant.png";
+											state.x = producers.get(p).getX();
+											state.y = producers.get(p).getY();
+											state.size = producers.get(p).getSize();
 											currStep.states.add(state);
 										}
 									}
@@ -180,6 +266,10 @@ public class XMLParser {
 										state.loss = elem.getAttribute("loss");
 										if (elem.getAttribute("isOk").equals("true")) {state.isOK=true;}
 										else {state.isOK=false;}
+										state.imgPath = "/images/transformer.png";
+										state.x=transformers.get(t).getX();
+										state.y=transformers.get(t).getY();
+										state.size=transformers.get(t).getSize();
 										currStep.states.add(state);
 									}
 								}
@@ -203,6 +293,10 @@ public class XMLParser {
 										state.usage = elem.getAttribute("usage");
 										state.loss = elem.getAttribute("loss");
 										state.max = elem.getAttribute("maxCapacity");
+										state.imgPath = "/images/powergrid.png";
+										state.x = grids.get(g).getX();
+										state.y = grids.get(g).getY();
+										state.size = grids.get(g).getSize();
 										currStep.states.add(state);
 									}
 								}
@@ -222,44 +316,133 @@ public class XMLParser {
 				} catch(Exception e) {
 			   e.printStackTrace();
 		   }	
-		   w = new Window();
-		   w.startSimulation(steps);
+		  w = new Window(steps);
+		  
 	}
-
-
-
-
-	/** For testing purposes only, steps over all our step objects that contain lists of state objects
-	    * Use these two for loops for rendering
-	    * 
-	    * */
-	   public void print() {
-		   for (Step step : steps) {
-			   
-			   //potentially void code, 
-			   for (StateObject state : step.states) {
-				   String type = state.getClassType();
-				   if (type.equals("ElTransformer")) {
-					   //DO TRANSFORMER
-					   System.out.println("Tran: "+state.name);
-				   } else if (type.equals("ElGrid")) {
-					   //DO GRID
-					   System.out.println("Grid: "+state.name);
-				   } else if (type.equals("ElProducer")) {
-					   //DO PRODUCER
-					   System.out.println("Prod: "+state.name);
-				   } else if (type.equals("ElConsumer")) {
-					   //DO CONSUMER
-					   System.out.println("Cons: "+state.name);
-				   }
-			   }
-		   }
-	   }
 	   
 		//inner class for one singular step object
 		public class Step{
 			public List <StateObject> states=new ArrayList<StateObject>();
 			public int id;
+			public String number;
+			public String overallLoss;
+			public String currentConsumption;
+		}
+		
+		// inner class for rendering?? 
+		public static class Window extends JFrame{
+			JFrame mainFrame;
+			static int stepCount = 1;
+			public Window(List<Step>_steps) {
+				List <Step> steps = _steps;
+				mainFrame = new JFrame("PowerGrid Simulation");
+				mainFrame.addWindowListener(new WindowAdapter() {
+					          public void windowClosing(WindowEvent e) {
+					            System.exit(0);
+					          }
+					      });
+				mainFrame.add(new Show());
+				Timer timer = new Timer(2000, new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("Is this even happening tho");
+						stepCount++;
+						if (stepCount>=steps.size()) {
+							mainFrame.add(new EndShow());
+							mainFrame.setVisible(true);
+						}else {
+							mainFrame.add(new Show());
+							mainFrame.setVisible(true);
+						}
+					}}); timer.start();
+				mainFrame.setSize(1500, 750);
+				mainFrame.setVisible(true);
+			}
+			
+			public static List<Step> getSteps(){
+				return steps;
+			}
+			
+			public static Step getStep() {
+				return steps.get(stepCount);
+			}
+		}
+		
+		public static class EndShow extends JPanel {
+			public void paint (Graphics g) {
+				g.setColor(Color.BLUE);
+				g.drawString("End of Simulation.", 500, 500);
+			}
+		}
+		
+		//inner class to display
+		public static class Show extends JPanel {
+			
+			public void paint(Graphics g) {
+				//List <Step> _steps = Window.getSteps();
+				Step step = Window.getStep();
+				
+				//First step to draw
+				List <StateObject> currStates = step.states;
+				BufferedImage img = null;
+				
+				for (int i=0; i<currStates.size(); i++) {
+					g.setColor(Color.BLUE);
+					g.drawString("Step #: "+step.number+" Current Consumption: "+step.currentConsumption+" Overall Loss: "+step.overallLoss, 100, 700);
+					StateObject toDraw = currStates.get(i);
+					if (toDraw.getClassType().equals("ElGrid")) {
+						try {
+							img = ImageIO.read(new File(getClass().getResource(toDraw.imgPath).toURI()));
+						}catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (URISyntaxException e1) {
+							e1.printStackTrace();
+						}
+						g.drawImage(img, toDraw.x, toDraw.y, toDraw.size, toDraw.size, null);
+						g.setColor(Color.BLACK);
+						g.drawString(toDraw.name, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size/2))));
+						g.setColor(Color.darkGray);
+						//connect a line to the left transformer
+						g.drawLine(toDraw.x, toDraw.y, toDraw.type.getLeftTransformer().getX(), toDraw.type.getLeftTransformer().getY());
+						//connect a line to the right transformer
+						g.drawLine(toDraw.x, toDraw.y, toDraw.type.getRightTransformer().getX(), toDraw.type.getRightTransformer().getY());
+						if (toDraw.isOK) {g.setColor(Color.GREEN);}
+						else {g.setColor(Color.RED);}
+						g.drawString("usage:"+toDraw.currentUsage, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size))));
+					} else if (toDraw.getClassType().equals("ElTransformer")) {
+						try {
+							img = ImageIO.read(new File(getClass().getResource(toDraw.imgPath).toURI()));
+						}catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (URISyntaxException e1) {
+							e1.printStackTrace();
+						}
+						g.drawImage(img, toDraw.x, toDraw.y, toDraw.size, toDraw.size, null);
+						g.setColor(Color.BLACK);
+						g.drawString(toDraw.name, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size/2))));
+						if (toDraw.isOK) {g.setColor(Color.GREEN);}
+						else {g.setColor(Color.RED);}
+						g.drawString("usage:"+toDraw.currentUsage, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size))));
+					} else {
+						//draw the producers and consumers
+						try {
+							img = ImageIO.read(new File(getClass().getResource(toDraw.imgPath).toURI()));
+						}catch (IOException e1) {
+							e1.printStackTrace();
+						} catch (URISyntaxException e1) {
+							e1.printStackTrace();
+						}
+						g.drawImage(img, toDraw.x, toDraw.y, toDraw.size, toDraw.size, null);
+						g.setColor(Color.BLACK);
+						g.drawString(toDraw.name, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size/2))));
+						if (toDraw.currentUsage != null)
+							g.drawString(toDraw.currentUsage, toDraw.x, (toDraw.y+(toDraw.size+(toDraw.size))));
+						g.drawLine(toDraw.x, toDraw.y, toDraw.type.getLeftTransformer().getX(), toDraw.type.getLeftTransformer().getY());
+					}
+				
+				}
+			}
+			
 		}
 }
 

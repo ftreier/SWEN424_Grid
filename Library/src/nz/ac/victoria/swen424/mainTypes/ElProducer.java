@@ -1,5 +1,7 @@
 package nz.ac.victoria.swen424.mainTypes;
 
+import java.util.List;
+
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -10,10 +12,16 @@ public class ElProducer extends MainBaseType
 {
 	private int _minProduction;
 	private int _maxProduction;
+	private String _connectName;
 	private ElTransformer _connect;
+	private String _weatherName;
 	private ProducitionMethodeType _productionType;
 	private WeatherValues _weather;
 	
+	//for rendering purposes 
+		private int x; 
+		private int y; 
+		private int size;
 
 	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
@@ -22,12 +30,23 @@ public class ElProducer extends MainBaseType
 		_maxProduction = maxProduction;
 		_productionType = prodType;
 		// TODO: Real reference
-		_weather = new WeatherValues("test", true);
+		//_weather = new WeatherValues("test", true);
 	}
+	@Override
+	public void setRender(int x, int y, int size) {
+		this.x=x;
+		this.y=y;
+		this.size=size;
+	}
+	
+	public int getX() {return x;}
+	public int getY() {return y;}
+	public int getSize() {return size;}
 	
 	public void connectTransformer(ElTransformer connect){
 		_connect = connect;
 		connect.addLeftConnection(this);
+		System.out.println("Producer "+_name+" Transformer connect");
 //		if(connect.increaseUsage(_maxProduction, this) == true){
 //			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
@@ -37,12 +56,25 @@ public class ElProducer extends MainBaseType
 //		}
 	}
 	
+	public void connectWeather(WeatherValues weather){
+		_weather = weather;
+		System.out.println("Producer "+_name+" Weather register");
+	}
+	
 	public boolean canChange() 
 	{
 		return _productionType == ProducitionMethodeType.Conventional; 
 	}
+	
+	public String getTransName(){
+		return _connectName;
+	}
+	
+	public String getWeatherName(){
+		return _weatherName;
+	}
 
-	@Override
+	
 	public String getData()
 	{
 		// TODO return useful data
@@ -217,5 +249,24 @@ public class ElProducer extends MainBaseType
 	public double getMaxProduction()
 	{
 		return _maxProduction;
+	}
+
+	//Following methods not needed in here
+	@Override
+	public ElTransformer getLeftTransformer() {
+		// TODO Auto-generated method stub
+		return _connect;
+	}
+
+	@Override
+	public ElTransformer getRightTransformer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<MainBaseType> getProdCon() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

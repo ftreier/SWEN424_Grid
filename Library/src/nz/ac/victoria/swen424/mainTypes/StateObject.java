@@ -12,8 +12,7 @@ public class StateObject {
 	
 	//for rendering purposes
 	public String imgPath;
-	public int x,y;
-	public double size;
+	public int x,y, size;
 
 	//consumer and producer
 	public String prodcon;

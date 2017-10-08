@@ -1,6 +1,7 @@
 package nz.ac.victoria.swen424.mainTypes;
 
 import java.awt.*;
+import java.util.List;
 
 import javax.swing.*;
 import javax.xml.stream.XMLEventFactory;
@@ -13,20 +14,28 @@ public class ElConsumer extends MainBaseType implements IMainType {
 	//private String _name;
 	private int _minConsumption;
 	private int _maxConsumption;
+	private String _connectName;
+	private String _usageName;
 	private ElTransformer _connect;
 	private UsageProfile _usageProfile;
+	
+	//for rendering purposes 
+		private int x; 
+		private int y; 
+		private int size;
 
 	
 public ElConsumer(String name, int maxConsumption){
 	super(name);
 	_maxConsumption = maxConsumption;
 	// TODO: Real reference
-	_usageProfile = new UsageProfile("test");
+	//_usageProfile = new UsageProfile("test");
 	}
 
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
 	connect.addLeftConnection(this);
+	System.out.println("Consumer " + _name + " Transformer connect");
 //	if(connect.decreaseUsage(_maxConsumption, this) == true){
 //		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
@@ -35,12 +44,33 @@ public void connectTransformer(ElTransformer connect){
 //		else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
 //	}
 }
+@Override
+public void setRender(int x, int y, int size) {
+	this.x=x;
+	this.y=y;
+	this.size=size;
+}
+
+public int getX() {return x;}
+public int getY() {return y;}
+public int getSize() {return size;}
+
+public void connectUsageProfile(UsageProfile usage){
+	_usageProfile = usage;
+	System.out.println("Consumer "+_name+" Usage Profile register");
+}
+
+public String getTransName(){
+	return _connectName;
+}
+public String getUsageName(){
+	return _usageName;
+}
 
 public int getMaxConsumption(){
 	return _maxConsumption;
 }
 
-@Override
 public String getData() {
 	// TODO show the data related to the consumer
 	// _name, _minConsumption & _maxConsumption
@@ -107,5 +137,23 @@ public StateObject getState() {
 	prodState.name = this._name;
 	prodState.type = this;
 	return prodState;
+}
+//Following methods not needed in here
+@Override
+public ElTransformer getLeftTransformer() {
+	// TODO Auto-generated method stub
+	return _connect;
+}
+
+@Override
+public ElTransformer getRightTransformer() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public List<MainBaseType> getProdCon() {
+	// TODO Auto-generated method stub
+	return null;
 }
 }

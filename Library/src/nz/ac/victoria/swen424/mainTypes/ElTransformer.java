@@ -14,31 +14,34 @@ public class ElTransformer extends MainBaseType
 	private int _maxcapacity;
 	private int _usage;
 	private int _efficiency;
-	private int leftNetLevel;
-	private int rightNetLevel;
 	private List<MainBaseType> _leftConnection;
 	private List<ElGrid> _rightConnection;
 	//private Set<MainBaseType> connections;
+	
+	//for rendering purposes 
+		private int x; 
+		private int y; 
+		private int size;
 
-	public ElTransformer(String name, int maxcapacity, int usage, int efficiency, int leftNet, int rightNet){
+	public ElTransformer(String name, int maxcapacity, int usage, int efficiency){
 		super(name);
 		_maxcapacity = maxcapacity;
 		_usage = usage;
 		_efficiency = efficiency;
-		leftNetLevel = leftNet;
-		rightNetLevel = rightNet;
 		_leftConnection = new LinkedList<>();
 		_rightConnection = new LinkedList<>();
 		//connections = new HashSet<MainBaseType>();
 	}
-	
-	public int getLeftNet(){
-		return leftNetLevel;
+	@Override
+	public void setRender(int x, int y, int size) {
+		this.x=x;
+		this.y=y;
+		this.size=size;
 	}
 	
-	public int getRightNet(){
-		return rightNetLevel;
-	}
+	public int getX() {return x;}
+	public int getY() {return y;}
+	public int getSize() {return size;}
 	
 	public void addLeftConnection(MainBaseType object)
 	{
@@ -60,39 +63,18 @@ public class ElTransformer extends MainBaseType
 		return _rightConnection;
 	}
 	
-//	public Boolean increaseUsage(int increment, MainBaseType connect){
-//		if(_usage+(increment*(_efficiency)/100) > _maxcapacity){
-//			System.out.println("Cannot exceed maximum capacity of transformer");
-//			return false;
-//		}
-//		_usage += (increment*(_efficiency/100));
-//		addConnection(connect);
-//		return true;
-//	}
-//	
-//	public Boolean decreaseUsage(int increment, MainBaseType connect){
-//		if(_usage-(increment*(_efficiency/100)) < 0){
-//			System.out.println("Cannot fall below 0 usage on transformer");
-//			return false;
-//		}
-//		_usage -= (increment*(_efficiency/100));
-//		addConnection(connect);
-//		return true;
-//	}
+	public String getName(){
+		return _name;
+	}
 	
-//	public void addConnection(MainBaseType connect){
-//		connections.add(connect);
-//	}
-//	
-//	public void removeConnection(MainBaseType remove){
-//		connections.remove(remove);
-//	}
+	//public Set<IMainType> getConnections(){
+		//return connections;
+	
 //	
 //	public Set<MainBaseType> getConnections(){
 //		return connections;
 //	}
 
-	@Override
 	public String getData() {
 		// TODO Auto-generated method stub
 		return this._name;
@@ -225,5 +207,24 @@ public class ElTransformer extends MainBaseType
 		}
 
 		return _simStat.isOk;
+	}
+
+	//Return all the producers and consumers attached to this transformer
+	@Override
+	public List<MainBaseType> getProdCon() {
+		// TODO Auto-generated method stub
+		return _leftConnection;
+	}
+	//Not needed in here
+	@Override
+	public ElTransformer getLeftTransformer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	//Not needed in here
+	@Override
+	public ElTransformer getRightTransformer() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

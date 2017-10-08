@@ -1,5 +1,6 @@
 package nz.ac.victoria.swen424.mainTypes;
 
+import java.util.List;
 import java.util.Random;
 
 import javax.xml.stream.XMLEventFactory;
@@ -11,47 +12,52 @@ import jdk.management.resource.internal.TotalResourceContext;
 public class ElGrid extends MainBaseType{
 
 	private int _maxCapacity;
-	private int _percentUsage;
 	private int _efficiency;
-	private int _voltage;
+	private String _connectName1;
+	private String _connectName2;
 	private ElTransformer leftTransformer;
 	private ElTransformer rightTransformer;
 	private int _probabilityOfFailure;
 	
-	public ElGrid(int maxCapacity, int percentUsage, int efficiency, int voltage, String sector, int probabilityOfFailure){
-		super(sector);
-		_maxCapacity = maxCapacity;
-		_percentUsage = percentUsage;
-		_efficiency = efficiency;
-		_voltage = voltage;
-		_probabilityOfFailure = probabilityOfFailure;
-	}
-	
-	public void connectLeftTransformer(ElTransformer connect)
-	{
-		leftTransformer = connect;
-		connect.addRightConnection(this);
-	}
-	
-	public void connectRightTransformer(ElTransformer connect)
-	{
-		rightTransformer = connect;
-		connect.addRightConnection(this);
-	}
-	
-//	public void connectTransformer(ElTransformer connect)
-//	{
-//		if(connect.increaseUsage((_percentUsage/100)*_maxCapacity, this) == true){
-//			if(connect.getLeftNet() == _voltage || connect.getRightNet() == _voltage){
-//				if(connect1 == null){ connect1 = connect; System.out.println("Grid " + _name + " connected to transformer 1");}
-//				else if(connect2 == null){ connect2 = connect; System.out.println("Grid " + _name + " connected to transformer 2");}
-//				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
-//			}
-//			else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
-//		}
-//	}
+	//for rendering purposes 
+	private int x; 
+	private int y; 
+	private int size;
 
+	
+	public ElGrid(String name, int maxCapacity, int efficiency, int probabilityOfFailure){
+		super(name);
+		_maxCapacity = maxCapacity;
+		_efficiency = efficiency;
+		_probabilityOfFailure = probabilityOfFailure;
+		
+	}
+	
+	public void connectTransformer(ElTransformer connect){
+			if(leftTransformer == null){ leftTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
+			else if(rightTransformer == null){ rightTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
+			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
+	}
 	@Override
+	public void setRender(int x, int y, int size) {
+		this.x=x;
+		this.y=y;
+		this.size=size;
+	}
+	
+	public int getX() {return x;}
+	public int getY() {return y;}
+	public int getSize() {return size;}
+	
+	public String getName1(){
+		return _connectName1;
+	}
+	
+	public String getName2(){
+		return _connectName2;
+	}
+	
+
 	public String getData() {
 		// TODO Auto-generated method stub
 		return this._name;
@@ -264,5 +270,23 @@ public class ElGrid extends MainBaseType{
 		prodState.name = this._name;
 		prodState.type = this;
 		return prodState;
+	}
+
+	@Override
+	public ElTransformer getLeftTransformer() {
+		// TODO Auto-generated method stub
+		return leftTransformer;
+	}
+
+	@Override
+	public ElTransformer getRightTransformer() {
+		// TODO Auto-generated method stub
+		return rightTransformer;
+	}
+	//Following method not needed in here
+	@Override
+	public List<MainBaseType> getProdCon() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
