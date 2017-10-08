@@ -9,16 +9,18 @@ import nz.ac.victoria.swen424.UsageProfile;
 public class ElConsumer extends MainBaseType{
 	private int _maxConsumption;
 	private String _connectName;
+	private String _usageName;
 	private ElTransformer _connect;
 	private UsageProfile _usageProfile;
 	
 	
-public ElConsumer(String name, int maxConsumption, String connectName){
+public ElConsumer(String name, int maxConsumption, String connectName, String usageName){
 	super(name);
 	_maxConsumption = maxConsumption;
 	_connectName = connectName;
+	_usageName = usageName;
 	// TODO: Real reference
-	_usageProfile = new UsageProfile("test");
+	//_usageProfile = new UsageProfile("test");
 	}
 
 public void connectTransformer(ElTransformer connect){
@@ -33,8 +35,15 @@ public void connectTransformer(ElTransformer connect){
 //	}
 }
 
+public void connectUsageProfile(UsageProfile usage){
+	_usageProfile = usage;
+}
+
 public String getTransName(){
 	return _connectName;
+}
+public String getUsageName(){
+	return _usageName;
 }
 
 public int getMaxConsumption(){

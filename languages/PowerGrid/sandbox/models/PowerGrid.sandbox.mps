@@ -40,6 +40,7 @@
       </concept>
       <concept id="2395210634691681910" name="PowerGrid.structure.Producer" flags="ng" index="3yd64n">
         <property id="5758246778675384565" name="TransName" index="244Foq" />
+        <property id="7841080990075074533" name="WeatherName" index="2KFMDS" />
         <property id="2395210634691693334" name="MaxProduction" index="3yd3hR" />
         <property id="2395210634691681913" name="MinProduction" index="3yd64o" />
         <reference id="7210842759738047906" name="Weather" index="1Hs3bF" />
@@ -83,6 +84,7 @@
       <property role="3yd3hR" value="1000" />
       <property role="TrG5h" value="Dam" />
       <property role="244Foq" value="Tran" />
+      <property role="2KFMDS" value="Auckland" />
       <ref role="1Hs3bF" node="4ZDpIZc4bMw" resolve="Auckland" />
     </node>
     <node concept="3lM9jV" id="4ZDpIZc4bM$" role="3lMnhl">

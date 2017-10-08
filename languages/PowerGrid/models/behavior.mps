@@ -255,5 +255,51 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="6Nh7pRsx3Xi">
+    <ref role="13h7C2" to="aw7t:6gi3O$9nB7M" resolve="WeatherList" />
+    <node concept="13i0hz" id="6Nh7pRsx3YB" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <node concept="3Tm1VV" id="6Nh7pRsx3YC" role="1B3o_S" />
+      <node concept="3uibUv" id="6Nh7pRsx3YR" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="6Nh7pRsx3YE" role="3clF47">
+        <node concept="3cpWs6" id="6Nh7pRsx3Zb" role="3cqZAp">
+          <node concept="2OqwBi" id="6Nh7pRsx6tz" role="3cqZAk">
+            <node concept="13iPFW" id="6Nh7pRsx6k0" role="2Oq$k0" />
+            <node concept="3TrcHB" id="6Nh7pRsx6YH" role="2OqNvi">
+              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="6Nh7pRsx3Xj" role="13h7CW">
+      <node concept="3clFbS" id="6Nh7pRsx3Xk" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="6Nh7pRsy_3x">
+    <ref role="13h7C2" to="aw7t:4qWwfGpuBmX" resolve="UsageProfile" />
+    <node concept="13i0hz" id="6Nh7pRsy_4Q" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <node concept="3Tm1VV" id="6Nh7pRsy_4R" role="1B3o_S" />
+      <node concept="3uibUv" id="6Nh7pRsy_56" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="6Nh7pRsy_4T" role="3clF47">
+        <node concept="3cpWs6" id="6Nh7pRsy_5q" role="3cqZAp">
+          <node concept="2OqwBi" id="6Nh7pRsy_eV" role="3cqZAk">
+            <node concept="13iPFW" id="6Nh7pRsy_5w" role="2Oq$k0" />
+            <node concept="3TrcHB" id="6Nh7pRsy__c" role="2OqNvi">
+              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="6Nh7pRsy_3y" role="13h7CW">
+      <node concept="3clFbS" id="6Nh7pRsy_3z" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

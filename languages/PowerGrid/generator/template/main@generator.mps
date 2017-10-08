@@ -334,7 +334,7 @@
             <node concept="37vLTI" id="7Erv4TlV9Nc" role="3clFbG">
               <node concept="2ShNRf" id="7Erv4TlV9NM" role="37vLTx">
                 <node concept="1pGfFk" id="7Erv4TlVcsi" role="2ShVmc">
-                  <ref role="37wK5l" to="mgvq:~ElProducer.&lt;init&gt;(java.lang.String,int,int,nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType,java.lang.String)" resolve="ElProducer" />
+                  <ref role="37wK5l" to="mgvq:~ElProducer.&lt;init&gt;(java.lang.String,int,int,nz.ac.victoria.swen424.mainTypes.ProducitionMethodeType,java.lang.String,java.lang.String)" resolve="ElProducer" />
                   <node concept="Xl_RD" id="7Erv4TlVcsN" role="37wK5m">
                     <property role="Xl_RC" value="name" />
                     <node concept="17Uvod" id="7Erv4TlVcM9" role="lGtFl">
@@ -410,6 +410,25 @@
                                 <ref role="3TsBF5" to="aw7t:4ZDpIZbYX3P" resolve="TransName" />
                               </node>
                               <node concept="30H73N" id="4qWfsD8P$b5" role="2Oq$k0" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="6Nh7pRswDcI" role="37wK5m">
+                    <property role="Xl_RC" value="name&quot;" />
+                    <node concept="17Uvod" id="6Nh7pRswGXP" role="lGtFl">
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                      <property role="2qtEX9" value="value" />
+                      <node concept="3zFVjK" id="6Nh7pRswGXS" role="3zH0cK">
+                        <node concept="3clFbS" id="6Nh7pRswGXT" role="2VODD2">
+                          <node concept="3clFbF" id="6Nh7pRswGXZ" role="3cqZAp">
+                            <node concept="2OqwBi" id="6Nh7pRswGXU" role="3clFbG">
+                              <node concept="3TrcHB" id="6Nh7pRswGXX" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:6Nh7pRsvzv_" resolve="WeatherName" />
+                              </node>
+                              <node concept="30H73N" id="6Nh7pRswGXY" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>
@@ -845,51 +864,51 @@
           </node>
         </node>
         <node concept="3clFbH" id="4qWfsD8PHwH" role="3cqZAp" />
-        <node concept="2Gpval" id="4qWfsD8QgAL" role="3cqZAp">
-          <node concept="2GrKxI" id="4qWfsD8QgAN" role="2Gsz3X">
-            <property role="TrG5h" value="tran" />
+        <node concept="2Gpval" id="4qWfsD8QhAv" role="3cqZAp">
+          <node concept="2GrKxI" id="4qWfsD8QhAw" role="2Gsz3X">
+            <property role="TrG5h" value="produc" />
           </node>
-          <node concept="37vLTw" id="4qWfsD8Qhu7" role="2GsD0m">
-            <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+          <node concept="37vLTw" id="4qWfsD8QhD3" role="2GsD0m">
+            <ref role="3cqZAo" node="6Lad368R4N5" resolve="_producers" />
           </node>
-          <node concept="3clFbS" id="4qWfsD8QgAR" role="2LFqv$">
-            <node concept="2Gpval" id="4qWfsD8QhAv" role="3cqZAp">
-              <node concept="2GrKxI" id="4qWfsD8QhAw" role="2Gsz3X">
-                <property role="TrG5h" value="produc" />
+          <node concept="3clFbS" id="4qWfsD8QhAy" role="2LFqv$">
+            <node concept="2Gpval" id="6Nh7pRsxD_L" role="3cqZAp">
+              <node concept="2GrKxI" id="6Nh7pRsxD_N" role="2Gsz3X">
+                <property role="TrG5h" value="tran" />
               </node>
-              <node concept="37vLTw" id="4qWfsD8QhD3" role="2GsD0m">
-                <ref role="3cqZAo" node="6Lad368R4N5" resolve="_producers" />
+              <node concept="37vLTw" id="6Nh7pRsxE5N" role="2GsD0m">
+                <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
               </node>
-              <node concept="3clFbS" id="4qWfsD8QhAy" role="2LFqv$">
-                <node concept="3clFbJ" id="4qWfsD8QhJn" role="3cqZAp">
-                  <node concept="3clFbC" id="4qWfsD8Qj2B" role="3clFbw">
-                    <node concept="2OqwBi" id="4qWfsD8Ql36" role="3uHU7w">
-                      <node concept="2GrUjf" id="4qWfsD8QkMC" role="2Oq$k0">
+              <node concept="3clFbS" id="6Nh7pRsxD_R" role="2LFqv$">
+                <node concept="3clFbJ" id="6Nh7pRsxEdH" role="3cqZAp">
+                  <node concept="3clFbC" id="6Nh7pRsxFSq" role="3clFbw">
+                    <node concept="2OqwBi" id="6Nh7pRsxHhT" role="3uHU7w">
+                      <node concept="2GrUjf" id="6Nh7pRsxH1r" role="2Oq$k0">
                         <ref role="2Gs0qQ" node="4qWfsD8QhAw" resolve="produc" />
                       </node>
-                      <node concept="liA8E" id="4qWfsD8QlIA" role="2OqNvi">
+                      <node concept="liA8E" id="6Nh7pRsxIoS" role="2OqNvi">
                         <ref role="37wK5l" to="mgvq:~ElProducer.getTransName():java.lang.String" resolve="getTransName" />
                       </node>
                     </node>
-                    <node concept="2OqwBi" id="4qWfsD8QhQG" role="3uHU7B">
-                      <node concept="2GrUjf" id="4qWfsD8QhJP" role="2Oq$k0">
-                        <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                    <node concept="2OqwBi" id="6Nh7pRsxEyb" role="3uHU7B">
+                      <node concept="2GrUjf" id="6Nh7pRsxEdX" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="6Nh7pRsxD_N" resolve="tran" />
                       </node>
-                      <node concept="liA8E" id="4qWfsD8QigK" role="2OqNvi">
+                      <node concept="liA8E" id="6Nh7pRsxFe9" role="2OqNvi">
                         <ref role="37wK5l" to="mgvq:~ElTransformer.getName():java.lang.String" resolve="getName" />
                       </node>
                     </node>
                   </node>
-                  <node concept="3clFbS" id="4qWfsD8QhJp" role="3clFbx">
-                    <node concept="3clFbF" id="4qWfsD8QmhD" role="3cqZAp">
-                      <node concept="2OqwBi" id="4qWfsD8QmxM" role="3clFbG">
-                        <node concept="2GrUjf" id="4qWfsD8QmhC" role="2Oq$k0">
+                  <node concept="3clFbS" id="6Nh7pRsxEdJ" role="3clFbx">
+                    <node concept="3clFbF" id="6Nh7pRsxJws" role="3cqZAp">
+                      <node concept="2OqwBi" id="6Nh7pRsxJK_" role="3clFbG">
+                        <node concept="2GrUjf" id="6Nh7pRsxJwr" role="2Oq$k0">
                           <ref role="2Gs0qQ" node="4qWfsD8QhAw" resolve="produc" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8QndB" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsxKW3" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElProducer.connectTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectTransformer" />
-                          <node concept="2GrUjf" id="4qWfsD8QnB1" role="37wK5m">
-                            <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                          <node concept="2GrUjf" id="6Nh7pRsxLtB" role="37wK5m">
+                            <ref role="2Gs0qQ" node="6Nh7pRsxD_N" resolve="tran" />
                           </node>
                         </node>
                       </node>
@@ -898,44 +917,99 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="4qWfsD8Qo0v" role="3cqZAp" />
-            <node concept="2Gpval" id="4qWfsD8QoAk" role="3cqZAp">
-              <node concept="2GrKxI" id="4qWfsD8QoAm" role="2Gsz3X">
-                <property role="TrG5h" value="cons" />
+            <node concept="2Gpval" id="6Nh7pRsxOkK" role="3cqZAp">
+              <node concept="2GrKxI" id="6Nh7pRsxOkM" role="2Gsz3X">
+                <property role="TrG5h" value="weath" />
               </node>
-              <node concept="37vLTw" id="4qWfsD8QoTQ" role="2GsD0m">
-                <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
+              <node concept="37vLTw" id="6Nh7pRsxOW2" role="2GsD0m">
+                <ref role="3cqZAo" node="6gi3O$9o8_V" resolve="_weather" />
               </node>
-              <node concept="3clFbS" id="4qWfsD8QoAq" role="2LFqv$">
-                <node concept="3clFbJ" id="4qWfsD8Qp02" role="3cqZAp">
-                  <node concept="3clFbC" id="4qWfsD8QqF2" role="3clFbw">
-                    <node concept="2OqwBi" id="4qWfsD8Qtun" role="3uHU7w">
-                      <node concept="2GrUjf" id="4qWfsD8QtlR" role="2Oq$k0">
+              <node concept="3clFbS" id="6Nh7pRsxOkQ" role="2LFqv$">
+                <node concept="3clFbJ" id="6Nh7pRsxP3O" role="3cqZAp">
+                  <node concept="3clFbC" id="6Nh7pRsxQGq" role="3clFbw">
+                    <node concept="2OqwBi" id="6Nh7pRsxUCJ" role="3uHU7w">
+                      <node concept="2GrUjf" id="6Nh7pRsxRPG" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="4qWfsD8QhAw" resolve="produc" />
+                      </node>
+                      <node concept="liA8E" id="6Nh7pRsxZGH" role="2OqNvi">
+                        <ref role="37wK5l" to="mgvq:~ElProducer.getWeatherName():java.lang.String" resolve="getWeatherName" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="6Nh7pRsxPHJ" role="3uHU7B">
+                      <node concept="2GrUjf" id="6Nh7pRsxP4i" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="6Nh7pRsxOkM" resolve="weath" />
+                      </node>
+                      <node concept="liA8E" id="6Nh7pRsxQ24" role="2OqNvi">
+                        <ref role="37wK5l" to="8t2c:~XmlLayoutNode.GetName():java.lang.String" resolve="GetName" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6Nh7pRsxP3Q" role="3clFbx">
+                    <node concept="3clFbF" id="6Nh7pRsy0wH" role="3cqZAp">
+                      <node concept="2OqwBi" id="6Nh7pRsy0KQ" role="3clFbG">
+                        <node concept="2GrUjf" id="6Nh7pRsy0wG" role="2Oq$k0">
+                          <ref role="2Gs0qQ" node="4qWfsD8QhAw" resolve="produc" />
+                        </node>
+                        <node concept="liA8E" id="6Nh7pRsy1OR" role="2OqNvi">
+                          <ref role="37wK5l" to="mgvq:~ElProducer.connectWeather(nz.ac.victoria.swen424.weather.WeatherValues):void" resolve="connectWeather" />
+                          <node concept="2GrUjf" id="6Nh7pRsy2$R" role="37wK5m">
+                            <ref role="2Gs0qQ" node="6Nh7pRsxOkM" resolve="weath" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4qWfsD8Qo0v" role="3cqZAp" />
+        <node concept="2Gpval" id="4qWfsD8QoAk" role="3cqZAp">
+          <node concept="2GrKxI" id="4qWfsD8QoAm" role="2Gsz3X">
+            <property role="TrG5h" value="cons" />
+          </node>
+          <node concept="37vLTw" id="4qWfsD8QoTQ" role="2GsD0m">
+            <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
+          </node>
+          <node concept="3clFbS" id="4qWfsD8QoAq" role="2LFqv$">
+            <node concept="2Gpval" id="6Nh7pRsyrJ_" role="3cqZAp">
+              <node concept="2GrKxI" id="6Nh7pRsyrJB" role="2Gsz3X">
+                <property role="TrG5h" value="tran" />
+              </node>
+              <node concept="37vLTw" id="6Nh7pRsyrLo" role="2GsD0m">
+                <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+              </node>
+              <node concept="3clFbS" id="6Nh7pRsyrJF" role="2LFqv$">
+                <node concept="3clFbJ" id="6Nh7pRsyrTi" role="3cqZAp">
+                  <node concept="3clFbC" id="6Nh7pRsytzZ" role="3clFbw">
+                    <node concept="2OqwBi" id="6Nh7pRsyuXu" role="3uHU7w">
+                      <node concept="2GrUjf" id="6Nh7pRsyuH0" role="2Oq$k0">
                         <ref role="2Gs0qQ" node="4qWfsD8QoAm" resolve="cons" />
                       </node>
-                      <node concept="liA8E" id="4qWfsD8QtUx" role="2OqNvi">
+                      <node concept="liA8E" id="6Nh7pRsywcx" role="2OqNvi">
                         <ref role="37wK5l" to="mgvq:~ElConsumer.getTransName():java.lang.String" resolve="getTransName" />
                       </node>
                     </node>
-                    <node concept="2OqwBi" id="4qWfsD8Qp7v" role="3uHU7B">
-                      <node concept="2GrUjf" id="4qWfsD8Qp0w" role="2Oq$k0">
-                        <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                    <node concept="2OqwBi" id="6Nh7pRsysdK" role="3uHU7B">
+                      <node concept="2GrUjf" id="6Nh7pRsyrTy" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="6Nh7pRsyrJB" resolve="tran" />
                       </node>
-                      <node concept="liA8E" id="4qWfsD8QpC5" role="2OqNvi">
+                      <node concept="liA8E" id="6Nh7pRsysTI" role="2OqNvi">
                         <ref role="37wK5l" to="mgvq:~ElTransformer.getName():java.lang.String" resolve="getName" />
                       </node>
                     </node>
                   </node>
-                  <node concept="3clFbS" id="4qWfsD8Qp04" role="3clFbx">
-                    <node concept="3clFbF" id="4qWfsD8QuEB" role="3cqZAp">
-                      <node concept="2OqwBi" id="4qWfsD8QuMM" role="3clFbG">
-                        <node concept="2GrUjf" id="4qWfsD8QuEA" role="2Oq$k0">
+                  <node concept="3clFbS" id="6Nh7pRsyrTk" role="3clFbx">
+                    <node concept="3clFbF" id="6Nh7pRsyxnZ" role="3cqZAp">
+                      <node concept="2OqwBi" id="6Nh7pRsyxSl" role="3clFbG">
+                        <node concept="2GrUjf" id="6Nh7pRsyxnY" role="2Oq$k0">
                           <ref role="2Gs0qQ" node="4qWfsD8QoAm" resolve="cons" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8Qvfh" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsyz7D" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElConsumer.connectTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectTransformer" />
-                          <node concept="2GrUjf" id="4qWfsD8QvPI" role="37wK5m">
-                            <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                          <node concept="2GrUjf" id="6Nh7pRsyzDd" role="37wK5m">
+                            <ref role="2Gs0qQ" node="6Nh7pRsyrJB" resolve="tran" />
                           </node>
                         </node>
                       </node>
@@ -944,64 +1018,119 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="4qWfsD8Qwsf" role="3cqZAp" />
-            <node concept="2Gpval" id="4qWfsD8QwQN" role="3cqZAp">
-              <node concept="2GrKxI" id="4qWfsD8QwQP" role="2Gsz3X">
-                <property role="TrG5h" value="powGrid" />
+            <node concept="2Gpval" id="6Nh7pRszg5X" role="3cqZAp">
+              <node concept="2GrKxI" id="6Nh7pRszg5Z" role="2Gsz3X">
+                <property role="TrG5h" value="usage" />
               </node>
-              <node concept="37vLTw" id="4qWfsD8QxhQ" role="2GsD0m">
-                <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
+              <node concept="37vLTw" id="6Nh7pRszgjs" role="2GsD0m">
+                <ref role="3cqZAo" node="4qWwfGpv39p" resolve="_usageProfiles" />
               </node>
-              <node concept="3clFbS" id="4qWfsD8QwQT" role="2LFqv$">
-                <node concept="3clFbJ" id="4qWfsD8Qxo2" role="3cqZAp">
-                  <node concept="22lmx$" id="4qWfsD8QGD6" role="3clFbw">
-                    <node concept="3clFbC" id="4qWfsD8QS31" role="3uHU7w">
-                      <node concept="2OqwBi" id="4qWfsD8QVOU" role="3uHU7w">
-                        <node concept="2GrUjf" id="4qWfsD8QVgR" role="2Oq$k0">
+              <node concept="3clFbS" id="6Nh7pRszg63" role="2LFqv$">
+                <node concept="3clFbJ" id="6Nh7pRszgre" role="3cqZAp">
+                  <node concept="3clFbC" id="6Nh7pRszhOA" role="3clFbw">
+                    <node concept="2OqwBi" id="6Nh7pRszjeo" role="3uHU7w">
+                      <node concept="2GrUjf" id="6Nh7pRsziXS" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="4qWfsD8QoAm" resolve="cons" />
+                      </node>
+                      <node concept="liA8E" id="6Nh7pRszkt_" role="2OqNvi">
+                        <ref role="37wK5l" to="mgvq:~ElConsumer.getUsageName():java.lang.String" resolve="getUsageName" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="6Nh7pRszgDa" role="3uHU7B">
+                      <node concept="2GrUjf" id="6Nh7pRszgrG" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="6Nh7pRszg5Z" resolve="usage" />
+                      </node>
+                      <node concept="liA8E" id="6Nh7pRszhag" role="2OqNvi">
+                        <ref role="37wK5l" to="8t2c:~XmlLayoutNode.GetName():java.lang.String" resolve="GetName" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3clFbS" id="6Nh7pRszgrg" role="3clFbx">
+                    <node concept="3clFbF" id="6Nh7pRszlRD" role="3cqZAp">
+                      <node concept="2OqwBi" id="6Nh7pRszm7M" role="3clFbG">
+                        <node concept="2GrUjf" id="6Nh7pRszlRC" role="2Oq$k0">
+                          <ref role="2Gs0qQ" node="4qWfsD8QoAm" resolve="cons" />
+                        </node>
+                        <node concept="liA8E" id="6Nh7pRsznnk" role="2OqNvi">
+                          <ref role="37wK5l" to="mgvq:~ElConsumer.connectUsageProfile(nz.ac.victoria.swen424.UsageProfile):void" resolve="connectUsageProfile" />
+                          <node concept="2GrUjf" id="6Nh7pRszo7k" role="37wK5m">
+                            <ref role="2Gs0qQ" node="6Nh7pRszg5Z" resolve="usage" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4qWfsD8Qwsf" role="3cqZAp" />
+        <node concept="2Gpval" id="4qWfsD8QwQN" role="3cqZAp">
+          <node concept="2GrKxI" id="4qWfsD8QwQP" role="2Gsz3X">
+            <property role="TrG5h" value="powGrid" />
+          </node>
+          <node concept="37vLTw" id="4qWfsD8QxhQ" role="2GsD0m">
+            <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
+          </node>
+          <node concept="3clFbS" id="4qWfsD8QwQT" role="2LFqv$">
+            <node concept="2Gpval" id="6Nh7pRsy3mV" role="3cqZAp">
+              <node concept="2GrKxI" id="6Nh7pRsy3mX" role="2Gsz3X">
+                <property role="TrG5h" value="tran" />
+              </node>
+              <node concept="37vLTw" id="6Nh7pRsy3pn" role="2GsD0m">
+                <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
+              </node>
+              <node concept="3clFbS" id="6Nh7pRsy3n1" role="2LFqv$">
+                <node concept="3clFbJ" id="6Nh7pRsy3xh" role="3cqZAp">
+                  <node concept="22lmx$" id="6Nh7pRsy8WS" role="3clFbw">
+                    <node concept="3clFbC" id="6Nh7pRsyi4O" role="3uHU7w">
+                      <node concept="2OqwBi" id="6Nh7pRsylwA" role="3uHU7w">
+                        <node concept="2GrUjf" id="6Nh7pRsykId" role="2Oq$k0">
                           <ref role="2Gs0qQ" node="4qWfsD8QwQP" resolve="powGrid" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8QWBD" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsymz7" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElGrid.getName2():java.lang.String" resolve="getName2" />
                         </node>
                       </node>
-                      <node concept="2OqwBi" id="4qWfsD8QPDk" role="3uHU7B">
-                        <node concept="2GrUjf" id="4qWfsD8QP77" role="2Oq$k0">
-                          <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                      <node concept="2OqwBi" id="6Nh7pRsyfw5" role="3uHU7B">
+                        <node concept="2GrUjf" id="6Nh7pRsyeEb" role="2Oq$k0">
+                          <ref role="2Gs0qQ" node="6Nh7pRsy3mX" resolve="tran" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8QQlx" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsygAx" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElTransformer.getName():java.lang.String" resolve="getName" />
                         </node>
                       </node>
                     </node>
-                    <node concept="3clFbC" id="4qWfsD8Qzmy" role="3uHU7B">
-                      <node concept="2OqwBi" id="4qWfsD8Qxvn" role="3uHU7B">
-                        <node concept="2GrUjf" id="4qWfsD8Qxow" role="2Oq$k0">
-                          <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                    <node concept="3clFbC" id="6Nh7pRsy5ck" role="3uHU7B">
+                      <node concept="2OqwBi" id="6Nh7pRsy3Q5" role="3uHU7B">
+                        <node concept="2GrUjf" id="6Nh7pRsy3xJ" role="2Oq$k0">
+                          <ref role="2Gs0qQ" node="6Nh7pRsy3mX" resolve="tran" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8Qyaz" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsy4y3" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElTransformer.getName():java.lang.String" resolve="getName" />
                         </node>
                       </node>
-                      <node concept="2OqwBi" id="4qWfsD8QB90" role="3uHU7w">
-                        <node concept="2GrUjf" id="4qWfsD8QAWb" role="2Oq$k0">
+                      <node concept="2OqwBi" id="6Nh7pRsy6_G" role="3uHU7w">
+                        <node concept="2GrUjf" id="6Nh7pRsy69L" role="2Oq$k0">
                           <ref role="2Gs0qQ" node="4qWfsD8QwQP" resolve="powGrid" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8QB_a" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsy7FH" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElGrid.getName1():java.lang.String" resolve="getName1" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="3clFbS" id="4qWfsD8Qxo4" role="3clFbx">
-                    <node concept="3clFbF" id="4qWfsD8QCyk" role="3cqZAp">
-                      <node concept="2OqwBi" id="4qWfsD8QEwP" role="3clFbG">
-                        <node concept="2GrUjf" id="4qWfsD8QEov" role="2Oq$k0">
+                  <node concept="3clFbS" id="6Nh7pRsy3xj" role="3clFbx">
+                    <node concept="3clFbF" id="6Nh7pRsynCV" role="3cqZAp">
+                      <node concept="2OqwBi" id="6Nh7pRsynTo" role="3clFbG">
+                        <node concept="2GrUjf" id="6Nh7pRsynCU" role="2Oq$k0">
                           <ref role="2Gs0qQ" node="4qWfsD8QwQP" resolve="powGrid" />
                         </node>
-                        <node concept="liA8E" id="4qWfsD8QEOn" role="2OqNvi">
+                        <node concept="liA8E" id="6Nh7pRsyp0o" role="2OqNvi">
                           <ref role="37wK5l" to="mgvq:~ElGrid.connectTransformer(nz.ac.victoria.swen424.mainTypes.ElTransformer):void" resolve="connectTransformer" />
-                          <node concept="2GrUjf" id="4qWfsD8QFBS" role="37wK5m">
-                            <ref role="2Gs0qQ" node="4qWfsD8QgAN" resolve="tran" />
+                          <node concept="2GrUjf" id="6Nh7pRsyp$A" role="37wK5m">
+                            <ref role="2Gs0qQ" node="6Nh7pRsy3mX" resolve="tran" />
                           </node>
                         </node>
                       </node>
@@ -1718,7 +1847,7 @@
             <node concept="37vLTI" id="1k1HPbVDyVa" role="3clFbG">
               <node concept="2ShNRf" id="1k1HPbVDyVK" role="37vLTx">
                 <node concept="1pGfFk" id="1k1HPbVD_$e" role="2ShVmc">
-                  <ref role="37wK5l" to="mgvq:~ElConsumer.&lt;init&gt;(java.lang.String,int,java.lang.String)" resolve="ElConsumer" />
+                  <ref role="37wK5l" to="mgvq:~ElConsumer.&lt;init&gt;(java.lang.String,int,java.lang.String,java.lang.String)" resolve="ElConsumer" />
                   <node concept="Xl_RD" id="1k1HPbVD_$H" role="37wK5m">
                     <property role="Xl_RC" value="name" />
                     <node concept="17Uvod" id="1k1HPbVD_Gu" role="lGtFl">
@@ -1770,6 +1899,25 @@
                                 <ref role="3TsBF5" to="aw7t:4qWfsD8P0vX" resolve="TransName" />
                               </node>
                               <node concept="30H73N" id="4qWfsD8PyjK" role="2Oq$k0" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="6Nh7pRszbIH" role="37wK5m">
+                    <property role="Xl_RC" value="name" />
+                    <node concept="17Uvod" id="6Nh7pRszcGM" role="lGtFl">
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                      <property role="2qtEX9" value="value" />
+                      <node concept="3zFVjK" id="6Nh7pRszcGP" role="3zH0cK">
+                        <node concept="3clFbS" id="6Nh7pRszcGQ" role="2VODD2">
+                          <node concept="3clFbF" id="6Nh7pRszcGW" role="3cqZAp">
+                            <node concept="2OqwBi" id="6Nh7pRszcGR" role="3clFbG">
+                              <node concept="3TrcHB" id="6Nh7pRszcGU" role="2OqNvi">
+                                <ref role="3TsBF5" to="aw7t:6Nh7pRsy_B$" resolve="UsageName" />
+                              </node>
+                              <node concept="30H73N" id="6Nh7pRszcGV" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>

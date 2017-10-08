@@ -17,8 +17,6 @@
       <dependencies>
         <dependency reexport="false">f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)</dependency>
         <dependency reexport="false">06938a7a-d23b-45e2-95a4-0d0c6d8a569c(ExternalCode)</dependency>
-        <dependency reexport="false">65c13e67-09b6-4695-af88-52024b7d2027(org.jetbrains.mps.samples.DecisionTable)</dependency>
-        <dependency reexport="false">38daf5f6-3ea9-4539-9ff0-4dfa8b2ff692(org.jetbrains.mps.samples.DecisionTable#3863300516938090568)</dependency>
         <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
         <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
       </dependencies>

@@ -145,6 +145,11 @@
       <property role="TrG5h" value="TransName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="6Nh7pRsvzv_" role="1TKVEl">
+      <property role="IQ2nx" value="7841080990075074533" />
+      <property role="TrG5h" value="WeatherName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="AxPO7" id="6Lad368Q94p">
     <property role="TrG5h" value="EnergyUnitEnum" />
@@ -361,6 +366,11 @@
     <node concept="1TJgyi" id="4qWfsD8P0vX" role="1TKVEl">
       <property role="IQ2nx" value="5097016817291102205" />
       <property role="TrG5h" value="TransName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="6Nh7pRsy_B$" role="1TKVEl">
+      <property role="IQ2nx" value="7841080990075869668" />
+      <property role="TrG5h" value="UsageName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

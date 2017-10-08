@@ -12,19 +12,21 @@ public class ElProducer extends MainBaseType
 	private int _maxProduction;
 	private String _connectName;
 	private ElTransformer _connect;
+	private String _weatherName;
 	private ProducitionMethodeType _productionType;
 	private WeatherValues _weather;
 	
 
-	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType, String connectName)
+	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType, String connectName, String weatherName)
 	{
 		super(name);
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
 		_productionType = prodType;
 		_connectName = connectName;
+		_weatherName = weatherName;
 		// TODO: Real reference
-		_weather = new WeatherValues("test", true);
+		//_weather = new WeatherValues("test", true);
 	}
 	
 	public void connectTransformer(ElTransformer connect){
@@ -39,6 +41,10 @@ public class ElProducer extends MainBaseType
 //		}
 	}
 	
+	public void connectWeather(WeatherValues weather){
+		_weather = weather;
+	}
+	
 	public boolean canChange() 
 	{
 		return _productionType == ProducitionMethodeType.Conventional; 
@@ -46,6 +52,10 @@ public class ElProducer extends MainBaseType
 	
 	public String getTransName(){
 		return _connectName;
+	}
+	
+	public String getWeatherName(){
+		return _weatherName;
 	}
 
 	@Override
