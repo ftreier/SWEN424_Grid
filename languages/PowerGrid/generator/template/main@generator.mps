@@ -2,13 +2,12 @@
 <model ref="r:c1ed82f3-bfb1-46e4-a5d4-5cd54c6af72a(main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
-    <use id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal" version="0" />
+    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="-1" />
+    <use id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal" version="-1" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
     <import index="aw7t" ref="r:2a8ae552-038d-4f4d-a413-89014cd6b087(PowerGrid.structure)" />
-    <import index="66tq" ref="r:b4263613-04e2-445e-bee6-d68be65f39c8(PowerGrid.Runtime.Utils)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
@@ -1227,28 +1226,48 @@
         </node>
         <node concept="3clFbH" id="4qE1Afm7Hv2" role="3cqZAp" />
         <node concept="3clFbF" id="4qWwfGpx_zo" role="3cqZAp">
-          <node concept="2YIFZM" id="4qWwfGpx_T9" role="3clFbG">
+          <node concept="2YIFZM" id="3X184CBhoUy" role="3clFbG">
+            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(nz.ac.victoria.swen424.SimulationIntervalEnum,int,java.util.List,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
             <ref role="1Pybhc" to="mgvq:~MainBaseType" resolve="MainBaseType" />
-            <ref role="37wK5l" to="mgvq:~MainBaseType.Simulate(int,int,java.util.List,java.util.List,java.util.List,java.util.List,javax.xml.stream.XMLEventWriter):void" resolve="Simulate" />
-            <node concept="3cmrfG" id="4qWwfGpxYZW" role="37wK5m">
-              <property role="3cmrfH" value="1" />
+            <node concept="Rm8GO" id="3X184CBhzMz" role="37wK5m">
+              <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.OneHour" resolve="OneHour" />
+              <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+              <node concept="1sPUBX" id="3X184CBh$cd" role="lGtFl">
+                <ref role="v9R2y" node="3X184CBgwhG" resolve="ReduceSimulationInterval" />
+              </node>
             </node>
-            <node concept="3cmrfG" id="4qWwfGpxZcC" role="37wK5m">
+            <node concept="3cmrfG" id="3X184CBhoU_" role="37wK5m">
               <property role="3cmrfH" value="24" />
+              <node concept="17Uvod" id="3X184CBi23f" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="3X184CBi23i" role="3zH0cK">
+                  <node concept="3clFbS" id="3X184CBi23j" role="2VODD2">
+                    <node concept="3clFbF" id="3X184CBi23p" role="3cqZAp">
+                      <node concept="2OqwBi" id="3X184CBi23k" role="3clFbG">
+                        <node concept="3TrcHB" id="3X184CBi23n" role="2OqNvi">
+                          <ref role="3TsBF5" to="aw7t:3X184CBhSHk" resolve="SimulationSteps" />
+                        </node>
+                        <node concept="30H73N" id="3X184CBi23o" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
-            <node concept="37vLTw" id="4qWwfGpxZgB" role="37wK5m">
+            <node concept="37vLTw" id="3X184CBhoUA" role="37wK5m">
               <ref role="3cqZAo" node="6Lad368R4N5" resolve="_producers" />
             </node>
-            <node concept="37vLTw" id="4qWwfGpxZvn" role="37wK5m">
+            <node concept="37vLTw" id="3X184CBhoUB" role="37wK5m">
               <ref role="3cqZAo" node="7IoK3S59rx8" resolve="_consumers" />
             </node>
-            <node concept="37vLTw" id="4qWwfGp_fRK" role="37wK5m">
+            <node concept="37vLTw" id="3X184CBhoUC" role="37wK5m">
               <ref role="3cqZAo" node="Kb51drnOYO" resolve="_transformers" />
             </node>
-            <node concept="37vLTw" id="4qWwfGpBi_S" role="37wK5m">
+            <node concept="37vLTw" id="3X184CBhoUD" role="37wK5m">
               <ref role="3cqZAo" node="1G90Zx2mVDV" resolve="_grids" />
             </node>
-            <node concept="37vLTw" id="4qWwfGpxZTr" role="37wK5m">
+            <node concept="37vLTw" id="3X184CBhoUE" role="37wK5m">
               <ref role="3cqZAo" node="4qE1Afm7nTR" resolve="xmlWriter" />
             </node>
           </node>
@@ -3142,6 +3161,177 @@
               <node concept="3t7uKx" id="7Erv4TlUl5p" role="2OqNvi">
                 <node concept="uoxfO" id="7Erv4TlUl5r" role="3t7uKA">
                   <ref role="uo_Cq" to="aw7t:7Erv4TlTGP5" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="jVnub" id="3X184CBgwhG">
+    <property role="TrG5h" value="ReduceSimulationInterval" />
+    <node concept="3aamgX" id="3X184CBgwiR" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBg$p3" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBg$p1" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.OneHour" resolve="OneHour" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBgx48" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBgx49" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBgxbi" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgz59" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBgxp1" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBgxbh" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBgxSG" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgzDe" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgzDg" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgw1A" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="3X184CBg$A1" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBgQ0Z" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBgQcv" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.TwoHours" resolve="TwoHours" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBg$SN" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBg$SO" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBg$ZX" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgAMx" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBg_dG" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBg$ZW" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBg_A4" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgBmA" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgBmC" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgw6f" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="3X184CBgQyj" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBgQyk" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBgR0O" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.ThreeHours" resolve="ThreeHours" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBgQym" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBgQyn" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBgQyo" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgQyp" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBgQyq" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBgQyr" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBgQys" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgQyt" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgQyu" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgQgl" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="3X184CBgBTE" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBgPRt" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBgQdH" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.FourHours" resolve="FourHours" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBgCdJ" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBgCdK" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBgCkT" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgFOv" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBgCyC" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBgCkS" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBgCV0" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgGo$" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgGoA" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgw6i" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="3X184CBgGVC" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBgPHV" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBgQeT" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.SixHours" resolve="SixHours" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBgHGN" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBgHGO" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBgHNX" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgJAx" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBgI1G" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBgHNW" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBgIq4" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgKaA" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgKaC" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgw6m" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="3X184CBgKHE" role="3aUrZf">
+      <ref role="30HIoZ" to="aw7t:3pcEwkEWqD2" resolve="PowerGridSimulator" />
+      <node concept="gft3U" id="3X184CBgP$p" role="1lVwrX">
+        <node concept="Rm8GO" id="3X184CBgQg3" role="gfFT$">
+          <ref role="Rm8GQ" to="8t2c:~SimulationIntervalEnum.EightHours" resolve="EightHours" />
+          <ref role="1Px2BO" to="8t2c:~SimulationIntervalEnum" resolve="SimulationIntervalEnum" />
+        </node>
+      </node>
+      <node concept="30G5F_" id="3X184CBgL4l" role="30HLyM">
+        <node concept="3clFbS" id="3X184CBgL4m" role="2VODD2">
+          <node concept="3clFbF" id="3X184CBgLbv" role="3cqZAp">
+            <node concept="2OqwBi" id="3X184CBgOte" role="3clFbG">
+              <node concept="2OqwBi" id="3X184CBgLpe" role="2Oq$k0">
+                <node concept="30H73N" id="3X184CBgLbu" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3X184CBgLLA" role="2OqNvi">
+                  <ref role="3TsBF5" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+                </node>
+              </node>
+              <node concept="3t7uKx" id="3X184CBgP1j" role="2OqNvi">
+                <node concept="uoxfO" id="3X184CBgP1l" role="3t7uKA">
+                  <ref role="uo_Cq" to="aw7t:3X184CBgw6r" />
                 </node>
               </node>
             </node>

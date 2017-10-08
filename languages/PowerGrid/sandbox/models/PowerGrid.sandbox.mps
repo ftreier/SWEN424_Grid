@@ -17,6 +17,7 @@
         <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
+        <property id="4557959800734321492" name="SimulationSteps" index="o1EGu" />
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="3886532124061166063" name="Consumers" index="N8dmf" />
         <child id="5542951320088342670" name="Grids" index="3lMnhl" />
@@ -62,6 +63,7 @@
   </registry>
   <node concept="sJg17" id="5n4IGwrWnq1">
     <property role="TrG5h" value="Test" />
+    <property role="o1EGu" value="24" />
     <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d" />

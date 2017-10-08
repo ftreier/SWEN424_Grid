@@ -1,5 +1,7 @@
 package nz.ac.victoria.swen424.weather;
 
+import java.util.Random;
+
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -13,6 +15,17 @@ public class Weather
 	{
 		_weather = weather;
 		_windSpeed = windSpeed;
+	}
+	
+	/**
+	 * Creates a random weather/wind combination.
+	 */
+	public Weather()
+	{
+		Random rand = new Random();
+		
+		_weather = WeatherEnum.valueOf(rand.nextInt(3));
+		_windSpeed = WindSpeedEnum.valueOf(rand.nextInt(13));
 	}
 
 	protected void writeHeaderData(XMLEventWriter xmlWriter, int i) throws XMLStreamException

@@ -62,18 +62,24 @@ public class ElGrid extends MainBaseType{
 		// Write connection
 		xmlWriter.add(eventFactory.createStartElement("", "", "connections"));
 
-		xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
-		xmlWriter.add(eventFactory.createAttribute("id", leftTransformer.GetGuid().toString()));
-		xmlWriter.add(eventFactory.createAttribute("name", leftTransformer.GetName()));
-		xmlWriter.add(eventFactory.createAttribute("side", "left"));
-		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+		if(leftTransformer != null)
+		{
+			xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
+			xmlWriter.add(eventFactory.createAttribute("id", leftTransformer.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", leftTransformer.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "left"));
+			xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+		}
 		
-		xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
-		xmlWriter.add(eventFactory.createAttribute("id", rightTransformer.GetGuid().toString()));
-		xmlWriter.add(eventFactory.createAttribute("name", rightTransformer.GetName()));
-		xmlWriter.add(eventFactory.createAttribute("side", "right"));
-		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
-		xmlWriter.add(eventFactory.createEndElement("", "", "connections")); // </connections>
+		if(rightTransformer != null)
+		{
+			xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
+			xmlWriter.add(eventFactory.createAttribute("id", rightTransformer.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", rightTransformer.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "right"));
+			xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+			xmlWriter.add(eventFactory.createEndElement("", "", "connections")); // </connections>
+		}
 		
 		xmlWriter.add(eventFactory.createEndElement("", "", "grid")); // </grid>
 	}

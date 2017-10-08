@@ -2,7 +2,7 @@
 <model ref="r:5a8ea039-0432-4fb0-883f-92690104bf9e(PowerGrid.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="11" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="-1" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
@@ -51,6 +51,9 @@
       <concept id="1186414976055" name="jetbrains.mps.lang.editor.structure.DrawBorderStyleClassItem" flags="ln" index="VPXOz" />
       <concept id="1186414999511" name="jetbrains.mps.lang.editor.structure.UnderlinedStyleClassItem" flags="ln" index="VQ3r3">
         <property id="1214316229833" name="underlined" index="2USNnj" />
+      </concept>
+      <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
+        <property id="1221209241505" name="value" index="1lJzqX" />
       </concept>
       <concept id="1214406454886" name="jetbrains.mps.lang.editor.structure.TextBackgroundColorStyleClassItem" flags="ln" index="30gYXW" />
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
@@ -243,6 +246,7 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="3X184CBlToi" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhTxki" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhT_bs" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhUl4U" role="3EZMnx" />
@@ -622,6 +626,18 @@
         <node concept="Vb9p2" id="2iMgKDgaCRM" role="3F10Kt">
           <property role="Vbekb" value="BOLD" />
         </node>
+        <node concept="VSNWy" id="3X184CBm2Mi" role="3F10Kt">
+          <property role="1lJzqX" value="20" />
+        </node>
+        <node concept="ljvvj" id="3X184CBmoma" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3X184CBmoov" role="3EZMnx">
+        <property role="3F0ifm" value="Name                        " />
+        <node concept="lj46D" id="3X184CBmI6l" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0A7n" id="NibI7nzWsT" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -638,6 +654,24 @@
         </node>
       </node>
       <node concept="3EZMnI" id="NibI7nzWsX" role="3EZMnx">
+        <node concept="3F0ifn" id="3X184CBh8aQ" role="3EZMnx">
+          <property role="3F0ifm" value="Simulation Intervall        " />
+        </node>
+        <node concept="3F0A7n" id="3X184CBh8eE" role="3EZMnx">
+          <ref role="1NtTu8" to="aw7t:3X184CBgxCW" resolve="SimulationInterval" />
+          <node concept="ljvvj" id="3X184CBh8g_" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="3X184CBhSJj" role="3EZMnx">
+          <property role="3F0ifm" value="Number of Simulation Steps  " />
+        </node>
+        <node concept="3F0A7n" id="3X184CBhSR5" role="3EZMnx">
+          <ref role="1NtTu8" to="aw7t:3X184CBhSHk" resolve="SimulationSteps" />
+          <node concept="ljvvj" id="3X184CBhST3" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
         <node concept="l2Vlx" id="NibI7nzWsY" role="2iSdaV" />
         <node concept="lj46D" id="NibI7nzWsZ" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -1366,7 +1400,11 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="68AEjYhUPG8" role="3EZMnx" />
+      <node concept="3F0ifn" id="68AEjYhUPG8" role="3EZMnx">
+        <node concept="11L4FC" id="3X184CBlJLV" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="68AEjYhUPHE" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhUPJe" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhUPKO" role="3EZMnx" />
@@ -1697,7 +1735,11 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="68AEjYhVIYK" role="3EZMnx" />
+      <node concept="3F0ifn" id="68AEjYhVIYK" role="3EZMnx">
+        <node concept="11L4FC" id="3X184CBlAas" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="68AEjYhVJ0w" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVJ2i" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVJ46" role="3EZMnx" />
@@ -1723,9 +1765,14 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="68AEjYhVJ9X" role="3EZMnx" />
+      <node concept="3F0ifn" id="68AEjYhVJ9X" role="3EZMnx">
+        <node concept="11L4FC" id="3X184CBlAaq" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="68AEjYhVJcX" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVTH3" role="3EZMnx" />
+      <node concept="3F0ifn" id="3X184CBlssH" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVTK_" role="3EZMnx" />
       <node concept="3F0A7n" id="4ZDpIZc1N51" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4ZDpIZbZ8iu" resolve="ConnectTransName1" />
@@ -1834,9 +1881,14 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="68AEjYhVJfZ" role="3EZMnx" />
+      <node concept="3F0ifn" id="68AEjYhVJfZ" role="3EZMnx">
+        <node concept="11L4FC" id="3X184CBlAao" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="68AEjYhVJj3" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVTO9" role="3EZMnx" />
+      <node concept="3F0ifn" id="3X184CBlsTI" role="3EZMnx" />
       <node concept="3F0ifn" id="68AEjYhVTRJ" role="3EZMnx" />
       <node concept="3F0A7n" id="4ZDpIZc1N7y" role="3EZMnx">
         <ref role="1NtTu8" to="aw7t:4ZDpIZbZ8iA" resolve="ConnectTransName2" />

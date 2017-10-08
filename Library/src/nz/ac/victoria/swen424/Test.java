@@ -20,6 +20,7 @@ import java.io.FileOutputStream;
 import javanet.staxutils.IndentingXMLEventWriter;
 import javax.xml.stream.XMLEventFactory;
 import nz.ac.victoria.swen424.mainTypes.MainBaseType;
+import nz.ac.victoria.swen424.SimulationIntervalEnum;
 
 public class Test {
   /*package*/ List<WeatherValues> _weather;
@@ -30,178 +31,14 @@ public class Test {
   /*package*/ List<ElGrid> _grids;
 
   public Test() {
-<<<<<<< HEAD
-	    WeatherValues wv;
-	    _weather = new LinkedList<WeatherValues>();
-	    wv = new WeatherValues("Wellington", false);
-	    wv.AppendWeather(new Weather(WeatherEnum.Rain, WindSpeedEnum.Flat));
-	    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.HurricaneForce));
-	    _weather.add(wv);
-	    wv = new WeatherValues("Auckland", true);
-	    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.Flat));
-	    _weather.add(wv);
-
-	    _usageProfile = new LinkedList<UsageProfile>();
-	    UsageProfile us = new UsageProfile("test");
-	    _usageProfile.add(us);
-
-	    _transformers = new LinkedList<ElTransformer>();
-	    _transformers.add(new ElTransformer("Central", 3000, 0, 95));
-	    _transformers.add(new ElTransformer("Norht", 3000, 0, 98));
-	    _transformers.add(new ElTransformer("East", 1000, 0, 90));
-	    _transformers.add(new ElTransformer("Soutn", 2000, 0, 97));
-	    _transformers.add(new ElTransformer("West", 1200, 0, 93));
-
-	    ElProducer producer;
-	    _producers = new LinkedList<ElProducer>();
-//	    producer = new ElProducer("NSolar", 0, 1000, ProducitionMethodeType.Solar, "Central", "Wellington");
-//	    producer.connectTransformer(_transformers.get(1));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("NWind", 0, 100, ProducitionMethodeType.Wind, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(1));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("CWind", 0, 100, ProducitionMethodeType.Wind, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(0));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("CConv", 100, 800, ProducitionMethodeType.Conventional, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(0));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("CSolar", 0, 50, ProducitionMethodeType.Solar, "West", "Wellington");
-//	    producer.connectTransformer(_transformers.get(0));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("SWind", 0, 1000, ProducitionMethodeType.Wind, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(3));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("SSolar", 0, 80, ProducitionMethodeType.Solar, "Norht", "Wellington");
-//	    producer.connectTransformer(_transformers.get(3));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("SConv", 100, 800, ProducitionMethodeType.Conventional, "Soutn", "Auckland");
-//	    producer.connectTransformer(_transformers.get(3));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("EConv", 300, 700, ProducitionMethodeType.Conventional, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(2));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("WConv", 10, 20, ProducitionMethodeType.Conventional, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(4));
-//	    _producers.add(producer);
-//	    producer = new ElProducer("WWind", 0, 500, ProducitionMethodeType.Wind, "East", "Auckland");
-//	    producer.connectTransformer(_transformers.get(2));
-//	    _producers.add(producer);
-//
-//	    ElConsumer consumer;
-//	    _consumers = new LinkedList<ElConsumer>();
-//	    consumer = new ElConsumer("CHouses", 200, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(0));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("CBuisness", 200, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(0));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("CIndustry", 200, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(0));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("NHouses", 200, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(1));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("NBuisness", 300, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(1));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("NIndustry", 1000, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(1));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("EHouses", 400, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(2));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("EBuisness", 100, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(2));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("EIndustry", 20, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(2));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("SHouses", 20, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(3));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("SBuisness", 100, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(3));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("SIndustry", 200, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(3));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("WHouses", 300, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(4));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("WBuisness", 150, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(4));
-//	    _consumers.add(consumer);
-//	    consumer = new ElConsumer("WIndustry", 100, "West", "test");
-//	    consumer.connectTransformer(_transformers.get(4));
-//	    _consumers.add(consumer);
-	    
-	    for (ElConsumer elConsumer : _consumers) {
-			for(UsageProfile usag : _usageProfile){
-				if(elConsumer.getUsageName()==usag.GetName()){
-					elConsumer.connectUsageProfile(usag);
-				}
-			}
-		}
-
-	    ElGrid grid;
-	    _grids = new LinkedList<ElGrid>();
-	    _grids.add(new ElGrid("T1", 1200, 98, 5));
-	    _grids.add(new ElGrid("T2",500,95, 2));
-	    _grids.add(new ElGrid("T3",700,99, 2));
-	    _grids.add(new ElGrid("T4",1000, 97, 1));
-	    _grids.add(new ElGrid("T5",700,95, 500));
-	    _grids.add(new ElGrid("T6",1000, 95, 500));
-	    System.out.println("");
-
-	  }
-  
-public void writeXML() throws Exception {
-XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
-XMLEventWriter xmlWriter = outputFactory.createXMLEventWriter(new FileOutputStream("output.xml"));
-xmlWriter = new IndentingXMLEventWriter(xmlWriter);
-XMLEventFactory eventFactory = XMLEventFactory.newInstance();
-
-xmlWriter.add(eventFactory.createStartDocument());
-xmlWriter.add(eventFactory.createStartElement("", "", "powerGridSimulator"));
-
-writeLayoutXML(xmlWriter);
-
-MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, _grids, xmlWriter);
-
-xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
-xmlWriter.add(eventFactory.createEndDocument());
-xmlWriter.close();
-}
-
-private void writeLayoutXML(XMLEventWriter xmlWriter) throws Exception {
-XMLEventFactory eventFactory = XMLEventFactory.newInstance();
-xmlWriter.add(eventFactory.createStartElement("", "", "modelDefinition"));
-
-// Export Weather 
-for (WeatherValues weather : _weather) {
-  weather.writeHeaderData(xmlWriter);
-}
-
-// Export Usage Profiles 
-for (UsageProfile usageProfile : _usageProfile) {
-  usageProfile.writeHeaderData(xmlWriter);
-}}
-  
-public static void main(String[] args) throws Exception {
-Test simulator = new Test();
-simulator.writeXML();
-}
-
-=======
     WeatherValues wv;
     _weather = new LinkedList<WeatherValues>();
     wv = new WeatherValues("Auckland", false);
-    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.Flat));
+    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.ModerateGale));
     _weather.add(wv);
 
     _usageProfiles = new LinkedList<UsageProfile>();
-    _usageProfiles.add(new UsageProfile("yester", 45, 18, 92, 55, 99, false));
+    _usageProfiles.add(new UsageProfile("yester", 20, 40, 100, 50, 70, false));
 
     ElTransformer toAdd;
     _transformers = new LinkedList<ElTransformer>();
@@ -212,21 +49,21 @@ simulator.writeXML();
 
     ElProducer producer;
     _producers = new LinkedList<ElProducer>();
-    producer = new ElProducer("Dam", 0, 1000, ProducitionMethodeType.Conventional, "Tran", "Auckland");
+    producer = new ElProducer("Dam", 0, 1000, ProducitionMethodeType.Conventional);
     producer.connectTransformer(findTransformer("Tran"));
     producer.connectWeather(findWeather("Auckland"));
     _producers.add(producer);
 
     ElConsumer consumer;
     _consumers = new LinkedList<ElConsumer>();
-    consumer = new ElConsumer("House", 1000, "Tran2", "yester");
+    consumer = new ElConsumer("House", 1000);
     consumer.connectUsageProfile(findUsageProfile("yester"));
     consumer.connectTransformer(findTransformer("Tran2"));
     _consumers.add(consumer);
 
     ElGrid grid;
     _grids = new LinkedList<ElGrid>();
-    grid = new ElGrid("Auck", 200, 80, 0, "Tran", "Tran2");
+    grid = new ElGrid("Auck", 200, 100, 0);
     grid.connectTransformer(findTransformer("Tran"));
     grid.connectTransformer(findTransformer("Tran2"));
     _grids.add(grid);
@@ -272,7 +109,7 @@ simulator.writeXML();
 
     writeLayoutXML(xmlWriter);
 
-    MainBaseType.Simulate(1, 24, _producers, _consumers, _transformers, _grids, xmlWriter);
+    MainBaseType.Simulate(SimulationIntervalEnum.OneHour, 12, _producers, _consumers, _transformers, _grids, xmlWriter);
 
     xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
     xmlWriter.add(eventFactory.createEndDocument());
@@ -314,5 +151,4 @@ simulator.writeXML();
     Test simulator = new Test();
     simulator.writeXML();
   }
->>>>>>> origin/Lachlan
 }
