@@ -26,6 +26,7 @@ public ElConsumer(String name, int maxConsumption, String connectName, String us
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
 	connect.addLeftConnection(this);
+	System.out.println("Consumer " + _name + " Transformer connect");
 //	if(connect.decreaseUsage(_maxConsumption, this) == true){
 //		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
 //			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
@@ -37,6 +38,7 @@ public void connectTransformer(ElTransformer connect){
 
 public void connectUsageProfile(UsageProfile usage){
 	_usageProfile = usage;
+	System.out.println("Consumer "+_name+" Usage Profile register");
 }
 
 public String getTransName(){

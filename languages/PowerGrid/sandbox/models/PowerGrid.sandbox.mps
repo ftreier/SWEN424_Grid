@@ -53,6 +53,7 @@
       </concept>
       <concept id="5771403044647069386" name="PowerGrid.structure.Consumer" flags="ng" index="3VOWaR">
         <property id="5097016817291102205" name="TransName" index="eq3CR" />
+        <property id="7841080990075869668" name="UsageName" index="2KmOhT" />
         <property id="5771403044647069445" name="MaxConsumption" index="3VOWdS" />
         <reference id="5758246778675381904" name="UsageProfile" index="244E1Z" />
       </concept>
@@ -111,6 +112,7 @@
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="House" />
       <property role="eq3CR" value="Tran" />
+      <property role="2KmOhT" value="yester" />
       <ref role="244E1Z" node="4ZDpIZc4bMy" resolve="yester" />
     </node>
   </node>

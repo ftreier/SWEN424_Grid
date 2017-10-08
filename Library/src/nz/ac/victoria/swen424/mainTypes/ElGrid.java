@@ -29,8 +29,8 @@ public class ElGrid extends MainBaseType{
 	}
 	
 	public void connectTransformer(ElTransformer connect){
-			if(_connectName1 == connect.getName()){ connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
-			else if(_connectName2 == connect.getName()){ connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
+			if(_connectName1 == connect.getName()){ leftTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
+			else if(_connectName2 == connect.getName()){ rightTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
 			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
 	}
 	
