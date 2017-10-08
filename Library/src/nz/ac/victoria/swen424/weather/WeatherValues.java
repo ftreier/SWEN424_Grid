@@ -2,7 +2,6 @@ package nz.ac.victoria.swen424.weather;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
