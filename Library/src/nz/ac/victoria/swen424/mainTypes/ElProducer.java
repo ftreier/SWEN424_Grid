@@ -29,8 +29,6 @@ public class ElProducer extends MainBaseType
 		_minProduction = minProduction;
 		_maxProduction = maxProduction;
 		_productionType = prodType;
-		// TODO: Real reference
-		//_weather = new WeatherValues("test", true);
 	}
 	@Override
 	public void setRender(int x, int y, int size) {
@@ -47,13 +45,6 @@ public class ElProducer extends MainBaseType
 		_connect = connect;
 		connect.addLeftConnection(this);
 		System.out.println("Producer "+_name+" Transformer connect");
-//		if(connect.increaseUsage(_maxProduction, this) == true){
-//			if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
-//				if(_connect == null){ _connect = connect; System.out.println("Producer " + _name + " connected to transformer"); }
-//				else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1");}
-//			}
-//			else{ System.out.println("Could not connect transformer due to a difference in voltage levels"); }
-//		}
 	}
 	
 	public void connectWeather(WeatherValues weather){

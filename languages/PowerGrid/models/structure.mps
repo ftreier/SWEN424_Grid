@@ -61,6 +61,16 @@
     <property role="34LRSv" value="Power Grid Simulator" />
     <property role="R4oN_" value="The root concept for our Power Grid Simulator" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3X184CBgxCW" role="1TKVEl">
+      <property role="IQ2nx" value="4557959800733964860" />
+      <property role="TrG5h" value="SimulationInterval" />
+      <ref role="AX2Wp" node="3X184CBgw1_" resolve="SimulationInterval" />
+    </node>
+    <node concept="1TJgyi" id="3X184CBhSHk" role="1TKVEl">
+      <property role="IQ2nx" value="4557959800734321492" />
+      <property role="TrG5h" value="SimulationSteps" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="6gi3O$9nB8n" role="1TKVEi">
       <property role="IQ2ns" value="7210842759737799191" />
       <property role="20lmBu" value="aggregation" />
@@ -151,26 +161,6 @@
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
-  <node concept="AxPO7" id="6Lad368Q94p">
-    <property role="TrG5h" value="EnergyUnitEnum" />
-    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
-    <node concept="M4N5e" id="6Lad368Q94r" role="M5hS2">
-      <property role="1uS6qv" value="1" />
-      <property role="1uS6qo" value="Wh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94q" role="M5hS2">
-      <property role="1uS6qv" value="2" />
-      <property role="1uS6qo" value="kWh" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94w" role="M5hS2">
-      <property role="1uS6qo" value="MWh" />
-      <property role="1uS6qv" value="3" />
-    </node>
-    <node concept="M4N5e" id="6Lad368Q94B" role="M5hS2">
-      <property role="1uS6qo" value="GWh" />
-      <property role="1uS6qv" value="4" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="7rDXPBEWeTn">
     <property role="EcuMT" value="8568651731614887511" />
     <property role="TrG5h" value="Transformer" />
@@ -185,11 +175,6 @@
     <node concept="1TJgyi" id="7rDXPBEWeTx" role="1TKVEl">
       <property role="IQ2nx" value="8568651731614887521" />
       <property role="TrG5h" value="Efficiency" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="7rDXPBEWeTA" role="1TKVEl">
-      <property role="IQ2nx" value="8568651731614887526" />
-      <property role="TrG5h" value="Usage" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="PrWs8" id="7rDXPBEWeTG" role="PzmwI">
@@ -234,11 +219,6 @@
     <property role="EcuMT" value="7210842759737799155" />
     <property role="TrG5h" value="Weather" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6gi3O$9nB8e" role="1TKVEl">
-      <property role="IQ2nx" value="7210842759737799182" />
-      <property role="TrG5h" value="day" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="1TJgyi" id="6gi3O$9nB8g" role="1TKVEl">
       <property role="IQ2nx" value="7210842759737799184" />
       <property role="TrG5h" value="Type" />
@@ -420,6 +400,34 @@
       <property role="IQ2nx" value="5097090694229163126" />
       <property role="TrG5h" value="IsRandom" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="3X184CBgw1_">
+    <property role="TrG5h" value="SimulationInterval" />
+    <ref role="M4eZT" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="M4N5e" id="3X184CBgw1A" role="M5hS2">
+      <property role="1uS6qo" value="1 hour" />
+      <property role="1uS6qv" value="1" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6f" role="M5hS2">
+      <property role="1uS6qo" value="2 hours" />
+      <property role="1uS6qv" value="2" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgQgl" role="M5hS2">
+      <property role="1uS6qo" value="3 hours" />
+      <property role="1uS6qv" value="3" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6i" role="M5hS2">
+      <property role="1uS6qo" value="4 hours" />
+      <property role="1uS6qv" value="4" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6m" role="M5hS2">
+      <property role="1uS6qo" value="6 hours" />
+      <property role="1uS6qv" value="6" />
+    </node>
+    <node concept="M4N5e" id="3X184CBgw6r" role="M5hS2">
+      <property role="1uS6qo" value="8 hours" />
+      <property role="1uS6qv" value="8" />
     </node>
   </node>
 </model>

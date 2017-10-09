@@ -10,39 +10,28 @@ import javax.xml.stream.XMLStreamException;
 
 import nz.ac.victoria.swen424.UsageProfile;
 
-public class ElConsumer extends MainBaseType implements IMainType {
-	//private String _name;
-	private int _minConsumption;
+public class ElConsumer extends MainBaseType{
 	private int _maxConsumption;
 	private String _connectName;
 	private String _usageName;
 	private ElTransformer _connect;
 	private UsageProfile _usageProfile;
 	
-	//for rendering purposes 
-		private int x; 
-		private int y; 
+	//for rendering purposes
+		private int x;
+		private int y;
 		private int size;
 
-	
+
 public ElConsumer(String name, int maxConsumption){
 	super(name);
 	_maxConsumption = maxConsumption;
-	// TODO: Real reference
-	//_usageProfile = new UsageProfile("test");
 	}
 
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
 	connect.addLeftConnection(this);
 	System.out.println("Consumer " + _name + " Transformer connect");
-//	if(connect.decreaseUsage(_maxConsumption, this) == true){
-//		if(connect.getLeftNet() == 1 || connect.getRightNet() == 1){
-//			if(_connect == null){ _connect = connect; System.out.println("Consumer " + _name + " connected to transformer");}
-//			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 1"); }
-//		}
-//		else{ System.out.println("Could not connect transformer due to a difference in voltage levels");}
-//	}
 }
 @Override
 public void setRender(int x, int y, int size) {
@@ -72,15 +61,11 @@ public int getMaxConsumption(){
 }
 
 public String getData() {
-	// TODO show the data related to the consumer
-	// _name, _minConsumption & _maxConsumption
 	return _name;
 }
 
 @Override
 public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException {
-	// TODO Auto-generated method stub
-
 }
 
 @Override

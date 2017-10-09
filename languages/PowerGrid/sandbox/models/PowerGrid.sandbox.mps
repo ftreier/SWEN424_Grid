@@ -2,7 +2,7 @@
 <model ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="0" />
+    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="-1" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
@@ -14,9 +14,9 @@
       <concept id="8568651731614887511" name="PowerGrid.structure.Transformer" flags="ng" index="2s6h$e">
         <property id="8568651731614887517" name="MaxCapacity" index="2s6h$4" />
         <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
-        <property id="8568651731614887526" name="Usage" index="2s6h$Z" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
+        <property id="4557959800734321492" name="SimulationSteps" index="o1EGu" />
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="3886532124061166063" name="Consumers" index="N8dmf" />
         <child id="5542951320088342670" name="Grids" index="3lMnhl" />
@@ -47,7 +47,7 @@
         <reference id="7210842759738047906" name="Weather" index="1Hs3bF" />
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
-        <property id="7210842759737799182" name="day" index="1Hj7P7" />
+        <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
         <child id="7210842759737835332" name="Weather" index="1Hjf0d" />
@@ -66,10 +66,65 @@
   </registry>
   <node concept="sJg17" id="4ZDpIZc4bMv">
     <property role="TrG5h" value="tester" />
+    <property role="o1EGu" value="10" />
+    <node concept="3VOWaR" id="jCjOAzvzXx" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="Office" />
+      <property role="eq3CR" value="Tran" />
+      <property role="2KmOhT" value="toda" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzwq1z" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="House" />
+      <property role="eq3CR" value="Tran3" />
+      <property role="2KmOhT" value="yester" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzCdRf" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="Building" />
+      <property role="eq3CR" value="SuperTran" />
+      <property role="2KmOhT" value="yester" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAz$5dN" role="N8dmf">
+      <property role="3VOWdS" value="100" />
+      <property role="TrG5h" value="House" />
+      <property role="eq3CR" value="SuperTran" />
+      <property role="2KmOhT" value="toda" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAz$5dR" role="N8dmf">
+      <property role="3VOWdS" value="800" />
+      <property role="TrG5h" value="Again" />
+      <property role="eq3CR" value="Tran4" />
+      <property role="2KmOhT" value="yester" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzB1wz" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="Home" />
+      <property role="eq3CR" value="Tran" />
+      <property role="2KmOhT" value="yester" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzBqg6" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="Office" />
+      <property role="eq3CR" value="Tran2" />
+      <property role="2KmOhT" value="toda" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzBqgd" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="Work" />
+      <property role="eq3CR" value="Tran2" />
+      <property role="2KmOhT" value="yester" />
+    </node>
+    <node concept="3VOWaR" id="jCjOAzBqgl" role="N8dmf">
+      <property role="3VOWdS" value="1000" />
+      <property role="TrG5h" value="School" />
+      <property role="eq3CR" value="Tran2" />
+      <property role="2KmOhT" value="yester" />
+    </node>
     <node concept="1Hj7UV" id="4ZDpIZc4bMw" role="1Hj7Pu">
       <property role="TrG5h" value="Auckland" />
-      <node concept="1Hj7UU" id="4ZDpIZc4bMx" role="1Hjf0d">
-        <property role="1Hj7P7" value="1" />
+      <node concept="1Hj7UU" id="351O6722GPz" role="1Hjf0d">
+        <property role="1Hj7Pq" value="8" />
       </node>
     </node>
     <node concept="1vLJl6" id="4ZDpIZc4bMy" role="1vLJPo">
@@ -189,95 +244,79 @@
       <property role="245u9L" value="Tran" />
       <property role="245u99" value="Tran2" />
     </node>
-    <node concept="2s6h$e" id="4ZDpIZc4bM_" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IOS" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="99" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="Tran" />
     </node>
-    <node concept="2s6h$e" id="4ZDpIZc4bMB" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IP6" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="99" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="Tran2" />
     </node>
-    <node concept="2s6h$e" id="jCjOAzv40r" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IPk" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="50" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="Tran3" />
     </node>
-    <node concept="2s6h$e" id="jCjOAz$5dC" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IPy" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="60" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="SuperTran" />
     </node>
-    <node concept="2s6h$e" id="jCjOAz$5dH" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IPK" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="100" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="Tran4" />
     </node>
-    <node concept="2s6h$e" id="jCjOAzCdR8" role="2s6h$R">
+    <node concept="2s6h$e" id="351O6722IPS" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="55" />
-      <property role="2s6h$Z" value="0" />
       <property role="TrG5h" value="Tran5" />
     </node>
-    <node concept="3VOWaR" id="jCjOAzvzXx" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="Office" />
-      <property role="eq3CR" value="Tran" />
-      <property role="2KmOhT" value="toda" />
+  </node>
+  <node concept="sJg17" id="5n4IGwrWnq1">
+    <property role="TrG5h" value="Test" />
+    <property role="o1EGu" value="24" />
+    <node concept="2s6h$e" id="2djYxgKlzXH" role="2s6h$R">
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="99" />
+      <property role="TrG5h" value="Trans1" />
     </node>
-    <node concept="3VOWaR" id="jCjOAzwq1z" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="House" />
-      <property role="eq3CR" value="Tran3" />
-      <property role="2KmOhT" value="yester" />
+    <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
+      <property role="TrG5h" value="Wellington" />
+      <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d">
+        <property role="1Hj7Pq" value="3" />
+      </node>
     </node>
-    <node concept="3VOWaR" id="jCjOAzCdRf" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="Building" />
-      <property role="eq3CR" value="SuperTran" />
-      <property role="2KmOhT" value="yester" />
+    <node concept="1vLJl6" id="5n4IGwrWnq4" role="1vLJPo">
+      <property role="TrG5h" value="Residential" />
+      <property role="1vLJIY" value="20" />
+      <property role="1vLJIW" value="40" />
+      <property role="1vLJIL" value="100" />
+      <property role="1vLJIP" value="50" />
+      <property role="1vLJIC" value="90" />
     </node>
-    <node concept="3VOWaR" id="jCjOAz$5dN" role="N8dmf">
-      <property role="3VOWdS" value="100" />
-      <property role="TrG5h" value="House" />
-      <property role="eq3CR" value="SuperTran" />
-      <property role="2KmOhT" value="toda" />
+    <node concept="3yd64n" id="5n4IGwrWnq5" role="3yd3h7">
+      <property role="3yd64o" value="0" />
+      <property role="3yd3hR" value="100" />
+      <property role="2KFMDS" value="Wellington" />
+      <property role="244Foq" value="Trans1" />
+      <property role="TrG5h" value="Wellington Wind Mill" />
     </node>
-    <node concept="3VOWaR" id="jCjOAz$5dR" role="N8dmf">
-      <property role="3VOWdS" value="800" />
-      <property role="TrG5h" value="Again" />
-      <property role="eq3CR" value="Tran4" />
-      <property role="2KmOhT" value="yester" />
+    <node concept="3lM9jV" id="5n4IGwrWnq6" role="3lMnhl">
+      <property role="3lM9jS" value="200" />
+      <property role="3lM9jN" value="99" />
+      <property role="244Ey0" value="1" />
+      <property role="TrG5h" value="Wellington -Auckland" />
+      <property role="245u9L" value="Trans1" />
+      <property role="245u99" value="Trans1" />
     </node>
-    <node concept="3VOWaR" id="jCjOAzB1wz" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="Home" />
-      <property role="eq3CR" value="Tran" />
-      <property role="2KmOhT" value="yester" />
-    </node>
-    <node concept="3VOWaR" id="jCjOAzBqg6" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="Office" />
-      <property role="eq3CR" value="Tran2" />
-      <property role="2KmOhT" value="toda" />
-    </node>
-    <node concept="3VOWaR" id="jCjOAzBqgd" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="Work" />
-      <property role="eq3CR" value="Tran2" />
-      <property role="2KmOhT" value="yester" />
-    </node>
-    <node concept="3VOWaR" id="jCjOAzBqgl" role="N8dmf">
-      <property role="3VOWdS" value="1000" />
-      <property role="TrG5h" value="School" />
-      <property role="eq3CR" value="Tran2" />
-      <property role="2KmOhT" value="yester" />
+    <node concept="3VOWaR" id="5n4IGwrWnq8" role="N8dmf">
+      <property role="3VOWdS" value="10" />
+      <property role="TrG5h" value="House 1" />
+      <property role="eq3CR" value="Trans1" />
+      <property role="2KmOhT" value="Residential" />
     </node>
   </node>
 </model>

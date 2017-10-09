@@ -3,3 +3,4 @@ source_gen
 source_gen.caches
 /.mps/workspace.xml
 .DS_Store
+output.xml

@@ -7,8 +7,6 @@ import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-import jdk.management.resource.internal.TotalResourceContext;
-
 public class ElGrid extends MainBaseType{
 
 	private int _maxCapacity;
@@ -33,10 +31,24 @@ public class ElGrid extends MainBaseType{
 		
 	}
 	
-	public void connectTransformer(ElTransformer connect){
-			if(leftTransformer == null){ leftTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 1");}
-			else if(rightTransformer == null){ rightTransformer = connect; connect.addRightConnection(this);; System.out.println("Grid " + _name + " connected to transformer 2");}
-			else{ System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); }
+	public void connectTransformer(ElTransformer connect)
+	{
+		if(leftTransformer == null)
+		{
+			leftTransformer = connect;
+			connect.addRightConnection(this);
+			System.out.println("Grid " + _name + " connected to transformer 1");
+		}
+		else if(rightTransformer == null)
+		{
+			rightTransformer = connect;
+			connect.addRightConnection(this);
+			System.out.println("Grid " + _name + " connected to transformer 2");
+		}
+		else
+		{
+			System.out.println("Could not connect transformer to grid as it would exceed the maximum capacity of 2"); 
+		}
 	}
 	@Override
 	public void setRender(int x, int y, int size) {
@@ -78,18 +90,24 @@ public class ElGrid extends MainBaseType{
 		// Write connection
 		xmlWriter.add(eventFactory.createStartElement("", "", "connections"));
 
-		xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
-		xmlWriter.add(eventFactory.createAttribute("id", leftTransformer.GetGuid().toString()));
-		xmlWriter.add(eventFactory.createAttribute("name", leftTransformer.GetName()));
-		xmlWriter.add(eventFactory.createAttribute("side", "left"));
-		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+		if(leftTransformer != null)
+		{
+			xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
+			xmlWriter.add(eventFactory.createAttribute("id", leftTransformer.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", leftTransformer.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "left"));
+			xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+		}
 		
-		xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
-		xmlWriter.add(eventFactory.createAttribute("id", rightTransformer.GetGuid().toString()));
-		xmlWriter.add(eventFactory.createAttribute("name", rightTransformer.GetName()));
-		xmlWriter.add(eventFactory.createAttribute("side", "right"));
-		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
-		xmlWriter.add(eventFactory.createEndElement("", "", "connections")); // </connections>
+		if(rightTransformer != null)
+		{
+			xmlWriter.add(eventFactory.createStartElement("", "", "transformer"));
+			xmlWriter.add(eventFactory.createAttribute("id", rightTransformer.GetGuid().toString()));
+			xmlWriter.add(eventFactory.createAttribute("name", rightTransformer.GetName()));
+			xmlWriter.add(eventFactory.createAttribute("side", "right"));
+			xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
+			xmlWriter.add(eventFactory.createEndElement("", "", "connections")); // </connections>
+		}
 		
 		xmlWriter.add(eventFactory.createEndElement("", "", "grid")); // </grid>
 	}
@@ -115,7 +133,6 @@ public class ElGrid extends MainBaseType{
 		if(leftTransformer.getRightConnections().size() == 1 && rightTransformer.getRightConnections().size() == 1)
 		{
 			double balance = leftTransformer._simStat.currentElectricity + rightTransformer._simStat.currentElectricity;
-			//if(balance <= 0.1 && balance >= -0.1)
 			if(compareRange(balance, 0))
 			{
 				_simStat.currentElectricity = leftTransformer._simStat.currentElectricity;
@@ -123,7 +140,6 @@ public class ElGrid extends MainBaseType{
 			else
 			{
 				_simStat.currentElectricity = leftTransformer._simStat.currentElectricity;
-				//_simStat.isOk = false;
 			}
 		}
 		else if (leftTransformer.getRightConnections().size() == 1)
@@ -261,7 +277,6 @@ public class ElGrid extends MainBaseType{
 		xmlWriter.add(eventFactory.createAttribute("usage", Double.toString(_simStat.getUsage())));
 		xmlWriter.add(eventFactory.createAttribute("maxCapacity", Integer.toString(_maxCapacity)));
 		xmlWriter.add(eventFactory.createEndElement("", "", "grid")); // </consumer>
-
 	}
 	// return a stateObject for graphical rendering
 	public StateObject getState() {

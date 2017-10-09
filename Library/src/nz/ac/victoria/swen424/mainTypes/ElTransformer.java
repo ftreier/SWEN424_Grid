@@ -1,36 +1,31 @@
 package nz.ac.victoria.swen424.mainTypes;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
-import java.util.Set;
 import javax.xml.stream.XMLStreamException;
 
 public class ElTransformer extends MainBaseType
 {
 	private int _maxcapacity;
-	private int _usage;
 	private int _efficiency;
 	private List<MainBaseType> _leftConnection;
 	private List<ElGrid> _rightConnection;
 	//private Set<MainBaseType> connections;
-	
-	//for rendering purposes 
-		private int x; 
-		private int y; 
+
+	//for rendering purposes
+		private int x;
+		private int y;
 		private int size;
 
-	public ElTransformer(String name, int maxcapacity, int usage, int efficiency){
+	public ElTransformer(String name, int maxcapacity, int efficiency){
 		super(name);
 		_maxcapacity = maxcapacity;
-		_usage = usage;
 		_efficiency = efficiency;
 		_leftConnection = new LinkedList<>();
 		_rightConnection = new LinkedList<>();
-		//connections = new HashSet<MainBaseType>();
 	}
 	@Override
 	public void setRender(int x, int y, int size) {
@@ -38,11 +33,11 @@ public class ElTransformer extends MainBaseType
 		this.y=y;
 		this.size=size;
 	}
-	
+
 	public int getX() {return x;}
 	public int getY() {return y;}
 	public int getSize() {return size;}
-	
+
 	public void addLeftConnection(MainBaseType object)
 	{
 		_leftConnection.add(object);
@@ -66,14 +61,6 @@ public class ElTransformer extends MainBaseType
 	public String getName(){
 		return _name;
 	}
-	
-	//public Set<IMainType> getConnections(){
-		//return connections;
-	
-//	
-//	public Set<MainBaseType> getConnections(){
-//		return connections;
-//	}
 
 	public String getData() {
 		// TODO Auto-generated method stub
