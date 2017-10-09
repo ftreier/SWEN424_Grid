@@ -121,7 +121,7 @@
     </node>
   </node>
   <node concept="sJg17" id="4ZDpIZc4bMv">
-    <property role="TrG5h" value="tester" />
+    <property role="TrG5h" value="LargeNet2" />
     <property role="o1EGu" value="10" />
     <property role="o0NDQ" value="2" />
     <node concept="3VOWaR" id="jCjOAzvzXx" role="N8dmf">
@@ -332,51 +332,9 @@
       <property role="TrG5h" value="Tran5" />
     </node>
   </node>
-  <node concept="sJg17" id="351O6720jb$">
-    <property role="o1EGu" value="24" />
-    <property role="TrG5h" value="NewZealand" />
-    <node concept="1Hj7UV" id="351O6720jb_" role="1Hj7Pu">
-      <property role="TrG5h" value="asdf" />
-      <node concept="1Hj7UU" id="351O6720jbA" role="1Hjf0d" />
-    </node>
-    <node concept="1vLJl6" id="351O6720jbB" role="1vLJPo">
-      <property role="TrG5h" value="asdf" />
-      <property role="1vLJIY" value="1" />
-      <property role="1vLJIW" value="1" />
-      <property role="1vLJIL" value="1" />
-      <property role="1vLJIP" value="1" />
-      <property role="1vLJIC" value="1" />
-    </node>
-    <node concept="3yd64n" id="351O6720jbC" role="3yd3h7">
-      <property role="3yd64o" value="0" />
-      <property role="3yd3hR" value="100" />
-      <property role="TrG5h" value="asdf" />
-      <property role="244Foq" value="asdf" />
-      <property role="2KFMDS" value="asdf" />
-    </node>
-    <node concept="3lM9jV" id="351O6720jbD" role="3lMnhl">
-      <property role="3lM9jS" value="200" />
-      <property role="3lM9jN" value="98" />
-      <property role="244Ey0" value="1" />
-      <property role="TrG5h" value="asdf" />
-      <property role="245u9L" value="asdf" />
-      <property role="245u99" value="asdf" />
-    </node>
-    <node concept="2s6h$e" id="351O6720jbE" role="2s6h$R">
-      <property role="2s6h$4" value="200" />
-      <property role="2s6h$S" value="98" />
-      <property role="TrG5h" value="asdf" />
-    </node>
-    <node concept="3VOWaR" id="351O6720jbF" role="N8dmf">
-      <property role="3VOWdS" value="100" />
-      <property role="TrG5h" value="asdf" />
-      <property role="eq3CR" value="asdf" />
-      <property role="2KmOhT" value="asdf" />
-    </node>
-  </node>
   <node concept="sJg17" id="212Cs3XqGN2">
     <property role="o1EGu" value="24" />
-    <property role="TrG5h" value="Number2" />
+    <property role="TrG5h" value="LargeNet1" />
     <property role="o0NDQ" value="3" />
     <node concept="1Hj7UV" id="212Cs3XqGN3" role="1Hj7Pu">
       <property role="TrG5h" value="Auck" />
@@ -390,10 +348,6 @@
         <property role="1Hj7Pq" value="5" />
       </node>
       <node concept="1Hj7UU" id="212Cs3XqGRF" role="1Hjf0d">
-        <property role="1Hj7Pq" value="4" />
-      </node>
-      <node concept="1Hj7UU" id="212Cs3XqGRK" role="1Hjf0d">
-        <property role="1Hj7Pp" value="2" />
         <property role="1Hj7Pq" value="4" />
       </node>
     </node>
@@ -411,13 +365,6 @@
         <property role="1Hj7Pq" value="8" />
       </node>
       <node concept="1Hj7UU" id="212Cs3XqGS7" role="1Hjf0d" />
-      <node concept="1Hj7UU" id="212Cs3XqGSc" role="1Hjf0d">
-        <property role="1Hj7Pp" value="3" />
-      </node>
-      <node concept="1Hj7UU" id="212Cs3XqGSi" role="1Hjf0d">
-        <property role="1Hj7Pp" value="2" />
-        <property role="1Hj7Pq" value="3" />
-      </node>
     </node>
     <node concept="1Hj7UV" id="212Cs3XqGSp" role="1Hj7Pu">
       <property role="TrG5h" value="Ch" />
@@ -433,10 +380,6 @@
       </node>
       <node concept="1Hj7UU" id="212Cs3XqGSL" role="1Hjf0d">
         <property role="1Hj7Pq" value="7" />
-      </node>
-      <node concept="1Hj7UU" id="212Cs3XqGSQ" role="1Hjf0d">
-        <property role="1Hj7Pp" value="2" />
-        <property role="1Hj7Pq" value="1" />
       </node>
     </node>
     <node concept="1vLJl6" id="212Cs3XqGN5" role="1vLJPo">
