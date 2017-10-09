@@ -13,7 +13,6 @@ public class ElTransformer extends MainBaseType
 	private int _efficiency;
 	private List<MainBaseType> _leftConnection;
 	private List<ElGrid> _rightConnection;
-	//private Set<MainBaseType> connections;
 
 	//for rendering purposes
 		private int x;
@@ -191,6 +190,11 @@ public class ElTransformer extends MainBaseType
 			{
 				_simStat.isOk = false;
 			}
+		}
+		
+		if(Math.abs(_simStat.currentElectricity) > _maxcapacity)
+		{
+			_simStat.isOk = false;
 		}
 
 		return _simStat.isOk;

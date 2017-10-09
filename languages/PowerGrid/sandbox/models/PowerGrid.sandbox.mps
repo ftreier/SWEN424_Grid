@@ -16,6 +16,7 @@
         <property id="8568651731614887521" name="Efficiency" index="2s6h$S" />
       </concept>
       <concept id="3912689115450157634" name="PowerGrid.structure.PowerGridSimulator" flags="ng" index="sJg17">
+        <property id="4557959800733964860" name="SimulationInterval" index="o0NDQ" />
         <property id="4557959800734321492" name="SimulationSteps" index="o1EGu" />
         <child id="8568651731614887534" name="Transformers" index="2s6h$R" />
         <child id="3886532124061166063" name="Consumers" index="N8dmf" />
@@ -47,6 +48,7 @@
         <reference id="7210842759738047906" name="Weather" index="1Hs3bF" />
       </concept>
       <concept id="7210842759737799155" name="PowerGrid.structure.Weather" flags="ng" index="1Hj7UU">
+        <property id="7210842759737799184" name="Type" index="1Hj7Pp" />
         <property id="7210842759737799187" name="Wind" index="1Hj7Pq" />
       </concept>
       <concept id="7210842759737799154" name="PowerGrid.structure.WeatherList" flags="ng" index="1Hj7UV">
@@ -65,17 +67,26 @@
     </language>
   </registry>
   <node concept="sJg17" id="5n4IGwrWnq1">
-    <property role="TrG5h" value="Test" />
+    <property role="TrG5h" value="SimpleNet" />
     <property role="o1EGu" value="24" />
+    <property role="o0NDQ" value="2" />
     <node concept="2s6h$e" id="2djYxgKlzXH" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="99" />
-      <property role="TrG5h" value="Trans1" />
+      <property role="TrG5h" value="T Wellington" />
+    </node>
+    <node concept="2s6h$e" id="351O67268ES" role="2s6h$R">
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="98" />
+      <property role="TrG5h" value="T Auckland" />
     </node>
     <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d">
         <property role="1Hj7Pq" value="3" />
+      </node>
+      <node concept="1Hj7UU" id="351O6726yYa" role="1Hjf0d">
+        <property role="1Hj7Pp" value="2" />
       </node>
     </node>
     <node concept="1vLJl6" id="5n4IGwrWnq4" role="1vLJPo">
@@ -90,27 +101,29 @@
       <property role="3yd64o" value="0" />
       <property role="3yd3hR" value="100" />
       <property role="2KFMDS" value="Wellington" />
-      <property role="244Foq" value="Trans1" />
+      <property role="244Foq" value="T Wellington" />
       <property role="TrG5h" value="Wellington Wind Mill" />
+      <property role="JvpKn" value="3" />
     </node>
     <node concept="3lM9jV" id="5n4IGwrWnq6" role="3lMnhl">
       <property role="3lM9jS" value="200" />
       <property role="3lM9jN" value="99" />
       <property role="244Ey0" value="1" />
-      <property role="TrG5h" value="Wellington -Auckland" />
-      <property role="245u9L" value="Trans1" />
-      <property role="245u99" value="Trans1" />
+      <property role="TrG5h" value="Wellington-Auckland" />
+      <property role="245u9L" value="T Wellington" />
+      <property role="245u99" value="T Auckland" />
     </node>
     <node concept="3VOWaR" id="5n4IGwrWnq8" role="N8dmf">
-      <property role="3VOWdS" value="10" />
+      <property role="3VOWdS" value="100" />
       <property role="TrG5h" value="House 1" />
-      <property role="eq3CR" value="Trans1" />
+      <property role="eq3CR" value="T Auckland" />
       <property role="2KmOhT" value="Residential" />
     </node>
   </node>
   <node concept="sJg17" id="4ZDpIZc4bMv">
     <property role="TrG5h" value="tester" />
     <property role="o1EGu" value="10" />
+    <property role="o0NDQ" value="2" />
     <node concept="3VOWaR" id="jCjOAzvzXx" role="N8dmf">
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="Office" />
@@ -289,7 +302,7 @@
       <property role="245u99" value="Tran2" />
     </node>
     <node concept="2s6h$e" id="351O6722IOS" role="2s6h$R">
-      <property role="2s6h$4" value="200" />
+      <property role="2s6h$4" value="2000" />
       <property role="2s6h$S" value="99" />
       <property role="TrG5h" value="Tran" />
     </node>

@@ -21,6 +21,7 @@ import javanet.staxutils.IndentingXMLEventWriter;
 import javax.xml.stream.XMLEventFactory;
 import nz.ac.victoria.swen424.mainTypes.MainBaseType;
 import nz.ac.victoria.swen424.SimulationIntervalEnum;
+import nz.ac.victoria.swen424.gui.XMLParser;
 
 public class Test {
   /*package*/ List<WeatherValues> _weather;
@@ -34,29 +35,90 @@ public class Test {
     WeatherValues wv;
     _weather = new LinkedList<WeatherValues>();
     wv = new WeatherValues("Auckland", false);
-    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.ModerateGale));
+    wv.AppendWeather(new Weather(WeatherEnum.ClearSky, WindSpeedEnum.FrshGale));
     _weather.add(wv);
 
     _usageProfiles = new LinkedList<UsageProfile>();
-    _usageProfiles.add(new UsageProfile("yester", 20, 40, 100, 50, 70, false));
+    _usageProfiles.add(new UsageProfile("yester", 45, 18, 92, 55, 99, false));
+    _usageProfiles.add(new UsageProfile("toda", 60, 22, 54, 78, 24, false));
 
     ElTransformer toAdd;
     _transformers = new LinkedList<ElTransformer>();
-    toAdd = new ElTransformer("Tran", 200, 99);
+    toAdd = new ElTransformer("Tran", 2000, 99);
     _transformers.add(toAdd);
     toAdd = new ElTransformer("Tran2", 200, 99);
+    _transformers.add(toAdd);
+    toAdd = new ElTransformer("Tran3", 200, 50);
+    _transformers.add(toAdd);
+    toAdd = new ElTransformer("SuperTran", 200, 60);
+    _transformers.add(toAdd);
+    toAdd = new ElTransformer("Tran4", 200, 100);
+    _transformers.add(toAdd);
+    toAdd = new ElTransformer("Tran5", 200, 55);
     _transformers.add(toAdd);
 
     ElProducer producer;
     _producers = new LinkedList<ElProducer>();
-    producer = new ElProducer("Dam", 0, 1000, ProducitionMethodeType.Conventional);
+    producer = new ElProducer("Dam", 0, 1000, ProducitionMethodeType.Wind);
+    producer.connectTransformer(findTransformer("Tran"));
+    producer.connectWeather(findWeather("Auckland"));
+    _producers.add(producer);
+    producer = new ElProducer("Power", 0, 1000, ProducitionMethodeType.Conventional);
+    producer.connectTransformer(findTransformer("Tran5"));
+    producer.connectWeather(findWeather("Auckland"));
+    _producers.add(producer);
+    producer = new ElProducer("Plant", 0, 1000, ProducitionMethodeType.Conventional);
+    producer.connectTransformer(findTransformer("Tran2"));
+    producer.connectWeather(findWeather("Auckland"));
+    _producers.add(producer);
+    producer = new ElProducer("Greens", 0, 1000, ProducitionMethodeType.Wind);
+    producer.connectTransformer(findTransformer("Tran2"));
+    producer.connectWeather(findWeather("Auckland"));
+    _producers.add(producer);
+    producer = new ElProducer("Green2", 0, 1000, ProducitionMethodeType.Wind);
+    producer.connectTransformer(findTransformer("Tran"));
+    producer.connectWeather(findWeather("Auckland"));
+    _producers.add(producer);
+    producer = new ElProducer("Sonar", 0, 1000, ProducitionMethodeType.Wind);
     producer.connectTransformer(findTransformer("Tran"));
     producer.connectWeather(findWeather("Auckland"));
     _producers.add(producer);
 
     ElConsumer consumer;
     _consumers = new LinkedList<ElConsumer>();
+    consumer = new ElConsumer("Office", 1000);
+    consumer.connectUsageProfile(findUsageProfile("toda"));
+    consumer.connectTransformer(findTransformer("Tran"));
+    _consumers.add(consumer);
     consumer = new ElConsumer("House", 1000);
+    consumer.connectUsageProfile(findUsageProfile("yester"));
+    consumer.connectTransformer(findTransformer("Tran3"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("Building", 1000);
+    consumer.connectUsageProfile(findUsageProfile("yester"));
+    consumer.connectTransformer(findTransformer("SuperTran"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("House", 100);
+    consumer.connectUsageProfile(findUsageProfile("toda"));
+    consumer.connectTransformer(findTransformer("SuperTran"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("Again", 800);
+    consumer.connectUsageProfile(findUsageProfile("yester"));
+    consumer.connectTransformer(findTransformer("Tran4"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("Home", 1000);
+    consumer.connectUsageProfile(findUsageProfile("yester"));
+    consumer.connectTransformer(findTransformer("Tran"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("Office", 1000);
+    consumer.connectUsageProfile(findUsageProfile("toda"));
+    consumer.connectTransformer(findTransformer("Tran2"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("Work", 1000);
+    consumer.connectUsageProfile(findUsageProfile("yester"));
+    consumer.connectTransformer(findTransformer("Tran2"));
+    _consumers.add(consumer);
+    consumer = new ElConsumer("School", 1000);
     consumer.connectUsageProfile(findUsageProfile("yester"));
     consumer.connectTransformer(findTransformer("Tran2"));
     _consumers.add(consumer);
@@ -64,11 +126,34 @@ public class Test {
     ElGrid grid;
     _grids = new LinkedList<ElGrid>();
     grid = new ElGrid("Auck", 200, 100, 0);
+    grid.connectTransformer(findTransformer("SuperTran"));
+    grid.connectTransformer(findTransformer("Tran2"));
+    _grids.add(grid);
+    grid = new ElGrid("Wellington", 200, 100, 0);
+    grid.connectTransformer(findTransformer("Tran2"));
+    grid.connectTransformer(findTransformer("Tran3"));
+    _grids.add(grid);
+    grid = new ElGrid("Hamilton", 200, 100, 2);
+    grid.connectTransformer(findTransformer("Tran3"));
+    grid.connectTransformer(findTransformer("Tran2"));
+    _grids.add(grid);
+    grid = new ElGrid("Lower Hutt", 200, 100, 70);
+    grid.connectTransformer(findTransformer("Tran4"));
+    grid.connectTransformer(findTransformer("Tran3"));
+    _grids.add(grid);
+    grid = new ElGrid("Pohara", 200, 100, 0);
+    grid.connectTransformer(findTransformer("Tran5"));
+    grid.connectTransformer(findTransformer("SuperTran"));
+    _grids.add(grid);
+    grid = new ElGrid("Tukurua", 200, 100, 20);
+    grid.connectTransformer(findTransformer("Tran"));
+    grid.connectTransformer(findTransformer("Tran4"));
+    _grids.add(grid);
+    grid = new ElGrid("Hawthorn", 200, 100, 75);
     grid.connectTransformer(findTransformer("Tran"));
     grid.connectTransformer(findTransformer("Tran2"));
     _grids.add(grid);
     System.out.println("");
-
   }
 
   public UsageProfile findUsageProfile(String profile) {
@@ -82,7 +167,7 @@ public class Test {
 
   public ElTransformer findTransformer(String trans) {
     for (ElTransformer tran : _transformers) {
-      if (trans == tran.getName()) {
+      if (trans == tran.GetName()) {
         return tran;
       }
     }
@@ -109,7 +194,7 @@ public class Test {
 
     writeLayoutXML(xmlWriter);
 
-    MainBaseType.Simulate(SimulationIntervalEnum.OneHour, 12, _producers, _consumers, _transformers, _grids, xmlWriter);
+    MainBaseType.Simulate(SimulationIntervalEnum.TwoHours, 10, _producers, _consumers, _transformers, _grids, xmlWriter);
 
     xmlWriter.add(eventFactory.createEndElement("", "", "powerGridSimulator"));
     xmlWriter.add(eventFactory.createEndDocument());
@@ -120,17 +205,17 @@ public class Test {
     XMLEventFactory eventFactory = XMLEventFactory.newInstance();
     xmlWriter.add(eventFactory.createStartElement("", "", "modelDefinition"));
 
-    // Export Weather
+    // Export Weather 
     for (WeatherValues weather : _weather) {
       weather.writeHeaderData(xmlWriter);
     }
 
-    // Export Usage Profiles
+    // Export Usage Profiles 
     for (UsageProfile usageProfile : _usageProfiles) {
       usageProfile.writeHeaderData(xmlWriter);
     }
 
-    // Export Producers
+    // Export Producers 
     for (ElProducer producer : _producers) {
       producer.writeHeaderData(xmlWriter);
     }
@@ -142,13 +227,23 @@ public class Test {
       transformer.writeHeaderData(xmlWriter);
     }
 
-    // TODO For all the types
+    // Export Consumers 
+    for (ElConsumer consumer : _consumers) {
+      consumer.writeHeaderData(xmlWriter);
+    }
+
+    // TODO For all the types 
 
     xmlWriter.add(eventFactory.createEndElement("", "", "modelDefinition"));
+  }
+
+  public void parseSimulationXML() {
+    new XMLParser().initialiseStates(_producers, _consumers, _transformers, _grids);
   }
 
   public static void main(String[] args) throws Exception {
     Test simulator = new Test();
     simulator.writeXML();
+    simulator.parseSimulationXML();
   }
 }
