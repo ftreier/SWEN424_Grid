@@ -43,8 +43,8 @@ public class XMLParser {
 	   List <ElTransformer> transformers;
 	   List <ElGrid> grids;
 	   
-	   private int windowWidth = 1275;
-	   private int windowHeight = 1000;
+	   private static int windowWidth = 1275;
+	   private static int windowHeight = 1000;
 	   
 	   //Window object to display our simulation
 	   Window w;
@@ -181,7 +181,7 @@ public class XMLParser {
 	   private void parseXMLSteps() {
 		   // try extract producers from _producers list based on ID# parsed in XML
 		   try {
-			   File file = new File("/Users/koe/Desktop/SWEN424_Grid/output.xml");
+			   File file = new File("output.xml");
 					   
 			   DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			   DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -347,7 +347,7 @@ public class XMLParser {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("Is this even happening tho");
 						stepCount++;
-						if (stepCount>=steps.size()) {
+						if (stepCount >= steps.size()) {
 							mainFrame.add(new EndShow());
 							mainFrame.setVisible(true);
 						}else {
@@ -370,6 +370,7 @@ public class XMLParser {
 		
 		public static class EndShow extends JPanel {
 			public void paint (Graphics g) {
+				g.clearRect(0, 0, XMLParser.windowWidth, XMLParser.windowHeight);
 				g.setColor(Color.BLUE);
 				g.drawString("End of Simulation.", 500, 500);
 			}
@@ -381,6 +382,7 @@ public class XMLParser {
 			public void paint(Graphics g) {
 				//List <Step> _steps = Window.getSteps();
 				Step step = Window.getStep();
+				g.clearRect(0, 0, XMLParser.windowWidth, XMLParser.windowHeight);
 				
 				//First step to draw
 				List <StateObject> currStates = step.states;
