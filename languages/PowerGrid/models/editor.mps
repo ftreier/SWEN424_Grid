@@ -477,7 +477,10 @@
         <node concept="Vb9p2" id="68AEjYhUt7h" role="3F10Kt">
           <property role="Vbekb" value="BOLD" />
         </node>
-        <node concept="ljvvj" id="68AEjYhUx6O" role="3F10Kt">
+      </node>
+      <node concept="3F0ifn" id="351O6723fwj" role="3EZMnx">
+        <property role="3F0ifm" value="%" />
+        <node concept="ljvvj" id="351O6723gbS" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>

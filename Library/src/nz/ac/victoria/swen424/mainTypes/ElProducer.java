@@ -1,5 +1,7 @@
 package nz.ac.victoria.swen424.mainTypes;
 
+import java.util.List;
+
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -16,6 +18,10 @@ public class ElProducer extends MainBaseType
 	private ProducitionMethodeType _productionType;
 	private WeatherValues _weather;
 	
+	//for rendering purposes 
+		private int x; 
+		private int y; 
+		private int size;
 
 	public ElProducer(String name, int minProduction, int maxProduction, ProducitionMethodeType prodType)
 	{
@@ -24,6 +30,16 @@ public class ElProducer extends MainBaseType
 		_maxProduction = maxProduction;
 		_productionType = prodType;
 	}
+	@Override
+	public void setRender(int x, int y, int size) {
+		this.x=x;
+		this.y=y;
+		this.size=size;
+	}
+	
+	public int getX() {return x;}
+	public int getY() {return y;}
+	public int getSize() {return size;}
 	
 	public void connectTransformer(ElTransformer connect)
 	{
@@ -51,11 +67,11 @@ public class ElProducer extends MainBaseType
 		return _weatherName;
 	}
 
-	@Override
+	
 	public String getData()
 	{
 		// TODO return useful data
-		return _name;
+		return "Prod: "+_name+" Min: "+_minProduction+" Max: "+_maxProduction;
 	}
 
 	@Override
@@ -207,14 +223,43 @@ public class ElProducer extends MainBaseType
 		}
 		else
 		{
-			_simStat.isOk = true;			
+			_simStat.isOk = true;
 		}
 		
 		return _simStat.isOk;
 	}
 
+	// return a stateObject for graphical rendering
+	public StateObject getState() {
+		StateObject prodState = new StateObject();
+		prodState.id = this._guid;
+		prodState.name = this._name;
+		prodState.type = this;
+		return prodState;
+	}
+
+
 	public double getMaxProduction()
 	{
 		return _maxProduction;
+	}
+
+	//Following methods not needed in here
+	@Override
+	public ElTransformer getLeftTransformer() {
+		// TODO Auto-generated method stub
+		return _connect;
+	}
+
+	@Override
+	public ElTransformer getRightTransformer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<MainBaseType> getProdCon() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

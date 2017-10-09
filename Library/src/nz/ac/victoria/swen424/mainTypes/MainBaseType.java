@@ -19,7 +19,7 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 	}
 	
 	abstract SimulationStatus Simulate(int time) throws Exception;
-	
+
 	public static void Simulate(SimulationIntervalEnum simInterval, int noOfSteps, List<ElProducer> producers, List<ElConsumer> consumers, List<ElTransformer> transformers, List<ElGrid> grids, XMLEventWriter xmlWriter) throws Exception
 	{
 		int timeSteps = 1;

@@ -13,6 +13,12 @@ public class ElTransformer extends MainBaseType
 	private int _efficiency;
 	private List<MainBaseType> _leftConnection;
 	private List<ElGrid> _rightConnection;
+	//private Set<MainBaseType> connections;
+
+	//for rendering purposes
+		private int x;
+		private int y;
+		private int size;
 
 	public ElTransformer(String name, int maxcapacity, int efficiency){
 		super(name);
@@ -21,7 +27,17 @@ public class ElTransformer extends MainBaseType
 		_leftConnection = new LinkedList<>();
 		_rightConnection = new LinkedList<>();
 	}
-	
+	@Override
+	public void setRender(int x, int y, int size) {
+		this.x=x;
+		this.y=y;
+		this.size=size;
+	}
+
+	public int getX() {return x;}
+	public int getY() {return y;}
+	public int getSize() {return size;}
+
 	public void addLeftConnection(MainBaseType object)
 	{
 		_leftConnection.add(object);
@@ -45,11 +61,10 @@ public class ElTransformer extends MainBaseType
 	public String getName(){
 		return _name;
 	}
-	
-	@Override
+
 	public String getData() {
 		// TODO Auto-generated method stub
-		return null;
+		return this._name;
 	}
 
 	@Override
@@ -144,6 +159,15 @@ public class ElTransformer extends MainBaseType
 		xmlWriter.add(eventFactory.createEndElement("", "", "transformer")); // </transformer>
 	}
 
+	// return a stateObject for graphical rendering
+	public StateObject getState() {
+		StateObject prodState = new StateObject();
+		prodState.id = this._guid;
+		prodState.name = this._name;
+		prodState.type = this;
+		return prodState;
+	}
+
 	public boolean IsOk()
 	{
 		if(!compareRange(_simStat.currentElectricity, 0))
@@ -152,7 +176,7 @@ public class ElTransformer extends MainBaseType
 			{
 				_simStat.isOk = false;
 			}
-			
+
 			boolean hasInput = false;
 			for(ElGrid g : _rightConnection)
 			{
@@ -162,13 +186,32 @@ public class ElTransformer extends MainBaseType
 					break;
 				}
 			}
-			
+
 			if(!hasInput)
 			{
 				_simStat.isOk = false;
 			}
 		}
-		
+
 		return _simStat.isOk;
+	}
+
+	//Return all the producers and consumers attached to this transformer
+	@Override
+	public List<MainBaseType> getProdCon() {
+		// TODO Auto-generated method stub
+		return _leftConnection;
+	}
+	//Not needed in here
+	@Override
+	public ElTransformer getLeftTransformer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	//Not needed in here
+	@Override
+	public ElTransformer getRightTransformer() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

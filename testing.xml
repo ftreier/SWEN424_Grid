@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<powerGridSimulator>
+  <modelDefinition>
+  	<producer id="10838a1a-b429-4262-ae31-85688d663669" name="prod" minProduction="1" maxProduction="20" productionMethode="Solar">
+      <connectedTo transformerId="fa579c85-b7c5-4e11-afc8-0df413379b62" transformerName="tran"></connectedTo>
+    </producer>
+    <producer id="4748db9e-0590-4898-a889-e87fde5690be" name="prod2" minProduction="1" maxProduction="20" productionMethode="Conventional">
+      <connectedTo transformerId="fa579c85-b7c5-4e11-afc8-0df413379b62" transformerName="tran"></connectedTo>
+    </producer>
+  </modelDefinition>
+   <simulation>
+   	<step number="1" day="0" time="0">
+      <producer id="10838a1a-b429-4262-ae31-85688d663669" name="prod" production="0.0" maxProduction="20.0"></producer>
+      <producer id="4748db9e-0590-4898-a889-e87fde5690be" name="prod2" production="1.87" maxProduction="20.0" minProduction="1.0" used="4.578947368421053"></producer>
+    </step>
+    <step number="2" day="0" time="1">
+      <producer id="10838a1a-b429-4262-ae31-85688d663669" name="prod" production="0.0" maxProduction="20.0"></producer>
+      <producer id="4748db9e-0590-4898-a889-e87fde5690be" name="prod2" production="1.87" maxProduction="20.0" minProduction="1.0" used="4.578947368421053"></producer>
+    </step>
+   </simulation>
+</powerGridSimulator>

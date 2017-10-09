@@ -120,17 +120,17 @@ public class Test {
     XMLEventFactory eventFactory = XMLEventFactory.newInstance();
     xmlWriter.add(eventFactory.createStartElement("", "", "modelDefinition"));
 
-    // Export Weather 
+    // Export Weather
     for (WeatherValues weather : _weather) {
       weather.writeHeaderData(xmlWriter);
     }
 
-    // Export Usage Profiles 
+    // Export Usage Profiles
     for (UsageProfile usageProfile : _usageProfiles) {
       usageProfile.writeHeaderData(xmlWriter);
     }
 
-    // Export Producers 
+    // Export Producers
     for (ElProducer producer : _producers) {
       producer.writeHeaderData(xmlWriter);
     }
@@ -142,7 +142,7 @@ public class Test {
       transformer.writeHeaderData(xmlWriter);
     }
 
-    // TODO For all the types 
+    // TODO For all the types
 
     xmlWriter.add(eventFactory.createEndElement("", "", "modelDefinition"));
   }
