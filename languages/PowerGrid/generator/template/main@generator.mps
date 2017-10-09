@@ -935,7 +935,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="4qWfsD8PHwH" role="3cqZAp" />
       </node>
       <node concept="3Tm1VV" id="6Lad368Qz4n" role="1B3o_S" />
     </node>
@@ -2606,34 +2605,6 @@
           </node>
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="13MO4I" id="5zwZig_4435">
-    <property role="TrG5h" value="case_Weather" />
-    <ref role="3gUMe" to="aw7t:6gi3O$9nB7N" resolve="Weather" />
-    <node concept="312cEu" id="5zwZig_44ce" role="13RCb5">
-      <property role="TrG5h" value="Foo" />
-      <node concept="3clFb_" id="5zwZig_44cA" role="jymVt">
-        <property role="TrG5h" value="Bar" />
-        <node concept="3cqZAl" id="5zwZig_44cC" role="3clF45" />
-        <node concept="3Tm1VV" id="5zwZig_44cD" role="1B3o_S" />
-        <node concept="3clFbS" id="5zwZig_44cE" role="3clF47">
-          <node concept="3cpWs8" id="5zwZig_44ej" role="3cqZAp">
-            <node concept="3cpWsn" id="5zwZig_44ek" role="3cpWs9">
-              <property role="TrG5h" value="ws" />
-              <node concept="3uibUv" id="5zwZig_4NMi" role="1tU5fm">
-                <ref role="3uigEE" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
-              </node>
-              <node concept="Rm8GO" id="5zwZig_4NOI" role="33vP2m">
-                <ref role="Rm8GQ" to="ykoa:~WindSpeedEnum.Flat" resolve="Flat" />
-                <ref role="1Px2BO" to="ykoa:~WindSpeedEnum" resolve="WindSpeedEnum" />
-                <node concept="raruj" id="5zwZig_4NPf" role="lGtFl" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3Tm1VV" id="5zwZig_44cf" role="1B3o_S" />
     </node>
   </node>
   <node concept="13MO4I" id="5zwZig_0IBk">
