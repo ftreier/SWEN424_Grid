@@ -27,7 +27,6 @@ public ElConsumer(String name, int maxConsumption){
 public void connectTransformer(ElTransformer connect){
 	_connect = connect;
 	connect.addLeftConnection(this);
-	System.out.println("Consumer " + _name + " Transformer connect");
 }
 @Override
 public void setRender(int x, int y, int size) {
@@ -42,7 +41,6 @@ public int getSize() {return size;}
 
 public void connectUsageProfile(UsageProfile usage){
 	_usageProfile = usage;
-	System.out.println("Consumer "+_name+" Usage Profile register");
 }
 
 public int getMaxConsumption(){

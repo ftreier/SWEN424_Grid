@@ -43,13 +43,11 @@ public class ElProducer extends MainBaseType
 	{
 		_connect = connect;
 		connect.addLeftConnection(this);
-		System.out.println("Producer "+_name+" Transformer connect");
 	}
 	
 	public void connectWeather(WeatherValues weather)
 	{
 		_weather = weather;
-		System.out.println("Producer "+_name+" Weather register");
 	}
 	
 	public boolean canChange() 

@@ -79,7 +79,6 @@ public class XMLParser {
 		   int numProdCons = consumers.size()+producers.size();
 		   //rendering #'s for transformers
 		   int gridSpace = windowHeight/(grids.size()+1);
-		   System.out.println("Have gridSize: "+gridSpace);
 		   int initialY = 50;
 		   int imgSize = 30;
 		   int gridX = windowWidth/2;
@@ -345,7 +344,6 @@ public class XMLParser {
 				Timer timer = new Timer(2000, new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						System.out.println("Is this even happening tho");
 						stepCount++;
 						if (stepCount >= steps.size()) {
 							mainFrame.add(new EndShow());
