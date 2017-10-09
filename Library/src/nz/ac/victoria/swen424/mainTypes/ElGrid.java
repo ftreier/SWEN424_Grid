@@ -11,8 +11,6 @@ public class ElGrid extends MainBaseType{
 
 	private int _maxCapacity;
 	private int _efficiency;
-	private String _connectName1;
-	private String _connectName2;
 	private ElTransformer leftTransformer;
 	private ElTransformer rightTransformer;
 	private int _probabilityOfFailure;
@@ -59,16 +57,7 @@ public class ElGrid extends MainBaseType{
 	
 	public int getX() {return x;}
 	public int getY() {return y;}
-	public int getSize() {return size;}
-	
-	public String getName1(){
-		return _connectName1;
-	}
-	
-	public String getName2(){
-		return _connectName2;
-	}
-	
+	public int getSize() {return size;}	
 
 	public String getData() {
 		// TODO Auto-generated method stub
@@ -168,7 +157,7 @@ public class ElGrid extends MainBaseType{
 		if(_simStat.currentElectricity != Double.MAX_VALUE)
 		{
 			_simStat.loss = _simStat.currentElectricity * (100 - _efficiency) / 100;
-			_simStat.currentElectricity += _simStat.loss;
+			//_simStat.currentElectricity += _simStat.loss;
 			
 			if(_simStat.currentElectricity >= _maxCapacity)
 			{
@@ -258,7 +247,6 @@ public class ElGrid extends MainBaseType{
 		}
 		
 		_simStat.currentElectricity = leftTransformer._simStat.currentElectricity * _maxCapacity / totCapacity;
-		System.out.println("totCapacity = " + totCapacity + "; maxCapacity = " + _maxCapacity + "; electricity at node = " + leftTransformer._simStat.currentElectricity + "; electricity in grid = " + _simStat.currentElectricity);
 		finalizeSimStat();
 	}
 	
@@ -303,5 +291,11 @@ public class ElGrid extends MainBaseType{
 	public List<MainBaseType> getProdCon() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public boolean isOk()
+	{
+		_simStat.isOk = _simStat.isOk && Math.abs(_simStat.currentElectricity) < _maxCapacity;
+		return _simStat.isOk;
 	}
 }

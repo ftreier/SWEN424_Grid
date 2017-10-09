@@ -1,9 +1,7 @@
 package nz.ac.victoria.swen424.mainTypes;
 
-import java.awt.*;
 import java.util.List;
 
-import javax.swing.*;
 import javax.xml.stream.XMLEventFactory;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -12,8 +10,6 @@ import nz.ac.victoria.swen424.UsageProfile;
 
 public class ElConsumer extends MainBaseType{
 	private int _maxConsumption;
-	private String _connectName;
-	private String _usageName;
 	private ElTransformer _connect;
 	private UsageProfile _usageProfile;
 	
@@ -49,13 +45,6 @@ public void connectUsageProfile(UsageProfile usage){
 	System.out.println("Consumer "+_name+" Usage Profile register");
 }
 
-public String getTransName(){
-	return _connectName;
-}
-public String getUsageName(){
-	return _usageName;
-}
-
 public int getMaxConsumption(){
 	return _maxConsumption;
 }
@@ -65,7 +54,24 @@ public String getData() {
 }
 
 @Override
-public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException {
+public void writeHeaderData(XMLEventWriter xmlWriter) throws XMLStreamException
+{
+	XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+	
+	xmlWriter.add(eventFactory.createStartElement("", "", "consumer"));
+	xmlWriter.add(eventFactory.createAttribute("id", _guid.toString()));
+	xmlWriter.add(eventFactory.createAttribute("name", _name));
+	xmlWriter.add(eventFactory.createAttribute("maxConsumption", Integer.toString(_maxConsumption)));
+	xmlWriter.add(eventFactory.createAttribute("usageProfilID", _usageProfile.GetGuid().toString()));
+	xmlWriter.add(eventFactory.createAttribute("usageProfilName", _usageProfile.GetName()));
+
+	// Write connection
+	xmlWriter.add(eventFactory.createStartElement("", "", "connectedTo"));
+	xmlWriter.add(eventFactory.createAttribute("transformerId", _connect.GetGuid().toString()));
+	xmlWriter.add(eventFactory.createAttribute("transformerName", _connect.GetName()));
+	xmlWriter.add(eventFactory.createEndElement("", "", "connectedTo")); // </connectedTo>
+	
+	xmlWriter.add(eventFactory.createEndElement("", "", "consumer")); // </consumer>
 }
 
 @Override

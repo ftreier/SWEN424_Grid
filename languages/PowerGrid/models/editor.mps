@@ -479,7 +479,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="351O6723fwj" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
+        <property role="3F0ifm" value="MW" />
         <node concept="ljvvj" id="351O6723gbS" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

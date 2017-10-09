@@ -216,7 +216,12 @@ public abstract class MainBaseType extends XmlLayoutNode implements IMainType
 		
 		for (ElTransformer transformer : transformers)
 		{
-			isOk = isOk && transformer.IsOk();
+			isOk = transformer.IsOk() && isOk;
+		}
+		
+		for (ElGrid grid : grids)
+		{
+			isOk = grid.isOk() && isOk;
 		}
 		
 		// Allow for some small imbalance due to precision issues

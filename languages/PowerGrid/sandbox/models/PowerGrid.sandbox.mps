@@ -2,9 +2,9 @@
 <model ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="-1" />
-    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="-1" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
+    <use id="d2a07bb2-09cf-48ad-a97b-660a7f0f2205" name="PowerGrid" version="0" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
   <imports>
     <import index="z6cp" ref="r:3d5930c0-b584-4003-9a9d-a2422b4f3168(PowerGrid.sandbox)" />
@@ -67,17 +67,26 @@
     </language>
   </registry>
   <node concept="sJg17" id="5n4IGwrWnq1">
-    <property role="TrG5h" value="Test" />
+    <property role="TrG5h" value="SimpleNet" />
     <property role="o1EGu" value="24" />
+    <property role="o0NDQ" value="2" />
     <node concept="2s6h$e" id="2djYxgKlzXH" role="2s6h$R">
       <property role="2s6h$4" value="200" />
       <property role="2s6h$S" value="99" />
-      <property role="TrG5h" value="Trans1" />
+      <property role="TrG5h" value="T Wellington" />
+    </node>
+    <node concept="2s6h$e" id="351O67268ES" role="2s6h$R">
+      <property role="2s6h$4" value="200" />
+      <property role="2s6h$S" value="98" />
+      <property role="TrG5h" value="T Auckland" />
     </node>
     <node concept="1Hj7UV" id="5n4IGwrWnq2" role="1Hj7Pu">
       <property role="TrG5h" value="Wellington" />
       <node concept="1Hj7UU" id="5n4IGwrWnq3" role="1Hjf0d">
         <property role="1Hj7Pq" value="3" />
+      </node>
+      <node concept="1Hj7UU" id="351O6726yYa" role="1Hjf0d">
+        <property role="1Hj7Pp" value="2" />
       </node>
     </node>
     <node concept="1vLJl6" id="5n4IGwrWnq4" role="1vLJPo">
@@ -92,27 +101,29 @@
       <property role="3yd64o" value="0" />
       <property role="3yd3hR" value="100" />
       <property role="2KFMDS" value="Wellington" />
-      <property role="244Foq" value="Trans1" />
+      <property role="244Foq" value="T Wellington" />
       <property role="TrG5h" value="Wellington Wind Mill" />
+      <property role="JvpKn" value="3" />
     </node>
     <node concept="3lM9jV" id="5n4IGwrWnq6" role="3lMnhl">
       <property role="3lM9jS" value="200" />
       <property role="3lM9jN" value="99" />
       <property role="244Ey0" value="1" />
-      <property role="TrG5h" value="Wellington -Auckland" />
-      <property role="245u9L" value="Trans1" />
-      <property role="245u99" value="Trans1" />
+      <property role="TrG5h" value="Wellington-Auckland" />
+      <property role="245u9L" value="T Wellington" />
+      <property role="245u99" value="T Auckland" />
     </node>
     <node concept="3VOWaR" id="5n4IGwrWnq8" role="N8dmf">
-      <property role="3VOWdS" value="10" />
+      <property role="3VOWdS" value="100" />
       <property role="TrG5h" value="House 1" />
-      <property role="eq3CR" value="Trans1" />
+      <property role="eq3CR" value="T Auckland" />
       <property role="2KmOhT" value="Residential" />
     </node>
   </node>
   <node concept="sJg17" id="4ZDpIZc4bMv">
     <property role="TrG5h" value="tester" />
     <property role="o1EGu" value="10" />
+    <property role="o0NDQ" value="2" />
     <node concept="3VOWaR" id="jCjOAzvzXx" role="N8dmf">
       <property role="3VOWdS" value="1000" />
       <property role="TrG5h" value="Office" />
@@ -291,7 +302,7 @@
       <property role="245u99" value="Tran2" />
     </node>
     <node concept="2s6h$e" id="351O6722IOS" role="2s6h$R">
-      <property role="2s6h$4" value="200" />
+      <property role="2s6h$4" value="2000" />
       <property role="2s6h$S" value="99" />
       <property role="TrG5h" value="Tran" />
     </node>
