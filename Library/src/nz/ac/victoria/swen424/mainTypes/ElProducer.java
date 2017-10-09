@@ -12,9 +12,7 @@ public class ElProducer extends MainBaseType
 {
 	private int _minProduction;
 	private int _maxProduction;
-	private String _connectName;
 	private ElTransformer _connect;
-	private String _weatherName;
 	private ProducitionMethodeType _productionType;
 	private WeatherValues _weather;
 	
@@ -59,18 +57,8 @@ public class ElProducer extends MainBaseType
 		return _productionType == ProducitionMethodeType.Conventional; 
 	}
 	
-	public String getTransName(){
-		return _connectName;
-	}
-	
-	public String getWeatherName(){
-		return _weatherName;
-	}
-
-	
 	public String getData()
 	{
-		// TODO return useful data
 		return "Prod: "+_name+" Min: "+_minProduction+" Max: "+_maxProduction;
 	}
 
@@ -85,7 +73,9 @@ public class ElProducer extends MainBaseType
 		xmlWriter.add(eventFactory.createAttribute("minProduction", Integer.toString(_minProduction)));
 		xmlWriter.add(eventFactory.createAttribute("maxProduction", Integer.toString(_maxProduction)));
 		xmlWriter.add(eventFactory.createAttribute("productionMethode", _productionType.toString()));
-		
+		xmlWriter.add(eventFactory.createAttribute("usageProfilID", _weather.GetGuid().toString()));
+		xmlWriter.add(eventFactory.createAttribute("usageProfilName", _weather.GetName()));
+	
 		// Write connection
 		xmlWriter.add(eventFactory.createStartElement("", "", "connectedTo"));
 		xmlWriter.add(eventFactory.createAttribute("transformerId", _connect.GetGuid().toString()));
