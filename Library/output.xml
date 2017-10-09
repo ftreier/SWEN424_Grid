@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<powerGridSimulator>
+  <modelDefinition>
+    <weather id="efa3b055-7d13-4837-8e5b-0537d45aa9e4" name="Auckland" isRandom="false">
+      <value day="0" weather="ClearSky" windSpeed="FrshGale"></value>
+    </weather>
+    <usageProfile id="535bcc23-15b4-40f8-bbf1-9c6982057e59" name="yester" isRandom="false" night="45" morning="18" midday="92" afternoon="55" eavening="99"></usageProfile>
+    <usageProfile id="a72dec3a-d19f-461b-9a50-f7fb125782fa" name="toda" isRandom="false" night="60" morning="22" midday="54" afternoon="78" eavening="24"></usageProfile>
+    <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" minProduction="0" maxProduction="1000" productionMethode="Wind" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" transformerName="Tran"></connectedTo>
+    </producer>
+    <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" minProduction="0" maxProduction="1000" productionMethode="Conventional" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="10a60c30-54cc-4459-9ede-3bd2fed5c07e" transformerName="Tran5"></connectedTo>
+    </producer>
+    <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" minProduction="0" maxProduction="1000" productionMethode="Conventional" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" transformerName="Tran2"></connectedTo>
+    </producer>
+    <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" minProduction="0" maxProduction="1000" productionMethode="Wind" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" transformerName="Tran2"></connectedTo>
+    </producer>
+    <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" minProduction="0" maxProduction="1000" productionMethode="Wind" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" transformerName="Tran"></connectedTo>
+    </producer>
+    <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" minProduction="0" maxProduction="1000" productionMethode="Wind" usageProfilID="efa3b055-7d13-4837-8e5b-0537d45aa9e4" usageProfilName="Auckland">
+      <connectedTo transformerId="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" transformerName="Tran"></connectedTo>
+    </producer>
+    <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" maxCapacity="200" efficiency="100" probabilityOfFailure="0">
+      <connections>
+        <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" side="left"></transformer>
+        <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" maxCapacity="200" efficiency="100" probabilityOfFailure="0">
+      <connections>
+        <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" side="left"></transformer>
+        <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" maxCapacity="200" efficiency="100" probabilityOfFailure="2">
+      <connections>
+        <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" side="left"></transformer>
+        <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" maxCapacity="200" efficiency="100" probabilityOfFailure="70">
+      <connections>
+        <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" side="left"></transformer>
+        <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" maxCapacity="200" efficiency="100" probabilityOfFailure="0">
+      <connections>
+        <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" side="left"></transformer>
+        <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" maxCapacity="200" efficiency="100" probabilityOfFailure="20">
+      <connections>
+        <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" side="left"></transformer>
+        <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" side="right"></transformer>
+      </connections>
+    </grid>
+    <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" maxCapacity="200" efficiency="100" probabilityOfFailure="75">
+      <connections>
+        <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" side="left"></transformer>
+        <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" side="right"></transformer>
+      </connections>
+    </grid>
+    <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" maxCapacity="2000" efficiency="99">
+      <connections>
+        <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" side="left"></producer>
+        <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" side="left"></producer>
+        <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" side="left"></producer>
+        <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" side="left"></consumer>
+        <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" side="left"></consumer>
+        <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" side="right"></grid>
+        <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" side="right"></grid>
+      </connections>
+    </transformer>
+    <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" maxCapacity="200" efficiency="99">
+      <connections>
+        <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" side="left"></producer>
+        <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" side="left"></producer>
+        <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" side="left"></consumer>
+        <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" side="left"></consumer>
+        <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" side="left"></consumer>
+        <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" side="right"></grid>
+        <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" side="right"></grid>
+        <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" side="right"></grid>
+        <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" side="right"></grid>
+      </connections>
+    </transformer>
+    <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" maxCapacity="200" efficiency="50">
+      <connections>
+        <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" side="left"></consumer>
+        <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" side="right"></grid>
+        <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" side="right"></grid>
+        <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" side="right"></grid>
+      </connections>
+    </transformer>
+    <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" maxCapacity="200" efficiency="60">
+      <connections>
+        <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" side="left"></consumer>
+        <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" side="left"></consumer>
+        <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" side="right"></grid>
+        <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" side="right"></grid>
+      </connections>
+    </transformer>
+    <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" maxCapacity="200" efficiency="100">
+      <connections>
+        <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" side="left"></consumer>
+        <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" side="right"></grid>
+        <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" side="right"></grid>
+      </connections>
+    </transformer>
+    <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" maxCapacity="200" efficiency="55">
+      <connections>
+        <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" side="left"></producer>
+        <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" side="right"></grid>
+      </connections>
+    </transformer>
+    <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" maxConsumption="1000" usageProfilID="a72dec3a-d19f-461b-9a50-f7fb125782fa" usageProfilName="toda">
+      <connectedTo transformerId="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" transformerName="Tran"></connectedTo>
+    </consumer>
+    <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" maxConsumption="1000" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="7153f14e-d55b-4759-b211-db58c6eb8ceb" transformerName="Tran3"></connectedTo>
+    </consumer>
+    <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" maxConsumption="1000" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="9054db21-4afa-44ce-ac02-106e7ecbe6f9" transformerName="SuperTran"></connectedTo>
+    </consumer>
+    <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" maxConsumption="100" usageProfilID="a72dec3a-d19f-461b-9a50-f7fb125782fa" usageProfilName="toda">
+      <connectedTo transformerId="9054db21-4afa-44ce-ac02-106e7ecbe6f9" transformerName="SuperTran"></connectedTo>
+    </consumer>
+    <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" maxConsumption="800" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="8ffbccee-389e-4bda-949c-e41caa6ba38c" transformerName="Tran4"></connectedTo>
+    </consumer>
+    <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" maxConsumption="1000" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" transformerName="Tran"></connectedTo>
+    </consumer>
+    <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" maxConsumption="1000" usageProfilID="a72dec3a-d19f-461b-9a50-f7fb125782fa" usageProfilName="toda">
+      <connectedTo transformerId="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" transformerName="Tran2"></connectedTo>
+    </consumer>
+    <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" maxConsumption="1000" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" transformerName="Tran2"></connectedTo>
+    </consumer>
+    <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" maxConsumption="1000" usageProfilID="535bcc23-15b4-40f8-bbf1-9c6982057e59" usageProfilName="yester">
+      <connectedTo transformerId="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" transformerName="Tran2"></connectedTo>
+    </consumer>
+  </modelDefinition>
+  <simulation>
+    <step number="1" day="0" time="0" isOk="false" overallLoss="483.4" currentConsumption="3870.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="60.0" usage="60.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="360.0" usage="45.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="19.5" currentUsage="1930.5" usage="97.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="5.65" currentUsage="328.95" usage="167.29999999999998" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="225.0" currentUsage="675.0" usage="450.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="204.0" currentUsage="714.0" usage="459.0" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="360.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="true" loss="29.25" currentUsage="147.45" usage="88.35" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="619.75" loss="0.0" usage="309.875" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="142.6625" loss="0.0" usage="71.33125" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="225.0" loss="0.0" usage="112.5" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="1042.6625" loss="0.0" usage="521.33125" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="true" isFailure="false" currentUsage="94.25" loss="0.0" usage="47.125" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="1402.6625" loss="0.0" usage="701.33125" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3333.1625" loss="0.0" usage="1666.5812500000002" maxCapacity="200"></grid>
+    </step>
+    <step number="2" day="0" time="2" isOk="false" overallLoss="483.4" currentConsumption="3870.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="60.0" usage="60.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="360.0" usage="45.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="19.5" currentUsage="1930.5" usage="97.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="5.65" currentUsage="328.95" usage="167.29999999999998" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="225.0" currentUsage="675.0" usage="450.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="204.0" currentUsage="714.0" usage="459.0" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="360.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="true" loss="29.25" currentUsage="147.45" usage="88.35" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="619.75" loss="0.0" usage="309.875" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="142.6625" loss="0.0" usage="71.33125" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="225.0" loss="0.0" usage="112.5" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="1042.6625" loss="0.0" usage="521.33125" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="true" isFailure="false" currentUsage="94.25" loss="0.0" usage="47.125" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="1402.6625" loss="0.0" usage="701.33125" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3333.1625" loss="0.0" usage="1666.5812500000002" maxCapacity="200"></grid>
+    </step>
+    <step number="3" day="0" time="4" isOk="false" overallLoss="483.4" currentConsumption="3870.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="60.0" usage="60.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="360.0" usage="45.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="19.5" currentUsage="1930.5" usage="97.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="5.65" currentUsage="328.95" usage="167.29999999999998" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="225.0" currentUsage="675.0" usage="450.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="204.0" currentUsage="714.0" usage="459.0" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="360.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="true" loss="29.25" currentUsage="147.45" usage="88.35" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="619.75" loss="0.0" usage="309.875" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="142.6625" loss="0.0" usage="71.33125" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="225.0" loss="0.0" usage="112.5" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="1042.6625" loss="0.0" usage="521.33125" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="true" isFailure="false" currentUsage="94.25" loss="0.0" usage="47.125" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="1402.6625" loss="0.0" usage="701.33125" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3333.1625" loss="0.0" usage="1666.5812500000002" maxCapacity="200"></grid>
+    </step>
+    <step number="4" day="0" time="6" isOk="false" overallLoss="483.4" currentConsumption="3870.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="60.0" usage="60.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="360.0" usage="45.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="600.0" usage="60.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="450.0" usage="45.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="176.7" maxProduction="1000.0" minProduction="0.0" used="17.669999999999998"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="19.5" currentUsage="1930.5" usage="97.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="5.65" currentUsage="328.95" usage="167.29999999999998" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="225.0" currentUsage="675.0" usage="450.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="204.0" currentUsage="714.0" usage="459.0" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="360.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="true" loss="29.25" currentUsage="147.45" usage="88.35" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="619.75" loss="0.0" usage="309.875" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="142.6625" loss="0.0" usage="71.33125" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="532.3375" loss="0.0" usage="266.16875" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="true" isFailure="true" currentUsage="0.0" loss="0.0" usage="0.0" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="true" isFailure="false" currentUsage="94.25" loss="0.0" usage="47.125" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="360.0" loss="0.0" usage="180.0" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="2290.5" loss="0.0" usage="1145.25" maxCapacity="200"></grid>
+    </step>
+    <step number="5" day="0" time="8" isOk="false" overallLoss="766.22" currentConsumption="1506.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="220.0" usage="22.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="22.0" usage="22.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="144.0" usage="18.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="220.0" usage="22.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="false" production="-863.89" maxProduction="1000.0" minProduction="0.0" used="86.389"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="false" production="-863.89" maxProduction="1000.0" minProduction="0.0" used="86.389"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="false" loss="26.0" currentUsage="2574.0" usage="130.0" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="8.27" currentUsage="452.15999999999997" usage="230.21499999999997" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="90.0" currentUsage="270.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="80.8" currentUsage="282.8" usage="181.8" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="true" loss="0.0" currentUsage="144.0" usage="72.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="561.15" currentUsage="1425.04" usage="993.0950000000001" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="1525.3500000000001" loss="0.0" usage="762.6750000000001" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="false" isFailure="false" currentUsage="208.8175" loss="0.0" usage="104.40875000000001" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="true" isFailure="false" currentUsage="90.0" loss="0.0" usage="45.0" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="568.8175" loss="0.0" usage="284.40875" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="1808.15" loss="0.0" usage="904.075" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="712.8175" loss="0.0" usage="356.40875" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3286.8175" loss="0.0" usage="1643.40875" maxCapacity="200"></grid>
+    </step>
+    <step number="6" day="0" time="10" isOk="false" overallLoss="766.22" currentConsumption="1506.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="220.0" usage="22.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="22.0" usage="22.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="144.0" usage="18.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="220.0" usage="22.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="180.0" usage="18.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="false" production="-863.89" maxProduction="1000.0" minProduction="0.0" used="86.389"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="false" production="-863.89" maxProduction="1000.0" minProduction="0.0" used="86.389"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="false" loss="26.0" currentUsage="2574.0" usage="130.0" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="8.27" currentUsage="452.15999999999997" usage="230.21499999999997" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="90.0" currentUsage="270.0" usage="180.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="80.8" currentUsage="282.8" usage="181.8" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="true" loss="0.0" currentUsage="144.0" usage="72.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="561.15" currentUsage="1425.04" usage="993.0950000000001" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="1525.3500000000001" loss="0.0" usage="762.6750000000001" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="false" isFailure="false" currentUsage="208.8175" loss="0.0" usage="104.40875000000001" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="true" isFailure="false" currentUsage="90.0" loss="0.0" usage="45.0" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="568.8175" loss="0.0" usage="284.40875" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="1808.15" loss="0.0" usage="904.075" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="712.8175" loss="0.0" usage="356.40875" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3286.8175" loss="0.0" usage="1643.40875" maxCapacity="200"></grid>
+    </step>
+    <step number="7" day="0" time="12" isOk="false" overallLoss="1422.2" currentConsumption="6470.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="540.0" usage="54.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="54.0" usage="54.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="736.0" usage="92.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="540.0" usage="54.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="920.0" usage="92.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="false" production="1946.1" maxProduction="1000.0" minProduction="0.0" used="194.60999999999999"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="false" production="1946.1" maxProduction="1000.0" minProduction="0.0" used="194.60999999999999"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="15.4" currentUsage="1524.6" usage="77.0" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="1.45" currentUsage="564.6500000000001" usage="283.05000000000007" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="460.0" currentUsage="1380.0" usage="919.9999999999999" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="389.6" currentUsage="1363.6" usage="876.5999999999998" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="736.0" usage="368.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="555.75" currentUsage="1390.35" usage="973.05" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="2042.85" loss="0.0" usage="1021.425" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="36.6125" loss="0.0" usage="18.30625" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="460.0" loss="0.0" usage="229.99999999999997" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="1876.6125" loss="0.0" usage="938.30625" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="679.25" loss="0.0" usage="339.625" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="2612.6125" loss="0.0" usage="1306.30625" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="4137.2125" loss="0.0" usage="2068.60625" maxCapacity="200"></grid>
+    </step>
+    <step number="8" day="0" time="14" isOk="false" overallLoss="733.8599999999999" currentConsumption="4828.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="780.0" usage="78.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="78.0" usage="78.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="440.0" usage="55.00000000000001" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="780.0" usage="78.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="780.93" maxProduction="1000.0" minProduction="0.0" used="78.09299999999999"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="780.93" maxProduction="1000.0" minProduction="0.0" used="78.09299999999999"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="16.7" currentUsage="1653.3" usage="83.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="true" loss="4.66" currentUsage="103.73000000000008" usage="54.195000000000036" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="275.0" currentUsage="825.0" usage="550.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="251.2" currentUsage="879.2" usage="565.2" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="440.0" usage="220.00000000000003" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="186.3" currentUsage="594.6299999999999" usage="390.4649999999999" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="1106.9" loss="0.0" usage="553.45" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="117.665" loss="0.0" usage="58.832499999999996" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="275.0" loss="0.0" usage="137.5" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="1217.665" loss="0.0" usage="608.8325" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="227.7" loss="0.0" usage="113.84999999999998" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="1657.665" loss="0.0" usage="828.8325" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="3310.965" loss="0.0" usage="1655.4825" maxCapacity="200"></grid>
+    </step>
+    <step number="9" day="0" time="16" isOk="false" overallLoss="733.8599999999999" currentConsumption="4828.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="780.0" usage="78.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="78.0" usage="78.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="440.0" usage="55.00000000000001" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="780.0" usage="78.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="550.0" usage="55.00000000000001" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="true" production="780.93" maxProduction="1000.0" minProduction="0.0" used="78.09299999999999"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="true" production="780.93" maxProduction="1000.0" minProduction="0.0" used="78.09299999999999"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="16.7" currentUsage="1653.3" usage="83.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="true" loss="4.66" currentUsage="103.73000000000008" usage="54.195000000000036" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="275.0" currentUsage="825.0" usage="550.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="251.2" currentUsage="879.2" usage="565.2" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="440.0" usage="220.00000000000003" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="186.3" currentUsage="594.6299999999999" usage="390.4649999999999" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="1106.9" loss="0.0" usage="553.45" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="117.665" loss="0.0" usage="58.832499999999996" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="707.335" loss="0.0" usage="353.6675" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="true" isFailure="true" currentUsage="0.0" loss="0.0" usage="0.0" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="227.7" loss="0.0" usage="113.84999999999998" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="440.0" loss="0.0" usage="220.00000000000003" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="2093.3" loss="0.0" usage="1046.65" maxCapacity="200"></grid>
+    </step>
+    <step number="10" day="0" time="18" isOk="false" overallLoss="1424.62" currentConsumption="6246.0" minProduction="4000.0" maxProduction="6000.0">
+      <consumer id="568cf272-73ee-4c07-aa35-acc3a17875dd" name="Office" consumption="240.0" usage="24.0" maxConsumption="1000"></consumer>
+      <consumer id="2b8c7cd1-3b2d-4ee0-a4ea-3bd5466fef47" name="House" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <consumer id="f2a03786-c0d2-4ee3-b6e8-baee99105a56" name="Building" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <consumer id="170e5720-f0b5-40a2-a6c6-b55b39fa9f3f" name="House" consumption="24.0" usage="24.0" maxConsumption="100"></consumer>
+      <consumer id="711ed757-789f-4bc4-959b-5212e63f0555" name="Again" consumption="792.0" usage="99.0" maxConsumption="800"></consumer>
+      <consumer id="2d2fcf43-4833-4fa0-bbb4-17a81dac08e3" name="Home" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <consumer id="52d09f18-31a2-425c-b1a9-1059e6d9ae23" name="Office" consumption="240.0" usage="24.0" maxConsumption="1000"></consumer>
+      <consumer id="2bb57abf-2e93-4877-94b7-66dba8e5eb77" name="Work" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <consumer id="40117cde-d20a-4752-bc4e-277eb4c04ea6" name="School" consumption="990.0" usage="99.0" maxConsumption="1000"></consumer>
+      <producer id="0ccc4424-73da-4b5c-87b5-39327f3abf98" name="Dam" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="24156b71-d4eb-4580-9ffb-5f9476d1ddf6" name="Power" isOk="false" production="1835.31" maxProduction="1000.0" minProduction="0.0" used="183.531"></producer>
+      <producer id="8dfe248c-c963-4ddd-9765-40aa3a233fc2" name="Plant" isOk="false" production="1835.31" maxProduction="1000.0" minProduction="0.0" used="183.531"></producer>
+      <producer id="fd5d20d3-3c3b-4b78-885f-65ab73fbd2f7" name="Greens" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="cc6d42fc-d69a-4e5e-8822-6f4d22573c08" name="Green2" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <producer id="7e9ebdd5-66dd-4caf-b313-b7a0867d8efa" name="Sonar" isOk="true" production="1000.0" maxProduction="1000.0"></producer>
+      <transformer id="da8bab3b-74e1-41b7-a0c5-760285e6c7bf" name="Tran" isOk="true" loss="17.7" currentUsage="1752.3" usage="88.5" maxCapacity="2000"></transformer>
+      <transformer id="27d9e7c6-fb43-46f5-90a2-dd155bb2d0be" name="Tran2" isOk="false" loss="0.97" currentUsage="614.3399999999999" usage="307.655" maxCapacity="200"></transformer>
+      <transformer id="7153f14e-d55b-4759-b211-db58c6eb8ceb" name="Tran3" isOk="false" loss="495.0" currentUsage="1485.0" usage="990.0" maxCapacity="200"></transformer>
+      <transformer id="9054db21-4afa-44ce-ac02-106e7ecbe6f9" name="SuperTran" isOk="false" loss="405.6" currentUsage="1419.6" usage="912.5999999999999" maxCapacity="200"></transformer>
+      <transformer id="8ffbccee-389e-4bda-949c-e41caa6ba38c" name="Tran4" isOk="false" loss="0.0" currentUsage="792.0" usage="396.0" maxCapacity="200"></transformer>
+      <transformer id="10a60c30-54cc-4459-9ede-3bd2fed5c07e" name="Tran5" isOk="false" loss="505.35" currentUsage="1329.96" usage="917.6549999999999" maxCapacity="200"></transformer>
+      <grid id="27856b50-e9b6-4b24-814f-121da8805d39" name="Auck" isOk="false" isFailure="false" currentUsage="2037.25" loss="0.0" usage="1018.6249999999999" maxCapacity="200"></grid>
+      <grid id="5ca6d494-ad41-44cc-8953-6f0028639436" name="Wellington" isOk="true" isFailure="false" currentUsage="24.4925" loss="0.0" usage="12.24625" maxCapacity="200"></grid>
+      <grid id="ed8c1a2e-8d0c-40ad-902b-a917f73d7a9b" name="Hamilton" isOk="false" isFailure="false" currentUsage="495.0" loss="0.0" usage="247.5" maxCapacity="200"></grid>
+      <grid id="4e55392b-093e-4caf-be15-81b9aa8f57fc" name="Lower Hutt" isOk="false" isFailure="false" currentUsage="2004.4925" loss="0.0" usage="1002.2462499999999" maxCapacity="200"></grid>
+      <grid id="aa69057a-0ca3-46c2-a0c4-02fb9a9287b2" name="Pohara" isOk="false" isFailure="false" currentUsage="617.65" loss="0.0" usage="308.825" maxCapacity="200"></grid>
+      <grid id="88d4eb5f-aefa-415a-862c-a8f17963c6b7" name="Tukurua" isOk="false" isFailure="false" currentUsage="2796.4925000000003" loss="0.0" usage="1398.2462500000001" maxCapacity="200"></grid>
+      <grid id="27cfe8d9-6f9e-4c38-b2be-d35050f04e4e" name="Hawthorn" isOk="false" isFailure="false" currentUsage="4548.7925000000005" loss="0.0" usage="2274.3962500000002" maxCapacity="200"></grid>
+    </step>
+  </simulation>
+</powerGridSimulator>
