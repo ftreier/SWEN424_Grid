@@ -41,13 +41,15 @@ public class ElProducer extends MainBaseType
 	public int getY() {return y;}
 	public int getSize() {return size;}
 	
-	public void connectTransformer(ElTransformer connect){
+	public void connectTransformer(ElTransformer connect)
+	{
 		_connect = connect;
 		connect.addLeftConnection(this);
 		System.out.println("Producer "+_name+" Transformer connect");
 	}
 	
-	public void connectWeather(WeatherValues weather){
+	public void connectWeather(WeatherValues weather)
+	{
 		_weather = weather;
 		System.out.println("Producer "+_name+" Weather register");
 	}
@@ -138,7 +140,7 @@ public class ElProducer extends MainBaseType
 		// Optimal region, maximum production
 		else if (windSpeed >= 7)
 		{
-			s.currentElectricity = _maxProduction / 3.0;
+			s.currentElectricity = _maxProduction;
 		}
 		// Linear approximation for low wind production
 		else
